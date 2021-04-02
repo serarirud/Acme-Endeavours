@@ -62,5 +62,14 @@
 		<property name="isPublic" value="true"/>
 	</bean>
 	
+	<bean id="task05" class="acme.entities.tasks.Task">
+		<property name="title" value="Tarea 005" />
+		<property name="startExecutionPeriod" value="2021/01/01 10:00"/>
+		<property name="endExecutionPeriod" value="2021/02/01 13:00"/>
+		<property name="workload" value="1.25"/>
+		<property name="description" value="Descripción de prueba"/>
+		<property name="link"><null/></property>
+		<property name="isPublic" value="true"/>
+	</bean>
 
 </beans>

@@ -1,0 +1,7 @@
+authenticated.task.list.label.title = Title
+authenticated.task.list.label.start-execution-period = Start of the execution period
+authenticated.task.list.label.end-execution-period = End of the execution period
+authenticated.task.list.label.workload = Workload
+authenticated.task.list.label.description = Description
+authenticated.task.list.label.link = Link
+authenticated.task.list.label.isPublic = Public

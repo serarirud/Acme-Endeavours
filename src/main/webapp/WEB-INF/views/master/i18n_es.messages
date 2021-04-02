@@ -32,6 +32,11 @@ master.menu.anonymous = Anónimo
 master.menu.anonymous.favourite-link = Enlace favorito
 master.menu.anonymous.task.list = Lista de tareas
 
+# master.menu.authenticated #######################################################
+
+master.menu.authenticated = Autenticado
+master.menu.authenticated.task.list = Lista de tareas
+
 # master.menu.administrator ###################################################
 
 master.menu.administrator = Administrador
@@ -108,4 +113,5 @@ master.panic.label.request = Petición:
 master.panic.label.status = Estado:
 master.panic.label.exceptions = Excepciones:
 master.panic.text.consult-log = Por favor, consulte el log para ver más detalles.
+
 
