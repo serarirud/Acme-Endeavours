@@ -1,7 +1,7 @@
-anonymous.task.list.label.title = Title
-anonymous.task.list.label.start-execution-period = Start of the execution period
-anonymous.task.list.label.end-execution-period = End of the execution period
-anonymous.task.list.label.workload = Workload
-anonymous.task.list.label.description = Description
-anonymous.task.list.label.link = Link
-anonymous.task.list.label.isPublic = Public
+authenticated.task.list.label.title = Title
+authenticated.task.list.label.start-execution-period = Start of the execution period
+authenticated.task.list.label.end-execution-period = End of the execution period
+authenticated.task.list.label.workload = Workload
+authenticated.task.list.label.description = Description
+authenticated.task.list.label.link = Link
+authenticated.task.list.label.isPublic = Public
