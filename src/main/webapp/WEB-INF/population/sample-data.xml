@@ -24,7 +24,7 @@
 	<bean id="task01" class="acme.entities.tasks.Task">
 		<property name="title" value="Tarea 001" />
 		<property name="startExecutionPeriod" value="2021/07/01 12:00"/>
-		<property name="endExecutionPeriod" value="2021/07/01 13:00"/>
+		<property name="endExecutionPeriod" value="2022/07/01 13:00"/>
 		<property name="workload" value="1"/>
 		<property name="description" value="Descripción de prueba"/>
 		<property name="link" value="https://github.com/Francisco-Borrego/Acme-Planner"/>
