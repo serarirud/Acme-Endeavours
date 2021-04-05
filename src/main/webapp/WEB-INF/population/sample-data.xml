@@ -19,6 +19,33 @@
 
 	<import resource="classpath:/WEB-INF/population/conversion-service.xml"/>
 	
+	<!--  Shouts -->
+	
+	<bean id="shout01" class="acme.entities.shouts.Shout">
+		<property name="moment" value="2021/04/03 10:00"/>
+		<property name="author" value="John Doe"/>		
+		<property name="text" value="I'm happy!"/>
+		<property name="info"><null/></property>
+	</bean>
+	
+	<bean id="shout02" class="acme.entities.shouts.Shout">
+		<property name="moment" value="2021/04/01 12:00"/>
+		<property name="author" value="Jane Doe"/>		
+		<property name="text" value="I'm the master of my room!"/>
+		<property name="info" value="http://www.example.org"/>
+	</bean>
+	
+	<bean id="shout03" class="acme.entities.shouts.Shout">
+		<property name="moment" value="2021/04/02 16:00"/>
+		<property name="author" value="Foo Bar"/>		
+		<property name="text" value="Just turning 50!"/>
+		<property name="info" value="http://www.example1.org"/>	
+	</bean>
+	
+	
+	
+	
+	
 	<!-- Tasks -->
 	
 	<bean id="task01" class="acme.entities.tasks.Task">
