@@ -12,6 +12,9 @@ import acme.framework.repositories.AbstractRepository;
 @Repository
 public interface AnonymousTaskRepository extends AbstractRepository {
 
+	@Query("SELECT t FROM Task t WHERE t.id = ?1")
+	Task findOneById(int id);
+	
 	//tareas públicas y que no estén finalizadas
 	@Query("SELECT t FROM Task t WHERE (t.isPublic = true AND t.endExecutionPeriod > :today) ")
 	Collection<Task> findMany(Date today);

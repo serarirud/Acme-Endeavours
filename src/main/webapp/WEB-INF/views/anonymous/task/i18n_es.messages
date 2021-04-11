@@ -2,6 +2,13 @@ anonymous.task.list.label.title = Título
 anonymous.task.list.label.start-execution-period = Inicio del periodo de ejecución
 anonymous.task.list.label.end-execution-period = Fin del periodo de ejecución
 anonymous.task.list.label.workload = Carga de trabajo
-anonymous.task.list.label.description = Descripción
-anonymous.task.list.label.link = Enlace
-anonymous.task.list.label.isPublic = Pública
+
+
+anonymous.task.form.label.title = Título
+anonymous.task.form.label.start-execution-period = Inicio del periodo de ejecución
+anonymous.task.form.label.end-execution-period = Fin del periodo de ejecución
+anonymous.task.form.label.workload = Carga de trabajo
+anonymous.task.form.label.description = Descripción
+anonymous.task.form.label.link = Enlace
+anonymous.task.form.label.is-public = Pública
+anonymous.task.form.button.return = Volver
