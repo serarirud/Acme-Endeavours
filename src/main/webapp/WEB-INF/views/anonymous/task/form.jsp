@@ -3,7 +3,7 @@
 <%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
-<acme:form readonly=true>
+<acme:form readonly="true">
 	<acme:form-textbox code="anonymous.task.form.label.title" path="title" />
 	<acme:form-moment code="anonymous.task.form.label.start-execution-period" path="startExecutionPeriod" />
 	<acme:form-moment code="anonymous.task.form.label.end-execution-period" path="endExecutionPeriod" />

@@ -9,6 +9,7 @@ import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.Length;
+import org.hibernate.validator.constraints.URL;
 
 import acme.framework.entities.DomainEntity;
 import lombok.Getter;
@@ -43,6 +44,7 @@ public class Task extends DomainEntity {
 	@Length(min=1, max=500)
 	protected String description;
 	
+	@URL
 	protected String link;
 	
 	protected Boolean isPublic;
