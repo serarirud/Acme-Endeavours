@@ -61,7 +61,7 @@
 	<bean id="task02" class="acme.entities.tasks.Task">
 		<property name="title" value="Tarea 002" />
 		<property name="startExecutionPeriod" value="2021/08/01 10:00"/>
-		<property name="endExecutionPeriod" value="2021/07/01 13:00"/>
+		<property name="endExecutionPeriod" value="2021/08/04 13:00"/>
 		<property name="workload" value="1.20"/>
 		<property name="description" value="Descripción de prueba"/>
 		<property name="link"><null/></property>
@@ -71,7 +71,7 @@
 	<bean id="task03" class="acme.entities.tasks.Task">
 		<property name="title" value="Tarea 003" />
 		<property name="startExecutionPeriod" value="2021/08/01 10:00"/>
-		<property name="endExecutionPeriod" value="2021/07/01 13:00"/>
+		<property name="endExecutionPeriod" value="2021/09/01 13:00"/>
 		<property name="workload" value="1.20"/>
 		<property name="description" value="Descripción de prueba"/>
 		<property name="link"><null/></property>
