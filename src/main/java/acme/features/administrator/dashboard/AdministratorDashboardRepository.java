@@ -34,6 +34,7 @@ public interface AdministratorDashboardRepository extends AbstractRepository {
 	@Query("SELECT count(t) FROM Task t WHERE (t.endExecutionPeriod < :today)")
 	Integer nFinishedTask(Date today);
 
+	//DATEDIFF calcula la diferencia en días entre 2 fechas
 	@Query("select avg(DATEDIFF(t.endExecutionPeriod, t.startExecutionPeriod))  from Task t")
 	Double averageTaskExecutionPeriods();
 

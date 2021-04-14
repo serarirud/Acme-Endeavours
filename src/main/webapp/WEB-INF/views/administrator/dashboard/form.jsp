@@ -50,14 +50,14 @@
 	</tr>
 	<tr>
 		<th scope="row">
-			<acme:message code="administrator.dashboard.form.label.number-nofinished-task"/>
+			<acme:message code="administrator.dashboard.form.label.number-unfinished-task"/>
 		</th>
 		<td>
 			<acme:print value="${nNotFinishedTask}"/>
 		</td>
 	
 	</tr>
-	</table>
+</table>
 	
 	<script type="text/javascript">
 	$(document).ready(function() {

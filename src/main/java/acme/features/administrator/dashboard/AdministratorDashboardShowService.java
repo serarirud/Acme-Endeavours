@@ -45,7 +45,7 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, //
+		request.unbind(entity, model,
 			"nPrivateTask", "nPublicTask", "nNotFinishedTask", "nFinishedTask", "averageTaskExecutionPeriods",
 			"deviationTaskExecutionPeriods", "minimumTaskExecutionPeriods", "maximumTaskExecutionPeriods",
 			"averageTaskWorkloads", "deviationTaskWorkloads", "minimumTaskWorkloads", "maximumTaskWorkloads");
@@ -80,7 +80,7 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		minimumTaskExecutionPeriods = this.repository.minimumTaskExecutionPeriods();
 		maximumTaskExecutionPeriods = this.repository.maximumTaskExecutionPeriods();
 		averageTaskWorkloads = this.repository.averageTaskWorkloads();
-		deviationTaskWorkloads = this.repository.deviationTaskExecutionPeriods();
+		deviationTaskWorkloads = this.repository.deviationTaskWorkloads();
 		minimumTaskWorkloads = this.repository.minimumTaskWorkloads();
 		maximumTaskWorkloads = this.repository.maximumTaskWorkloads();
 		
