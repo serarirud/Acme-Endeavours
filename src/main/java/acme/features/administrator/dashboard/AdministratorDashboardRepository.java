@@ -1,0 +1,61 @@
+/*
+ * AdministratorDashboardRepository.java
+ *
+ * Copyright (c) 2012-2021 Rafael Corchuelo.
+ *
+ * In keeping with the traditional purpose of furthering education and research, it is
+ * the policy of the copyright owner to permit non-commercial use and redistribution of
+ * this software. It has been tested carefully, but it is not guaranteed for any particular
+ * purposes. The copyright owner does not offer any warranties or representations, nor do
+ * they accept any liabilities with respect to them.
+ */
+
+package acme.features.administrator.dashboard;
+
+import java.util.Date;
+
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.stereotype.Repository;
+
+import acme.framework.repositories.AbstractRepository;
+
+@Repository
+public interface AdministratorDashboardRepository extends AbstractRepository {
+
+	@Query("SELECT count(t) FROM Task t WHERE (t.isPublic = true)")
+	Integer nPublicTask();
+	
+	@Query("SELECT count(t) FROM Task t WHERE (t.isPublic = false)")
+	Integer nPrivateTask();
+	
+	@Query("SELECT count(t) FROM Task t WHERE (t.endExecutionPeriod > :today)")
+	Integer nNotFinishedTask(Date today);
+
+	@Query("SELECT count(t) FROM Task t WHERE (t.endExecutionPeriod < :today)")
+	Integer nFinishedTask(Date today);
+
+	//DATEDIFF calcula la diferencia en días entre 2 fechas
+	@Query("select avg(DATEDIFF(t.endExecutionPeriod, t.startExecutionPeriod))  from Task t")
+	Double averageTaskExecutionPeriods();
+
+	@Query("select stddev(DATEDIFF(t.endExecutionPeriod, t.startExecutionPeriod))  from Task t")
+	Double deviationTaskExecutionPeriods();
+
+	@Query("select min(DATEDIFF(t.endExecutionPeriod, t.startExecutionPeriod))  from Task t")
+	Integer minimumTaskExecutionPeriods();
+
+	@Query("select max(DATEDIFF(t.endExecutionPeriod, t.startExecutionPeriod))  from Task t")
+	Integer maximumTaskExecutionPeriods();
+
+	@Query("select avg(t.workload)  from Task t")
+	Double averageTaskWorkloads();
+
+	@Query("select stddev(t.workload)  from Task t")
+	Double deviationTaskWorkloads();
+
+	@Query("select min(t.workload)  from Task t")
+	Double minimumTaskWorkloads();
+
+	@Query("select max(t.workload)  from Task t")
+	Double maximumTaskWorkloads();
+}
