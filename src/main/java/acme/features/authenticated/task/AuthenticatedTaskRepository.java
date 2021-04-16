@@ -16,4 +16,7 @@ public interface AuthenticatedTaskRepository extends AbstractRepository {
 	@Query("SELECT t FROM Task t WHERE (t.isPublic = true AND t.endExecutionPeriod < :today) ")
 	Collection<Task> findMany(Date today);
 	
+	@Query("SELECT t FROM Task t WHERE t.id = ?1")
+	Task findOneById(int id);
+	
 }
