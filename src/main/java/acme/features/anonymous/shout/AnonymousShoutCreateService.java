@@ -28,7 +28,6 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 		
 	@Override
 	public boolean authorise(final Request<Shout> request) {
-		System.out.println("ENTRA AUTHORISE");
 		assert request != null;
 			
 		return true;
@@ -36,7 +35,6 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 		
 	@Override
 	public void bind(final Request<Shout> request, final Shout entity, final Errors errors) {
-		System.out.println("ENTRA BIND");
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
@@ -46,7 +44,6 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 		
 	@Override
 	public void unbind(final Request<Shout> request, final Shout entity, final Model model) {
-		System.out.println("ENTRA UNBIND");
 		assert request != null;
 		assert entity != null;
 		assert model != null;
@@ -56,7 +53,6 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 		
 	@Override
 	public Shout instantiate(final Request<Shout> request) {
-		System.out.println("ENTRA instantiate");
 		assert request != null;
 		
 		Shout result;
@@ -75,7 +71,6 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 	
 	@Override 
 	public void validate(final Request<Shout> request, final Shout entity, final Errors errors) {
-		System.out.println("ENTRA validate");
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
@@ -105,7 +100,6 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 	
 	@Override
 	public void create(final Request<Shout> request, final Shout entity) {
-		System.out.println("ENTRA create");
 		assert request != null;
 		assert entity != null;
 		
