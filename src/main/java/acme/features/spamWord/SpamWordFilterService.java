@@ -33,7 +33,6 @@ public class SpamWordFilterService {
 				contador+=textoSplit.length-1;
 			}
 		}
-		 //SOLUCIONAR CUANDO ES SOLO SEX O CUALQUIER PALABRA SPAM
 		final Double porcentajeSpam = contador*100/numWordsText;
 		
 		return porcentajeSpam>=umbral;
