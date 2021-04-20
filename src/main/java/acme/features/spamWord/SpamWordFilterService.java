@@ -26,7 +26,7 @@ public class SpamWordFilterService {
 		for(int i=0; i<words.size();i++) {
 			final String palabra = " "+words.get(i).getWord()+" ";
 			final String[] textoSplit = textMod.split(palabra);
-			if(palabra.equals(String.valueOf(text.toLowerCase().split(" ")))&& numWordsText==1.0) {
+			if(textoSplit.length==0) {
 				contador+=1.;
 				break;
 			}else {

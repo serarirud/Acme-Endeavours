@@ -1716,3 +1716,49 @@ INFO [acme.framework.utilities.DatabasePopulator] > Persisting spamWord5 = acme.
 INFO [acme.framework.utilities.DatabasePopulator] > Persisting spamWord6 = acme.entities.spamWord.SpamWord{id=11, version=0}
 INFO [acme.framework.utilities.DatabasePopulator] > Persisting spamWord7 = acme.entities.spamWord.SpamWord{id=12, version=0}
 INFO [acme.framework.configuration.ShutdownConfiguration] The system is shutting down...
+INFO [acme.Launcher] Starting Launcher using Java 1.8.0_281 on DESKTOP-1MUJJKU with PID 13768 (C:\Users\jvarg\git\Acme-Planner\target\classes started by jvarg in C:\Users\jvarg\git\Acme-Planner)
+INFO [acme.Launcher] The following profiles are active: development,populator
+INFO [acme.Launcher] Started Launcher in 5.12 seconds (JVM running for 5.627)
+INFO [acme.framework.utilities.DatabasePopulator] Populating initial data
+INFO [acme.framework.utilities.DatabasePopulator] Recreating schema
+INFO [acme.framework.utilities.DatabasePopulator] Populating entities from classpath:/WEB-INF/population/initial-data.xml
+INFO [acme.framework.utilities.DatabasePopulator] Validating your entities.
+INFO [acme.framework.utilities.DatabasePopulator] Validating anonymousUserAccount ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating anonymousAnonymous ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating administratorUserAccount ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating administratorAdministrator ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating administratorAuthenticated ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating spamWord1 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating spamWord2 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating spamWord3 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating spamWord4 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating spamWord5 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating spamWord6 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating spamWord7 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Sorting your entities topologically.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 0 for anonymousUserAccount.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 1 for anonymousAnonymous.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 2 for administratorUserAccount.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 3 for administratorAdministrator.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 4 for administratorAuthenticated.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 5 for spamWord1.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 6 for spamWord2.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 7 for spamWord3.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 8 for spamWord4.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 9 for spamWord5.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 10 for spamWord6.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 11 for spamWord7.
+INFO [acme.framework.utilities.DatabasePopulator] Persiting your entities.
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting anonymousUserAccount = acme.framework.entities.UserAccount{id=1, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting anonymousAnonymous = acme.framework.entities.Anonymous{id=2, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting administratorUserAccount = acme.framework.entities.UserAccount{id=3, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting administratorAdministrator = acme.framework.entities.Administrator{id=4, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting administratorAuthenticated = acme.framework.entities.Authenticated{id=5, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting spamWord1 = acme.entities.spamWord.SpamWord{id=6, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting spamWord2 = acme.entities.spamWord.SpamWord{id=7, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting spamWord3 = acme.entities.spamWord.SpamWord{id=8, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting spamWord4 = acme.entities.spamWord.SpamWord{id=9, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting spamWord5 = acme.entities.spamWord.SpamWord{id=10, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting spamWord6 = acme.entities.spamWord.SpamWord{id=11, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting spamWord7 = acme.entities.spamWord.SpamWord{id=12, version=0}
+INFO [acme.framework.configuration.ShutdownConfiguration] The system is shutting down...
