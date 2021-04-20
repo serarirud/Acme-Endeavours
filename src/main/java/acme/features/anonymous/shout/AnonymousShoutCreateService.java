@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.shouts.Shout;
+import acme.features.spamWord.SpamWordFilterService;
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
@@ -18,7 +19,10 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 	// Internal state -------------------------------------------------------------------
 	
 	@Autowired
-	protected AnonymousShoutRepository repository;
+	protected AnonymousShoutRepository shoutRepository;
+	
+	@Autowired
+	protected SpamWordFilterService spamService;
 		
 	// AbstractCreateService<Administrator, Shout> interface ------------------------
 		
@@ -70,6 +74,28 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
+		
+//		final List<SpamWord> words = this.spamRepo.findMany();
+//		final Integer palabrasShout = entity.getText().toLowerCase().split(" ").length;
+//		final String text =" " +entity.getText().toLowerCase().replace(",", " ").replace(".", " ").replace(";", " ")
+//			.replace(":", " ").replace("(", " ").replace(")", " ").replace("-", " ").replace("_", " ")
+//			.replace("<", " ").replace(">", " ").replace("¿", " ").replace("?", " ").replace("¡", " ")
+//			.replace("!", " ").replace("'", " ")+" ";
+//		
+//		Integer contador=0;
+//		
+//		for(int i=0; i<words.size();i++) {
+//			final String palabra = " "+words.get(i).getWord()+" ";
+//			contador+=text.split(palabra).length-1; 
+//		}
+//		
+//		final Integer umbral=contador*100/palabrasShout;
+//		
+//		final boolean umbralSuperado=umbral>=10;
+		
+		final boolean umbralSuperado = this.spamService.spamFilter(entity.getText(), 10);
+		
+		errors.state(request, !umbralSuperado, "umbral", "anonymous.shout.error.umbral-superado");
 	}
 	
 	@Override
@@ -81,7 +107,7 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 		
 		moment = new Date(System.currentTimeMillis() - 1);
 		entity.setMoment(moment);
-		this.repository.save(entity);
+		this.shoutRepository.save(entity);
 	}
 
 
