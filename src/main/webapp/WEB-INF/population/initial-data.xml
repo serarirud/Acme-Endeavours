@@ -73,5 +73,37 @@
 		<property name="userAccount" ref="administratorUserAccount" />
 	</bean>
 	
+	<bean id="spamWord1" class="acme.entities.spamWord.SpamWord">
+		<property name="word" value="sex"/>
+
+	</bean>
+	<bean id="spamWord2" class="acme.entities.spamWord.SpamWord">
+
+		<property name="word" value="hard core"/>
+
+	</bean>
+	<bean id="spamWord3" class="acme.entities.spamWord.SpamWord">
+
+		<property name="word" value="viagra"/>
+
+	</bean>
+	<bean id="spamWord4" class="acme.entities.spamWord.SpamWord">
+
+		<property name="word" value="cialis"/>
+
+	</bean>
+	<bean id="spamWord5" class="acme.entities.spamWord.SpamWord">
+
+		<property name="word" value="nigeria"/>
+
+	</bean>
+	<bean id="spamWord6" class="acme.entities.spamWord.SpamWord">
+
+		<property name="word" value="you've won"/>
+
+	</bean>
+	<bean id="spamWord7" class="acme.entities.spamWord.SpamWord">
+		<property name="word" value="million dollar"/>
+	</bean>
 	
 </beans>
