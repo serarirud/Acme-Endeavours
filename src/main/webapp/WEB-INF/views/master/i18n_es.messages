@@ -114,4 +114,19 @@ master.panic.label.status = Estado:
 master.panic.label.exceptions = Excepciones:
 master.panic.text.consult-log = Por favor, consulte el log para ver más detalles.
 
+# master.menu.administrator ###################################################
+master.menu.manager = Manager
+master.menu.manager.task.create = Crear una tarea
+master.menu.manager.task.list = Lista de tareas
 
+# master.task.form ###################################################
+manager.task.form.label.title = Titulo
+manager.task.form.label.start-execution-period= Inicio del periodo de ejecución
+manager.task.form.label.end-execution-period = Fin del periodo de ejecución
+manager.task.form.label.workload = Carga de trabajo
+manager.task.form.label.description = Descripcion
+manager.task.form.label.link = Enlace
+manager.task.form.label.is-public = Pública
+manager.task.form.button.create = Crear
+manager.task.form.button.update=Actualizar
+manager.task.form.button.delete = Borrar
