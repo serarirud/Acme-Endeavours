@@ -1,7 +1,7 @@
 package acme.entities.spamWord;
 
 import javax.persistence.Entity;
-import javax.validation.constraints.NotNull;
+import javax.validation.constraints.NotBlank;
 
 import acme.framework.entities.DomainEntity;
 import lombok.Getter;
@@ -14,7 +14,7 @@ public class SpamWord extends DomainEntity{
 	
 	protected static final long serialVersionUID = 1L;
 	
-	@NotNull
+	@NotBlank
 	protected String word;
 
 }
