@@ -18,7 +18,7 @@ public class ManagerTaskDeleteService implements AbstractDeleteService<Manager, 
 	protected ManagerTaskRepository repository;
 
 	@Override
-	public boolean authorise(Request<Task> request) {
+	public boolean authorise(final Request<Task> request) {
 		assert request != null;
 		
 		int taskId;
@@ -35,7 +35,7 @@ public class ManagerTaskDeleteService implements AbstractDeleteService<Manager, 
 	}
 
 	@Override
-	public void bind(Request<Task> request, Task entity, Errors errors) {
+	public void bind(final Request<Task> request, final Task entity, final Errors errors) {
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
@@ -44,32 +44,32 @@ public class ManagerTaskDeleteService implements AbstractDeleteService<Manager, 
 	}
 
 	@Override
-	public void unbind(Request<Task> request, Task entity, Model model) {
+	public void unbind(final Request<Task> request, final Task entity, final Model model) {
 		assert request != null;
 		assert entity != null;
 		assert model != null;
 		
-		request.unbind(entity, model, "title", "startExecutionPeriod", "endExecutionPeriod");
-		request.unbind(entity, model, "workload", "description", "link", "isPublic");	
+		request.unbind(entity, model, "title", "startExecutionPeriod", "endExecutionPeriod",
+			"workload", "description", "link", "isPublic");	
 	}
 
 	@Override
-	public Task findOne(Request<Task> request) {
+	public Task findOne(final Request<Task> request) {
 		assert request != null;
 		
-		int id = request.getModel().getInteger("id");
+		final int id = request.getModel().getInteger("id");
 		return this.repository.findOneById(id);
 	}
 
 	@Override
-	public void validate(Request<Task> request, Task entity, Errors errors) {
+	public void validate(final Request<Task> request, final Task entity, final Errors errors) {
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
 	}
 
 	@Override
-	public void delete(Request<Task> request, Task entity) {
+	public void delete(final Request<Task> request, final Task entity) {
 		assert request != null;
 		assert entity !=null;
 		

@@ -15,7 +15,6 @@ public interface ManagerTaskRepository extends AbstractRepository {
 	@Query("SELECT t FROM Task t WHERE t.id = ?1")
 	Task findOneById(int id);
 	
-	//tareas públicas y que no estén finalizadas
 	@Query("SELECT t FROM Task t WHERE t.manager.id = ?1")
 	Collection<Task> findMany(int idManager);
 	

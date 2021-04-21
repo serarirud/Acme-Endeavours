@@ -23,6 +23,8 @@ public class ManagerTaskListService implements AbstractListService<Manager, Task
 	
 	// AbstractListService<Administrator, Task> interface
 	
+	
+	//No hay que comprobar el manager pues la url no usa parámetros, solo puede obtener sus tareas
 	@Override
 	public boolean authorise(final Request<Task> request) {
 		assert request != null;

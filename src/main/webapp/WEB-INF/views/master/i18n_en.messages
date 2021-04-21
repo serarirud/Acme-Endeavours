@@ -117,14 +117,3 @@ master.menu.manager = Manager
 master.menu.manager.task.create = Create a task
 master.menu.manager.task.list = Task list
 
-# master.task.form ###################################################
-manager.task.form.label.title = Tittle
-manager.task.form.label.start-execution-period= Start execution period
-manager.task.form.label.end-execution-period = End execution period
-manager.task.form.label.workload = Workload
-manager.task.form.label.description = Description
-manager.task.form.label.link = Link
-manager.task.form.label.is-public = Is public (true/false)
-manager.task.form.button.create = Create
-manager.task.form.button.update=Update
-manager.task.form.button.delete = Delete

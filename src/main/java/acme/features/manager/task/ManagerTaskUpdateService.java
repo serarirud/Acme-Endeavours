@@ -1,5 +1,7 @@
 package acme.features.manager.task;
 
+import java.util.Date;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -19,7 +21,7 @@ public class ManagerTaskUpdateService implements AbstractUpdateService<Manager, 
 	protected ManagerTaskRepository repository;
 	
 	@Override
-	public boolean authorise(Request<Task> request) {
+	public boolean authorise(final Request<Task> request) {
 		assert request != null;
 		
 		int taskId;
@@ -36,7 +38,7 @@ public class ManagerTaskUpdateService implements AbstractUpdateService<Manager, 
 	}
 
 	@Override
-	public void bind(Request<Task> request, Task entity, Errors errors) {
+	public void bind(final Request<Task> request, final Task entity, final Errors errors) {
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
@@ -45,25 +47,25 @@ public class ManagerTaskUpdateService implements AbstractUpdateService<Manager, 
 	}
 
 	@Override
-	public void unbind(Request<Task> request, Task entity, Model model) {
+	public void unbind(final Request<Task> request, final Task entity, final Model model) {
 		assert request != null;
 		assert entity != null;
 		assert model != null;
 		
-		request.unbind(entity, model, "title", "startExecutionPeriod", "endExecutionPeriod");
-		request.unbind(entity, model, "workload", "description", "link", "isPublic");	
+		request.unbind(entity, model, "title", "startExecutionPeriod", "endExecutionPeriod", 
+			"workload", "description", "link", "isPublic");	
 	}
 
 	@Override
-	public Task findOne(Request<Task> request) {
+	public Task findOne(final Request<Task> request) {
 		assert request != null;
 		
-		int id = request.getModel().getInteger("id");
+		final int id = request.getModel().getInteger("id");
 		return this.repository.findOneById(id);
 	}
 
 	@Override
-	public void validate(Request<Task> request, Task entity, Errors errors) {
+	public void validate(final Request<Task> request, final Task entity, final Errors errors) {
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
@@ -73,17 +75,23 @@ public class ManagerTaskUpdateService implements AbstractUpdateService<Manager, 
 		}
 		
 		if(!errors.hasErrors("workload")) {
-			Double workload = entity.getWorkload();
-			String str = String.valueOf(workload);
+			final Double workload = entity.getWorkload();
+			final Integer parteEntera = workload.intValue();
+			final Double parteDecimal = workload - parteEntera;
+			errors.state(request, parteDecimal<0.6, "workload", "manager.task.form.error.workload");
 			
-			int decNumberInt = Integer.parseInt(str.substring(str.indexOf(".")+1));
-			errors.state(request, decNumberInt<60, "workload", "manager.task.form.error.workload");
+			final Date startExecutionPeriod = entity.getStartExecutionPeriod();
+			final Date endExecutionPeriod = entity.getEndExecutionPeriod();
+			final long diferencia = endExecutionPeriod.getTime() - startExecutionPeriod.getTime();
+			final Integer minutosDiferencia = (int) (diferencia/(1000*60));
+			final Integer minutosWorkload = (int) (parteEntera*60 + parteDecimal*100);
+			errors.state(request, minutosDiferencia>=minutosWorkload, "workload", "manager.task.form.error.workload2");
 		}
 		
 	}
 
 	@Override
-	public void update(Request<Task> request, Task entity) {
+	public void update(final Request<Task> request, final Task entity) {
 		assert request != null;
 		assert entity != null;
 		
