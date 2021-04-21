@@ -114,4 +114,8 @@ master.panic.label.status = Estado:
 master.panic.label.exceptions = Excepciones:
 master.panic.text.consult-log = Por favor, consulte el log para ver más detalles.
 
+# master.menu.administrator ###################################################
+master.menu.manager = Manager
+master.menu.manager.task.create = Crear una tarea
+master.menu.manager.task.list = Lista de tareas
 
