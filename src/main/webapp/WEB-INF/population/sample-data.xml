@@ -42,6 +42,38 @@
 		<property name="info" value="http://www.example1.org"/>	
 	</bean>
 	
+	
+	<bean id="shout04" class="acme.entities.shouts.Shout">
+		<property name="moment" value="2021/04/10 01:00"/>
+		<property name="author" value="Francisco Borrego"/>		
+		<property name="text" value="Este es un texto más largo de lo normal así que esto sirve para rellenar y sigo rellenando."/>
+		<property name="info"><null/></property>	
+	</bean>
+	
+	
+	<bean id="shout05" class="acme.entities.shouts.Shout">
+		<property name="moment" value="2020/04/10 01:00"/>
+		<property name="author" value="Sergio Arias Ruda"/>		
+		<property name="text" value="Este es un grito antiguo así que no debería verlo un usuario anónimo"/>
+		<property name="info"><null/></property>	
+	</bean>
+	
+	
+	<bean id="shout06" class="acme.entities.shouts.Shout">
+		<property name="moment" value="2021/04/20 13:00"/>
+		<property name="author" value="Jesus Vargas"/>		
+		<property name="text" value="Hola miren mi proyecto."/>
+		<property name="info" value="https://github.com/Francisco-Borrego/Acme-Planner/" />
+	</bean>
+	
+	<bean id="shout07" class="acme.entities.shouts.Shout">
+		<property name="moment" value="2021/04/21 21:00"/>
+		<property name="author" value="Antonio Funes"/>		
+		<property name="text" value="Me gusta mucho esta página."/>
+		<property name="info" value="https://www.us.es/" />
+	</bean>
+	
+	
 	<!-- Manager -->
 	
 	<bean name="managerUserAccount" class="acme.framework.entities.UserAccount">
@@ -154,6 +186,122 @@
 		<property name="workload" value="1.25"/>
 		<property name="description" value="Descripción de prueba"/>
 		<property name="link"><null/></property>
+		<property name="isPublic" value="true"/>
+		<property name="manager" ref="manager1Manager"/>
+	</bean>
+	
+	
+	<bean id="task06" class="acme.entities.tasks.Task">
+		<property name="title" value="Tarea 006" />
+		<property name="startExecutionPeriod" value="2008/04/10 07:00"/>
+		<property name="endExecutionPeriod" value="2008/04/11 17:00"/>
+		<property name="workload" value="9.10"/>
+		<property name="description" value="Es una tarea complicada, tened cuidado. "/>
+		<property name="link" value="https://www.google.es/"/>
+		<property name="isPublic" value="true"/>
+		<property name="manager" ref="manager1Manager"/>
+	</bean>
+	
+	<bean id="task07" class="acme.entities.tasks.Task">
+		<property name="title" value="Tarea 007" />
+		<property name="startExecutionPeriod" value="2016/03/02 16:00"/>
+		<property name="endExecutionPeriod" value="2016/03/02 16:15"/>
+		<property name="workload" value="0.10"/>
+		<property name="description" value="Es una tarea muy fácil y corta, hacedlo lo antes posible. "/>
+		<property name="link" value="https://www.youtube.com/"/>
+		<property name="isPublic" value="true"/>
+		<property name="manager" ref="manager1Manager"/>
+	</bean>
+	
+	
+	<bean id="task08" class="acme.entities.tasks.Task">
+		<property name="title" value="Tarea 008" />
+		<property name="startExecutionPeriod" value="2005/08/01 16:00"/>
+		<property name="endExecutionPeriod" value="2016/08/12 18:45"/>
+		<property name="workload" value="6.15"/>
+		<property name="description" value="Es una tarea larga, hay que empezar cuanto antes posible  "/>
+		<property name="link"><null/></property>
+		<property name="isPublic" value="false"/>
+		<property name="manager" ref="managerManager"/>
+	</bean>
+	
+	<bean id="task09" class="acme.entities.tasks.Task">
+		<property name="title" value="Tarea con título más largo de lo normal" />
+		<property name="startExecutionPeriod" value="2015/07/01 08:00"/>
+		<property name="endExecutionPeriod" value="2016/08/01 19:00"/>
+		<property name="workload" value="100.25"/>
+		<property name="description" value="Esta es una descripción muy larga así que esto se usa para rellenar
+		todo lo posible y no se me ocurre nada más que poner, espero que sea suficiente. "/>
+		<property name="link" value="https://www.us.es/"/>
+		<property name="isPublic" value="true"/>
+		<property name="manager" ref="manager1Manager"/>
+	</bean>
+	
+	<bean id="task10" class="acme.entities.tasks.Task">
+		<property name="title" value="Tarea 10" />
+		<property name="startExecutionPeriod" value="2021/04/22 09:00"/>
+		<property name="endExecutionPeriod" value="2021/08/01 22:00"/>
+		<property name="workload" value="1.30"/>
+		<property name="description" value="Esta tarea aún no ha acabado. "/>
+		<property name="link" value="https://github.com/"/>
+		<property name="isPublic" value="true"/>
+		<property name="manager" ref="manager1Manager"/>
+	</bean>
+	
+	
+	
+	<bean id="task11" class="acme.entities.tasks.Task">
+		<property name="title" value="Tarea 11" />
+		<property name="startExecutionPeriod" value="2021/04/13 11:00"/>
+		<property name="endExecutionPeriod" value="2022/10/01 23:00"/>
+		<property name="workload" value="50.10"/>
+		<property name="description" value="A esta tarea le queda mucho. "/>
+		<property name="link" value="https://twitter.com/?lang=es"/>
+		<property name="isPublic" value="true"/>
+		<property name="manager" ref="managerManager"/>
+	</bean>
+	
+	<bean id="task12" class="acme.entities.tasks.Task">
+		<property name="title" value="Tarea muy rara" />
+		<property name="startExecutionPeriod" value="2021/04/10 12:00"/>
+		<property name="endExecutionPeriod" value="2023/10/01 12:00"/>
+		<property name="workload" value="80.15"/>
+		<property name="description" value="Esta tarea es muy peculiar "/>
+		<property name="link"><null/></property>
+		<property name="isPublic" value="true"/>
+		<property name="manager" ref="managerManager"/>
+	</bean>
+	
+	
+	<bean id="task13" class="acme.entities.tasks.Task">
+		<property name="title" value="Tarea futura" />
+		<property name="startExecutionPeriod" value="2025/04/10 12:00"/>
+		<property name="endExecutionPeriod" value="2027/10/01 12:00"/>
+		<property name="workload" value="90.45"/>
+		<property name="description" value="Esta tarea es para dentro de unos años "/>
+		<property name="link"><null/></property>
+		<property name="isPublic" value="true"/>
+		<property name="manager" ref="managerManager"/>
+	</bean>
+	
+	<bean id="task14" class="acme.entities.tasks.Task">
+		<property name="title" value="Tarea 14" />
+		<property name="startExecutionPeriod" value="2021/04/22 09:00"/>
+		<property name="endExecutionPeriod" value="2021/08/01 22:00"/>
+		<property name="workload" value="1.30"/>
+		<property name="description" value="Esta tarea aún no ha acabado. "/>
+		<property name="link" value="https://twitter.com/?lang=es"/>
+		<property name="isPublic" value="true"/>
+		<property name="manager" ref="manager1Manager"/>
+	</bean>
+	
+	<bean id="task15" class="acme.entities.tasks.Task">
+		<property name="title" value="Tarea final" />
+		<property name="startExecutionPeriod" value="2019/02/21 11:15"/>
+		<property name="endExecutionPeriod" value="2020/05/01 01:14"/>
+		<property name="workload" value="73.13"/>
+		<property name="description" value="Esta tarea es la última. "/>
+		<property name="link" value="https://www.amazon.es/"/>
 		<property name="isPublic" value="true"/>
 		<property name="manager" ref="manager1Manager"/>
 	</bean>

@@ -19,5 +19,6 @@ manager.task.form.error.title = Title error, the title must be shorter that 80 c
 manager.task.form.error.description = Description error, the description must be shorter that 500 characters
 manager.task.form.error.workload = Workload error, the decimal part of workload must be shooter that 60 because represent minutes {Hours,Minutes}
 manager.task.form.error.workload2 = Workload error, it is too big for the execution period
+manager.task.form.button.create = Create
 manager.task.form.button.update = Update
 manager.task.form.button.delete = Delete

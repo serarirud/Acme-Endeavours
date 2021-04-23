@@ -9,4 +9,4 @@ authenticated.task.form.label.end-execution-period = End of the execution period
 authenticated.task.form.label.workload = Workload
 authenticated.task.form.label.description = Description
 authenticated.task.form.label.link = Link
-authenticated.task.form.label.isPublic = Public
+authenticated.task.form.label.is-public = Public
