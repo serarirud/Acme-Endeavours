@@ -22,3 +22,5 @@ manager.task.form.error.workload2 = Error de carga de trabajo, es demasiado gran
 manager.task.form.button.create = Crear
 manager.task.form.button.update = Actualizar
 manager.task.form.button.delete = Borrar
+
+manager.task.error.umbral-superado = Umbral de palabras spam superado
