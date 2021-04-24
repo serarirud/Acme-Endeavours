@@ -91,9 +91,13 @@ public class ManagerTaskCreateService implements AbstractCreateService<Manager, 
 			final Integer minutosWorkload = (int) (parteEntera*60 + parteDecimal*100);
 			errors.state(request, minutosDiferencia>=minutosWorkload, "workload", "manager.task.form.error.workload2");
 
-//		final boolean umbralSuperado = this.spamService.spamFilter(entity.getDescription(), 10);
-//		errors.state(request, !umbralSuperado, "umbral", "anonymous.shout.error.umbral-superado");
 		}
+		
+		if(!errors.hasErrors("description")) {
+			final boolean umbralSuperado = this.spamService.spamFilter(entity.getDescription(), 10);
+			errors.state(request, !umbralSuperado, "description", "manager.task.error.umbral-superado");
+		}
+		
 	}
 
 	@Override
