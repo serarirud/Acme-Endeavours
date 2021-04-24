@@ -106,4 +106,15 @@
 		<property name="word" value="million dollar"/>
 	</bean>
 	
+	<bean id="spamWord8" class="acme.entities.spamWord.SpamWord">
+		<property name="word" value="millón de dolares"/>
+	</bean>
+	
+	<bean id="spamWord9" class="acme.entities.spamWord.SpamWord">
+		<property name="word" value="has ganado"/>
+	</bean>
+	
+	<bean id="spamWord10" class="acme.entities.spamWord.SpamWord">
+		<property name="word" value="sexo"/>
+	</bean>
 </beans>
