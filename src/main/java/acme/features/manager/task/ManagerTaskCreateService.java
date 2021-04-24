@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.tasks.Task;
+import acme.features.spamWord.SpamWordFilterService;
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
@@ -19,6 +20,9 @@ public class ManagerTaskCreateService implements AbstractCreateService<Manager, 
 	
 	@Autowired
 	protected ManagerTaskRepository repository;
+	
+	@Autowired
+	protected SpamWordFilterService spamService;
 	
 	@Override
 	public boolean authorise(final Request<Task> request) {
@@ -87,6 +91,8 @@ public class ManagerTaskCreateService implements AbstractCreateService<Manager, 
 			final Integer minutosWorkload = (int) (parteEntera*60 + parteDecimal*100);
 			errors.state(request, minutosDiferencia>=minutosWorkload, "workload", "manager.task.form.error.workload2");
 
+//		final boolean umbralSuperado = this.spamService.spamFilter(entity.getDescription(), 10);
+//		errors.state(request, !umbralSuperado, "umbral", "anonymous.shout.error.umbral-superado");
 		}
 	}
 
