@@ -19,5 +19,8 @@ manager.task.form.error.title = Error de titulo, el titulo debe tener tamaño me
 manager.task.form.error.description = Error de descripcion, la descripcion debe tener tamaño menor a 500 caracteres
 manager.task.form.error.workload = Error de carga de trabajo, la parte decimal de la carga de trabajo debe ser menor a 60 ya que representa minutos {Horas,Minutos}
 manager.task.form.error.workload2 = Error de carga de trabajo, es demasiado grande para el periodo de ejecución dado
+manager.task.form.button.create = Crear
 manager.task.form.button.update = Actualizar
 manager.task.form.button.delete = Borrar
+
+manager.task.error.umbral-superado = Umbral de palabras spam superado

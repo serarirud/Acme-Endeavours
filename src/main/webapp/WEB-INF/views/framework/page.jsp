@@ -32,7 +32,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
 		
-		<link rel="shortcut icon" href="images/favicon.ico"/>
+		<link rel="shortcut icon" href="images/favicon1.PNG"/>
 		
 		<link rel="stylesheet" href="libraries/fontawesome/5.2.0/css/all.min.css"/>
 		<link rel="stylesheet" href="libraries/bootstrap/4.1.3/css/bootstrap.min.css"/>
