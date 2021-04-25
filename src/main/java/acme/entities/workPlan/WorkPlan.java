@@ -33,6 +33,9 @@ public class WorkPlan extends DomainEntity  {
 	@NotNull
 	private Boolean isPublic;
 	
+	@NotNull
+	private Boolean isPublished;
+	
 	@Temporal(TemporalType.TIMESTAMP)
 	@NotNull
 	private Date startExecutionPeriod;
