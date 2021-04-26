@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.tasks.Task;
-import acme.features.spamWord.SpamWordFilterService;
+import acme.features.configuration.ConfigurationService;
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
@@ -22,7 +22,7 @@ public class ManagerTaskCreateService implements AbstractCreateService<Manager, 
 	protected ManagerTaskRepository repository;
 	
 	@Autowired
-	protected SpamWordFilterService spamService;
+	protected ConfigurationService confService;
 	
 	@Override
 	public boolean authorise(final Request<Task> request) {
@@ -84,17 +84,18 @@ public class ManagerTaskCreateService implements AbstractCreateService<Manager, 
 			final Double parteDecimal = workload - parteEntera;
 			errors.state(request, parteDecimal<0.6, "workload", "manager.task.form.error.workload");
 			
-			final Date startExecutionPeriod = entity.getStartExecutionPeriod();
-			final Date endExecutionPeriod = entity.getEndExecutionPeriod();
-			final long diferencia = endExecutionPeriod.getTime() - startExecutionPeriod.getTime();
-			final Integer minutosDiferencia = (int) (diferencia/(1000*60));
-			final Integer minutosWorkload = (int) (parteEntera*60 + parteDecimal*100);
-			errors.state(request, minutosDiferencia>=minutosWorkload, "workload", "manager.task.form.error.workload2");
-
+			if (!errors.hasErrors("startExecutionPeriod") && !errors.hasErrors("endExecutionPeriod")) {
+				final Date startExecutionPeriod = entity.getStartExecutionPeriod();
+				final Date endExecutionPeriod = entity.getEndExecutionPeriod();
+				final long diferencia = endExecutionPeriod.getTime() - startExecutionPeriod.getTime();
+				final Integer minutosDiferencia = (int) (diferencia/(1000*60));
+				final Integer minutosWorkload = (int) (parteEntera*60 + parteDecimal*100);
+				errors.state(request, minutosDiferencia>=minutosWorkload, "workload", "manager.task.form.error.workload2");
+			}
 		}
 		
 		if(!errors.hasErrors("description")) {
-			final boolean umbralSuperado = this.spamService.spamFilter(entity.getDescription(), 10);
+			final boolean umbralSuperado = this.confService.spamFilter(entity.getDescription(), 10);
 			errors.state(request, !umbralSuperado, "description", "manager.task.error.umbral-superado");
 		}
 		
