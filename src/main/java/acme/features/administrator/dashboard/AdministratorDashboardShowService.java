@@ -13,10 +13,13 @@
 package acme.features.administrator.dashboard;
 
 import java.util.Date;
+import java.util.List;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.entities.tasks.Task;
 import acme.forms.Dashboard;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
@@ -66,6 +69,7 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		Double deviationTaskExecutionPeriods;
 		Integer minimumTaskExecutionPeriods;
 		Integer	maximumTaskExecutionPeriods;
+		
 		Double averageTaskWorkloads;
 		Double deviationTaskWorkloads;
 		Double	minimumTaskWorkloads;
@@ -79,8 +83,33 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		deviationTaskExecutionPeriods = this.repository.deviationTaskExecutionPeriods();
 		minimumTaskExecutionPeriods = this.repository.minimumTaskExecutionPeriods();
 		maximumTaskExecutionPeriods = this.repository.maximumTaskExecutionPeriods();
-		averageTaskWorkloads = this.repository.averageTaskWorkloads();
-		deviationTaskWorkloads = this.repository.deviationTaskWorkloads();
+		
+		List<Task> tasks = this.repository.findAllTask().stream().collect(Collectors.toList());
+		Double sum = 0.;
+		for(Task a:tasks) {
+			sum += a.getMinutes();
+		}
+		Double averageMinWorkloads = sum/tasks.size()/60;
+		Integer parteEntera = averageMinWorkloads.intValue();
+		Integer parteFracional = (int) ((averageMinWorkloads - parteEntera)*100);
+		if(parteFracional>=60) {
+			parteEntera += 1;
+			parteFracional -= 60;
+		}
+		averageTaskWorkloads = parteEntera + parteFracional*0.01;
+		
+		Double sum1=0.;
+		for(Task a:tasks) {
+			sum1 += Math.pow(a.getMinutes() - averageMinWorkloads, 2);
+		}
+		Double desviation = Math.sqrt(sum1 / tasks.size());
+		Integer parteEntera1 = desviation.intValue();
+		Integer parteFracional1 = (int) ((desviation - parteEntera1)*100);
+		if(parteFracional1>=60) {
+			parteEntera1 += 1;
+			parteFracional1 -= 60;
+		}
+		deviationTaskWorkloads = parteEntera1 + parteFracional1*0.01;
 		minimumTaskWorkloads = this.repository.minimumTaskWorkloads();
 		maximumTaskWorkloads = this.repository.maximumTaskWorkloads();
 		
@@ -93,6 +122,7 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		result.setDeviationTaskExecutionPeriods(deviationTaskExecutionPeriods);
 		result.setMinimumTaskExecutionPeriods(minimumTaskExecutionPeriods);
 		result.setMaximumTaskExecutionPeriods(maximumTaskExecutionPeriods);
+		
 		result.setAverageTaskWorkloads(averageTaskWorkloads);
 		result.setDeviationTaskWorkloads(deviationTaskWorkloads);
 		result.setMinimumTaskWorkloads(minimumTaskWorkloads);
@@ -100,5 +130,7 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		
 		return result;
 	}
+	
+
 
 }
