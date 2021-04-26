@@ -229,7 +229,7 @@
 		<property name="title" value="Tarea con título más largo de lo normal" />
 		<property name="startExecutionPeriod" value="2015/07/01 08:00"/>
 		<property name="endExecutionPeriod" value="2016/08/01 19:00"/>
-		<property name="workload" value="100.25"/>
+		<property name="workload" value="10.25"/>
 		<property name="description" value="Esta es una descripción muy larga así que esto se usa para rellenar
 		todo lo posible y no se me ocurre nada más que poner, espero que sea suficiente. "/>
 		<property name="link" value="https://www.us.es/"/>
