@@ -22,7 +22,6 @@ public class Configuration extends DomainEntity {
 	private String spamWords;
 	
 //	@NotNull
-//	@Max(100)
-//	@Min(0)
+//	@Range(min=0, max=100)
 //	private Double umbral;
 }

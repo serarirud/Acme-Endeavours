@@ -1,5 +1,6 @@
 package acme.features.configuration;
 
+import java.util.Arrays;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +14,7 @@ public class ConfigurationService {
 	
 	public boolean spamFilter(final String text, final Integer umbral) {
 		Double contador=0.;
-		final List<String> spamWords = List.of(this.confRepo.getConfiguration().getSpamWords().split(","));
+		final List<String> spamWords = Arrays.asList(this.confRepo.getConfiguration().getSpamWords().split(","));
 		final Double numWordsText = text.toLowerCase().split(" ").length*1.;
 		
 		final String textMod =" " +text.toLowerCase().replace(",", " ").replace(".", " ").replace(";", " ")
