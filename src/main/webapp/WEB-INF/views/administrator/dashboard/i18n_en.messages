@@ -26,3 +26,4 @@ administrator.dashboard.form.label.task-public = Public
 administrator.dashboard.form.label.task-privates = Private 
 administrator.dashboard.form.label.task-finished =  Finished 
 administrator.dashboard.form.label.task-unfinished = Unfinished 
+administrator.dashboard.form.result.hours = {Hours,Minutes}

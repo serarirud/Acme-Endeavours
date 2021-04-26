@@ -63,6 +63,14 @@ public class Task extends DomainEntity {
 	@ManyToOne(optional = false)
 	protected Manager manager;
 	
+	// Others ------------------------
+	
+	public Integer getMinutes() {
+		String str = String.valueOf(this.workload);
+		Integer parteEntera = Integer.parseInt(str.substring(0, str.indexOf('.')));
+		Integer parteDecimal = Integer.parseInt(str.substring(str.indexOf('.') + 1));
+		return parteEntera*60 + parteDecimal;
+	}
 	
 
 }

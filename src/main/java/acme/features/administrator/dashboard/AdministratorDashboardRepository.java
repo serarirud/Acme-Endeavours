@@ -12,11 +12,13 @@
 
 package acme.features.administrator.dashboard;
 
+import java.util.Collection;
 import java.util.Date;
 
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
+import acme.entities.tasks.Task;
 import acme.framework.repositories.AbstractRepository;
 
 @Repository
@@ -47,15 +49,14 @@ public interface AdministratorDashboardRepository extends AbstractRepository {
 	@Query("select max(DATEDIFF(t.endExecutionPeriod, t.startExecutionPeriod))  from Task t")
 	Integer maximumTaskExecutionPeriods();
 
-	@Query("select avg(t.workload)  from Task t")
-	Double averageTaskWorkloads();
-
-	@Query("select stddev(t.workload)  from Task t")
-	Double deviationTaskWorkloads();
-
+	@Query("select t from Task t")
+	Collection<Task> findAllTask();
+	
 	@Query("select min(t.workload)  from Task t")
 	Double minimumTaskWorkloads();
 
 	@Query("select max(t.workload)  from Task t")
 	Double maximumTaskWorkloads();
+
+	
 }

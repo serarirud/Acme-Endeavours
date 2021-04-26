@@ -172,7 +172,7 @@
 		</th>
 		<td>
 			<acme:print value="${averageTaskWorkloads}"/> 
-			<acme:message code="administrator.dashboard.form.result.days"/>
+			<acme:message code="administrator.dashboard.form.result.hours"/>
 		</td>
 	</tr>
 	<tr>
@@ -181,7 +181,7 @@
 		</th>
 		<td>
 			<acme:print value="${deviationTaskWorkloads}"/> 
-			<acme:message code="administrator.dashboard.form.result.days"/>
+			<acme:message code="administrator.dashboard.form.result.hours"/>
 		</td>
 	</tr>
 	<tr>
@@ -190,7 +190,7 @@
 		</th>
 		<td>
 			<acme:print value="${minimumTaskWorkloads}"/> 
-			<acme:message code="administrator.dashboard.form.result.days"/>
+			<acme:message code="administrator.dashboard.form.result.hours"/>
 		</td>
 	</tr>
 	<tr>
@@ -199,7 +199,7 @@
 		</th>
 		<td>
 			<acme:print value="${maximumTaskWorkloads}"/> 
-			<acme:message code="administrator.dashboard.form.result.days"/>
+			<acme:message code="administrator.dashboard.form.result.hours"/>			
 		</td>
 	</tr>
 	
