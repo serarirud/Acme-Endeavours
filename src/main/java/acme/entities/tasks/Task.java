@@ -42,6 +42,7 @@ public class Task extends DomainEntity {
 	protected Date endExecutionPeriod;
 	
 	@NotNull
+	//@Digits(integer=2,fraction=2)
 	protected Double workload;
 	
 	@NotBlank
@@ -51,6 +52,7 @@ public class Task extends DomainEntity {
 	@URL
 	protected String link;
 	
+	@NotNull
 	protected Boolean isPublic;
 	
 	// Relationships -----------------------------------
