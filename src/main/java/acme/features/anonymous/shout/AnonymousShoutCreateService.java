@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.shouts.Shout;
-import acme.features.spamWord.SpamWordFilterService;
+import acme.features.configuration.ConfigurationService;
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
@@ -20,9 +20,9 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 	
 	@Autowired
 	protected AnonymousShoutRepository shoutRepository;
-	
+
 	@Autowired
-	protected SpamWordFilterService spamService;
+	protected ConfigurationService confService;
 		
 	// AbstractCreateService<Administrator, Shout> interface ------------------------
 		
@@ -75,7 +75,7 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 		assert entity != null;
 		assert errors != null;
 		
-		final boolean umbralSuperado = this.spamService.spamFilter(entity.getText(), 10);
+		final boolean umbralSuperado = this.confService.spamFilter(entity.getText(), 10);
 		
 		errors.state(request, !umbralSuperado, "text", "anonymous.shout.error.umbral-superado");
 	}

@@ -7,6 +7,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.Valid;
+import javax.validation.constraints.Digits;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
@@ -42,7 +43,7 @@ public class Task extends DomainEntity {
 	protected Date endExecutionPeriod;
 	
 	@NotNull
-	//@Digits(integer=2,fraction=2)
+	@Digits(integer=Integer.MAX_VALUE,fraction=2)
 	protected Double workload;
 	
 	@NotBlank

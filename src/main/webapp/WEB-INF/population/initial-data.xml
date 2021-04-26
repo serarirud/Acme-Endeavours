@@ -73,48 +73,8 @@
 		<property name="userAccount" ref="administratorUserAccount" />
 	</bean>
 	
-	<bean id="spamWord1" class="acme.entities.spamWord.SpamWord">
-		<property name="word" value="sex"/>
+	<bean id="configuration" class="acme.entities.configuration.Configuration">
+		<property name="spamWords" value="sex,hard core,viagra,cialis,nigeria,you've won,million dollar,millón de dolares,has ganado,sexo"/>
 
-	</bean>
-	<bean id="spamWord2" class="acme.entities.spamWord.SpamWord">
-
-		<property name="word" value="hard core"/>
-
-	</bean>
-	<bean id="spamWord3" class="acme.entities.spamWord.SpamWord">
-
-		<property name="word" value="viagra"/>
-
-	</bean>
-	<bean id="spamWord4" class="acme.entities.spamWord.SpamWord">
-
-		<property name="word" value="cialis"/>
-
-	</bean>
-	<bean id="spamWord5" class="acme.entities.spamWord.SpamWord">
-
-		<property name="word" value="nigeria"/>
-
-	</bean>
-	<bean id="spamWord6" class="acme.entities.spamWord.SpamWord">
-
-		<property name="word" value="you've won"/>
-
-	</bean>
-	<bean id="spamWord7" class="acme.entities.spamWord.SpamWord">
-		<property name="word" value="million dollar"/>
-	</bean>
-	
-	<bean id="spamWord8" class="acme.entities.spamWord.SpamWord">
-		<property name="word" value="millón de dolares"/>
-	</bean>
-	
-	<bean id="spamWord9" class="acme.entities.spamWord.SpamWord">
-		<property name="word" value="has ganado"/>
-	</bean>
-	
-	<bean id="spamWord10" class="acme.entities.spamWord.SpamWord">
-		<property name="word" value="sexo"/>
 	</bean>
 </beans>
