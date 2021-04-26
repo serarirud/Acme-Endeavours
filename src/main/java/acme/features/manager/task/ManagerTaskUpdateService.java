@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.tasks.Task;
-import acme.features.spamWord.SpamWordFilterService;
+import acme.features.configuration.ConfigurationService;
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
@@ -20,9 +20,9 @@ public class ManagerTaskUpdateService implements AbstractUpdateService<Manager, 
 	
 	@Autowired
 	protected ManagerTaskRepository repository;
-	
+
 	@Autowired
-	protected SpamWordFilterService spamService;
+	protected ConfigurationService confService;
 	
 	@Override
 	public boolean authorise(final Request<Task> request) {
@@ -93,7 +93,7 @@ public class ManagerTaskUpdateService implements AbstractUpdateService<Manager, 
 		}
 		
 		if(!errors.hasErrors("description")) {
-			final boolean umbralSuperado = this.spamService.spamFilter(entity.getDescription(), 10);
+			final boolean umbralSuperado = this.confService.spamFilter(entity.getDescription(), 10);
 			errors.state(request, !umbralSuperado, "description", "manager.task.error.umbral-superado");
 		}
 	}
