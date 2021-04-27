@@ -84,14 +84,14 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		minimumTaskExecutionPeriods = this.repository.minimumTaskExecutionPeriods();
 		maximumTaskExecutionPeriods = this.repository.maximumTaskExecutionPeriods();
 		
-		List<Task> tasks = this.repository.findAllTask().stream().collect(Collectors.toList());
+		final List<Task> tasks = this.repository.findAllTask().stream().collect(Collectors.toList());
 		Double sum = 0.;
-		for(Task a:tasks) {
+		for(final Task a:tasks) {
 			sum += a.getMinutes();
 		}
-		Double averageMinWorkloads = sum/tasks.size()/60;
-		Integer parteEntera = averageMinWorkloads.intValue();
-		Integer parteFracional = (int) ((averageMinWorkloads - parteEntera)*100);
+		final Double averageHoursWorkloads = sum/tasks.size()/60; 
+		Integer parteEntera = averageHoursWorkloads.intValue(); 
+		Integer parteFracional = (int) ((averageHoursWorkloads - parteEntera)*100);
 		if(parteFracional>=60) {
 			parteEntera += 1;
 			parteFracional -= 60;
@@ -99,10 +99,10 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		averageTaskWorkloads = parteEntera + parteFracional*0.01;
 		
 		Double sum1=0.;
-		for(Task a:tasks) {
-			sum1 += Math.pow(a.getMinutes() - averageMinWorkloads, 2);
+		for(final Task a:tasks) {
+			sum1 += Math.pow(a.getMinutes() - averageHoursWorkloads*60, 2); 
 		}
-		Double desviation = Math.sqrt(sum1 / tasks.size());
+		final Double desviation = Math.sqrt(sum1 / tasks.size());
 		Integer parteEntera1 = desviation.intValue();
 		Integer parteFracional1 = (int) ((desviation - parteEntera1)*100);
 		if(parteFracional1>=60) {
