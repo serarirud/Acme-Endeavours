@@ -12,7 +12,7 @@ public class ConfigurationService {
 	@Autowired
 	private ConfigurationRepository confRepo;
 	
-	public boolean spamFilter(final String text, final Integer umbral) {
+	public boolean spamFilter(final String text, final Double umbral) {
 		Double contador=0.;
 		final List<String> spamWords = Arrays.asList(this.confRepo.getConfiguration().getSpamWords().split(","));
 		final Double numWordsText = text.toLowerCase().split(" ").length*1.;
@@ -35,6 +35,11 @@ public class ConfigurationService {
 		final Double porcentajeSpam = contador*100/numWordsText;
 		
 		return porcentajeSpam>=umbral;
+	}
+	
+	
+	public Double getThreshold() {
+		return this.confRepo.getConfiguration().getThreshold();
 	}
 	
 

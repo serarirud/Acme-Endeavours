@@ -95,7 +95,7 @@ public class ManagerTaskCreateService implements AbstractCreateService<Manager, 
 		}
 		
 		if(!errors.hasErrors("description")) {
-			final boolean umbralSuperado = this.confService.spamFilter(entity.getDescription(), 10);
+			final boolean umbralSuperado = this.confService.spamFilter(entity.getDescription(), this.confService.getThreshold());
 			errors.state(request, !umbralSuperado, "description", "manager.task.error.umbral-superado");
 		}
 		
