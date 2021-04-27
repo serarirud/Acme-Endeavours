@@ -19,9 +19,7 @@
 	<acme:form-textbox code="administrator.configuration.form.label.spamwords" path="spamWords" readonly="${command == 'show'}"/>
 	<acme:form-textbox code="administrator.configuration.form.button.threshold" path="threshold" readonly="${command == 'show'}"/>
 	
-	<jstl:if test="${command == 'show'}">
-		<a class="btn btn-primary" href="javascript: redirect('/administrator/configuration/update')"><acme:message code="administrator.configuration.form.button.update"/></a>
-	</jstl:if>
+	<acme:form-submit test="${command == 'show'}" code="administrator.configuration.form.button.edit" action="/administrator/configuration/update" method="get"/>
   	<acme:form-submit test="${command == 'update'}" code="administrator.configuration.form.button.update" action="/administrator/configuration/update"/>
 	<acme:form-return code="administrator.configuration.form.button.return"/>
 </acme:form>
