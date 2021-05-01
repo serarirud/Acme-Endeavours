@@ -4,8 +4,8 @@
 
 <tiles-definitions>
 
-	<definition name="/anonymous/workPlan/list" extends="master">
-		<put-attribute name="body" type="template" value="../anonymous/workPlan/list.jsp" />
+	<definition name="anonymous/work-plan/list" extends="master">
+		<put-attribute name="body" type="template" value="../anonymous/work-plan/list.jsp" />
 	</definition>
 
 </tiles-definitions>
