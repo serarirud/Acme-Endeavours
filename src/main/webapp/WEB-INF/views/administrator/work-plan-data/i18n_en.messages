@@ -1,0 +1,23 @@
+# i18n_en.messages
+#
+# Copyright (c) 2012-2021 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+administrator.configuration.form.label.total = Total
+administrator.configuration.form.label.finalizados = Finalized
+administrator.configuration.form.label.noFinalizados = Not finalized
+administrator.configuration.form.label.publicados = Published
+administrator.configuration.form.label.noPublicados = Not published
+administrator.configuration.form.label.maximoPeriodo = Maximum period
+administrator.configuration.form.label.minimoPeriodo = Minimum period
+administrator.configuration.form.label.maximoCarga = Maximum workload
+administrator.configuration.form.label.minimoCarga = Minimun workload
+administrator.configuration.form.label.mediaPeriodo = Period mean
+administrator.configuration.form.label.desviacionPeriodo = Period deviation
+administrator.configuration.form.label.mediaCarga = Workload mean
+administrator.configuration.form.label.desviacionCarga = WorkLoad deviation

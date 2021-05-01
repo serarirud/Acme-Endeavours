@@ -40,6 +40,7 @@
 			<acme:menu-suboption code="master.menu.administrator.shutdown" action="/master/shutdown"/>			
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.show.configuration" action="/administrator/configuration/show"/>
+			<acme:menu-suboption code="master.menu.administrator.show.work-plan-data" action="/administrator/work-plan-data/show"/>
 		</acme:menu-option>
 		
 		<acme:menu-option code="master.menu.manager" access="hasRole('Manager')">

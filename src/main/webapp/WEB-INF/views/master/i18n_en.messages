@@ -47,6 +47,7 @@ master.menu.administrator.populate-initial = Populate DB (initial)
 master.menu.administrator.populate-sample = Populate DB (samples)
 master.menu.administrator.shutdown = Shut down
 master.menu.administrator.show.configuration = Show configuration
+master.menu.administrator.show.work-plan-data = Work plan data
 
 # master.menu.provider ########################################################
 
