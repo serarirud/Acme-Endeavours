@@ -32,7 +32,7 @@ master.menu.anonymous.favourite-link = Enlace favorito
 master.menu.anonymous.task.list = Lista de tareas
 master.menu.anonymous.shout.list = Lista de gritos
 master.menu.anonymous.shout.form = Crear un grito
-master.menu.anonymous.workplan.list=Lista de planes de trabajo
+master.menu.anonymous.workPlan.list=Lista de planes de trabajo
 
 # master.menu.authenticated #######################################################
 
