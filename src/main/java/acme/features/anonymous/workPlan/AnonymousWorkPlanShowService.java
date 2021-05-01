@@ -1,8 +1,5 @@
 package acme.features.anonymous.workPlan;
 
-import java.util.Collection;
-import java.util.Date;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -10,13 +7,13 @@ import acme.entities.workPlan.WorkPlan;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
 import acme.framework.entities.Anonymous;
-import acme.framework.services.AbstractListService;
+import acme.framework.services.AbstractShowService;
 
 @Service
-public class AnonymousWorkPlanListService implements AbstractListService<Anonymous, WorkPlan>{
+public class AnonymousWorkPlanShowService implements AbstractShowService<Anonymous, WorkPlan>{
 
 	@Autowired
-	private AnonymousWorkPlanRepository repository;
+	private AnonymousWorkPlanRepository repo;
 	
 	@Override
 	public boolean authorise(final Request<WorkPlan> request) {
@@ -31,24 +28,19 @@ public class AnonymousWorkPlanListService implements AbstractListService<Anonymo
 		assert entity != null;
 		assert model != null;
 		
-		request.unbind(entity, model, "id", "startExecutionPeriod", 
-			"endExecutionPeriod", "workload");
-		
+		request.unbind(entity, model, "startExecutionPeriod", 
+			"endExecutionPeriod", "isPublic", "isPublished");
 	}
-		
-	
 
 	@Override
-	public Collection<WorkPlan> findMany(final Request<WorkPlan> request) {
+	public WorkPlan findOne(final Request<WorkPlan> request) {
 		assert request != null;
+
+		int id;
+		id = request.getModel().getInteger("id");
+		final WorkPlan w = this.repo.findOneById(id);
 		
-		Collection<WorkPlan> result;
-		
-		final Date today = new Date(System.currentTimeMillis());
-		
-		result = this.repository.findMany(today);
-		
-		return result;
+		return w;
 	}
 
 }
