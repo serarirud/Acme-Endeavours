@@ -12,9 +12,10 @@ public class ConfigurationService {
 	@Autowired
 	private ConfigurationRepository confRepo;
 	
-	public boolean spamFilter(final String text) {
+	public boolean spamFilter(String text) {
 		final Double umbral = this.confRepo.getConfiguration().getThreshold();
 		final List<String> spamWords = Arrays.asList(this.confRepo.getConfiguration().getSpamWords().split(","));
+		text = text.trim();
 		Integer numWordsText = text.toLowerCase().split(" ").length;
 		
 		final String textMod = text.toLowerCase().replace(",", " ").replace(".", " ").replace(";", " ")
