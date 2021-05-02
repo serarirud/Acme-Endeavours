@@ -1,12 +1,8 @@
 package acme.features.manager.workPlan;
 
-import java.util.Set;
-import java.util.stream.Collectors;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.entities.tasks.Task;
 import acme.entities.workPlan.WorkPlan;
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
@@ -55,8 +51,8 @@ public class ManagerWorkPlanUpdateService implements AbstractUpdateService<Manag
 		assert entity != null;
 		assert model != null;
 		
-		final Set<Task> tasks = this.repository.findTasks(request.getPrincipal().getActiveRoleId()).stream().collect(Collectors.toSet());
-		entity.setTasks(tasks);
+//		final Set<Task> tasks = this.repository.findTasks(request.getPrincipal().getActiveRoleId()).stream().collect(Collectors.toSet());
+//		entity.setTasks(tasks);
 		
 		request.unbind(entity, model, "tasks", "startExecutionPeriod", 
 			"endExecutionPeriod", "isPublic", "isPublished");

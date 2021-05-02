@@ -6,7 +6,7 @@
 <acme:form>
 	<acme:form-selectField code="tasks" path="tasks">
 		<jstl:forEach var="task" items="${tasks}">
-			<acme:form-option code="${task.title}" value="${task}" />
+			<acme:form-option code="${task.title}" value="${task.id}" />
 		</jstl:forEach>
 	</acme:form-selectField>
 

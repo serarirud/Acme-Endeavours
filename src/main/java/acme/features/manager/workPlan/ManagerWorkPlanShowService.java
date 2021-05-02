@@ -45,9 +45,8 @@ public class ManagerWorkPlanShowService implements AbstractShowService<Manager, 
 		assert model != null;
 		
 		final Set<Task> tasks = this.repository.findTasks(request.getPrincipal().getActiveRoleId()).stream().collect(Collectors.toSet());
-		entity.setTasks(tasks);
-		
-		request.unbind(entity, model, "tasks", "startExecutionPeriod", 
+		model.setAttribute("tasks", tasks);
+		request.unbind(entity, model, "startExecutionPeriod", 
 			"endExecutionPeriod", "isPublic", "isPublished");
 		
 	}
