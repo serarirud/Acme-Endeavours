@@ -6,6 +6,7 @@ import java.util.Date;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
+import acme.entities.tasks.Task;
 import acme.entities.workPlan.WorkPlan;
 import acme.framework.repositories.AbstractRepository;
 
@@ -18,4 +19,7 @@ public interface AnonymousWorkPlanRepository extends AbstractRepository{
 	//WorkPlans públicos y que no estén finalizados
 	@Query("SELECT w FROM WorkPlan w WHERE (w.isPublic = true AND w.endExecutionPeriod > :today) ")
 	Collection<WorkPlan> findMany(Date today);
+	
+	@Query("SELECT w.tasks FROM WorkPlan w WHERE w.id = ?1")
+	Collection<Task> findTasksByWorkPlan(int id);
 }

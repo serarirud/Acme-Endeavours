@@ -263,7 +263,7 @@
 	
 	<bean id="task12" class="acme.entities.tasks.Task">
 		<property name="title" value="Tarea muy rara" />
-		<property name="startExecutionPeriod" value="2021/04/10 12:00"/>
+		<property name="startExecutionPeriod" value="2022/04/10 12:00"/>
 		<property name="endExecutionPeriod" value="2023/10/01 12:00"/>
 		<property name="workload" value="80.15"/>
 		<property name="description" value="Esta tarea es muy peculiar "/>
@@ -286,7 +286,7 @@
 	
 	<bean id="task14" class="acme.entities.tasks.Task">
 		<property name="title" value="Tarea 14" />
-		<property name="startExecutionPeriod" value="2021/04/22 09:00"/>
+		<property name="startExecutionPeriod" value="2021/07/22 09:00"/>
 		<property name="endExecutionPeriod" value="2021/08/01 22:00"/>
 		<property name="workload" value="1.30"/>
 		<property name="description" value="Esta tarea aún no ha acabado. "/>
@@ -310,12 +310,11 @@
 		<property name="manager" ref="manager1Manager"/>
 		<property name="tasks">
 			<set>
-				<ref bean="task14" />
 				<ref bean="task13" />
-				<ref bean="task15" />
+				<ref bean="task12" />
 			</set>
 		</property>
-		<property name="startExecutionPeriod" value="2021/04/22 07:00"/>
+		<property name="startExecutionPeriod" value="2022/04/10 07:00"/>
 		<property name="endExecutionPeriod" value="2027/10/01 13:00"/>
 		<property name="isPublic" value="true"/>
 		<property name="isPublished" value="true"/>
@@ -329,7 +328,7 @@
 				<ref bean="task13" />
 			</set>
 		</property>
-		<property name="startExecutionPeriod" value="2021/04/22 07:00"/>
+		<property name="startExecutionPeriod" value="2021/07/22 07:00"/>
 		<property name="endExecutionPeriod" value="2027/10/01 13:00"/>
 		<property name="isPublic" value="true"/>
 		<property name="isPublished" value="true"/>

@@ -1,4 +1,11 @@
-anonymous.workPlan.list.label.tasks = Tasks
-anonymous.workPlan.list.label.start-execution-period = Start of the execution period
-anonymous.workPlan.list.label.end-execution-period = End of the execution period
+anonymous.work-plan.list.label.id = Id
+anonymous.work-plan.list.label.start-execution-period = Start of the execution period
+anonymous.work-plan.list.label.end-execution-period = End of the execution period
 anonymous.workPlan.list.label.workload = Workload 
+
+anonymous.work-plan.form.label.start-execution-period=Start of the execution period
+anonymous.work-plan.form.label.end-execution-period = End of the execution period
+anonymous.work-plan.form.label.workload = Workload
+anonymous.work-plan.form.label.is-public = Public
+anonymous.work-plan.form.label.is-published=Published
+manager.work-plan.form.button.return=Return
