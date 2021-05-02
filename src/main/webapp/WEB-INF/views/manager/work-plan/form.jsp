@@ -13,6 +13,7 @@
 	
 	<acme:form-moment code="manager.work-plan.form.label.start-execution-period" path="startExecutionPeriod" />
 	<acme:form-moment code="manager.work-plan.form.label.end-execution-period" path="endExecutionPeriod" />
+	<acme:form-submit code="manager.work-plan.form.button.perform" action="/manager/work-plan/perform"/>
 	<acme:form-checkbox code="manager.work-plan.form.label.is-public" path="isPublic" />
 	<acme:form-checkbox code="manager.work-plan.form.label.is-published" path="isPublished" />
 	

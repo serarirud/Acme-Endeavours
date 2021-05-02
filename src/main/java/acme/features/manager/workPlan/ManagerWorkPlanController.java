@@ -30,6 +30,9 @@ public class ManagerWorkPlanController extends AbstractController<Manager, WorkP
 	@Autowired
 	private ManagerWorkPlanDeleteService deleteService;
 	
+	@Autowired
+	private ManagerWorkPlanPerformService performService;
+	
 	@PostConstruct
 	private void initialise() {
 		super.addBasicCommand(BasicCommand.LIST, this.listService);
@@ -37,5 +40,6 @@ public class ManagerWorkPlanController extends AbstractController<Manager, WorkP
 		super.addBasicCommand(BasicCommand.CREATE, this.createService);
 		super.addBasicCommand(BasicCommand.UPDATE, this.updateService);
 		super.addBasicCommand(BasicCommand.DELETE, this.deleteService);
+		super.addBasicCommand(BasicCommand.PERFORM, this.performService);
 	}
 }

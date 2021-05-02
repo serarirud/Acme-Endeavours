@@ -8575,3 +8575,11 @@ INFO [acme.framework.utilities.DatabasePopulator] > Persisting administratorAuth
 INFO [acme.framework.utilities.DatabasePopulator] > Persisting configuration = acme.entities.configuration.Configuration{id=6, version=0}
 INFO [acme.framework.utilities.DatabasePopulator] Populating entities from classpath:/WEB-INF/population/sample-data.xml
 INFO [acme.framework.configuration.ShutdownConfiguration] The system is shutting down...
+INFO [acme.Launcher] Starting Launcher using Java 1.8.0_281 on PC-Alejandro with PID 920 (C:\Users\ALEJANDROPC\Desktop\Workspace-21.1\Projects\Acme-Planner\target\classes started by ALEJANDROPC in C:\Users\ALEJANDROPC\Desktop\Workspace-21.1\Projects\Acme-Planner)
+INFO [acme.Launcher] The following profiles are active: development,populator
+INFO [acme.Launcher] Starting Launcher using Java 1.8.0_281 on PC-Alejandro with PID 8424 (C:\Users\ALEJANDROPC\Desktop\Workspace-21.1\Projects\Acme-Planner\target\classes started by ALEJANDROPC in C:\Users\ALEJANDROPC\Desktop\Workspace-21.1\Projects\Acme-Planner)
+INFO [acme.Launcher] The following profiles are active: development,populator
+INFO [acme.Launcher] Starting Launcher using Java 1.8.0_281 on PC-Alejandro with PID 17108 (C:\Users\ALEJANDROPC\Desktop\Workspace-21.1\Projects\Acme-Planner\target\classes started by ALEJANDROPC in C:\Users\ALEJANDROPC\Desktop\Workspace-21.1\Projects\Acme-Planner)
+INFO [acme.Launcher] The following profiles are active: development,populator
+INFO [acme.Launcher] Starting Launcher using Java 1.8.0_281 on PC-Alejandro with PID 17484 (C:\Users\ALEJANDROPC\Desktop\Workspace-21.1\Projects\Acme-Planner\target\classes started by ALEJANDROPC in C:\Users\ALEJANDROPC\Desktop\Workspace-21.1\Projects\Acme-Planner)
+INFO [acme.Launcher] The following profiles are active: development,populator

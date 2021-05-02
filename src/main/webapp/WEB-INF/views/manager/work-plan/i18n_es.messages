@@ -15,3 +15,5 @@ manager.work-plan.form.button.return=Volver
 
 manager.work-plan.form.error.workload = Error de carga de trabajo, la parte decimal de la carga de trabajo debe ser menor a 60 ya que representa minutos {Horas,Minutos}
 manager.work-plan.form.error.workload2 = Error de carga de trabajo, es demasiado grande para el periodo de ejecución dado
+
+manager.work-plan.form.button.perform = Sugerir fechas

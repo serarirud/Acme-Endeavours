@@ -15,3 +15,5 @@ manager.work-plan.form.button.return=Return
 
 manager.work-plan.form.error.workload = Workload error, the decimal part of workload must be shooter that 60 because represent minutes {Hours,Minutes}
 manager.work-plan.form.error.workload2 = Workload error, it is too big for the execution period
+
+manager.work-plan.form.button.perform= Suggest Dates
