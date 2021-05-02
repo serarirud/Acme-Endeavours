@@ -54,18 +54,26 @@ public class WorkPlan extends DomainEntity  {
 	
 	@Transient
 	public Double getWorkload() {
-		Integer a = 0;
-		for(final Task task: this.tasks) {
-			a += task.getMinutes();
-		}
-		Double b = a/60.0;
-		Integer parteEntera = b.intValue();
-		Integer parteFracional = (int) ((b - parteEntera)*100);
-		if(parteFracional>=60) {
-			parteEntera += 1;
-			parteFracional -= 60;
-		}
-		return parteEntera+parteFracional*0.01;
+		Double res = 0.;
+        Integer parteEntera;
+        Integer parteFraccional;
+
+        for(final Task task: this.tasks) {
+            final Double workload = task.getWorkload();
+            parteEntera = workload.intValue(); 
+            parteFraccional = (int) ((workload - parteEntera)*100);
+            res += (parteEntera*60 + parteFraccional);
+        }
+
+        Integer horas=0;
+        Double minutos;
+        while(res>60) {
+            res-=60;
+            horas+=1;
+        }
+        minutos = res/100;
+        res=horas+minutos;
+        return res;
 	}
 	
 	public Boolean isValid() {
