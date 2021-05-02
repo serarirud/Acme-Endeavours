@@ -4,8 +4,7 @@
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
 <acme:list>
-	<acme:list-column code="manager.work-plan.list.label.tasks" path="tasks" width="30%" />
-	<acme:list-column code="manager.work-plan.list.label.start-execution-period" path="startExecutionPeriod" width="30%" />
-	<acme:list-column code="manager.work-plan.list.label.end-execution-period" path="endExecutionPeriod" width="30%" />
-	<acme:list-column code="manager.work-plan.list.label.workload" path="workload" width="10%" />
+	<acme:list-column code="manager.work-plan.list.label.start-execution-period" path="startExecutionPeriod" width="40%" />
+	<acme:list-column code="manager.work-plan.list.label.end-execution-period" path="endExecutionPeriod" width="40%" />
+	<acme:list-column code="manager.work-plan.list.label.workload" path="workload" width="20%" />
 </acme:list>

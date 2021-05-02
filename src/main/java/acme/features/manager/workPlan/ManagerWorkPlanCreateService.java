@@ -41,17 +41,20 @@ public class ManagerWorkPlanCreateService implements AbstractCreateService<Manag
 		assert entity != null;
 		assert model != null;
 		
-		request.unbind(entity, model, "tasks", "isPublic", "isPublished",
-			"startExecutionPeriod", "endExecutionPeriod", "workload");
+		request.unbind(entity, model, "isPublic", "isPublished",
+			"startExecutionPeriod", "endExecutionPeriod");
 	}
 
 	@Override
 	public WorkPlan instantiate(final Request<WorkPlan> request) {
 		assert request != null;
 
-		WorkPlan result;
+		final WorkPlan result;
+		Manager manager;
 		
-		result = new WorkPlan();
+		manager= this.repository.findOneManagerById(request.getPrincipal().getActiveRoleId());
+		result= new WorkPlan();
+		result.setManager(manager);
 
 		return result;
 	}
@@ -69,22 +72,7 @@ public class ManagerWorkPlanCreateService implements AbstractCreateService<Manag
 			final Date today = Calendar.getInstance().getTime();
 			errors.state(request, entity.getStartExecutionPeriod().after(today), "startExecutionPeriod", "manager.work-plan.form.error.start");
 		}
-		if(!errors.hasErrors("workload")) {
-			final Double workload = entity.getWorkload();			
-			final Integer parteEntera = workload.intValue();
-			final Double parteDecimal = workload - parteEntera;
-			errors.state(request, parteDecimal<0.6, "workload", "manager.work-plan.form.error.workload");
-			
-			if (!errors.hasErrors("startExecutionPeriod") && !errors.hasErrors("endExecutionPeriod")) {
-				final Date startExecutionPeriod = entity.getStartExecutionPeriod();
-				final Date endExecutionPeriod = entity.getEndExecutionPeriod();
-				final long diferencia = endExecutionPeriod.getTime() - startExecutionPeriod.getTime();
-				final Integer minutosDiferencia = (int) (diferencia/(1000*60));
-				final Integer minutosWorkload = (int) (parteEntera*60 + parteDecimal*100);
-				errors.state(request, minutosDiferencia>=minutosWorkload, "workload", "manager.work-plan.form.error.workload2");
-			}
-		}
-		
+
 	}
 
 	@Override

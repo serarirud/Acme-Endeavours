@@ -5,14 +5,15 @@ import java.util.Set;
 
 import javax.persistence.Entity;
 import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.persistence.Transient;
 import javax.validation.constraints.NotNull;
-
-import org.springframework.data.annotation.Transient;
 
 import acme.entities.tasks.Task;
 import acme.framework.entities.DomainEntity;
+import acme.framework.entities.Manager;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -26,6 +27,9 @@ public class WorkPlan extends DomainEntity  {
 	protected static final long serialVersionUID = 1L;
 	
 	//Attributes
+	
+	@ManyToOne
+	private Manager manager;
 	
 	@ManyToMany
 	private Set<Task> tasks;
@@ -44,15 +48,32 @@ public class WorkPlan extends DomainEntity  {
 	@NotNull
 	private Date endExecutionPeriod;
 	
+	
+//	@NotNull
+//	@Digits(integer=Integer.MAX_VALUE,fraction=2)
 	@Transient
 	public Double getWorkload() {
 		Double res = 0.;
+		Integer parteEntera;
+		Integer parteFraccional;
 		
 		for(final Task task: this.tasks) {
-			res += task.getWorkload();
+			final Double workload = task.getWorkload();
+			parteEntera = workload.intValue(); 
+			parteFraccional = (int) ((workload - parteEntera)*100);
+			res += (parteEntera*60 + parteFraccional);
 		}
 		
+		Integer horas=0;
+		Double minutos;
+		while(res>60) {
+			res-=60;
+			horas+=1;
+		}
+		minutos = res/100;
+		res=horas+minutos;
 		return res;
+			
 	}
 	
 	public Boolean isValid() {

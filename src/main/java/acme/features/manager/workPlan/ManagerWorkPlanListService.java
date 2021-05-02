@@ -9,6 +9,7 @@ import acme.entities.workPlan.WorkPlan;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
 import acme.framework.entities.Manager;
+import acme.framework.entities.Principal;
 import acme.framework.services.AbstractListService;
 
 @Service
@@ -30,7 +31,7 @@ public class ManagerWorkPlanListService implements AbstractListService<Manager, 
 		assert entity != null;
 		assert model != null;
 		
-		request.unbind(entity, model, "startExecutionPeriod", "endExecutionPeriod");
+		request.unbind(entity, model, "startExecutionPeriod", "endExecutionPeriod", "workload");
 	}
 
 	@Override
@@ -38,7 +39,10 @@ public class ManagerWorkPlanListService implements AbstractListService<Manager, 
 		assert request != null;
 		
 		Collection<WorkPlan> result;
-		result = this.repository.findMany();
+		Principal principal;
+		
+		principal = request.getPrincipal();
+		result = this.repository.findMany(principal.getActiveRoleId());
 		
 		return result;
 	}

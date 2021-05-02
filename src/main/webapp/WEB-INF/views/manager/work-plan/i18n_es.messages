@@ -1,0 +1,17 @@
+manager.work-plan.list.label.start-execution-period=Inicio del periodo de ejecución
+manager.work-plan.list.label.end-execution-period=Fin del periodo de ejecución
+manager.work-plan.list.label.workload=Carga de trabajo
+
+manager.work-plan.form.label.start-execution-period=Inicio del periodo de ejecución
+manager.work-plan.form.label.end-execution-period=Fin del periodo de ejecución
+manager.work-plan.form.label.workload=Carga de trabajo
+manager.work-plan.form.label.is-public=Pública
+manager.work-plan.form.label.is-published=Publicada
+
+manager.work-plan.form.button.update=Actualizar
+manager.work-plan.form.button.delete=Borrar
+manager.work-plan.form.button.create=Crear
+manager.work-plan.form.button.return=Volver
+
+manager.work-plan.form.error.workload = Error de carga de trabajo, la parte decimal de la carga de trabajo debe ser menor a 60 ya que representa minutos {Horas,Minutos}
+manager.work-plan.form.error.workload2 = Error de carga de trabajo, es demasiado grande para el periodo de ejecución dado

@@ -1,0 +1,17 @@
+manager.work-plan.list.label.start-execution-period = Start execution period
+manager.work-plan.list.label.end-execution-period = End execution period
+manager.work-plan.list.label.workload = Workload
+
+manager.work-plan.form.label.start-execution-period=Start execution period
+manager.work-plan.form.label.end-execution-period=End execution period
+manager.work-plan.form.label.workload=Workload
+manager.work-plan.form.label.is-public=Public
+manager.work-plan.form.label.is-published=Published
+
+manager.work-plan.form.button.update=Update
+manager.work-plan.form.button.delete=Delete
+manager.work-plan.form.button.create=Create
+manager.work-plan.form.button.return=Return
+
+manager.work-plan.form.error.workload = Workload error, the decimal part of workload must be shooter that 60 because represent minutes {Hours,Minutes}
+manager.work-plan.form.error.workload2 = Workload error, it is too big for the execution period
