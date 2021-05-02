@@ -8,6 +8,7 @@ import java.util.stream.Collectors;
 
 import javax.persistence.Entity;
 import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.NotNull;
@@ -16,6 +17,7 @@ import org.springframework.data.annotation.Transient;
 
 import acme.entities.tasks.Task;
 import acme.framework.entities.DomainEntity;
+import acme.framework.entities.Manager;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -29,6 +31,9 @@ public class WorkPlan extends DomainEntity  {
 	protected static final long serialVersionUID = 1L;
 	
 	//Attributes
+	
+	@ManyToOne
+	private Manager manager;
 	
 	@ManyToMany
 	private Set<Task> tasks;

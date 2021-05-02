@@ -23,6 +23,7 @@
 			<acme:menu-suboption code="master.menu.anonymous.task.list" action="/anonymous/task/list"/>
 			<acme:menu-suboption code="master.menu.anonymous.shout.list" action="/anonymous/shout/list"/>
 			<acme:menu-suboption code="master.menu.anonymous.shout.form" action="/anonymous/shout/create"/>
+			<acme:menu-suboption code="master.menu.anonymous.workPlan.list" action="/anonymous/work-plan/list"/>
 			
 		</acme:menu-option>
 		
@@ -37,7 +38,9 @@
 			<acme:menu-suboption code="master.menu.administrator.populate-initial" action="/master/populate-initial"/>
 			<acme:menu-suboption code="master.menu.administrator.populate-sample" action="/master/populate-sample"/>			
 			<acme:menu-separator/>
-			<acme:menu-suboption code="master.menu.administrator.shutdown" action="/master/shutdown"/>
+			<acme:menu-suboption code="master.menu.administrator.shutdown" action="/master/shutdown"/>			
+			<acme:menu-separator/>
+			<acme:menu-suboption code="master.menu.administrator.show.configuration" action="/administrator/configuration/show"/>
 		</acme:menu-option>
 		
 		<acme:menu-option code="master.menu.manager" access="hasRole('Manager')">

@@ -75,6 +75,6 @@
 	
 	<bean id="configuration" class="acme.entities.configuration.Configuration">
 		<property name="spamWords" value="sex,hard core,viagra,cialis,nigeria,you've won,million dollar,millón de dolares,has ganado,sexo"/>
-
+		<property name="threshold" value="10"/>
 	</bean>
 </beans>

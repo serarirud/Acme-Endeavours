@@ -32,6 +32,7 @@ master.menu.anonymous.favourite-link = Favourite link
 master.menu.anonymous.task.list = Task list
 master.menu.anonymous.shout.list = Shout list
 master.menu.anonymous.shout.form = Create a shout
+master.menu.anonymous.workPlan.list= WorkPlan list
 
 # master.menu.authenticated #######################################################
 
@@ -46,6 +47,7 @@ master.menu.administrator.user-accounts = User accounts
 master.menu.administrator.populate-initial = Populate DB (initial)
 master.menu.administrator.populate-sample = Populate DB (samples)
 master.menu.administrator.shutdown = Shut down
+master.menu.administrator.show.configuration = Show configuration
 
 # master.menu.provider ########################################################
 
