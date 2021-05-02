@@ -54,11 +54,6 @@ public class WorkPlan extends DomainEntity  {
 		return res;
 	}
 	
-	@Transient
-	public Long getPeriod() {
-		return this.endExecutionPeriod.getTime() - this.startExecutionPeriod.getTime();
-	}
-	
 	public Boolean isValid() {
 		Boolean res = true;
 		
