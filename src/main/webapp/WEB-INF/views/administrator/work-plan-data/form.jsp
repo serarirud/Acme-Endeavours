@@ -155,8 +155,7 @@
 			<acme:message code="administrator.configuration.form.label.maximoPeriodo"/>
 		</th>
 		<td>
-			<acme:print value="${maximoPeriodo}"/> 
-			<acme:message code="administrator.work-plan-data.form.result.days"/>
+			<acme:print value="${maximoPeriodo}"/>
 		</td>
 	</tr>
 	<tr>
@@ -164,8 +163,7 @@
 			<acme:message code="administrator.configuration.form.label.minimoPeriodo"/>
 		</th>
 		<td>
-			<acme:print value="${minimoPeriodo}"/> 
-			<acme:message code="administrator.work-plan-data.form.result.days"/>
+			<acme:print value="${minimoPeriodo}"/>
 		</td>
 	</tr>
 	
