@@ -96,7 +96,7 @@ public class ManagerTaskUpdateService implements AbstractUpdateService<Manager, 
 		}
 		
 		if(!errors.hasErrors("description")) {
-			final boolean umbralSuperado = this.confService.spamFilter(entity.getDescription(), this.confService.getThreshold());
+			final boolean umbralSuperado = this.confService.spamFilter(entity.getDescription());
 			errors.state(request, !umbralSuperado, "description", "manager.task.error.umbral-superado");
 		}
 	}
