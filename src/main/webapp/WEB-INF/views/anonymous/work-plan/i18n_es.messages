@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 anonymous.work-plan.list.label.id = Identificador
 anonymous.work-plan.list.label.start-execution-period = Inicio del periodo de ejecución
 anonymous.work-plan.list.label.end-execution-period = Fin del periodo de ejecución
@@ -9,3 +10,17 @@ anonymous.work-plan.form.label.workload = Carga de trabajo
 anonymous.work-plan.form.label.is-public = Público
 anonymous.work-plan.form.label.is-published=Publicado
 manager.work-plan.form.button.return=Volver
+=======
+anonymous.workPlan.list.label.tasks = Tareas
+anonymous.workPlan.list.label.start-execution-period = Inicio del periodo de ejecución
+anonymous.workPlan.list.label.end-execution-period = Fin del periodo de ejecución
+anonymous.workPlan.list.label.workload = Carga de trabajo
+
+anonymous.workPlan.form.label.id = Identificador
+anonymous.workPlan.form.label.start-execution-period = Inicio del periodo de ejecución
+anonymous.workPlan.form.label.end-execution-period = Fin del periodo de ejecución
+anonymous.workPlan.form.label.workload = Carga de trabajo
+anonymous.workPlan.form.label.is-public = Pública
+anonymous.workPlan.form.label.is-published = Publicada
+anonymous.workPlan.form.button.return = Volver
+>>>>>>> branch 'tarea-008' of https://github.com/Francisco-Borrego/Acme-Planner.git

@@ -3,6 +3,7 @@
 <%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
+
 <acme:form>
 	<acme:form-selectField code="tasks" path="tasks">
 		<jstl:forEach var="task" items="${tasks}">
@@ -17,4 +18,5 @@
 	<acme:form-checkbox code="anonymous.work-plan.form.label.is-public" path="isPublic" />
 	<acme:form-checkbox code="anonymous.work-plan.form.label.is-published" path="isPublished" />
 	<acme:form-return code="manager.work-plan.form.button.return" />
+
 </acme:form>

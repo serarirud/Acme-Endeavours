@@ -31,9 +31,10 @@ public class AnonymousWorkPlanListService implements AbstractListService<Anonymo
 		assert request != null;
 		assert entity != null;
 		assert model != null;
-		
+
 		entity.setTasks(this.repository.findTasksByWorkPlan(entity.getId()).stream().collect(Collectors.toSet()));
 		System.out.println(entity.getTasks().size());
+		
 		request.unbind(entity, model, "id", "startExecutionPeriod", 
 			"endExecutionPeriod", "workload");
 		

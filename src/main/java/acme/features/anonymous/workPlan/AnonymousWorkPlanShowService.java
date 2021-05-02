@@ -1,5 +1,6 @@
 package acme.features.anonymous.workPlan;
 
+
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -45,8 +46,6 @@ public class AnonymousWorkPlanShowService implements AbstractShowService<Anonymo
 		WorkPlan w;
 		id = request.getModel().getInteger("id");
 		w = this.repository.findOneById(id);
-	
-		
 		return w;
 	}
 
