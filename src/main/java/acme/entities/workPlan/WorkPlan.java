@@ -47,12 +47,16 @@ public class WorkPlan extends DomainEntity  {
 	@Transient
 	public Double getWorkload() {
 		Double res = 0.;
-		
 		for(final Task task: this.tasks) {
 			res += task.getWorkload();
 		}
 		
 		return res;
+	}
+	
+	@Transient
+	public Long getPeriod() {
+		return this.endExecutionPeriod.getTime() - this.startExecutionPeriod.getTime();
 	}
 	
 	public Boolean isValid() {

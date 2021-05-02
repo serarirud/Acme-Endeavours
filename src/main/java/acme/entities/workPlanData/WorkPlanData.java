@@ -13,8 +13,9 @@ public class WorkPlanData {
 	
 	//Attributes
 	
-	private Integer total, finalizados, noFinalizados, publicados, noPublicados, maximoPeriodo, minimoPeriodo, maximoCarga, minimoCarga;
+	private Integer total, finalizados, noFinalizados, publicados, noPublicados;
 	
-	private Double mediaPeriodo, desviacionPeriodo, mediaCarga, desviacionCarga;
+	private Double mediaPeriodo, desviacionPeriodo, mediaCarga, desviacionCarga, maximoCarga, minimoCarga;
 	
+	private String maximoPeriodo, minimoPeriodo;
 }

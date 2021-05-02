@@ -305,5 +305,31 @@
 		<property name="isPublic" value="true"/>
 		<property name="manager" ref="manager1Manager"/>
 	</bean>
+	
+	<bean id="workPlan01" class="acme.entities.workPlan.WorkPlan">
+        <property name="tasks">
+            <set>
+                <ref bean="task14" />
+                <ref bean="task13" />
+            </set>
+        </property>
+        <property name="startExecutionPeriod" value="2021/04/22 07:00"/>
+        <property name="endExecutionPeriod" value="2027/10/01 13:00"/>
+        <property name="isPublic" value="true"/>
+        <property name="isPublished" value="true"/>
+    </bean>
+    
+    <bean id="workPlan02" class="acme.entities.workPlan.WorkPlan">
+        <property name="tasks">
+            <set>
+                <ref bean="task07" />
+                <ref bean="task08" />
+            </set>
+        </property>
+        <property name="startExecutionPeriod" value="2005/08/01 15:00"/>
+        <property name="endExecutionPeriod" value="2016/08/12 18:55"/>
+        <property name="isPublic" value="true"/>
+        <property name="isPublished" value="true"/>
+    </bean>
 
 </beans>

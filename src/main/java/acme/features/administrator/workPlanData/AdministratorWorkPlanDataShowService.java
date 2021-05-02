@@ -12,9 +12,16 @@
 
 package acme.features.administrator.workPlanData;
 
+import java.sql.Date;
+import java.time.LocalDate;
+import java.util.List;
+import java.util.Set;
+import java.util.stream.Collectors;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.entities.workPlan.WorkPlan;
 import acme.entities.workPlanData.WorkPlanData;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
@@ -55,22 +62,77 @@ public class AdministratorWorkPlanDataShowService implements AbstractShowService
 		assert request != null;
 
 		final WorkPlanData result = new WorkPlanData();
+		final WorkPlan wp = new WorkPlan();
 		
-		result.setTotal(10);
-		result.setFinalizados(9);
-		result.setNoFinalizados(1);
-		result.setPublicados(8);
-		result.setNoPublicados(2);
-		result.setMaximoPeriodo(10);
-		result.setMinimoPeriodo(8);
-		result.setMaximoCarga(100);
-		result.setMinimoCarga(8);
-		result.setMediaPeriodo(40.);
-		result.setDesviacionPeriodo(50.);
-		result.setMediaCarga(50.);
-		result.setDesviacionCarga(40.);
+		final Integer total = this.repository.workPlanAmount();
+		final Integer finalizados = this.repository.finishedWorkPlanAmount(Date.valueOf(LocalDate.now()));
+		final Integer publicos = this.repository.publishedWorkPlanAmount();
+		result.setTotal(total);
+		result.setFinalizados(finalizados);
+		result.setNoFinalizados(total - finalizados);
+		result.setPublicados(publicos);
+		result.setNoPublicados(total - publicos);
+		
+		final Set<WorkPlan> workPlans = this.repository.findAllWorkPlans();
+		
+		result.setMaximoPeriodo(this.getMaxPeriod(workPlans));
+		result.setMinimoPeriodo(this.getMinPeriod(workPlans));
+		result.setMaximoCarga(workPlans.stream().map(WorkPlan::getWorkload).max(Double::compare).get());
+		result.setMinimoCarga(workPlans.stream().map(WorkPlan::getWorkload).min(Double::compare).get());
+		result.setMediaPeriodo(this.repository.averageExecutionPeriods());
+		result.setDesviacionPeriodo(this.repository.deviationExecutionPeriods());
+		final List<Double> workloads = workPlans.stream().map(WorkPlan::getWorkload).collect(Collectors.toList());
+		result.setMediaCarga(this.media(workloads));
+		result.setDesviacionCarga(this.deviation(workloads));
 
 		return result;
 	}
+	
+	private Double media(final List<Double> workloads) {
+		Double sum = 0.;
+		for(final Double workload : workloads) {
+			sum += workload;
+		}
+		
+		return sum/workloads.size();
+	}
+	
+	private Double deviation(final List<Double> workloads) {
+		final Double media = this.media(workloads);
+		Double acum = 0.;
+		
+		for(final Double workload : workloads) {
+			acum += (workload - media)*(workload - media);
+		}
+		
+		return Math.sqrt(acum/workloads.size());
+	}
 
+	private String getMaxPeriod(final Set<WorkPlan> workPlans) {
+		String res = "";
+		Long max = 0L;
+		
+		for(final WorkPlan wp : workPlans) {
+			final Long tempMax = wp.getEndExecutionPeriod().getTime() - wp.getStartExecutionPeriod().getTime();
+			if(max < tempMax) {
+				res = wp.getStartExecutionPeriod().toString() + " - " + wp.getEndExecutionPeriod().toString();
+				max = tempMax;
+			}
+		}
+		return res;
+	}
+	
+	private String getMinPeriod(final Set<WorkPlan> workPlans) {
+		String res = "";
+		Long min = null;
+		
+		for(final WorkPlan wp : workPlans) {
+			final Long tempMin = wp.getEndExecutionPeriod().getTime() - wp.getStartExecutionPeriod().getTime();
+			if(min == null || min > tempMin) {
+				res = wp.getStartExecutionPeriod().toString() + " - " + wp.getEndExecutionPeriod().toString();
+				min = tempMin;
+			}
+		}
+		return res;
+	}
 }

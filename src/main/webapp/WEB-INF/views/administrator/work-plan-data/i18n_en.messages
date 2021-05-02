@@ -21,3 +21,10 @@ administrator.configuration.form.label.mediaPeriodo = Period mean
 administrator.configuration.form.label.desviacionPeriodo = Period deviation
 administrator.configuration.form.label.mediaCarga = Workload mean
 administrator.configuration.form.label.desviacionCarga = WorkLoad deviation
+
+administrator.work-plan-data.form.result.days = Days.
+administrator.work-plan-data.form.result.hours = Hours.
+
+administrator.work-plan-data.form.title.workloads = Workloads
+dministrator.work-plan-data.form.title.executionPeriods = Execution periods
+administrator.work-plan-data.form.title.general-indicators = General indicators
