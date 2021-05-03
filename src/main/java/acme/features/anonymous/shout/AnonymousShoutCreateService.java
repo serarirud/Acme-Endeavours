@@ -75,9 +75,10 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 		assert entity != null;
 		assert errors != null;
 		
-		final boolean umbralSuperado = this.confService.spamFilter(entity.getText());
-		
-		errors.state(request, !umbralSuperado, "text", "anonymous.shout.error.umbral-superado");
+		if(!errors.hasErrors("text")) {
+			final boolean umbralSuperado = this.confService.spamFilter(entity.getText());
+			errors.state(request, !umbralSuperado,"text", "manager.task.error.umbral-superado");
+		}
 	}
 	
 	@Override

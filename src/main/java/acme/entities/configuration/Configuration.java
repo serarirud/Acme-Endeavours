@@ -1,6 +1,8 @@
 package acme.entities.configuration;
 
 import javax.persistence.Entity;
+import javax.validation.constraints.Digits;
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.Range;
@@ -20,10 +22,11 @@ public class Configuration extends DomainEntity {
 	
 	// Atributos
 	
-	@NotNull
+	@NotBlank
 	private String spamWords;
 	
 	@NotNull
 	@Range(min=0, max=100)
+	@Digits(integer=3, fraction=2)
 	private Double threshold;
 }

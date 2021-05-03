@@ -8,6 +8,7 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.Valid;
 import javax.validation.constraints.Digits;
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
@@ -43,6 +44,7 @@ public class Task extends DomainEntity {
 	protected Date endExecutionPeriod;
 	
 	@NotNull
+	@Min(0)
 	@Digits(integer=Integer.MAX_VALUE,fraction=2)
 	protected Double workload;
 	
@@ -66,9 +68,9 @@ public class Task extends DomainEntity {
 	// Others ------------------------
 	
 	public Integer getMinutes() {
-		String str = String.valueOf(this.workload);
-		Integer parteEntera = Integer.parseInt(str.substring(0, str.indexOf('.')));
-		Integer parteDecimal = Integer.parseInt(str.substring(str.indexOf('.') + 1));
+		final String str = String.valueOf(this.workload);
+		final Integer parteEntera = Integer.parseInt(str.substring(0, str.indexOf('.')));
+		final Integer parteDecimal = Integer.parseInt(str.substring(str.indexOf('.') + 1));
 		return parteEntera*60 + parteDecimal;
 	}
 	
