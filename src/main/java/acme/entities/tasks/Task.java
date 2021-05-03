@@ -70,8 +70,8 @@ public class Task extends DomainEntity {
 	public Integer getMinutes() {
 		final String str = String.valueOf(this.workload);
 		final Integer parteEntera = Integer.parseInt(str.substring(0, str.indexOf('.')));
-		final Integer parteDecimal = Integer.parseInt(str.substring(str.indexOf('.') + 1));
-		return parteEntera*60 + parteDecimal;
+		final Double parteDecimal = (this.workload - parteEntera)*100;
+		return (int) (parteEntera*60 + parteDecimal);
 	}
 	
 
