@@ -26,5 +26,5 @@ administrator.work-plan-data.form.result.days = Days.
 administrator.work-plan-data.form.result.hours = {Hours,Minutes}
 
 administrator.work-plan-data.form.title.workloads = Workloads
-dministrator.work-plan-data.form.title.executionPeriods = Execution periods
+administrator.work-plan-data.form.title.executionPeriods = Execution periods
 administrator.work-plan-data.form.title.general-indicators = General indicators

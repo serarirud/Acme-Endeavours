@@ -93,7 +93,7 @@ public class AdministratorWorkPlanDataShowService implements AbstractShowService
 		for(final Double workload : workloads) {
 			final Integer hours = workload.intValue();
 			final Double minutes = workload - hours;
-			sum += hours*60 + minutes;
+			sum += hours*60 + minutes*100;
 		}
 		
 		final Double media = sum/workloads.size();
@@ -108,10 +108,10 @@ public class AdministratorWorkPlanDataShowService implements AbstractShowService
 		Double media = this.media(workloads);
 		Double acum = 0.;
 		
-		media = media.intValue() + (media - media.intValue())/60;
+		media = media.intValue() + (media - media.intValue())*100/60;
 		
 		for(Double workload : workloads) {
-			workload = workload.intValue() + (workload - workload.intValue())/60;
+			workload = workload.intValue() + (workload - workload.intValue())*100/60;
 			acum += (workload - media)*(workload - media);
 		}
 		Double deviation = Math.sqrt(acum/workloads.size());
