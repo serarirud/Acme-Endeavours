@@ -91,21 +91,32 @@ public class AdministratorWorkPlanDataShowService implements AbstractShowService
 	private Double media(final List<Double> workloads) {
 		Double sum = 0.;
 		for(final Double workload : workloads) {
-			sum += workload;
+			final Integer hours = workload.intValue();
+			final Double minutes = workload - hours;
+			sum += hours*60 + minutes;
 		}
 		
-		return sum/workloads.size();
+		final Double media = sum/workloads.size();
+		
+		final Double sumHours = media/60;
+		final Double minutes = (sumHours - sumHours.intValue())*60;
+		
+		return sumHours.intValue() + minutes/100;
 	}
 	
 	private Double deviation(final List<Double> workloads) {
-		final Double media = this.media(workloads);
+		Double media = this.media(workloads);
 		Double acum = 0.;
 		
-		for(final Double workload : workloads) {
+		media = media.intValue() + (media - media.intValue())/60;
+		
+		for(Double workload : workloads) {
+			workload = workload.intValue() + (workload - workload.intValue())/60;
 			acum += (workload - media)*(workload - media);
 		}
-		
-		return Math.sqrt(acum/workloads.size());
+		Double deviation = Math.sqrt(acum/workloads.size());
+		deviation = deviation.intValue() + (deviation - deviation.intValue())*0.6;
+		return deviation;
 	}
 
 	private String getMaxPeriod(final Set<WorkPlan> workPlans) {
