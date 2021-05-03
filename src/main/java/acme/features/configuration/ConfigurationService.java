@@ -12,17 +12,13 @@ public class ConfigurationService {
 	@Autowired
 	private ConfigurationRepository confRepo;
 	
-	public boolean spamFilter(String text) {
+	public boolean spamFilter(final String text) {
 		final Double umbral = this.confRepo.getConfiguration().getThreshold();
 		final List<String> spamWords = Arrays.asList(this.confRepo.getConfiguration().getSpamWords().split(","));
-		text = text.trim();
-		Integer numWordsText = text.toLowerCase().split(" ").length;
 		
-		final String textMod = text.toLowerCase().replace(",", " ").replace(".", " ").replace(";", " ")
-			.replace(":", " ").replace("(", " ").replace(")", " ").replace("-", " ").replace("_", " ")
-			.replace("<", " ").replace(">", " ").replace("¿", " ").replace("?", " ").replace("¡", " ")
-			.replace("!", " ");
-
+		final String textMod = this.limpiarTexto(text);
+		Integer numWordsText = textMod.toLowerCase().split(" ").length;
+		
 		Integer contador=0;
 		for(int i=0; i<spamWords.size();i++) {
 			final String palabra = spamWords.get(i);
@@ -45,6 +41,15 @@ public class ConfigurationService {
 	
 	public Double getThreshold() {
 		return this.confRepo.getConfiguration().getThreshold();
+	}
+	
+	private String limpiarTexto(final String text) {
+		final String textMod = text.toLowerCase().replace(",", " ").replace(".", " ").replace(";", " ")
+			.replace(":", " ").replace("(", " ").replace(")", " ").replace("-", " ").replace("_", " ")
+			.replace("<", " ").replace(">", " ").replace("¿", " ").replace("?", " ").replace("¡", " ")
+			.replace("!", " ").replace("´", "'").replace("`", "'");
+		final String res = textMod.trim();
+		return res.replaceAll("\s+", " ");
 	}
 	
 

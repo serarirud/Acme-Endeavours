@@ -94,9 +94,10 @@ public class ManagerTaskCreateService implements AbstractCreateService<Manager, 
 			}
 		}
 		
-		if(!errors.hasErrors("description")) {
-			final boolean umbralSuperado = this.confService.spamFilter(entity.getDescription());
-			errors.state(request, !umbralSuperado, "description", "manager.task.error.umbral-superado");
+		if(!errors.hasErrors("description") && !errors.hasErrors("title")) {
+			final boolean umbralSuperado = this.confService.spamFilter(entity.getTitle()+" "+entity.getDescription());
+			errors.state(request, !umbralSuperado,"description", "manager.task.error.umbral-superado");
+			errors.state(request, !umbralSuperado,"title", "manager.task.error.umbral-superado");
 		}
 		
 	}

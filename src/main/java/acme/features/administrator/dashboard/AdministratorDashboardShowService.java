@@ -90,26 +90,19 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 			sum += a.getMinutes();
 		}
 		final Double averageHoursWorkloads = sum/tasks.size()/60; 
-		Integer parteEntera = averageHoursWorkloads.intValue(); 
-		Integer parteFracional = (int) ((averageHoursWorkloads - parteEntera)*100);
-		if(parteFracional>=60) {
-			parteEntera += 1;
-			parteFracional -= 60;
-		}
-		averageTaskWorkloads = parteEntera + parteFracional*0.01;
+		final Integer parteEntera = averageHoursWorkloads.intValue(); 
+		final Double parteFracional = (averageHoursWorkloads - parteEntera)*0.6;
+
+		averageTaskWorkloads = parteEntera + parteFracional;
 		
 		Double sum1=0.;
 		for(final Task a:tasks) {
 			sum1 += Math.pow(a.getMinutes() - averageHoursWorkloads*60, 2); 
 		}
-		final Double desviation = Math.sqrt(sum1 / tasks.size());
-		Integer parteEntera1 = desviation.intValue();
-		Integer parteFracional1 = (int) ((desviation - parteEntera1)*100);
-		if(parteFracional1>=60) {
-			parteEntera1 += 1;
-			parteFracional1 -= 60;
-		}
-		deviationTaskWorkloads = parteEntera1 + parteFracional1*0.01;
+		final Double desviation = Math.sqrt(sum1 / tasks.size())/60;
+		final Integer parteEntera1 = desviation.intValue();
+		final Double parteFracional1 = (desviation - parteEntera1)*0.6;
+		deviationTaskWorkloads = parteEntera1 + parteFracional1;
 		minimumTaskWorkloads = this.repository.minimumTaskWorkloads();
 		maximumTaskWorkloads = this.repository.maximumTaskWorkloads();
 		
