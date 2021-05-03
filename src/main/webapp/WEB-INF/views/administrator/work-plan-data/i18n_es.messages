@@ -23,7 +23,7 @@ administrator.configuration.form.label.mediaCarga = Media de la carga
 administrator.configuration.form.label.desviacionCarga = Desviación de la carga
 
 administrator.work-plan-data.form.result.days = Días.
-administrator.work-plan-data.form.result.hours = Horas.
+administrator.work-plan-data.form.result.hours = {Horas,Minutos}
 
 administrator.work-plan-data.form.title.workloads = Cargas de trabajo
 dministrator.work-plan-data.form.title.executionPeriods = Periodos de ejecución

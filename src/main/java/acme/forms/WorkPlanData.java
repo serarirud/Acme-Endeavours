@@ -1,11 +1,13 @@
-package acme.entities.workPlanData;
+package acme.forms;
+
+import java.io.Serializable;
 
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
-public class WorkPlanData {
+public class WorkPlanData implements Serializable {
 	
 	//Serialisation identifier
 	
