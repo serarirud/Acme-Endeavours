@@ -14,3 +14,7 @@ adquiridos durante las clases de la asignatura Diseño y Pruebas 2, constituyend
 fundamental del segundo entregable.  
 
 Enlace al repositorio en Github: https://github.com/Francisco-Borrego/Acme-Planner
+
+Credenciales para Clever Cloud:
+- Dirección de correo: fraborcar@alum.us.es
+- Contraseña: contrasenaparadp2
