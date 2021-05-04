@@ -49,7 +49,7 @@ public class ConfigurationService {
 			.replace("<", " ").replace(">", " ").replace("¿", " ").replace("?", " ").replace("¡", " ")
 			.replace("!", " ").replace("´", "'").replace("`", "'");
 		final String res = textMod.trim();
-		return res.replaceAll("\s+", " ");
+		return res.replaceAll("\\s+", " ");
 	}
 	
 

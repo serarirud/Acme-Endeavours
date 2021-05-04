@@ -87,7 +87,7 @@ public class AdministratorConfigurationUpdateService implements AbstractUpdateSe
 		for(int i = 0; i< wordsArray.length; i++) {
 			final String word = wordsArray[i].toLowerCase();
 			final String end = i == wordsArray.length - 1 ? "" : ",";
-			words.append(word.trim().replaceAll("\s+", " ") + end);
+			words.append(word.trim().replaceAll("\\s+", " ") + end);
 		}
 		
 		entity.setSpamWords(words.toString());
