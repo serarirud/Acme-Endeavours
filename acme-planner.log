@@ -8104,10 +8104,17 @@ INFO [acme.framework.utilities.DatabasePopulator] > Persisting administratorAdmi
 INFO [acme.framework.utilities.DatabasePopulator] > Persisting administratorAuthenticated = acme.framework.entities.Authenticated{id=5, version=0}
 INFO [acme.framework.utilities.DatabasePopulator] > Persisting configuration = acme.entities.configuration.Configuration{id=6, version=0}
 INFO [acme.framework.configuration.ShutdownConfiguration] The system is shutting down...
+
+INFO [acme.Launcher] Starting Launcher using Java 1.8.0_281 on DESKTOP-H9Q10E5 with PID 20916 (C:\Users\Usuario\Desktop\Workspace-21.1\Projects\Acme-Planner\target\classes started by Usuario in C:\Users\Usuario\Desktop\Workspace-21.1\Projects\Acme-Planner)
+INFO [acme.Launcher] The following profiles are active: development,populator
+INFO [acme.Launcher] Started Launcher in 24.105 seconds (JVM running for 28.925)
+INFO [acme.framework.utilities.DatabasePopulator] Populating initial data
+
 INFO [acme.Launcher] Starting Launcher using Java 1.8.0_281 on PC-Alejandro with PID 13932 (C:\Users\ALEJANDROPC\Desktop\Workspace-21.1\Projects\Acme-Planner\target\classes started by ALEJANDROPC in C:\Users\ALEJANDROPC\Desktop\Workspace-21.1\Projects\Acme-Planner)
 INFO [acme.Launcher] The following profiles are active: development,populator
 INFO [acme.Launcher] Started Launcher in 5.865 seconds (JVM running for 6.353)
 INFO [acme.framework.utilities.DatabasePopulator] Populating sample data
+
 INFO [acme.framework.utilities.DatabasePopulator] Recreating schema
 INFO [acme.framework.utilities.DatabasePopulator] Populating entities from classpath:/WEB-INF/population/initial-data.xml
 INFO [acme.framework.utilities.DatabasePopulator] Validating your entities.
@@ -8131,6 +8138,12 @@ INFO [acme.framework.utilities.DatabasePopulator] > Persisting administratorUser
 INFO [acme.framework.utilities.DatabasePopulator] > Persisting administratorAdministrator = acme.framework.entities.Administrator{id=4, version=0}
 INFO [acme.framework.utilities.DatabasePopulator] > Persisting administratorAuthenticated = acme.framework.entities.Authenticated{id=5, version=0}
 INFO [acme.framework.utilities.DatabasePopulator] > Persisting configuration = acme.entities.configuration.Configuration{id=6, version=0}
+
+INFO [acme.framework.configuration.ShutdownConfiguration] The system is shutting down...
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] HTTP GET /Acme-Planner/WEB-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Exception: acme.framework.helpers.Assert.state(Assert.java:45): Access is not authorised
+
 INFO [acme.framework.utilities.DatabasePopulator] Populating entities from classpath:/WEB-INF/population/sample-data.xml
 INFO [acme.framework.utilities.DatabasePopulator] Validating your entities.
 INFO [acme.framework.utilities.DatabasePopulator] Validating shout01 ... PASS
@@ -8223,3 +8236,4 @@ INFO [acme.framework.utilities.DatabasePopulator] > Persisting task13 = acme.ent
 INFO [acme.framework.utilities.DatabasePopulator] > Persisting task14 = acme.entities.tasks.Task{id=34, version=0}
 INFO [acme.framework.utilities.DatabasePopulator] > Persisting task15 = acme.entities.tasks.Task{id=35, version=0}
 INFO [acme.framework.configuration.ShutdownConfiguration] The system is shutting down...
+
