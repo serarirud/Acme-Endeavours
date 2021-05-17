@@ -50,7 +50,7 @@ bg=orange
     <id>UMLNote</id>
     <coordinates>
       <x>399</x>
-      <y>413</y>
+      <y>399</y>
       <w>168</w>
       <h>42</h>
     </coordinates>
@@ -63,13 +63,13 @@ bg=blue</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>469</x>
-      <y>448</y>
+      <y>434</y>
       <w>21</w>
-      <h>42</h>
+      <h>56</h>
     </coordinates>
     <panel_attributes>lt=..
 </panel_attributes>
-    <additional_attributes>10.0;40.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -310,7 +310,7 @@ Task
 + title: String {NotBlank, Length(min=1, max=80)}
 + startExecutionPeriod: Date {NotNull, Temporal(TIMESTAMP)}
 + endExecutionPeriod: Date {NotNull, Temporal(TIMESTAMP)} 
-+ workload: Double {NotNull, Digits(integer=Integer.MAX_VALUE, fraction=2)}
++ workload: Double {NotNull, Digits(integer=5, fraction=2)}
 + description: String {NotBlank, Length(min=1,max=500)}
 + link: String {URL}
 + isPublic: Boolean {NotNull}</panel_attributes>
@@ -401,6 +401,69 @@ Configuration
 --
 + spamWords: String {NotBlank}
 + umbral: Double {NotNull, Range(min=0, max=100), Digits(integer=3, fraction=2)}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>644</x>
+      <y>147</y>
+      <w>168</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>The end execution period must be 
+after the start execution period.
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>14</x>
+      <y>14</y>
+      <w>133</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;..</panel_attributes>
+    <additional_attributes>10.0;10.0;170.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>637</x>
+      <y>182</y>
+      <w>105</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>lt=..
+</panel_attributes>
+    <additional_attributes>10.0;70.0;130.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>721</x>
+      <y>259</y>
+      <w>105</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>lt=..
+</panel_attributes>
+    <additional_attributes>10.0;20.0;130.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>812</x>
+      <y>252</y>
+      <w>168</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>The workload must fit the execution 
+period.
+Decimals digits represent minutes,
+so it must be between 0.0 and 0.59.
+bg=blue</panel_attributes>
     <additional_attributes/>
   </element>
 </diagram>

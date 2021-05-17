@@ -13,7 +13,7 @@ manager.task.form.label.link = Link
 manager.task.form.label.is-public = Public
 manager.task.form.button.return = Return
 
-manager.task.form.error.end= Date error, end of the execution period must be before at start of the execution period 
+manager.task.form.error.end= Date error, end of the execution period must be after at start of the execution period 
 manager.task.form.error.start = Date error, start of the execution period must be after at today
 manager.task.form.error.title = Title error, the title must be shorter that 80 characters
 manager.task.form.error.description = Description error, the description must be shorter that 500 characters

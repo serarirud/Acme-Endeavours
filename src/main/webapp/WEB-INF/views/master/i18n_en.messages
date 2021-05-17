@@ -28,15 +28,14 @@ master.menu.sign-out = Sign out
 # master.menu.anonymous #######################################################
 
 master.menu.anonymous = Anonymous
-master.menu.anonymous.favourite-link = Favourite link
-master.menu.anonymous.task.list = Task list
+master.menu.anonymous.task.list = Public non-finished task list
 master.menu.anonymous.shout.list = Shout list
 master.menu.anonymous.shout.form = Create a shout
 
 # master.menu.authenticated #######################################################
 
 master.menu.authenticated = Authenticated
-master.menu.authenticated.task.list = Task list
+master.menu.authenticated.task.list = Public finished task list
 
 # master.menu.administrator ###################################################
 
@@ -51,12 +50,10 @@ master.menu.administrator.show.configuration = Show configuration
 # master.menu.provider ########################################################
 
 master.menu.provider = Provider
-master.menu.provider.favourite-link = Favourite link
 
 # master.menu.consumer ##########################################################
 
 master.menu.consumer = Consumer
-master.menu.consumer.favourite-link = Favourite link
 
 # master.menu.user-account ####################################################
 
@@ -117,5 +114,5 @@ master.panic.text.consult-log = Please, consult the log to see them full stack t
 # master.menu.administrator ###################################################
 master.menu.manager = Manager
 master.menu.manager.task.create = Create a task
-master.menu.manager.task.list = Task list
+master.menu.manager.task.list = My task list
 

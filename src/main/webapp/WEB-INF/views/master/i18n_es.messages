@@ -28,15 +28,14 @@ master.menu.sign-out = Salir
 # master.menu.anonymous #######################################################
 
 master.menu.anonymous = Anónimo
-master.menu.anonymous.favourite-link = Enlace favorito
-master.menu.anonymous.task.list = Lista de tareas
+master.menu.anonymous.task.list = Lista de tareas públicas no finalizadas
 master.menu.anonymous.shout.list = Lista de gritos
 master.menu.anonymous.shout.form = Crear un grito
 
 # master.menu.authenticated #######################################################
 
 master.menu.authenticated = Autenticado
-master.menu.authenticated.task.list = Lista de tareas
+master.menu.authenticated.task.list = Lista de tareas públicas finalizadas
 
 # master.menu.administrator ###################################################
 
@@ -51,12 +50,10 @@ master.menu.administrator.show.configuration = Ver la configuración
 # master.menu.provider ########################################################
 
 master.menu.provider = Proveedor
-master.menu.provider.favourite-link = Enlace favorito
 
 # master.menu.consumer ##########################################################
 
 master.menu.consumer = Consumidor
-master.menu.consumer.favourite-link = Enlace favorito
 
 # master.menu.user-account ####################################################
 
@@ -119,5 +116,5 @@ master.panic.text.consult-log = Por favor, consulte el log para ver más detalle
 # master.menu.administrator ###################################################
 master.menu.manager = Manager
 master.menu.manager.task.create = Crear una tarea
-master.menu.manager.task.list = Lista de tareas
+master.menu.manager.task.list = Mi lista de tareas
 
