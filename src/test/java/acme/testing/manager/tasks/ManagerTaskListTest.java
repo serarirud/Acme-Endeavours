@@ -14,8 +14,8 @@ public class ManagerTaskListTest extends AcmePlannerTest{
 	
 	@ParameterizedTest
 	@CsvFileSource(resources = "/manager/task/list.csv", encoding = "utf-8", numLinesToSkip = 1)
-	@Order(20)	
-	public void listPositive(final int recordIndex, final String title, final String startExecutionPeriod, final String endExecutionPeriod, final String workload, final String description, final String link, final String isPublic) {
+	@Order(10)	
+	public void list(final int recordIndex, final String title, final String startExecutionPeriod, final String endExecutionPeriod, final String workload, final String description, final String link, final String isPublic) {
 		
 		super.signIn("manager", "manager");
 		
@@ -38,4 +38,27 @@ public class ManagerTaskListTest extends AcmePlannerTest{
 		
 		super.signOut();
 	}
+	
+	/*	Feature: un usuario manager puede observar detalles de sus propias tareas.
+	 * En el test anterior se comprueban los detalles en el caso positivo. Ahora se comprueba que no se pueden
+	 * observar detalles de tareas de otro manager
+	*	Caso negativo
+	*/
+	
+//	@ParameterizedTest
+//	@CsvFileSource(resources = "/manager/task/list.csv", encoding = "utf-8", numLinesToSkip = 1)
+//	@Order(20)	
+//	public void showNegative() {
+//		super.signIn("manager", "manager");
+//
+//		
+//		super.navigate("http://localhost:8080/Acme-Planner/manager/task/show?id=25", 
+//			"http://localhost:8080/Acme-Planner/manager/task/show?id=25");
+//		
+//		super.checkPanicExists();
+//	}
+	
+
+	
+
 }
