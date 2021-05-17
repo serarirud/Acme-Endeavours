@@ -1,10 +1,12 @@
-package acme.testing;
+package acme.testing.anonymous.task;
 
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 
-public class AnonymousTasksTest extends AcmePlannerTest{
+import acme.testing.AcmePlannerTest;
+
+public class AnonymousTasksListTest extends AcmePlannerTest{
 	
 	@ParameterizedTest
 	@CsvFileSource(resources = "/anonymous/task/list.csv", encoding = "utf-8", numLinesToSkip = 1)

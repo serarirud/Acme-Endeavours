@@ -2,6 +2,7 @@ package acme.testing;
 
 import org.hibernate.internal.util.StringHelper;
 import org.junit.jupiter.api.BeforeAll;
+import org.openqa.selenium.By;
 
 public abstract class AcmePlannerTest extends AcmeTest {
 
@@ -64,6 +65,17 @@ public abstract class AcmePlannerTest extends AcmeTest {
 		super.fillInputBoxIn("accept", "true");
 		super.clickOnSubmitButton("Sign up");
 		super.checkSimplePath("/master/welcome");
+	}
+	
+	protected void checkErrorsTextAreaExist(final String name) {
+		assert !StringHelper.isBlank(name);
+
+		String xpath;
+		By locator;
+
+		xpath = String.format("//div[@class='form-group'][textarea[@id='%s'] and div[@class='text-danger']]", name);
+		locator = By.xpath(xpath);
+		assert super.exists(locator) : String.format("No errors found in input box '%s'", name);
 	}
 
 }
