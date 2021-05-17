@@ -11,7 +11,7 @@ public class AnonymousTasksTest extends AcmePlannerTest{
 	@Order(20)	
 	public void list(final int recordIndex, final String title, final String startExecutionPeriod, final String endExecutionPeriod, final String workload, final String description, final String link, final String isPublic) {		
 				
-		super.clickOnMenu("Anonymous", "Task list");		
+		super.clickOnMenu("Anonymous", "Public non-finished task list");		
 		
 		super.checkColumnHasValue(recordIndex, 0, title);
 		super.checkColumnHasValue(recordIndex, 1, startExecutionPeriod);
