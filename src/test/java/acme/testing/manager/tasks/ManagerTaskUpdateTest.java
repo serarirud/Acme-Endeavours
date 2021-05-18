@@ -100,5 +100,7 @@ public class ManagerTaskUpdateTest extends AcmePlannerTest{
 		super.clickOnSubmitButton("Update");
 		
 		super.checkSimplePath("/manager/task/update");
+		
+		super.signOut();
 	}
 }
