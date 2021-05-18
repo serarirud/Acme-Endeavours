@@ -44,21 +44,6 @@ public class ManagerTaskListTest extends AcmePlannerTest{
 	 * observar detalles de tareas de otro manager
 	*	Caso negativo
 	*/
-	
-//	@ParameterizedTest
-//	@CsvFileSource(resources = "/manager/task/list.csv", encoding = "utf-8", numLinesToSkip = 1)
-//	@Order(20)	
-//	public void showNegative() {
-//		super.signIn("manager", "manager");
-//
-//		
-//		super.navigate("http://localhost:8080/Acme-Planner/manager/task/show?id=25", 
-//			"http://localhost:8080/Acme-Planner/manager/task/show?id=25");
-//		
-//		super.checkPanicExists();
-//	}
-	
 
-	
 
 }

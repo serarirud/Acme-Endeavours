@@ -6,3 +6,6 @@ recordIndex,title,startExecutionPeriod,endExecutionPeriod,workload,description,l
 4,Tarea 11,2021/04/13 11:00,2022/10/01 23:00,50.10,A esta tarea le queda mucho.,https://twitter.com/?lang=es,true
 5,Tarea muy rara,2021/04/10 12:00,2023/10/01 12:00,80.15,Esta tarea es muy peculiar,,true
 6,Tarea futura,2025/04/10 12:00,2027/10/01 12:00,90.45,Esta tarea es para dentro de unos años,,true
+7,Tarea también futura,2026/04/10 12:00,2027/10/01 12:00,70.45,Esta tarea es para dentro de muchos años,,true
+8,Tarea de prueba futura,2024/04/10 12:00,2027/10/01 12:00,45.45,Esta tarea también es de prueba,https://www.amazon.es/,false
+9,Tarea 18 antigua,2007/04/10 12:00,2007/10/01 12:00,4.45,Mas tareas de prueba,https://www.google.es/,true

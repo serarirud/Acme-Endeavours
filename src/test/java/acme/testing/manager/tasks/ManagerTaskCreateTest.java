@@ -37,11 +37,15 @@ public class ManagerTaskCreateTest extends AcmePlannerTest{
 		super.fillInputBoxIn("link", link);
 		if(isPublic.equals("true")) {
 			super.fillInputBoxIn("isPublic", "true");
+		}else {
+			super.fillInputBoxIn("isPublic", "false");
 		}
 
 		super.clickOnSubmitButton("Create");
 		
 		super.checkSimplePath("/master/welcome");
+		
+		super.signOut();
 
 	}
 	
@@ -81,6 +85,8 @@ public class ManagerTaskCreateTest extends AcmePlannerTest{
 		super.clickOnSubmitButton("Create");
 		
 		super.checkSimplePath("/manager/task/create");
+		
+		super.signOut();
 		
 	}
 }
