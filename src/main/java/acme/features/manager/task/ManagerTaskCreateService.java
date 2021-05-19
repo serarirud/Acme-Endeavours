@@ -71,13 +71,15 @@ public class ManagerTaskCreateService implements AbstractCreateService<Manager, 
 		assert entity != null;
 		assert errors != null;
 		
-		if(!errors.hasErrors("endExecutionPeriod")) {
-			errors.state(request, entity.getEndExecutionPeriod().after(entity.getStartExecutionPeriod()), "endExecutionPeriod", "manager.task.form.error.end");
-		}
-		if(!errors.hasErrors("startExecutionPeriod")) {
+		if(!errors.hasErrors("startExecutionPeriod") && !errors.hasErrors("endExecutionPeriod")) {
 			final Date today = Calendar.getInstance().getTime();
 			errors.state(request, entity.getStartExecutionPeriod().after(today), "startExecutionPeriod", "manager.task.form.error.start");
 		}
+		
+		if(!errors.hasErrors("startExecutionPeriod") && !errors.hasErrors("endExecutionPeriod")) {
+			errors.state(request, entity.getEndExecutionPeriod().after(entity.getStartExecutionPeriod()), "endExecutionPeriod", "manager.task.form.error.end");
+		}
+
 		if(!errors.hasErrors("workload")) {
 			final Double workload = entity.getWorkload();			
 			final Integer parteEntera = workload.intValue();

@@ -1,0 +1,11 @@
+recordIndex,title,startExecutionPeriod,endExecutionPeriod,workload,description,link,isPublic
+0,Tarea 001 act,2021/07/01 12:00,2021/07/01 13:00,1.00,Descripción de prueba act,https://github.com/Francisco-Borrego/Acme-Planner,false
+1,Tarea 002 act,2021/08/01 10:00,2021/08/05 13:00,1.50,Actualizar correctamente,https://youtube.com,true
+2,Tarea 003 act,2021/08/01 10:00,2021/10/01 13:00,2.20,Descripción de prueba act,,true
+3,Tarea 008 act,2006/08/01 13:00,2016/08/12 18:45,6.15,Descripcion nueva act,,false
+4,Tarea 11 act,2021/04/13 11:00,2022/10/01 23:00,50.10,A esta tarea le queda mucho.,https://twitter.com/?lang=es,false
+5,Tarea muy rara act,2022/04/10 12:00,2023/10/01 12:00,80.15,Esta tarea es muy peculiar act,,true
+6,Tarea futura act,2025/04/10 12:00,2027/10/01 12:00,40.45,Esta tarea es para dentro de unos años actualizado,https://sevilla.org,true
+7,Tarea también futura act,2026/04/10 12:00,2027/10/01 12:00,70.45,Esta tarea es para dentro de muchos años,https://url.com,true
+8,Tarea de prueba futura,2024/03/10 12:00,2027/10/01 12:00,45.55,Esta tarea también es de prueba act,https://www.amazon.es/,false
+9,Tarea 18 antigua act,2007/04/10 12:00,2008/10/01 12:00,4.45,Mas tareas de prueba act,,false
