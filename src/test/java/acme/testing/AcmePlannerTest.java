@@ -3,7 +3,6 @@ package acme.testing;
 import org.hibernate.internal.util.StringHelper;
 import org.junit.jupiter.api.BeforeAll;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 
 public abstract class AcmePlannerTest extends AcmeTest {
 
@@ -76,21 +75,8 @@ public abstract class AcmePlannerTest extends AcmeTest {
 
 		xpath = String.format("//div[@class='form-group'][textarea[@id='%s'] and div[@class='text-danger']]", name);
 		locator = By.xpath(xpath);
-		assert super.exists(locator) : String.format("Errors found in input box '%s'", name);
+		assert super.exists(locator) : String.format("No errors found in input box '%s'", name);
 	}
 
-	protected void checkErrorsAcmeMessageExist(final int div, final int table, final int tr, final String name) {
-		assert !StringHelper.isBlank(name);
-
-
-		String xpath;
-		By locator;
-
-		xpath = String.format("/html/body/div[%d]/div/table[%d]/tbody/tr[%d]/td", div, table, tr);
-		locator = By.xpath(xpath);
-		assert super.exists(locator) : String.format("Errors found in div %d, table %d and tr %d", div, table, tr);
-		final WebElement w = super.locateOne(locator);
-		assert w.getText().equals(name) : String.format("Errors found. Expected value: '%s', real value: '%s'", name, w.getText());
-	}
 }
 
