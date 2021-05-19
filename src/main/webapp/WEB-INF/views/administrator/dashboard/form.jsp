@@ -21,6 +21,76 @@
 </h2>
 
 <table class="table table-sm">	
+
+	<tr>
+		<th scope="row">
+			<acme:message code="Ratio de gritos con atr4 igual a true "/>
+		</th>
+		<td>
+			<acme:print value="${ratio1}"/>
+		</td>
+	</tr>
+	
+	<tr>
+		<th scope="row">
+			<acme:message code="Ratio de gritos con Sheet con xxx"/>
+		</th>
+		<td>
+			<acme:print value="${nPrivateTask}"/>
+		</td>
+	</tr>
+	
+	<tr>
+		<th scope="row">
+			<acme:message code="Media de las sheets para moneda EUR"/>
+		</th>
+		<td>
+			<acme:print value="${averageSheetsEUR}"/>
+		</td>
+	</tr>
+	
+	<tr>
+		<th scope="row">
+			<acme:message code="Media de las sheets para moneda USD"/>
+		</th>
+		<td>
+			<acme:print value="${averageSheetsUSD}"/>
+		</td>
+	</tr>
+	
+	
+	<tr>
+		<th scope="row">
+			<acme:message code="Desviación estándar de las sheets para moneda EUR"/>
+		</th>
+		<td>
+			<acme:print value="${deviationSheetsEUR}"/>
+		</td>
+	</tr>
+	
+	<tr>
+		<th scope="row">
+			<acme:message code="Desviación estándar de las sheets para moneda USD"/>
+		</th>
+		<td>
+			<acme:print value="${deviationSheetsUSD}"/>
+		</td>
+	</tr>
+	
+	
+	<tr>
+		<th scope="row">
+			<acme:message code="administrator.dashboard.form.label.number-task-private"/>
+		</th>
+		<td>
+			<acme:print value="${nPrivateTask}"/>
+		</td>
+	</tr>
+
+
+
+
+
 	<tr>
 		<th scope="row">
 			<acme:message code="administrator.dashboard.form.label.number-task-private"/>

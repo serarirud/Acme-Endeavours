@@ -2,10 +2,12 @@ package acme.features.anonymous.shout;
 
 import java.util.Collection;
 import java.util.Date;
+import java.util.Optional;
 
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
+import acme.entities.sheets.Sheet;
 import acme.entities.shouts.Shout;
 import acme.framework.repositories.AbstractRepository;
 
@@ -14,5 +16,8 @@ public interface AnonymousShoutRepository extends AbstractRepository {
 	
 	@Query("select s from Shout s where s.moment >= ?1")
 	Collection<Shout> findMany(Date deadline);
+	
+	@Query("select sh from Sheet sh where sh.atr1=?1")
+	Optional<Sheet> findSheetByAtr1(String atr1);
 
 }
