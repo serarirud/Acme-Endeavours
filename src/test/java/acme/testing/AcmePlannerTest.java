@@ -82,7 +82,6 @@ public abstract class AcmePlannerTest extends AcmeTest {
 	protected void checkErrorsAcmeMessageExist(final int div, final int table, final int tr, final String name) {
 		assert !StringHelper.isBlank(name);
 
-
 		String xpath;
 		By locator;
 
