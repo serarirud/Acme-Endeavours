@@ -8,6 +8,10 @@ import acme.testing.AcmePlannerTest;
 
 public class AnonymousTasksListTest extends AcmePlannerTest{
 	
+	/*	Feature: un usuario anonimo puede ver las tareas de públicas no finalizadas
+	 * 	Caso positivo.
+	*/
+	
 	@ParameterizedTest
 	@CsvFileSource(resources = "/anonymous/task/list.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(20)	

@@ -7,6 +7,10 @@ import org.junit.jupiter.params.provider.CsvFileSource;
 import acme.testing.AcmePlannerTest;
 
 public class AdministratorDashboardShowTest extends AcmePlannerTest {
+	
+	/*	Feature: un usuario administrador puede ver los datos de tasks y shouts
+	 * 	Caso positivo.
+	*/
 
 	@ParameterizedTest
 	@CsvFileSource(resources = "/administrator/dashboard/show.csv", encoding = "utf-8", numLinesToSkip = 1)
