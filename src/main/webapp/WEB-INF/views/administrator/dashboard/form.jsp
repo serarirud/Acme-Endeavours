@@ -21,6 +21,7 @@
 </h2>
 
 <table class="table table-sm">	
+	<caption><acme:message code="administrator.dashboard.form.title.general-indicators"/></caption>
 	<tr>
 		<th scope="row">
 			<acme:message code="administrator.dashboard.form.label.number-task-private"/>
@@ -122,6 +123,7 @@
 </h2>
 
 <table class="table table-sm">	
+	<caption><acme:message code="administrator.dashboard.form.title.executionPeriods"/></caption>
 	<tr>
 		<th scope="row">
 			<acme:message code="administrator.dashboard.form.label.average"/>
@@ -166,6 +168,7 @@
 </h2>
 
 <table class="table table-sm">	
+	<caption><acme:message code="administrator.dashboard.form.title.task-workloads"/></caption>
 	<tr>
 		<th scope="row">
 			<acme:message code="administrator.dashboard.form.label.average"/>
