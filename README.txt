@@ -19,4 +19,4 @@ Credenciales para Clever Cloud:
 - Dirección de correo: fraborcar@alum.us.es
 - Contraseña: contrasenaparadp2
 
-Enlace de la release: https://github.com/Francisco-Borrego/Acme-Planner/releases/tag/1.0
+Enlace de la release: https://github.com/Francisco-Borrego/Acme-Planner/releases/tag/2.0
