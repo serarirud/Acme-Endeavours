@@ -38,6 +38,10 @@ public class AnonymousShoutsCreateTest extends AcmePlannerTest {
 		
 	}
 	
+	/*	Feature: un usuario anónimo puede crear gritos
+	 * 	Caso negativo.
+	*/
+	
 	@ParameterizedTest
 	@CsvFileSource(resources = "/anonymous/shout/createNegative.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(20)	

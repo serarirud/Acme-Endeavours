@@ -39,11 +39,8 @@ public class ManagerTaskUpdateTest extends AcmePlannerTest{
 		super.fillInputBoxIn("workload", workload);
 		super.fillInputBoxIn("description", description);
 		super.fillInputBoxIn("link", link);
-		if(isPublic.equals("true")) {
-			super.fillInputBoxIn("isPublic", "true");
-		}else {
-			super.fillInputBoxIn("isPublic", "false");
-		}
+		super.fillInputBoxIn("isPublic", isPublic);
+		
 		super.clickOnSubmitButton("Update");
 		
 		super.clickOnListingRecord(recordIndex);
@@ -91,15 +88,12 @@ public class ManagerTaskUpdateTest extends AcmePlannerTest{
 		super.fillInputBoxIn("workload", workload);
 		super.fillInputBoxIn("description", description);
 		super.fillInputBoxIn("link", link);
-		if(isPublic.equals("true")) {
-			super.fillInputBoxIn("isPublic", "true");
-		}else {
-			super.fillInputBoxIn("isPublic", "false");
-		}
+		super.fillInputBoxIn("isPublic", isPublic);
 		
 		super.clickOnSubmitButton("Update");
 		
 		super.checkSimplePath("/manager/task/update");
+		super.checkErrorsExist();
 		
 		super.signOut();
 	}

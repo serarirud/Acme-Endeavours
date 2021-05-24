@@ -35,16 +35,22 @@ public class ManagerTaskCreateTest extends AcmePlannerTest{
 		super.fillInputBoxIn("workload", workload);
 		super.fillInputBoxIn("description", description);
 		super.fillInputBoxIn("link", link);
-		if(isPublic.equals("true")) {
-			super.fillInputBoxIn("isPublic", "true");
-		}else {
-			super.fillInputBoxIn("isPublic", "false");
-		}
+		super.fillInputBoxIn("isPublic", isPublic);
 
 		super.clickOnSubmitButton("Create");
 		
 		super.checkSimplePath("/master/welcome");
+		super.clickOnMenu("Manager", "My task list");
 		
+		super.clickOnListingRecord(recordIndex);
+		
+		super.checkInputBoxHasValue("title", title);
+		super.checkInputBoxHasValue("startExecutionPeriod", startExecutionPeriod);
+		super.checkInputBoxHasValue("endExecutionPeriod", endExecutionPeriod);
+		super.checkInputBoxHasValue("workload", workload);
+		super.checkInputBoxHasValue("description", description);
+		super.checkInputBoxHasValue("link", link);
+		super.checkInputBoxHasValue("isPublic", isPublic);
 		super.signOut();
 
 	}
@@ -62,6 +68,9 @@ public class ManagerTaskCreateTest extends AcmePlannerTest{
 	*		Octava tarea: tarea sin workload
 	*		Novena tarea: tarea sin endExecutionPeriod
 	*		Décima tarea: tarea sin descripcion
+	*		Undécima tarea: tarea con workload negativo
+	*		Duodécima tarea: tarea vacía
+	*		Decimo tercera tarea: tarea con url inválida
 	*/
 	
 	@ParameterizedTest
@@ -78,13 +87,12 @@ public class ManagerTaskCreateTest extends AcmePlannerTest{
 		super.fillInputBoxIn("workload", workload);
 		super.fillInputBoxIn("description", description);
 		super.fillInputBoxIn("link", link);
-		if(isPublic.equals("true")) {
-			super.fillInputBoxIn("isPublic", "true");
-		}
+		super.fillInputBoxIn("isPublic", isPublic);
 
 		super.clickOnSubmitButton("Create");
 		
 		super.checkSimplePath("/manager/task/create");
+		super.checkErrorsExist();
 		
 		super.signOut();
 		

@@ -9,3 +9,6 @@ recordIndex,title,startExecutionPeriod,endExecutionPeriod,workload,description,l
 7,Tarea fallo,2025/08/01 16:00,2025/10/01 17:00,,Descripción de prueba,https://google.es,false
 8,Tarea con fallos,2025/08/01 16:00,,2.00,Descripción de prueba,,false
 9,Tarea con mas fallos,2025/08/01 16:00,2025/10/01 17:00,2.00,,,true
+10,Tarea con mas fallos,2025/08/01 16:00,2025/10/01 17:00,-2.00,e,,true
+11,,,,,,,false
+12,Tarea con mas fallos,2025/08/01 16:00,2025/10/01 17:00,2.00,e,n,true

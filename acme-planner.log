@@ -10547,3 +10547,44 @@ INFO [acme.framework.configuration.ShutdownConfiguration] The system is shutting
 ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] HTTP GET /Acme-Planner/WEB-INF/views/framework/page.jsp HTTP/1.1
 ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Status: 500
 ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Exception: acme.framework.helpers.Assert.state(Assert.java:45): Access is not authorised
+WARN [org.apache.catalina.util.SessionIdGeneratorBase] Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [116] milliseconds.
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] HTTP GET /Acme-Planner/WEB-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Exception: acme.framework.helpers.Assert.state(Assert.java:45): Access is not authorised
+ERROR [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/Acme-Planner].[jsp]] at acme.framework.services.AuthenticationService.loadUserByUsername(AuthenticationService.java:51): anonymous
+ERROR [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/Acme-Planner].[jsp]] at acme.framework.services.AuthenticationService.loadUserByUsername(AuthenticationService.java:51): anonymous
+ERROR [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/Acme-Planner].[jsp]] at acme.framework.services.AuthenticationService.loadUserByUsername(AuthenticationService.java:51): anonymous
+ERROR [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/Acme-Planner].[jsp]] at acme.framework.services.AuthenticationService.loadUserByUsername(AuthenticationService.java:51): anonymous
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] HTTP GET /Acme-Planner/WEB-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Exception: acme.framework.helpers.Assert.state(Assert.java:45): Acceso no autorizado
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] HTTP GET /Acme-Planner/WEB-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Exception: acme.framework.helpers.Assert.state(Assert.java:45): Acceso no autorizado
+ERROR [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/Acme-Planner].[dispatcherServlet]] at acme.framework.utilities.RememberMeLogoutHandler.logout(RememberMeLogoutHandler.java:31): java.lang.AssertionError
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] HTTP GET /Acme-Planner/WEB-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Exception: org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:200): Filter execution threw an exception
+java.lang.AssertionError
+ERROR [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/Acme-Planner].[dispatcherServlet]] at acme.framework.utilities.RememberMeLogoutHandler.logout(RememberMeLogoutHandler.java:31): java.lang.AssertionError
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] HTTP GET /Acme-Planner/WEB-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Exception: org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:200): Filter execution threw an exception
+java.lang.AssertionError
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] HTTP GET /Acme-Planner/WEB-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Exception: acme.framework.helpers.Assert.state(Assert.java:45): Access is not authorised
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] HTTP GET /Acme-Planner/WEB-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Exception: acme.framework.helpers.Assert.state(Assert.java:45): Access is not authorised
+WARN [org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8080 is already in use
+ERROR [org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter] ***************************
+APPLICATION FAILED TO START
+***************************
+Description:
+Web server failed to start. Port 8080 was already in use.
+Action:
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] HTTP GET /Acme-Planner/WEB-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Exception: acme.framework.helpers.Assert.state(Assert.java:45): Access is not authorised
