@@ -10678,3 +10678,137 @@ ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Exception: acme.fra
 ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] HTTP GET /Acme-Planner/WEB-INF/views/framework/page.jsp HTTP/1.1
 ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Status: 500
 ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Exception: acme.framework.helpers.Assert.state(Assert.java:45): Access is not authorised
+ERROR [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/Acme-Planner].[jsp]] at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:103): Unable to compile class for JSP: 
+An error occurred at line: [18] in the generated java file: [C:\Users\ALEJANDROPC\AppData\Local\Temp\tomcat.8080.8003007707623461783\work\Tomcat\localhost\Acme-Planner\org\apache\jsp\WEB_002dINF\views\framework\page_jsp.java]
+Only a type can be imported. acme.entities.roles.Provider resolves to a package
+An error occurred at line: [19] in the generated java file: [C:\Users\ALEJANDROPC\AppData\Local\Temp\tomcat.8080.8003007707623461783\work\Tomcat\localhost\Acme-Planner\org\apache\jsp\WEB_002dINF\views\framework\page_jsp.java]
+Only a type can be imported. acme.entities.roles.Consumer resolves to a package
+ERROR [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/Acme-Planner].[dispatcherServlet]] at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:103): Unable to compile class for JSP: 
+An error occurred at line: [18] in the generated java file: [C:\Users\ALEJANDROPC\AppData\Local\Temp\tomcat.8080.8003007707623461783\work\Tomcat\localhost\Acme-Planner\org\apache\jsp\WEB_002dINF\views\framework\page_jsp.java]
+Only a type can be imported. acme.entities.roles.Provider resolves to a package
+An error occurred at line: [19] in the generated java file: [C:\Users\ALEJANDROPC\AppData\Local\Temp\tomcat.8080.8003007707623461783\work\Tomcat\localhost\Acme-Planner\org\apache\jsp\WEB_002dINF\views\framework\page_jsp.java]
+Only a type can be imported. acme.entities.roles.Consumer resolves to a package
+ERROR [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/Acme-Planner].[jsp]] at java.net.URLClassLoader.findClass(URLClassLoader.java:382): org.apache.jsp.WEB_002dINF.views.framework.page_jsp
+ERROR [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/Acme-Planner].[dispatcherServlet]] at java.net.URLClassLoader.findClass(URLClassLoader.java:382): org.apache.jsp.WEB_002dINF.views.framework.page_jsp
+ERROR [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost]] at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014): Request processing failed; nested exception is org.apache.tiles.request.render.CannotRenderException: ServletException including path '/WEB-INF/views/framework/page.jsp'.
+at org.apache.tiles.impl.BasicTilesContainer.render(BasicTilesContainer.java:399): ServletException including path '/WEB-INF/views/framework/page.jsp'.
+at org.apache.tiles.request.servlet.ServletUtil.wrapServletException(ServletUtil.java:61): ServletException including path '/WEB-INF/views/framework/page.jsp'.
+at java.net.URLClassLoader.findClass(URLClassLoader.java:382): org.apache.jsp.WEB_002dINF.views.framework.page_jsp
+ERROR [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/Acme-Planner].[jsp]] at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:103): Unable to compile class for JSP: 
+An error occurred at line: [18] in the generated java file: [C:\Users\ALEJANDROPC\AppData\Local\Temp\tomcat.8080.8003007707623461783\work\Tomcat\localhost\Acme-Planner\org\apache\jsp\WEB_002dINF\views\framework\page_jsp.java]
+Only a type can be imported. acme.entities.roles.Provider resolves to a package
+An error occurred at line: [19] in the generated java file: [C:\Users\ALEJANDROPC\AppData\Local\Temp\tomcat.8080.8003007707623461783\work\Tomcat\localhost\Acme-Planner\org\apache\jsp\WEB_002dINF\views\framework\page_jsp.java]
+Only a type can be imported. acme.entities.roles.Consumer resolves to a package
+ERROR [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/Acme-Planner].[dispatcherServlet]] at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:103): Unable to compile class for JSP: 
+An error occurred at line: [18] in the generated java file: [C:\Users\ALEJANDROPC\AppData\Local\Temp\tomcat.8080.8003007707623461783\work\Tomcat\localhost\Acme-Planner\org\apache\jsp\WEB_002dINF\views\framework\page_jsp.java]
+Only a type can be imported. acme.entities.roles.Provider resolves to a package
+An error occurred at line: [19] in the generated java file: [C:\Users\ALEJANDROPC\AppData\Local\Temp\tomcat.8080.8003007707623461783\work\Tomcat\localhost\Acme-Planner\org\apache\jsp\WEB_002dINF\views\framework\page_jsp.java]
+Only a type can be imported. acme.entities.roles.Consumer resolves to a package
+ERROR [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/Acme-Planner].[jsp]] at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:103): Unable to compile class for JSP: 
+An error occurred at line: [18] in the generated java file: [C:\Users\ALEJANDROPC\AppData\Local\Temp\tomcat.8080.8003007707623461783\work\Tomcat\localhost\Acme-Planner\org\apache\jsp\WEB_002dINF\views\framework\page_jsp.java]
+Only a type can be imported. acme.entities.roles.Provider resolves to a package
+An error occurred at line: [19] in the generated java file: [C:\Users\ALEJANDROPC\AppData\Local\Temp\tomcat.8080.8003007707623461783\work\Tomcat\localhost\Acme-Planner\org\apache\jsp\WEB_002dINF\views\framework\page_jsp.java]
+Only a type can be imported. acme.entities.roles.Consumer resolves to a package
+ERROR [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/Acme-Planner].[dispatcherServlet]] at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:103): Unable to compile class for JSP: 
+An error occurred at line: [18] in the generated java file: [C:\Users\ALEJANDROPC\AppData\Local\Temp\tomcat.8080.8003007707623461783\work\Tomcat\localhost\Acme-Planner\org\apache\jsp\WEB_002dINF\views\framework\page_jsp.java]
+Only a type can be imported. acme.entities.roles.Provider resolves to a package
+An error occurred at line: [19] in the generated java file: [C:\Users\ALEJANDROPC\AppData\Local\Temp\tomcat.8080.8003007707623461783\work\Tomcat\localhost\Acme-Planner\org\apache\jsp\WEB_002dINF\views\framework\page_jsp.java]
+Only a type can be imported. acme.entities.roles.Consumer resolves to a package
+ERROR [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost]] at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014): Request processing failed; nested exception is org.apache.tiles.request.render.CannotRenderException: ServletException including path '/WEB-INF/views/framework/page.jsp'.
+at org.apache.tiles.impl.BasicTilesContainer.render(BasicTilesContainer.java:399): ServletException including path '/WEB-INF/views/framework/page.jsp'.
+at org.apache.tiles.request.servlet.ServletUtil.wrapServletException(ServletUtil.java:63): ServletException including path '/WEB-INF/views/framework/page.jsp'.
+at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:103): Unable to compile class for JSP: 
+An error occurred at line: [18] in the generated java file: [C:\Users\ALEJANDROPC\AppData\Local\Temp\tomcat.8080.8003007707623461783\work\Tomcat\localhost\Acme-Planner\org\apache\jsp\WEB_002dINF\views\framework\page_jsp.java]
+Only a type can be imported. acme.entities.roles.Provider resolves to a package
+An error occurred at line: [19] in the generated java file: [C:\Users\ALEJANDROPC\AppData\Local\Temp\tomcat.8080.8003007707623461783\work\Tomcat\localhost\Acme-Planner\org\apache\jsp\WEB_002dINF\views\framework\page_jsp.java]
+Only a type can be imported. acme.entities.roles.Consumer resolves to a package
+ERROR [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/Acme-Planner].[jsp]] at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:103): Unable to compile class for JSP: 
+An error occurred at line: [18] in the generated java file: [C:\Users\ALEJANDROPC\AppData\Local\Temp\tomcat.8080.8003007707623461783\work\Tomcat\localhost\Acme-Planner\org\apache\jsp\WEB_002dINF\views\framework\page_jsp.java]
+Only a type can be imported. acme.entities.roles.Provider resolves to a package
+An error occurred at line: [19] in the generated java file: [C:\Users\ALEJANDROPC\AppData\Local\Temp\tomcat.8080.8003007707623461783\work\Tomcat\localhost\Acme-Planner\org\apache\jsp\WEB_002dINF\views\framework\page_jsp.java]
+Only a type can be imported. acme.entities.roles.Consumer resolves to a package
+ERROR [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/Acme-Planner].[dispatcherServlet]] at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:103): Unable to compile class for JSP: 
+An error occurred at line: [18] in the generated java file: [C:\Users\ALEJANDROPC\AppData\Local\Temp\tomcat.8080.8003007707623461783\work\Tomcat\localhost\Acme-Planner\org\apache\jsp\WEB_002dINF\views\framework\page_jsp.java]
+Only a type can be imported. acme.entities.roles.Provider resolves to a package
+An error occurred at line: [19] in the generated java file: [C:\Users\ALEJANDROPC\AppData\Local\Temp\tomcat.8080.8003007707623461783\work\Tomcat\localhost\Acme-Planner\org\apache\jsp\WEB_002dINF\views\framework\page_jsp.java]
+Only a type can be imported. acme.entities.roles.Consumer resolves to a package
+ERROR [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/Acme-Planner].[jsp]] at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:103): Unable to compile class for JSP: 
+An error occurred at line: [18] in the generated java file: [C:\Users\ALEJANDROPC\AppData\Local\Temp\tomcat.8080.8003007707623461783\work\Tomcat\localhost\Acme-Planner\org\apache\jsp\WEB_002dINF\views\framework\page_jsp.java]
+Only a type can be imported. acme.entities.roles.Provider resolves to a package
+An error occurred at line: [19] in the generated java file: [C:\Users\ALEJANDROPC\AppData\Local\Temp\tomcat.8080.8003007707623461783\work\Tomcat\localhost\Acme-Planner\org\apache\jsp\WEB_002dINF\views\framework\page_jsp.java]
+Only a type can be imported. acme.entities.roles.Consumer resolves to a package
+ERROR [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/Acme-Planner].[dispatcherServlet]] at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:103): Unable to compile class for JSP: 
+An error occurred at line: [18] in the generated java file: [C:\Users\ALEJANDROPC\AppData\Local\Temp\tomcat.8080.8003007707623461783\work\Tomcat\localhost\Acme-Planner\org\apache\jsp\WEB_002dINF\views\framework\page_jsp.java]
+Only a type can be imported. acme.entities.roles.Provider resolves to a package
+An error occurred at line: [19] in the generated java file: [C:\Users\ALEJANDROPC\AppData\Local\Temp\tomcat.8080.8003007707623461783\work\Tomcat\localhost\Acme-Planner\org\apache\jsp\WEB_002dINF\views\framework\page_jsp.java]
+Only a type can be imported. acme.entities.roles.Consumer resolves to a package
+ERROR [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost]] at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014): Request processing failed; nested exception is org.apache.tiles.request.render.CannotRenderException: ServletException including path '/WEB-INF/views/framework/page.jsp'.
+at org.apache.tiles.impl.BasicTilesContainer.render(BasicTilesContainer.java:399): ServletException including path '/WEB-INF/views/framework/page.jsp'.
+at org.apache.tiles.request.servlet.ServletUtil.wrapServletException(ServletUtil.java:63): ServletException including path '/WEB-INF/views/framework/page.jsp'.
+at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:103): Unable to compile class for JSP: 
+An error occurred at line: [18] in the generated java file: [C:\Users\ALEJANDROPC\AppData\Local\Temp\tomcat.8080.8003007707623461783\work\Tomcat\localhost\Acme-Planner\org\apache\jsp\WEB_002dINF\views\framework\page_jsp.java]
+Only a type can be imported. acme.entities.roles.Provider resolves to a package
+An error occurred at line: [19] in the generated java file: [C:\Users\ALEJANDROPC\AppData\Local\Temp\tomcat.8080.8003007707623461783\work\Tomcat\localhost\Acme-Planner\org\apache\jsp\WEB_002dINF\views\framework\page_jsp.java]
+Only a type can be imported. acme.entities.roles.Consumer resolves to a package
+ERROR [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/Acme-Planner].[jsp]] at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:103): Unable to compile class for JSP: 
+An error occurred at line: [18] in the generated java file: [C:\Users\ALEJANDROPC\AppData\Local\Temp\tomcat.8080.8003007707623461783\work\Tomcat\localhost\Acme-Planner\org\apache\jsp\WEB_002dINF\views\framework\page_jsp.java]
+Only a type can be imported. acme.entities.roles.Provider resolves to a package
+An error occurred at line: [19] in the generated java file: [C:\Users\ALEJANDROPC\AppData\Local\Temp\tomcat.8080.8003007707623461783\work\Tomcat\localhost\Acme-Planner\org\apache\jsp\WEB_002dINF\views\framework\page_jsp.java]
+Only a type can be imported. acme.entities.roles.Consumer resolves to a package
+ERROR [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/Acme-Planner].[dispatcherServlet]] at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:103): Unable to compile class for JSP: 
+An error occurred at line: [18] in the generated java file: [C:\Users\ALEJANDROPC\AppData\Local\Temp\tomcat.8080.8003007707623461783\work\Tomcat\localhost\Acme-Planner\org\apache\jsp\WEB_002dINF\views\framework\page_jsp.java]
+Only a type can be imported. acme.entities.roles.Provider resolves to a package
+An error occurred at line: [19] in the generated java file: [C:\Users\ALEJANDROPC\AppData\Local\Temp\tomcat.8080.8003007707623461783\work\Tomcat\localhost\Acme-Planner\org\apache\jsp\WEB_002dINF\views\framework\page_jsp.java]
+Only a type can be imported. acme.entities.roles.Consumer resolves to a package
+ERROR [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/Acme-Planner].[jsp]] at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:103): Unable to compile class for JSP: 
+An error occurred at line: [18] in the generated java file: [C:\Users\ALEJANDROPC\AppData\Local\Temp\tomcat.8080.8003007707623461783\work\Tomcat\localhost\Acme-Planner\org\apache\jsp\WEB_002dINF\views\framework\page_jsp.java]
+Only a type can be imported. acme.entities.roles.Provider resolves to a package
+An error occurred at line: [19] in the generated java file: [C:\Users\ALEJANDROPC\AppData\Local\Temp\tomcat.8080.8003007707623461783\work\Tomcat\localhost\Acme-Planner\org\apache\jsp\WEB_002dINF\views\framework\page_jsp.java]
+Only a type can be imported. acme.entities.roles.Consumer resolves to a package
+ERROR [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/Acme-Planner].[dispatcherServlet]] at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:103): Unable to compile class for JSP: 
+An error occurred at line: [18] in the generated java file: [C:\Users\ALEJANDROPC\AppData\Local\Temp\tomcat.8080.8003007707623461783\work\Tomcat\localhost\Acme-Planner\org\apache\jsp\WEB_002dINF\views\framework\page_jsp.java]
+Only a type can be imported. acme.entities.roles.Provider resolves to a package
+An error occurred at line: [19] in the generated java file: [C:\Users\ALEJANDROPC\AppData\Local\Temp\tomcat.8080.8003007707623461783\work\Tomcat\localhost\Acme-Planner\org\apache\jsp\WEB_002dINF\views\framework\page_jsp.java]
+Only a type can be imported. acme.entities.roles.Consumer resolves to a package
+ERROR [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost]] at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014): Request processing failed; nested exception is org.apache.tiles.request.render.CannotRenderException: ServletException including path '/WEB-INF/views/framework/page.jsp'.
+at org.apache.tiles.impl.BasicTilesContainer.render(BasicTilesContainer.java:399): ServletException including path '/WEB-INF/views/framework/page.jsp'.
+at org.apache.tiles.request.servlet.ServletUtil.wrapServletException(ServletUtil.java:63): ServletException including path '/WEB-INF/views/framework/page.jsp'.
+at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:103): Unable to compile class for JSP: 
+An error occurred at line: [18] in the generated java file: [C:\Users\ALEJANDROPC\AppData\Local\Temp\tomcat.8080.8003007707623461783\work\Tomcat\localhost\Acme-Planner\org\apache\jsp\WEB_002dINF\views\framework\page_jsp.java]
+Only a type can be imported. acme.entities.roles.Provider resolves to a package
+An error occurred at line: [19] in the generated java file: [C:\Users\ALEJANDROPC\AppData\Local\Temp\tomcat.8080.8003007707623461783\work\Tomcat\localhost\Acme-Planner\org\apache\jsp\WEB_002dINF\views\framework\page_jsp.java]
+Only a type can be imported. acme.entities.roles.Consumer resolves to a package
+WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper] SQL Error: 1451, SQLState: 23000
+ERROR [org.hibernate.engine.jdbc.spi.SqlExceptionHelper] Cannot delete or update a parent row: a foreign key constraint fails (`acme-planner`.`work_plan_task`, CONSTRAINT `FK57x79t8cweik3oxa52mwl0v6q` FOREIGN KEY (`tasks_id`) REFERENCES `task` (`id`))
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] HTTP POST /Acme-Planner/WEB-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Exception: org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:276): could not execute statement; SQL [n/a]; constraint [null]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+org.hibernate.exception.internal.SQLExceptionTypeDelegate.convert(SQLExceptionTypeDelegate.java:59): could not execute statement
+com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:117): Cannot delete or update a parent row: a foreign key constraint fails (`acme-planner`.`work_plan_task`, CONSTRAINT `FK57x79t8cweik3oxa52mwl0v6q` FOREIGN KEY (`tasks_id`) REFERENCES `task` (`id`))
+WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper] SQL Error: 1451, SQLState: 23000
+ERROR [org.hibernate.engine.jdbc.spi.SqlExceptionHelper] Cannot delete or update a parent row: a foreign key constraint fails (`acme-planner`.`work_plan_task`, CONSTRAINT `FK57x79t8cweik3oxa52mwl0v6q` FOREIGN KEY (`tasks_id`) REFERENCES `task` (`id`))
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] HTTP POST /Acme-Planner/WEB-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Exception: org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:276): could not execute statement; SQL [n/a]; constraint [null]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+org.hibernate.exception.internal.SQLExceptionTypeDelegate.convert(SQLExceptionTypeDelegate.java:59): could not execute statement
+com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:117): Cannot delete or update a parent row: a foreign key constraint fails (`acme-planner`.`work_plan_task`, CONSTRAINT `FK57x79t8cweik3oxa52mwl0v6q` FOREIGN KEY (`tasks_id`) REFERENCES `task` (`id`))
+WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper] SQL Error: 1451, SQLState: 23000
+ERROR [org.hibernate.engine.jdbc.spi.SqlExceptionHelper] Cannot delete or update a parent row: a foreign key constraint fails (`acme-planner`.`work_plan_task`, CONSTRAINT `FK57x79t8cweik3oxa52mwl0v6q` FOREIGN KEY (`tasks_id`) REFERENCES `task` (`id`))
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] HTTP POST /Acme-Planner/WEB-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Exception: org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:276): could not execute statement; SQL [n/a]; constraint [null]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+org.hibernate.exception.internal.SQLExceptionTypeDelegate.convert(SQLExceptionTypeDelegate.java:59): could not execute statement
+com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:117): Cannot delete or update a parent row: a foreign key constraint fails (`acme-planner`.`work_plan_task`, CONSTRAINT `FK57x79t8cweik3oxa52mwl0v6q` FOREIGN KEY (`tasks_id`) REFERENCES `task` (`id`))
+WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper] SQL Error: 1451, SQLState: 23000
+ERROR [org.hibernate.engine.jdbc.spi.SqlExceptionHelper] Cannot delete or update a parent row: a foreign key constraint fails (`acme-planner`.`work_plan_task`, CONSTRAINT `FK57x79t8cweik3oxa52mwl0v6q` FOREIGN KEY (`tasks_id`) REFERENCES `task` (`id`))
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] HTTP POST /Acme-Planner/WEB-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Exception: org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:276): could not execute statement; SQL [n/a]; constraint [null]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+org.hibernate.exception.internal.SQLExceptionTypeDelegate.convert(SQLExceptionTypeDelegate.java:59): could not execute statement
+com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:117): Cannot delete or update a parent row: a foreign key constraint fails (`acme-planner`.`work_plan_task`, CONSTRAINT `FK57x79t8cweik3oxa52mwl0v6q` FOREIGN KEY (`tasks_id`) REFERENCES `task` (`id`))
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] HTTP GET /Acme-Planner/WEB-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Exception: acme.framework.helpers.Assert.state(Assert.java:45): Access is not authorised
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] HTTP GET /Acme-Planner/WEB-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Exception: acme.framework.helpers.Assert.state(Assert.java:45): Access is not authorised
