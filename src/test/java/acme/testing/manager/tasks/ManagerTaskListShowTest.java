@@ -53,7 +53,7 @@ public class ManagerTaskListShowTest extends AcmePlannerTest{
 		
 		super.signIn("manager1", "manager1");
 				
-		super.driver.get("http://localhost:8080/Acme-Planner/manager/task/show?id=21");
+		super.navigate("/manager/task/show", "id=21");
 		super.checkErrorsExist();
 		super.signOut();
 	}

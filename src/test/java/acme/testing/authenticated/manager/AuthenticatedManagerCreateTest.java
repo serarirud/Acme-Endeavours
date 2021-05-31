@@ -34,7 +34,7 @@ public class AuthenticatedManagerCreateTest extends AcmePlannerTest {
 	@Test
 	@Order(20)	
 	public void createNegative() {	
-		super.driver.get("http://localhost:8080/Acme-Planner/authenticated/manager/create");
+		super.navigate("/authenticated/manager/create", "");
 		super.checkErrorsExist();
 		
 	}
