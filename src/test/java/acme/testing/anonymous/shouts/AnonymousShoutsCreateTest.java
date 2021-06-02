@@ -40,6 +40,11 @@ public class AnonymousShoutsCreateTest extends AcmePlannerTest {
 	
 	/*	Feature: un usuario anónimo puede crear gritos
 	 * 	Caso negativo.
+	 * 		Primer update: autor y texto vacío. Información mala URL.
+	 * 		Segundo update: autor superando el máximo de caracteres, texto con umbral de spam superado y mala URL.
+	 * 		Tercer update: autor y texto menor del mínimo de caracteres, y mala URL.
+	 * 		Cuarto update: autor vacío, texto superando el máximo de caracteres y mala URL.
+	 * 		Quinto update: autor vacío, texto con umbral de spam superado y mala URL.
 	*/
 	
 	@ParameterizedTest

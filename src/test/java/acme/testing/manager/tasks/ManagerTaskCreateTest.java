@@ -70,7 +70,7 @@ public class ManagerTaskCreateTest extends AcmePlannerTest{
 	*		Décima tarea: tarea sin descripcion
 	*		Undécima tarea: tarea con workload negativo
 	*		Duodécima tarea: tarea vacía
-	*		Decimo tercera tarea: tarea con url inválida
+	*		Decimo tercera tarea: tarea con URL inválida
 	*/
 	
 	@ParameterizedTest

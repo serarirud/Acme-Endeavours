@@ -40,7 +40,15 @@ public class AdministratorConfigurationUpdateTest extends AcmePlannerTest {
 	/*	Feature: un usuario administrador puede modificar los parámetros de configuración de la
 	 * 	aplicación (palabras spam, umbral de spam).
 	 * 	Caso negativo.
+	 * 		Primer update: spamWords es null y el threshold negativo.
+	 * 	 	Segundo update: spamWords es null y el threshold positivo mayor que 100%.
+	 * 		Tercer update: spamWords es null y el threshold tiene tres decimales.
+	 * 		Cuarto update: spamWords es null y el threshold es null.
+	 * 		Quinto update: spamWords es null y el threshold es un número negativo muy grande y con cuatro decimales.
+	 * 		Sexto update: spamWords es null y el threshold es un positivo muy grande, superior a 100% y con cuatro decimales.
+	 * 
 	*/
+
 	
 	
 	@ParameterizedTest

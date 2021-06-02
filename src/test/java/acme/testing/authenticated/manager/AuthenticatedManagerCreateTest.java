@@ -29,6 +29,7 @@ public class AuthenticatedManagerCreateTest extends AcmePlannerTest {
 	
 	/*	Feature: un usuario anónimo no puede convertirse en mánager
 	 * 	Caso negativo.
+	 * Se comprueba intentando entrar a la URL de creación de manager sin estar autenticado.
 	*/
 	
 	@Test
