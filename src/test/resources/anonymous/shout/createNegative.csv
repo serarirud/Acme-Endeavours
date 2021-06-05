@@ -1,6 +1,14 @@
 author,text,info
-"",,n
-12345678901234567890123456,John Doe hard          core,http
-1234,1234,google.es
-"",12345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901 -- + de 100 caracteres,alum.us.es
-"",sex dd     hard             core,https//g
+"",,n,,,,true
+12345678901234567890123456,John Doe hard          core,http,,,,true
+1234,1234,google.es,,,,true
+"",12345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901 -- + de 100 caracteres,alum.us.es,,,,true
+"",sex dd     hard             core,https//g,,,,true
+John Doe,Texto de prueba,2021/06/02 10:00,patron incorrecto,2022/01/01 10:00,EUR 100.00,true
+John Doe,Texto de prueba,2021/06/02 10:00,01/12/2000,2022/01/01 10:00,EUR 100.00,true
+John Doe,Texto de prueba,2021/06/02 10:00,1999/01/01,patron incorrecto,EUR 100.00,true
+John Doe,Texto de prueba,2021/06/02 10:00,1999/01/01,2020/01/01 10:00,EUR 100.00,true
+John Doe,Texto de prueba,2021/06/02 10:00,1999/01/01,2022/01/01 10:00,patron incorrecto,true
+John Doe,Texto de prueba,2021/06/02 10:00,1999/01/01,2022/01/01 10:00,EUR -0.01,true
+John Doe,Texto de prueba,2021/06/02 10:00,1999/01/01,2022/01/01 10:00,AAA 100.00,true
+

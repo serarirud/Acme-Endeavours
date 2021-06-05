@@ -58,5 +58,21 @@ public interface AdministratorDashboardRepository extends AbstractRepository {
 	@Query("select max(t.workload)  from Task t")
 	Double maximumTaskWorkloads();
 
+	//-------------------------------
+	
+	@Query("SELECT count(s) FROM Shout s")
+	Integer nShouts();
+		
+	@Query("SELECT count(s) FROM Shout s WHERE (s.sheet.atr4 = true)")
+	Integer nShoutsAtr4();
+		
+	@Query("SELECT avg(sh.atr3.amount) FROM Sheet sh WHERE (sh.atr3.currency = ?1)")
+	Double averageSheetsByCurrency(String currency);
+		
+	@Query("SELECT stddev(sh.atr3.amount) FROM Sheet sh WHERE (sh.atr3.currency = ?1)")
+	Double deviationSheetsByCurrency(String currency);
+		
+		
+	//---------------------------------
 	
 }

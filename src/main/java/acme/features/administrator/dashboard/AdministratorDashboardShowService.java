@@ -34,7 +34,7 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 	protected AdministratorDashboardRepository repository;
 
 
-
+	
 	@Override
 	public boolean authorise(final Request<Dashboard> request) {
 		assert request != null;
@@ -51,7 +51,9 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		request.unbind(entity, model,
 			"nPrivateTask", "nPublicTask", "nNotFinishedTask", "nFinishedTask", "averageTaskExecutionPeriods",
 			"deviationTaskExecutionPeriods", "minimumTaskExecutionPeriods", "maximumTaskExecutionPeriods",
-			"averageTaskWorkloads", "deviationTaskWorkloads", "minimumTaskWorkloads", "maximumTaskWorkloads");
+			"averageTaskWorkloads", "deviationTaskWorkloads", "minimumTaskWorkloads", "maximumTaskWorkloads",
+			//--------------------
+			"ratio1", "ratio2", "averageSheetsEUR", "averageSheetsUSD", "deviationSheetsEUR", "deviationSheetsUSD");
 	}
 
 	@Override
@@ -74,6 +76,19 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		Double deviationTaskWorkloads;
 		Double	minimumTaskWorkloads;
 		Double	maximumTaskWorkloads;
+		
+		//--------------------------
+		Double ratio1;
+		final Double ratio2;
+		
+		Double averageSheetsEUR;
+		Double averageSheetsUSD;
+		final Double deviationSheetsEUR;
+		final Double deviationSheetsUSD;
+		
+		
+		
+		//-------------------------
 
 		nPrivateTask = this.repository.nPrivateTask();
 		nPublicTask = this.repository.nPublicTask();
@@ -83,6 +98,25 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		deviationTaskExecutionPeriods = this.repository.deviationTaskExecutionPeriods();
 		minimumTaskExecutionPeriods = this.repository.minimumTaskExecutionPeriods();
 		maximumTaskExecutionPeriods = this.repository.maximumTaskExecutionPeriods();
+		
+
+
+		
+		//----------------------------
+		final Integer totalNumberOfShouts = this.repository.nShouts();
+		final Integer nShoutsAtr4 = this.repository.nShoutsAtr4();
+		ratio1 = ((nShoutsAtr4+0.0)/totalNumberOfShouts);
+		
+		ratio2=0.0;
+		
+		averageSheetsEUR=this.repository.averageSheetsByCurrency("EUR");
+		averageSheetsUSD=this.repository.averageSheetsByCurrency("USD");
+		deviationSheetsEUR=this.repository.deviationSheetsByCurrency("EUR");
+		deviationSheetsUSD=this.repository.deviationSheetsByCurrency("USD");
+		
+		
+		//---------------------------
+		
 		
 		final List<Task> tasks = this.repository.findAllTask().stream().collect(Collectors.toList());
 		Double sum = 0.;
@@ -120,6 +154,18 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		result.setDeviationTaskWorkloads(deviationTaskWorkloads);
 		result.setMinimumTaskWorkloads(minimumTaskWorkloads);
 		result.setMaximumTaskWorkloads(maximumTaskWorkloads);
+		
+		
+		//--------------------------------------
+		
+		result.setRatio1(ratio1);
+		result.setAverageSheetsEUR(averageSheetsEUR);
+		result.setAverageSheetsUSD(averageSheetsUSD);
+		result.setDeviationSheetsEUR(deviationSheetsEUR);
+		result.setDeviationSheetsUSD(deviationSheetsUSD);
+		
+		
+		//-------------------------------------
 		
 		return result;
 	}

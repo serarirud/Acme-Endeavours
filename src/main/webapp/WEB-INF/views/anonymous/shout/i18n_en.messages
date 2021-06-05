@@ -1,12 +1,25 @@
 anonymous.shout.form.label.author = Author:
 anonymous.shout.form.label.text = Text:
-anonymous.shout.form.label.info = Info: 
+anonymous.shout.form.label.info = Info:
+anonymous.shout.form.label.atr1 = atribute1:
+anonymous.shout.form.label.atr2 = atribute2:
+anonymous.shout.form.label.atr3 = atribute3:
+anonymous.shout.form.label.atr4 = atribute4: 
 anonymous.shout.form.button.create = Shout!
 anonymous.shout.form.button.return = Return
 
 anonymous.shout.list.label.moment = Moment
 anonymous.shout.list.label.author = Author
 anonymous.shout.list.label.text = Text
-anonymous.shout.list.label.info = Info 
+anonymous.shout.list.label.info = Info
+
+anonymous.shout.list.label.atr1 = atribute1
+anonymous.shout.list.label.atr2 = atribute2
+anonymous.shout.list.label.atr3 = atribute3
+anonymous.shout.list.label.atr4 = atribute4 
+
 
 anonymous.shout.error.umbral-superado = Threshold of spam word reachead
+anonymous.shout.error.atr1 = There is another sheet with the same value of this atribute
+anonymous.shout.error.atr2 = Date must be in the future
+anonymous.shout.error.atr3 = This type of currency is not valid

@@ -27,3 +27,12 @@ administrator.dashboard.form.label.task-privates = Private
 administrator.dashboard.form.label.task-finished =  Finished 
 administrator.dashboard.form.label.task-unfinished = Unfinished 
 administrator.dashboard.form.result.hours = {Hours,Minutes}
+
+
+administrator.dashboard.form.label.ratio1=Ratio of sheets flagged as xxx
+administrator.dashboard.form.label.ratio2=Ratio of sheets whose xxx as xxx
+administrator.dashboard.form.label.averageSheetsEUR=Average of sheets grouped by currency EUR
+administrator.dashboard.form.label.averageSheetsUSD=Average of sheets grouped by currency USD
+administrator.dashboard.form.label.deviationSheetsEUR=Standard deviation of sheets grouped by currency EUR
+administrator.dashboard.form.label.deviationSheetsUSD=Standard deviation of sheets grouped by currency USD
+

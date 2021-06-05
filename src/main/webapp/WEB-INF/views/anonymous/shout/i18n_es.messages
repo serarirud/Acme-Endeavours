@@ -1,12 +1,25 @@
 anonymous.shout.form.label.author = Autor:
 anonymous.shout.form.label.text = Texto:
 anonymous.shout.form.label.info = Información:
+anonymous.shout.form.label.atr1 = atributo1:
+anonymous.shout.form.label.atr2 = atributo2:
+anonymous.shout.form.label.atr3 = atributo3:
+anonymous.shout.form.label.atr4 = atributo4:
 anonymous.shout.form.button.create = ¡Gritar!
 anonymous.shout.form.button.return = Volver
 
 anonymous.shout.list.label.moment = Momento
 anonymous.shout.list.label.author = Autor
 anonymous.shout.list.label.text = Texto
-anonymous.shout.list.label.info = Información 
+anonymous.shout.list.label.info = Información
+
+anonymous.shout.list.label.atr1 = atributo1
+anonymous.shout.list.label.atr2 = atributo2
+anonymous.shout.list.label.atr3 = atributo3
+anonymous.shout.list.label.atr4 = atributo4
+
 
 anonymous.shout.error.umbral-superado = Umbral de palabras consideradas spam superado
+anonymous.shout.error.atr1 = Ya existe otra hoja de información con el mismo valor para este atributo
+anonymous.shout.error.atr2 = La fecha debe ser en futuro
+anonymous.shout.error.atr3 = No se admite ese tipo de moneda
