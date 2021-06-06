@@ -19,6 +19,107 @@
 
 	<import resource="classpath:/WEB-INF/population/conversion-service.xml"/>
 	
+	<!-- Sheets -->
+
+	
+	<bean id="sheet01" class="acme.entities.sheet.Sheet">
+		<property name="atributo1" value="01/12/2000"/>
+		<property name="atributo2" value="2021/05/02 10:00"/>		
+		<property name="atributo3">
+			<bean class="acme.framework.datatypes.Money">
+				<property name="amount" value="80.00" />
+				<property name="currency" value="USD" />
+			</bean>
+		</property>
+		<property name="atributo4" value="false"/>
+	</bean>
+	
+	<bean id="sheet02" class="acme.entities.sheet.Sheet">
+		<property name="atributo1" value="02/12/2000"/>
+		<property name="atributo2" value="2021/05/02 10:00"/>		
+		<property name="atributo3">
+			<bean class="acme.framework.datatypes.Money">
+				<property name="amount" value="70.00" />
+				<property name="currency" value="USD" />
+			</bean>
+		</property>
+		<property name="atributo4" value="false"/>
+	</bean>
+	
+	<bean id="sheet03" class="acme.entities.sheet.Sheet">
+		<property name="atributo1" value="03/12/2000"/>
+		<property name="atributo2" value="2021/05/02 10:00"/>		
+		<property name="atributo3">
+			<bean class="acme.framework.datatypes.Money">
+				<property name="amount" value="30.00" />
+				<property name="currency" value="USD" />
+			</bean>
+		</property>
+		<property name="atributo4" value="false"/>
+	</bean>
+	
+	<bean id="sheet04" class="acme.entities.sheet.Sheet">
+		<property name="atributo1" value="04/12/2000"/>
+		<property name="atributo2" value="2021/05/02 10:00"/>		
+		<property name="atributo3">
+			<bean class="acme.framework.datatypes.Money">
+				<property name="amount" value="15.50" />
+				<property name="currency" value="EUR" />
+			</bean>
+		</property>
+		<property name="atributo4" value="true"/>
+	</bean>
+	
+	<bean id="sheet05" class="acme.entities.sheet.Sheet">
+		<property name="atributo1" value="05/12/2000"/>
+		<property name="atributo2" value="2021/05/02 10:00"/>		
+		<property name="atributo3">
+			<bean class="acme.framework.datatypes.Money">
+				<property name="amount" value="9.10" />
+				<property name="currency" value="EUR" />
+			</bean>
+		</property>
+		<property name="atributo4" value="true"/>
+	</bean>
+	
+	<bean id="sheet06" class="acme.entities.sheet.Sheet">
+		<property name="atributo1" value="06/12/2000"/>
+		<property name="atributo2" value="2021/05/02 10:00"/>		
+		<property name="atributo3">
+			<bean class="acme.framework.datatypes.Money">
+				<property name="amount" value="100.00" />
+				<property name="currency" value="EUR" />
+			</bean>
+		</property>
+		<property name="atributo4" value="true"/>
+	</bean>
+	
+	
+	<bean id="sheet07" class="acme.entities.sheet.Sheet">
+		<property name="atributo1" value="07/12/2000"/>
+		<property name="atributo2" value="2021/05/02 10:00"/>		
+		<property name="atributo3">
+			<bean class="acme.framework.datatypes.Money">
+				<property name="amount" value="100.00" />
+				<property name="currency" value="EUR" />
+			</bean>
+		</property>
+		<property name="atributo4" value="true"/>
+	</bean>
+	
+		
+	<bean id="sheet08" class="acme.entities.sheet.Sheet">
+		<property name="atributo1" value="08/12/2000"/>
+		<property name="atributo2" value="2021/05/02 10:00"/>		
+		<property name="atributo3">
+			<bean class="acme.framework.datatypes.Money">
+				<property name="amount" value="100.00" />
+				<property name="currency" value="EUR" />
+			</bean>
+		</property>
+		<property name="atributo4" value="true"/>
+	</bean>
+	
 	<!--  Shouts -->
 	
 	<bean id="shout01" class="acme.entities.shouts.Shout">
@@ -26,6 +127,7 @@
 		<property name="author" value="John Doe"/>		
 		<property name="text" value="I'm happy!"/>
 		<property name="info"><null/></property>
+		<property name="sheet" ref="sheet01"/>
 	</bean>
 	
 	<bean id="shout02" class="acme.entities.shouts.Shout">
@@ -33,6 +135,7 @@
 		<property name="author" value="Jane Doe"/>		
 		<property name="text" value="I'm the master of my room!"/>
 		<property name="info" value="http://www.example.org"/>
+		<property name="sheet" ref="sheet02"/>
 	</bean>
 	
 	<bean id="shout03" class="acme.entities.shouts.Shout">
@@ -40,6 +143,7 @@
 		<property name="author" value="Foo Bar"/>		
 		<property name="text" value="Just turning 50!"/>
 		<property name="info" value="http://www.example1.org"/>	
+		<property name="sheet" ref="sheet03"/>
 	</bean>
 	
 	
@@ -48,6 +152,7 @@
 		<property name="author" value="Francisco Borrego"/>		
 		<property name="text" value="Este es un texto muy guay."/>
 		<property name="info"><null/></property>	
+		<property name="sheet" ref="sheet04"/>
 	</bean>
 	
 	
@@ -56,6 +161,7 @@
 		<property name="author" value="Sergio Arias Ruda"/>		
 		<property name="text" value="Este es un grito antiguo así que no debería verlo un usuario anónimo"/>
 		<property name="info"><null/></property>	
+		<property name="sheet" ref="sheet05"/>
 	</bean>
 	
 	
@@ -64,6 +170,7 @@
 		<property name="author" value="Jesus Vargas"/>		
 		<property name="text" value="Hola miren mi proyecto."/>
 		<property name="info" value="https://github.com/Francisco-Borrego/Acme-Planner/" />
+		<property name="sheet" ref="sheet06"/>
 	</bean>
 	
 	<bean id="shout07" class="acme.entities.shouts.Shout">
@@ -71,6 +178,7 @@
 		<property name="author" value="Antonio Funes"/>		
 		<property name="text" value="Me gusta mucho esta página."/>
 		<property name="info" value="https://www.us.es/" />
+		<property name="sheet" ref="sheet07"/>
 	</bean>
 	
 	<bean id="shout08" class="acme.entities.shouts.Shout">
@@ -78,6 +186,7 @@
 		<property name="author" value="Usuario de incógnito"/>		
 		<property name="text" value="Esta página está chula"/>
 		<property name="info" value="https://www.google.es/" />
+		<property name="sheet" ref="sheet08"/>
 	</bean>
 	
 	
