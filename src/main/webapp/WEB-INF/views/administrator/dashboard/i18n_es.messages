@@ -27,3 +27,10 @@ administrator.dashboard.form.label.task-privates = Privadas
 administrator.dashboard.form.label.task-finished =  Terminadas
 administrator.dashboard.form.label.task-unfinished = No terminadas
 administrator.dashboard.form.result.hours = {Horas,Minutos}
+
+administrator.dashboard.form.label.ratio1= Ratio 1
+administrator.dashboard.form.label.ratio2= Ratio 2
+administrator.dashboard.form.label.avgSheetsUSD = Media de hojas con USD
+administrator.dashboard.form.label.avgSheetsEUR = Media de hojas con EUR
+administrator.dashboard.form.label.devSheetsUSD = Desviación estándar de hojas con USD
+administrator.dashboard.form.label.devSheetsEUR = Desviación estándar de hojas con EUR

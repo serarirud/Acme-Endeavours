@@ -9,4 +9,14 @@ anonymous.shout.list.label.author = Author
 anonymous.shout.list.label.text = Text
 anonymous.shout.list.label.info = Info 
 
+anonymous.shout.list.label.atributo1 = Atributo1 
+anonymous.shout.list.label.atributo2 = Atributo2
+anonymous.shout.list.label.atributo3 = Atributo3
+anonymous.shout.list.label.atributo4 = Atributo4 
+
 anonymous.shout.error.umbral-superado = Threshold of spam word reachead
+
+error-atributo1-validacion1 = Validación incorrecta de Atributo1
+error-atributo1-validacion2 = Validación incorrecta de Atributo1
+error-atributo2-validacion = Validación incorrecta de Atributo2
+error-atributo3-validacion-currency = Validación incorrecta de Atributo3

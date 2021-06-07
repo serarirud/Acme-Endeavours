@@ -64,6 +64,7 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 		Shout result;
 		Date moment;
 
+		//Quizás instanciar el momento??
 		
 		moment = new Date(System.currentTimeMillis() - 1);
 		
@@ -100,7 +101,7 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 		
 		if(!errors.hasErrors("sheet.atributo3") && entity.getSheet().getAtributo3()!=null) {
 			final String currency = entity.getSheet().getAtributo3().getCurrency();
-			errors.state(request, currency.equals("EUR")||currency.equals("USD"), "sheet.atributo3", "error-atributo3-validacion-currency");
+			errors.state(request, currency.equals("USD")||currency.equals("EUR"), "sheet.atributo3", "error-atributo3-validacion-currency");
 		}
 	}
 	
