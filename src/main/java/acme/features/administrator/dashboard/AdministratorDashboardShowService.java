@@ -147,8 +147,8 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		result.setRatio2(ratio2);
 		result.setAvgSheetsUSD(avgSheetsUSD);
 		result.setAvgSheetsEUR(avgSheetsEUR);
-		result.setAvgSheetsUSD(devSheetsUSD);
-		result.setAvgSheetsEUR(devSheetsEUR);
+		result.setDevSheetsUSD(devSheetsUSD);
+		result.setDevSheetsEUR(devSheetsEUR);
 		
 		return result;
 	}

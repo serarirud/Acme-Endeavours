@@ -19,11 +19,20 @@ public class AdministratorDashboardShowTest extends AcmePlannerTest {
 		final String averageTaskExecutionPeriods, final String deviationTaskExecutionPeriods, 
 		final String minimumTaskExecutionPeriods, final String maximumTaskExecutionPeriods, 
 		final String averageTaskWorkloads, final String deviationTaskWorkloads, 
-		final String minimumTaskWorkloads, final String maximumTaskWorkloads) {
+		final String minimumTaskWorkloads, final String maximumTaskWorkloads, final String ratio1,
+		final String ratio2, final String avgSheetsUSD, final String avgSheetsEUR, final String devSheetsUSD, final String devSheetsEUR) {
 		
 		super.signIn("administrator", "administrator");
 		
 		super.clickOnMenu("Administrator", "Dashboard");
+		
+		//CC
+		super.checkErrorsAcmeMessageExist(2,1,1,ratio1.toString());
+		super.checkErrorsAcmeMessageExist(2,1,2,ratio2.toString());
+		super.checkErrorsAcmeMessageExist(2,1,3,avgSheetsUSD.toString());
+		super.checkErrorsAcmeMessageExist(2,1,4,avgSheetsEUR.toString());
+		super.checkErrorsAcmeMessageExist(2,1,5,devSheetsUSD.toString());
+		super.checkErrorsAcmeMessageExist(2,1,6,devSheetsEUR.toString());
 		
 		super.checkErrorsAcmeMessageExist(2,1,1,nPrivateTask.toString());
 		super.checkErrorsAcmeMessageExist(2,1,2,nPublicTask.toString());
