@@ -6,3 +6,5 @@ recordIndex,title,startExecutionPeriod,endExecutionPeriod,workload,description,l
 14,1234567890123456789012345678901234567890123456789012345678901234567890123456789,2026/08/01 18:44,2026/08/01 18:45,0.01,"Es una tarea larga, hay que empezar cuanto antes posible",https://google.es,false
 15,12345678901234567890123456789012345678901234567890123456789012345678901234567890,2025/08/01 16:00,2126/08/12 18:45,"99,999.00","Es una tarea larga, hay que empezar cuanto antes posible",,true
 16,T,2025/08/01 16:00,2126/08/12 18:45,"99,998.59","Es una tarea larga, hay que empezar cuanto antes posible",,false
+17,T,2025/08/01 16:00,2025/08/01 16:01,"0.01","Es una tarea larga, hay que empezar cuanto antes posible",,false
+18,T,2025/08/01 16:00,2025/08/01 17:00,"0.59","Es una tarea larga, hay que empezar cuanto antes posible",,false

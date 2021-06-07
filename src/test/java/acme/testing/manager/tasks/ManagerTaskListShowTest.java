@@ -41,8 +41,8 @@ public class ManagerTaskListShowTest extends AcmePlannerTest{
 	}
 	
 	/*	Feature: un usuario manager puede observar detalles de sus propias tareas.
-	 * En el test anterior se comprueban los detalles en el caso positivo. Ahora se comprueba que no se pueden
-	 * observar detalles de tareas de otro manager. La tarea con id=21 no pertenece a manager1.
+	 * En el test anterior se comprueban los detalles en el caso positivo. Ahora se comprueba que un usuario anonimo no puede
+	 * observar detalles de tareas de un manager.
 	*	Caso negativo
 	*/
 
@@ -50,11 +50,8 @@ public class ManagerTaskListShowTest extends AcmePlannerTest{
 	@Test
 	@Order(20)	
 	public void listNegative() {
-		
-		super.signIn("manager1", "manager1");
 				
-		super.navigate("/manager/task/show", "id=21");
+		super.navigate("/manager/task/list", "");
 		super.checkErrorsExist();
-		super.signOut();
 	}
 }
