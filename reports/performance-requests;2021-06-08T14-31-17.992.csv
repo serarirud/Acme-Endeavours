@@ -1,0 +1,19 @@
+timestamp,simple-path,time
+2021-06-08 14:31:25.786,/master/welcome,567
+2021-06-08 14:31:26.225,/master/welcome,375
+2021-06-08 14:31:27.105,/master/sign-in,627
+2021-06-08 14:31:28.9,/master/welcome,652
+2021-06-08 14:31:32.129,/master/welcome,383
+2021-06-08 14:31:32.873,/master/welcome,610
+2021-06-08 14:31:33.829,/master/welcome,537
+2021-06-08 14:31:35.458,/anonymous/shout/list,1179
+2021-06-08 14:31:41.156,/master/welcome,465
+2021-06-08 14:31:42.763,/anonymous/shout/list,1319
+2021-06-08 14:31:47.818,/master/welcome,433
+2021-06-08 14:31:48.843,/anonymous/shout/list,754
+2021-06-08 14:31:54.219,/master/welcome,571
+2021-06-08 14:31:55.7,/anonymous/shout/list,1207
+2021-06-08 14:32:01.303,/master/welcome,950
+2021-06-08 14:32:03.348,/anonymous/shout/list,1771
+2021-06-08 14:32:08.631,/master/welcome,733
+2021-06-08 14:32:09.735,/anonymous/shout/list,889

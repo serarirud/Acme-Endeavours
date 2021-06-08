@@ -1,0 +1,2 @@
+timestamp,test-class,test-method,time,description,result
+2021-06-08 16:51:42.642,acme.testing.anonymous.shouts.AnonymousShoutsCreateTest,create,13047,"[1] recordIndex=6, author=12345, text=12345, info=null, atributo1=01/12/2077, atributo2=2020/01/01 10:00, atributo3=EUR 100.00, atributo4=true",OK

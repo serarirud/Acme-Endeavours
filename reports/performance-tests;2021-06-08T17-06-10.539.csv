@@ -1,0 +1,6 @@
+timestamp,test-class,test-method,time,description,result
+2021-06-08 17:06:32.349,acme.testing.anonymous.shouts.AnonymousShoutsCreateTest,createNegative,4374,"[1] author=, text=null, info=n, atributo1=02/03/291j, atributo2=2022/03/01 12:78, atributo3=EUR 123.93, atributo4=false",OK
+2021-06-08 17:06:39.29,acme.testing.anonymous.shouts.AnonymousShoutsCreateTest,createNegative,5984,"[2] author=12345678901234567890123456, text=John Doe hard          core, info=http, atributo1=02/03/2020, atributo2=2020/02/02 12:48, atributo3=USD 12.93, atributo4=true",OK
+2021-06-08 17:06:44.547,acme.testing.anonymous.shouts.AnonymousShoutsCreateTest,createNegative,4470,"[3] author=1234, text=1234, info=google.es, atributo1=null, atributo2=null, atributo3=null, atributo4=false",OK
+2021-06-08 17:06:50.223,acme.testing.anonymous.shouts.AnonymousShoutsCreateTest,createNegative,4970,"[4] author=, text=12345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901 -- + de 100 caracteres, info=alum.us.es, atributo1=02/04/3030, atributo2=02/04/2020 02:34, atributo3=null, atributo4=true",OK
+2021-06-08 17:06:55.792,acme.testing.anonymous.shouts.AnonymousShoutsCreateTest,createNegative,4680,"[5] author=, text=sex dd     hard             core, info=https//g, atributo1=null, atributo2=null, atributo3=USD 48.23, atributo4=false",OK

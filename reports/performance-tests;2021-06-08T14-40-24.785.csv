@@ -1,0 +1,2 @@
+timestamp,test-class,test-method,time,description,result
+2021-06-08 14:40:48.941,acme.testing.anonymous.shouts.AnonymousShoutsCreateTest,create,4868,"[1] recordIndex=6, author=12345, text=12345, info=null, atributo1=04/10/2020, atributo2=2022/01/01 10:30, atributo3=EUR 12.00, atributo4=false",The system doesn't navigate from '/anonymous/shout/create' to '/master/welcome'
