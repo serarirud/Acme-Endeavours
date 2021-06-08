@@ -1,7 +1,5 @@
 package acme.features.anonymous.shout;
 
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Optional;
@@ -87,19 +85,18 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 			errors.state(request, !umbralSuperado,"text", "manager.task.error.umbral-superado");
 		}
 		
-		if(!errors.hasErrors("sheet.atributo1") && entity.getSheet().getAtributo1()!=null) {
+		if(!errors.hasErrors("sheet.atributo1")) {
 			final Optional<Sheet> sheet = this.shoutRepository.findSheetByAtributo1(entity.getSheet().getAtributo1());			
-			errors.state(request, entity.getSheet().getAtributo1().equals(LocalDate.now().format(DateTimeFormatter.ofPattern("dd/mm/yyyy"))), "sheet.atributo1", "error-atributo1-validacion1");
+			//errors.state(request, entity.getSheet().getAtributo1().equals(LocalDate.now().format(DateTimeFormatter.ofPattern("dd/mm/yyyy"))), "sheet.atributo1", "error-atributo1-validacion1");
 			errors.state(request, !sheet.isPresent(), "sheet.atributo1", "error-atributo1-validacion2");
 		}
 		
-		
-		if(!errors.hasErrors("sheet.atributo2") && entity.getSheet().getAtributo2()!=null) {
+		if(!errors.hasErrors("sheet.atributo2")) {
 			final Date hoy = Calendar.getInstance().getTime();
-			errors.state(request, entity.getSheet().getAtributo2().before(hoy), "sheet.atributo2", "error-atributo2-validacion");
+			errors.state(request, entity.getSheet().getAtributo2().before(hoy), "sheet.atributo2", "error-atributo2-validacion"); //Mirar si cumple validacion
 		}
 		
-		if(!errors.hasErrors("sheet.atributo3") && entity.getSheet().getAtributo3()!=null) {
+		if(!errors.hasErrors("sheet.atributo3")) {
 			final String currency = entity.getSheet().getAtributo3().getCurrency();
 			errors.state(request, currency.equals("USD")||currency.equals("EUR"), "sheet.atributo3", "error-atributo3-validacion-currency");
 		}

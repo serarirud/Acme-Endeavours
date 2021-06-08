@@ -1,5 +1,6 @@
 package acme.testing.anonymous.shouts;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
@@ -17,15 +18,23 @@ public class AnonymousShoutsCreateTest extends AcmePlannerTest {
 	@ParameterizedTest
 	@CsvFileSource(resources = "/anonymous/shout/createPositive.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(20)	
-	public void create(final int recordIndex, final String author, final String text, final String info) {		
+	@Disabled
+	public void create(final int recordIndex, final String author, final String text, final String info,
+		final String atributo1, final String atributo2, final String atributo3, final String atributo4) {
+		
 		assert !StringHelper.isBlank(author);
 		assert !StringHelper.isBlank(text);
+		assert !StringHelper.isBlank(atributo3);
 		
 		super.navigateHome();
 		super.clickOnMenu("Anonymous", "Create a shout");
 		super.fillInputBoxIn("author", author);
 		super.fillInputBoxIn("text", text);
 		super.fillInputBoxIn("info", info);
+		super.fillInputBoxIn("sheet.atributo1", atributo1);
+		super.fillInputBoxIn("sheet.atributo2", atributo2);
+		super.fillInputBoxIn("sheet.atributo3", atributo3);
+		super.fillInputBoxIn("sheet.atributo4", atributo4);
 		super.clickOnSubmitButton("Shout!");
 		 
 		super.checkSimplePath("/master/welcome");
@@ -35,6 +44,10 @@ public class AnonymousShoutsCreateTest extends AcmePlannerTest {
 		super.checkColumnHasValue(recordIndex, 1, author);
 		super.checkColumnHasValue(recordIndex, 2, text);
 		super.checkColumnHasValue(recordIndex, 3, info);
+		super.checkColumnHasValue(recordIndex, 4, atributo1);
+		super.checkColumnHasValue(recordIndex, 5, atributo2);
+		super.checkColumnHasValue(recordIndex, 6, atributo3);
+		super.checkColumnHasValue(recordIndex, 7, atributo4);
 		
 	}
 	
@@ -50,18 +63,21 @@ public class AnonymousShoutsCreateTest extends AcmePlannerTest {
 	@ParameterizedTest
 	@CsvFileSource(resources = "/anonymous/shout/createNegative.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(20)	
-	public void createNegative(final String author, final String text, final String info) {
+	public void createNegative(final String author, final String text, final String info,
+		final String atributo1, final String atributo2, final String atributo3, final String atributo4) {
 		
 		super.navigateHome();
 		super.clickOnMenu("Anonymous", "Create a shout");
 		super.fillInputBoxIn("author", author);
 		super.fillInputBoxIn("text", text);
 		super.fillInputBoxIn("info", info);
+		super.fillInputBoxIn("sheet.atributo1", atributo1);
+		super.fillInputBoxIn("sheet.atributo2", atributo2);
+		super.fillInputBoxIn("sheet.atributo3", atributo3);
+		super.fillInputBoxIn("sheet.atributo4", atributo4);
 		super.clickOnSubmitButton("Shout!");
 		
-		super.checkErrorsExist("author");
-		super.checkErrorsTextAreaExist("text");
-		super.checkErrorsExist("info");
+		super.checkErrorsExist();
 		
 		super.checkSimplePath("/anonymous/shout/create");
 		

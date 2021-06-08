@@ -1,6 +1,6 @@
-author,text,info
-"",,n
-12345678901234567890123456,John Doe hard          core,http
-1234,1234,google.es
-"",12345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901 -- + de 100 caracteres,alum.us.es
-"",sex dd     hard             core,https//g
+author,text,info,atributo1,atributo2,atributo3,atributo4
+"",,n,02/03/291j,2022/03/01 12:78,EUR 123.93,false
+12345678901234567890123456,John Doe hard          core,http,02/03/2020,2020/02/02 12:48,USD 12.93,true
+1234,1234,google.es,,,,false
+"",12345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901 -- + de 100 caracteres,alum.us.es,02/04/3030,02/04/2020 02:34,,true
+"",sex dd     hard             core,https//g,,,USD 48.23,false

@@ -1,6 +1,10 @@
 anonymous.shout.form.label.author = Autor:
 anonymous.shout.form.label.text = Texto:
 anonymous.shout.form.label.info = Información:
+anonymous.shout.form.label.atributo1 = Atributo1 
+anonymous.shout.form.label.atributo2 = Atributo2
+anonymous.shout.form.label.atributo3 = Atributo3
+anonymous.shout.form.label.atributo4 = Atributo4 
 anonymous.shout.form.button.create = ¡Gritar!
 anonymous.shout.form.button.return = Volver
 

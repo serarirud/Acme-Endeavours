@@ -8,7 +8,6 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Past;
 import javax.validation.constraints.Pattern;
 
 import acme.framework.datatypes.Money;
@@ -33,7 +32,7 @@ public class Sheet extends DomainEntity{
 	protected String atributo1;
 
 	@Temporal(TemporalType.TIMESTAMP)
-	@Past //No se sabe cuales son las restricciones
+	//@Past //No se sabe cuales son las restricciones
 	@NotNull
 	protected Date atributo2;
 	
