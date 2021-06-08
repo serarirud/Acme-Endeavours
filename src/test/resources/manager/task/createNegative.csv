@@ -12,3 +12,5 @@ recordIndex,title,startExecutionPeriod,endExecutionPeriod,workload,description,l
 10,Tarea con mas fallos,2025/08/01 16:00,2025/10/01 17:00,-2.00,e,,true
 11,,,,,,,false
 12,Tarea con mas fallos,2025/08/01 16:00,2025/10/01 17:00,2.00,e,n,true
+13,Tarea con mas fallos,2025/08/01 16:00,2025/08/01 17:00,1.01,e,n,true
+14,Tarea con mas fallos,2025/08/01 16:00,2025/08/01 17:00,-0.01,e,n,true

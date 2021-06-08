@@ -354,8 +354,8 @@ Configuration
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>644</x>
-      <y>49</y>
+      <x>602</x>
+      <y>14</y>
       <w>168</w>
       <h>42</h>
     </coordinates>
@@ -368,31 +368,31 @@ bg=blue</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>637</x>
-      <y>84</y>
-      <w>105</w>
-      <h>63</h>
+      <y>49</y>
+      <w>63</w>
+      <h>98</h>
     </coordinates>
     <panel_attributes>lt=..
 </panel_attributes>
-    <additional_attributes>10.0;70.0;130.0;10.0</additional_attributes>
+    <additional_attributes>10.0;120.0;70.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>721</x>
-      <y>161</y>
-      <w>105</w>
-      <h>28</h>
+      <y>126</y>
+      <w>147</w>
+      <h>63</h>
     </coordinates>
     <panel_attributes>lt=..
 </panel_attributes>
-    <additional_attributes>10.0;20.0;130.0;20.0</additional_attributes>
+    <additional_attributes>10.0;70.0;190.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>812</x>
-      <y>154</y>
+      <x>854</x>
+      <y>112</y>
       <w>168</w>
       <h>49</h>
     </coordinates>
@@ -406,8 +406,8 @@ bg=blue</panel_attributes>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>854</x>
-      <y>49</y>
+      <x>791</x>
+      <y>28</y>
       <w>168</w>
       <h>42</h>
     </coordinates>
@@ -420,13 +420,63 @@ bg=blue</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>721</x>
-      <y>84</y>
-      <w>231</w>
-      <h>77</h>
+      <y>63</y>
+      <w>168</w>
+      <h>98</h>
     </coordinates>
     <panel_attributes>lt=..
 </panel_attributes>
-    <additional_attributes>10.0;90.0;310.0;10.0</additional_attributes>
+    <additional_attributes>10.0;120.0;220.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>98</x>
+      <y>259</y>
+      <w>168</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>The text must not exceed 
+the spam words threshold
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>175</x>
+      <y>210</y>
+      <w>21</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>lt=..
+</panel_attributes>
+    <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>854</x>
+      <y>189</y>
+      <w>168</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>The title and description must not 
+exceed the spam words threshold
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>721</x>
+      <y>196</y>
+      <w>147</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=..
+</panel_attributes>
+    <additional_attributes>10.0;30.0;190.0;20.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
