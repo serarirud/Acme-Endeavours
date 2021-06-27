@@ -38,7 +38,7 @@
 			<acme:message code="administrator.dashboard.form.label.ratio2"/>
 		</th>
 		<td>
-			<acme:print value="${nPrivateTask}"/>
+			<acme:print value="${ratio2}"/>
 		</td>
 	</tr>
 	
@@ -47,7 +47,7 @@
 			<acme:message code="administrator.dashboard.form.label.averageSheetsEUR"/>
 		</th>
 		<td>
-			<acme:print value="${averageSheetsEUR}"/>
+			<acme:print value="${averageKolemsEUR}"/>
 		</td>
 	</tr>
 	
@@ -56,7 +56,7 @@
 			<acme:message code="administrator.dashboard.form.label.averageSheetsUSD"/>
 		</th>
 		<td>
-			<acme:print value="${averageSheetsUSD}"/>
+			<acme:print value="${averageKolemsUSD}"/>
 		</td>
 	</tr>
 	
@@ -66,7 +66,7 @@
 			<acme:message code="administrator.dashboard.form.label.deviationSheetsEUR"/>
 		</th>
 		<td>
-			<acme:print value="${deviationSheetsEUR}"/>
+			<acme:print value="${deviationKolemsEUR}"/>
 		</td>
 	</tr>
 	
@@ -75,7 +75,7 @@
 			<acme:message code="administrator.dashboard.form.label.deviationSheetsUSD"/>
 		</th>
 		<td>
-			<acme:print value="${deviationSheetsUSD}"/>
+			<acme:print value="${deviationKolemsUSD}"/>
 		</td>
 	</tr>
 	

@@ -1,4 +1,4 @@
-package acme.entities.sheets;
+package acme.entities.kolems;
 
 import java.util.Date;
 
@@ -19,7 +19,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class Sheet extends DomainEntity {
+public class Kolem extends DomainEntity {
 
 
 	// Serialisation identifier ------------------------
@@ -29,24 +29,28 @@ public class Sheet extends DomainEntity {
 	// Attributes --------------------------------------
 	
 	@Column(unique=true)
+	//Patrón día:([0-2][0-9]|(3)[0-1])
+	//Patrón mes:(((0)[0-9])|((1)[0-2])) --> 01, 02, ...
+	//Patrón año:\\d{4}
 	//@Pattern(regexp = "([12]\\d{3}-(0[1-9]|1[0-2])-(0[1-9]|[12]\\d|3[01]))") -> "YYYY-MM-DD"
-	@Pattern(regexp = "^([0-2][0-9]|(3)[0-1])(\\/)(((0)[0-9])|((1)[0-2]))(\\/)\\d{4}$") //-> "DD/MM/YYYY"
+	//@Pattern(regexp = "^([0-2][0-9]|(3)[0-1])(\\/)(((0)[0-9])|((1)[0-2]))(\\/)\\d{4}$") //-> "DD/MM/YYYY"
+	@Pattern(regexp = "^\\w{2,4}:\\d{2}:\\d{4}$")
 	@NotBlank
-	protected String atr1;
+	protected String ticker;
 	
 	//@Past, quito un milisegundo al crear para asegurar
 	//Futuro -> comprobarlo al crear
 	//Aquí supongo que va a ser en futuro
 	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
-	protected Date atr2;
+	protected Date deadline;
 	
 	//Comprobar la moneda al crear/actualizar
 	@Valid
 	@NotNull
-	protected Money atr3;
+	protected Money budget;
 	
 	@NotNull
-	protected Boolean atr4;
+	protected Boolean important;
 	
 }

@@ -1,0 +1,2 @@
+timestamp,test-class,test-method,time,description,result
+2021-06-09 10:02:09.227,acme.testing.anonymous.shouts.AnonymousShoutsListTest,list,6319,"[6] recordIndex=5, moment=2021/06/02 21:00, author=Usuario de incógnito, text=Esta página está chula, info=https://www.google.es/, atr1=ah:21:0609, atr2=2021/05/02 10:00, atr3=USD 80.00, atr4=false",OK

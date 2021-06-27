@@ -7,7 +7,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.entities.sheets.Sheet;
+import acme.entities.kolems.Kolem;
 import acme.entities.shouts.Shout;
 import acme.features.configuration.ConfigurationService;
 import acme.framework.components.Errors;
@@ -51,7 +51,7 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 		assert entity != null;
 		assert model != null;
 			
-		request.unbind(entity, model, "author", "text", "info");
+		request.unbind(entity, model);
 	}
 		
 	@Override
@@ -80,22 +80,60 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 			errors.state(request, !umbralSuperado,"text", "manager.task.error.umbral-superado");
 		}
 		
-		if(!errors.hasErrors("sheet.atr1")) {
-			final Optional<Sheet> opt = this.shoutRepository.findSheetByAtr1(entity.getSheet().getAtr1());
-			errors.state(request, !opt.isPresent(), "sheet.atr1", "anonymous.shout.error.atr1");
+		if(!errors.hasErrors("kolem.ticker")) {
+			final Optional<Kolem> opt = this.shoutRepository.findKolemByTicker(entity.getKolem().getTicker());
+			errors.state(request, !opt.isPresent(), "kolem.ticker", "anonymous.shout.error.atr1");
+			
+			final Calendar calendar = Calendar.getInstance();
+			final String year = Integer.toString(calendar.get(Calendar.YEAR)).substring(2);
+			String month = Integer.toString(calendar.get(Calendar.MONTH)+1);
+			String day = Integer.toString(calendar.get(Calendar.DAY_OF_MONTH));
+			
+			if(Integer.valueOf(day)<10) {
+				day ="0"+day;
+			}
+			
+			if(Integer.valueOf(month)<10) {
+				month ="0"+month;
+			}
+			
+			final String str = entity.getKolem().getTicker();
+			final String[] array = str.split(":");
+			final String monthTicker = array[2].substring(0, 2);
+			final String dayTicker = array[2].substring(2);
+			errors.state(request, array[1].equals(year) && monthTicker.equals(month) && dayTicker.equals(day), 
+				"kolem.ticker", "anonymous.shout.error2.atr1");
 		}
 		
+		
+		/* VALIDACION ATR1 SE CORRESPONDE CON EL DÍA ACTUAL
+		 * final Date today = Calendar.getInstance().getTime();
+			final Calendar calendar = Calendar.getInstance();
+			final String year = Integer.valueOf(calendar.get(Calendar.YEAR)).toString();
+			final String month = Integer.valueOf(calendar.get(Calendar.MONTH)+1).toString();
+			final String day = Integer.valueOf(calendar.get(Calendar.DAY_OF_MONTH)+1).toString();
+
+			final String str = entity.getSheet().getAtr1();
+			final String[] array = str.split("-");
+			errors.state(request, array[0].equals(year) && array[1].equals(month) && array[2].equals(day), 
+				"sheet.atr1", "anonymous.shout.error2.atr1");
+		 * 
+		 */
+		
 		//atr2 debe ser futuro en el momento de ser creado
-		if(!errors.hasErrors("sheet.atr2") && entity.getSheet().getAtr2()!=null) {
-			final Date today = Calendar.getInstance().getTime();
-			errors.state(request, entity.getSheet().getAtr2().after(today), 
-				"sheet.atr2", "anonymous.shout.error.atr2");
+		//Si es pasado simplemente eliminar esto
+		if(!errors.hasErrors("kolem.deadline")) {
+			final Calendar calendar = Calendar.getInstance();
+			calendar.add(Calendar.DAY_OF_MONTH, 7);
+			final Date weekAfter = calendar.getTime();
+			errors.state(request, entity.getKolem().getDeadline().after(weekAfter), 
+				"kolem.deadline", "anonymous.shout.error.atr2");
 		}
 		
 		//atr3 solo debe aceptar 2 tipos de dinero (ej: USD, EUR).
-		if(!errors.hasErrors("sheet.atr3")) {
-			final String currency = entity.getSheet().getAtr3().getCurrency();
-			errors.state(request, currency.equals("EUR") || currency.equals("USD"), "sheet.atr3", "anonymous.shout.error.atr3");
+		if(!errors.hasErrors("kolem.budget")) {
+			final String currency = entity.getKolem().getBudget().getCurrency();
+			errors.state(request, currency.equals("EUR") || currency.equals("USD"), "kolem.budget", "anonymous.shout.error.atr3");
 		}
 		
 		
@@ -110,9 +148,9 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 		
 		moment = new Date(System.currentTimeMillis() - 1);
 		entity.setMoment(moment);
-		final Sheet sheet = entity.getSheet();
+		final Kolem kolem = entity.getKolem();
 		
-		this.shoutRepository.save(sheet);
+		this.shoutRepository.save(kolem);
 		this.shoutRepository.save(entity);
 	}
 

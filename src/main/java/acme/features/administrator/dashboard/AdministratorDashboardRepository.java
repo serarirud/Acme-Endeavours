@@ -63,15 +63,17 @@ public interface AdministratorDashboardRepository extends AbstractRepository {
 	@Query("SELECT count(s) FROM Shout s")
 	Integer nShouts();
 		
-	@Query("SELECT count(s) FROM Shout s WHERE (s.sheet.atr4 = true)")
-	Integer nShoutsAtr4();
+	@Query("SELECT count(s) FROM Shout s WHERE (s.kolem.important = true)")
+	Integer nShoutsImportant();
 		
-	@Query("SELECT avg(sh.atr3.amount) FROM Sheet sh WHERE (sh.atr3.currency = ?1)")
-	Double averageSheetsByCurrency(String currency);
+	@Query("SELECT avg(k.budget.amount) FROM Kolem k WHERE (k.budget.currency = ?1)")
+	Double averageKolemsByCurrency(String currency);
 		
-	@Query("SELECT stddev(sh.atr3.amount) FROM Sheet sh WHERE (sh.atr3.currency = ?1)")
-	Double deviationSheetsByCurrency(String currency);
+	@Query("SELECT stddev(k.budget.amount) FROM Kolem k WHERE (k.budget.currency = ?1)")
+	Double deviationKolemsByCurrency(String currency);
 		
+	@Query("SELECT count(s) FROM Shout s WHERE (s.kolem.budget.amount = 0)")
+	Integer nShoutsBudget0();
 		
 	//---------------------------------
 	

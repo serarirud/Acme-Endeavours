@@ -1,7 +1,7 @@
-recordIndex,moment,author,text,info
-0,2021/06/02 10:00,John Doe,I'm happy!,,01/12/2000,2022/07/01 10:00,USD 80.00,false
-1,2021/06/02 16:00,Foo Bar,Just turning 50!,http://www.example1.org,03/12/2000,2024/06/21 10:00,USD 30.00,false
-2,2021/06/02 01:00,Francisco Borrego,Este es un texto muy guay.,,04/12/2000,2027/07/07 10:00,EUR 15.50,true
-3,2021/06/02 13:00,Jesus Vargas,Hola miren mi proyecto.,https://github.com/Francisco-Borrego/Acme-Planner/,06/12/2000,2023/03/03 10:00,EUR 0.01,true
-4,2021/06/02 21:00,Antonio Funes,Me gusta mucho esta página.,https://www.us.es/,07/12/2000,2025/05/05 10:00,EUR 100.00,true
-5,2021/06/02 21:00,Usuario de incógnito,Esta página está chula,https://www.google.es/,08/12/2000,2026/06/06 10:00,EUR 100.00,true
+recordIndex,moment,author,text,info,atr1,atr2,atr3,atr4
+0,2021/06/02 10:00,John Doe,I'm happy!,,aa:21:0609,2021/05/02 10:00,USD 0.01,true
+1,2021/06/02 16:00,Foo Bar,Just turning 50!,http://www.example1.org,ac:21:0609,2021/05/02 10:00,EUR 80.00,false
+2,2021/06/02 01:00,Francisco Borrego,Este es un texto muy guay.,,ad:21:0609,2021/05/02 10:00,EUR 80.00,false
+3,2021/06/02 13:00,Jesus Vargas,Hola miren mi proyecto.,https://github.com/Francisco-Borrego/Acme-Planner/,af:21:0609,2021/05/02 10:00,USD 80.00,false
+4,2021/06/02 21:00,Antonio Funes,Me gusta mucho esta página.,https://www.us.es/,ag:21:0609,2021/05/02 10:00,USD 80.00,false
+5,2021/06/02 21:00,Usuario de incógnito,Esta página está chula,https://www.google.es/,ah:21:0609,2021/05/02 10:00,USD 80.00,false

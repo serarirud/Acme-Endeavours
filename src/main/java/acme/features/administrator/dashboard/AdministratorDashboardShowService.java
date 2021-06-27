@@ -53,7 +53,7 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 			"deviationTaskExecutionPeriods", "minimumTaskExecutionPeriods", "maximumTaskExecutionPeriods",
 			"averageTaskWorkloads", "deviationTaskWorkloads", "minimumTaskWorkloads", "maximumTaskWorkloads",
 			//--------------------
-			"ratio1", "ratio2", "averageSheetsEUR", "averageSheetsUSD", "deviationSheetsEUR", "deviationSheetsUSD");
+			"ratio1", "ratio2", "averageKolemsEUR", "averageKolemsUSD", "deviationKolemsEUR", "deviationKolemsUSD");
 	}
 
 	@Override
@@ -81,10 +81,10 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		Double ratio1;
 		final Double ratio2;
 		
-		Double averageSheetsEUR;
-		Double averageSheetsUSD;
-		final Double deviationSheetsEUR;
-		final Double deviationSheetsUSD;
+		Double averageKolemsEUR;
+		Double averageKolemsUSD;
+		final Double deviationKolemsEUR;
+		final Double deviationKolemsUSD;
 		
 		
 		
@@ -104,15 +104,16 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		
 		//----------------------------
 		final Integer totalNumberOfShouts = this.repository.nShouts();
-		final Integer nShoutsAtr4 = this.repository.nShoutsAtr4();
+		final Integer nShoutsAtr4 = this.repository.nShoutsImportant();
+		final Integer nShoutsBudget0 = this.repository.nShoutsBudget0();
 		ratio1 = ((nShoutsAtr4+0.0)/totalNumberOfShouts);
 		
-		ratio2=0.0;
+		ratio2 = ((nShoutsBudget0+0.0)/totalNumberOfShouts);
 		
-		averageSheetsEUR=this.repository.averageSheetsByCurrency("EUR");
-		averageSheetsUSD=this.repository.averageSheetsByCurrency("USD");
-		deviationSheetsEUR=this.repository.deviationSheetsByCurrency("EUR");
-		deviationSheetsUSD=this.repository.deviationSheetsByCurrency("USD");
+		averageKolemsEUR=this.repository.averageKolemsByCurrency("EUR");
+		averageKolemsUSD=this.repository.averageKolemsByCurrency("USD");
+		deviationKolemsEUR=this.repository.deviationKolemsByCurrency("EUR");
+		deviationKolemsUSD=this.repository.deviationKolemsByCurrency("USD");
 		
 		
 		//---------------------------
@@ -159,10 +160,11 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		//--------------------------------------
 		
 		result.setRatio1(ratio1);
-		result.setAverageSheetsEUR(averageSheetsEUR);
-		result.setAverageSheetsUSD(averageSheetsUSD);
-		result.setDeviationSheetsEUR(deviationSheetsEUR);
-		result.setDeviationSheetsUSD(deviationSheetsUSD);
+		result.setRatio2(ratio2);
+		result.setAverageKolemsEUR(averageKolemsEUR);
+		result.setAverageKolemsUSD(averageKolemsUSD);
+		result.setDeviationKolemsEUR(deviationKolemsEUR);
+		result.setDeviationKolemsUSD(deviationKolemsUSD);
 		
 		
 		//-------------------------------------

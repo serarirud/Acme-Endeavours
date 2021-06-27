@@ -29,10 +29,10 @@ public class Dashboard implements Serializable {
 	
 	Double						ratio1;
 	Double						ratio2;
-	Double 						averageSheetsEUR;
-	Double 						averageSheetsUSD;
-	Double 						deviationSheetsEUR;
-	Double 						deviationSheetsUSD;
+	Double 						averageKolemsEUR;
+	Double 						averageKolemsUSD;
+	Double 						deviationKolemsEUR;
+	Double 						deviationKolemsUSD;
 	
 	//---------------------------------
 

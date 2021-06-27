@@ -14,7 +14,7 @@ import javax.validation.constraints.Past;
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
-import acme.entities.sheets.Sheet;
+import acme.entities.kolems.Kolem;
 import acme.framework.entities.DomainEntity;
 import lombok.Getter;
 import lombok.Setter;
@@ -51,5 +51,5 @@ public class Shout extends DomainEntity {
 	// Relationships -----------------------------------
 	@Valid
 	@OneToOne(optional=false)
-	protected Sheet sheet;
+	protected Kolem kolem;
 }

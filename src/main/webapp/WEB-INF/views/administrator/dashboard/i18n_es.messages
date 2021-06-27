@@ -29,9 +29,9 @@ administrator.dashboard.form.label.task-unfinished = No terminadas
 administrator.dashboard.form.result.hours = {Horas,Minutos}
 
 
-administrator.dashboard.form.label.ratio1=Ratio de hojas marcadas como xxx
-administrator.dashboard.form.label.ratio2=Ratio de hojas en las que xxx tiene xxx
-administrator.dashboard.form.label.averageSheetsEUR=Media de las hojas con moneda EUR
-administrator.dashboard.form.label.averageSheetsUSD=Media de las hojas con moneda USD
-administrator.dashboard.form.label.deviationSheetsEUR=Desviación estándar de las hojas con moneda EUR
-administrator.dashboard.form.label.deviationSheetsUSD=Desviación estándar de las hojas con moneda USD
+administrator.dashboard.form.label.ratio1=Ratio de gritos marcados como importante
+administrator.dashboard.form.label.ratio2=Ratio de gritos en los que el presupuesto es 0
+administrator.dashboard.form.label.averageSheetsEUR=Media de los presupuestos de los Kolems con moneda EUR
+administrator.dashboard.form.label.averageSheetsUSD=Media de los presupuestos de los Kolems con moneda USD
+administrator.dashboard.form.label.deviationSheetsEUR=Desviación estándar de los presupuestos de los Kolems con moneda EUR
+administrator.dashboard.form.label.deviationSheetsUSD=Desviación estándar de los presupuestos de los Kolems con moneda USD

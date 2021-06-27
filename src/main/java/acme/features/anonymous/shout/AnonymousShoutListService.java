@@ -37,7 +37,7 @@ public class AnonymousShoutListService implements AbstractListService<Anonymous,
 		assert model != null;
 		
 		request.unbind(entity, model, "author", "text", "moment", "info", 
-			"sheet.atr1", "sheet.atr2", "sheet.atr3", "sheet.atr4");
+			"kolem.ticker", "kolem.deadline", "kolem.budget", "kolem.important");
 	}
 	
 	@Override

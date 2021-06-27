@@ -27,10 +27,10 @@ public class AnonymousShoutsCreateTest extends AcmePlannerTest {
 		super.fillInputBoxIn("author", author);
 		super.fillInputBoxIn("text", text);
 		super.fillInputBoxIn("info", info);
-		super.fillInputBoxIn("sheet.atr1", atr1);
-		super.fillInputBoxIn("sheet.atr2", atr2);
-		super.fillInputBoxIn("sheet.atr3", atr3);
-		super.fillInputBoxIn("sheet.atr4", atr4);
+		super.fillInputBoxIn("kolem.ticker", atr1);
+		super.fillInputBoxIn("kolem.deadline", atr2);
+		super.fillInputBoxIn("kolem.budget", atr3);
+		super.fillInputBoxIn("kolem.important", atr4);
 		
 		super.clickOnSubmitButton("Shout!");
 		 
@@ -53,14 +53,15 @@ public class AnonymousShoutsCreateTest extends AcmePlannerTest {
 	 * 		Primer: autor y texto vacío. Información mala URL. Resto vacío
 	 * 		Segundo: autor superando el máximo de caracteres, texto con umbral de spam superado y mala URL.
 	 * 		Tercer: autor y texto menor del mínimo de caracteres, y mala URL.
-	 * 		Cuarto: autor vacío, texto superando el máximo de caracteres y mala URL.
+	 * 		Cuarto: autor vacío, texto superando el máximo de caracteres por 1 solo caracter y mala URL.
 	 * 		Quinto: autor vacío, texto con umbral de spam superado y mala URL.
 	 * 		Sexto: atr1, patrón incorrecto
 	 * 		Séptimo: atr1, valor que ya existe
 	 * 		Octavo: atr2, momento en pasado
 	 * 		Noveno: atr3, dinero negativo
-	 * 		Décimo: atr3, tipo de moneda no válida
-	 * 
+	 * 		Décimo: atr3, utilizamos más digitos para enteros y decimales de los permitidos
+	 * 		Undécimo: atr3, tipo de moneda no válida
+	 * 		Duodécimo: atr1, no coincide con la fecha actual
 	*/
 	
 	@ParameterizedTest
@@ -74,10 +75,10 @@ public class AnonymousShoutsCreateTest extends AcmePlannerTest {
 		super.fillInputBoxIn("author", author);
 		super.fillInputBoxIn("text", text);
 		super.fillInputBoxIn("info", info);
-		super.fillInputBoxIn("sheet.atr1", atr1);
-		super.fillInputBoxIn("sheet.atr2", atr2);
-		super.fillInputBoxIn("sheet.atr3", atr3);
-		super.fillInputBoxIn("sheet.atr4", atr4);
+		super.fillInputBoxIn("kolem.ticker", atr1);
+		super.fillInputBoxIn("kolem.deadline", atr2);
+		super.fillInputBoxIn("kolem.budget", atr3);
+		super.fillInputBoxIn("kolem.important", atr4);
 		super.clickOnSubmitButton("Shout!");
 		
 		super.checkErrorsExist();
