@@ -8,5 +8,13 @@ anonymous.shout.list.label.moment = Moment
 anonymous.shout.list.label.author = Author
 anonymous.shout.list.label.text = Text
 anonymous.shout.list.label.info = Info 
+anonymous.shout.list.label.sheet.pattern = Pattern
+anonymous.shout.list.label.sheet.moment = Moment
+anonymous.shout.list.label.sheet.money = Money
+anonymous.shout.list.label.sheet.important = Important
 
 anonymous.shout.error.umbral-superado = Threshold of spam word reachead
+anonymous.shout.error.sheet.pattern.day = Wrong date
+anonymous.shout.error.sheet.pattern.duplicated = Duplicated pattern
+anonymous.shout.error.sheet.moment = Moment must be at least one week after the creation of the shout
+anonymous.shout.error.sheet.money = Money must be USD, EUR or GBP

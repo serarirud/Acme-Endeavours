@@ -1,5 +1,7 @@
 package acme.features.anonymous.shout;
 
+import java.time.LocalDate;
+import java.util.Calendar;
 import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -47,8 +49,9 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 		assert request != null;
 		assert entity != null;
 		assert model != null;
-			
-		request.unbind(entity, model, "author", "text", "info");
+		//################################################ CAMBIAR ################################################################	
+		request.unbind(entity, model, "author", "text", "info", "sheet.pattern", "sheet.moment", "sheet.money", "sheet.important");
+		//#########################################################################################################################	
 	}
 		
 	@Override
@@ -76,6 +79,49 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 			final boolean umbralSuperado = this.confService.spamFilter(entity.getText());
 			errors.state(request, !umbralSuperado,"text", "manager.task.error.umbral-superado");
 		}
+		final String anonymousError = "anonymous.shout.error.";
+		//################################################ CAMBIAR ################################################################
+		final String patternName = "sheet.pattern"; // REFACTORIZAR EL NOMBRE DE LA VARIABLE
+		//#########################################################################################################################	
+		// ^\\w{2,4}/dd/mm/yy$
+		if(!errors.hasErrors(patternName)) {
+			//################################################ CAMBIAR ################################################################	
+			final String pattern = entity.getSheet().getPattern();
+
+			final String[] split = pattern.split("/");
+			final String day = split[1];
+			final String month = split[2];
+			final String year = "20" + split[3];
+			//#########################################################################################################################			
+			final LocalDate today = LocalDate.now();
+			final Boolean condicion = today.getYear() == Integer.valueOf(year) && today.getMonthValue() == Integer.valueOf(month) && today.getDayOfMonth() == Integer.valueOf(day);
+	
+			errors.state(request, condicion, patternName, anonymousError + patternName + ".day");
+			//################################################ CAMBIAR ################################################################			
+			errors.state(request, this.shoutRepository.findSheetByPattern(pattern).isEmpty(), patternName, anonymousError + patternName + ".duplicated");
+			//#########################################################################################################################		
+		}
+		//################################################ CAMBIAR ################################################################	
+		final String momentName = "sheet.moment"; // REFACTORIZAR EL NOMBRE DE LA VARIABLE
+		//#########################################################################################################################	
+		if(!errors.hasErrors(momentName)) {
+			//################################################ CAMBIAR ################################################################	
+			final Date moment = entity.getSheet().getMoment();
+			//#########################################################################################################################		
+			
+			final Calendar calendar = Calendar.getInstance();
+            calendar.add(Calendar.WEEK_OF_MONTH, +1);
+			errors.state(request, moment.after(calendar.getTime()), momentName, anonymousError + momentName);
+		}
+		//################################################ CAMBIAR ################################################################	
+		final String moneyName = "sheet.money"; // REFACTORIZAR EL NOMBRE DE LA VARIABLE
+		//#########################################################################################################################	
+		if(!errors.hasErrors(moneyName)) {
+			//################################################ CAMBIAR ################################################################	
+			final String currency = entity.getSheet().getMoney().getCurrency();
+			//#########################################################################################################################		
+            errors.state(request, currency.equals("EUR") || currency.equals("USD") || currency.equals("GBP"), moneyName, anonymousError + moneyName);
+		}
 	}
 	
 	@Override
@@ -87,6 +133,9 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 		
 		moment = new Date(System.currentTimeMillis() - 1);
 		entity.setMoment(moment);
+		//################################################ CAMBIAR ################################################################	
+		this.shoutRepository.save(entity.getSheet());
+		//#########################################################################################################################	
 		this.shoutRepository.save(entity);
 	}
 
