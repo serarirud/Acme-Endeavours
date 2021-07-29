@@ -1,4 +1,4 @@
-package acme.entities.Sheet;
+package acme.entities.sheet;
 
 import java.util.Date;
 

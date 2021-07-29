@@ -14,7 +14,7 @@ import javax.validation.constraints.Past;
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
-import acme.entities.Sheet.Sheet;
+import acme.entities.sheet.Sheet;
 import acme.framework.entities.DomainEntity;
 import lombok.Getter;
 import lombok.Setter;

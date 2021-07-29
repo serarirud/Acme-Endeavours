@@ -1,6 +1,10 @@
 anonymous.shout.form.label.author = Autor:
 anonymous.shout.form.label.text = Texto:
 anonymous.shout.form.label.info = Información:
+anonymous.shout.form.label.sheet.pattern = Patrón:
+anonymous.shout.form.label.sheet.moment = Momento:
+anonymous.shout.form.label.sheet.money = Dinero:
+anonymous.shout.form.label.sheet.important = Importante:
 anonymous.shout.form.button.create = ¡Gritar!
 anonymous.shout.form.button.return = Volver
 
