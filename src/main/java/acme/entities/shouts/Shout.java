@@ -50,8 +50,8 @@ public class Shout extends DomainEntity {
 	
 	// Relationships -----------------------------------
 	
-	@Valid
 	@NotNull
+	@Valid
 	@OneToOne(optional = false)
 	private Sheet sheet;
 
