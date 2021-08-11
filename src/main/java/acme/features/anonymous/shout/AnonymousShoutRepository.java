@@ -16,7 +16,7 @@ public interface AnonymousShoutRepository extends AbstractRepository {
 	@Query("select s from Shout s where s.moment >= ?1")
 	Collection<Shout> findMany(Date deadline);
 	//################################################ CAMBIAR ################################################################	
-	@Query("select count(s) from Shout s where s.sheet.pattern = ?1")
+	@Query("select s from Shout s where s.sheet.pattern = ?1")
 	Optional<Shout> findSheetByPattern(String pattern);
 	//#########################################################################################################################		
 }

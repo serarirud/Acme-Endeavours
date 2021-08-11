@@ -29,7 +29,7 @@
 	</bean>
 	
 	<bean id="shout01" class="acme.entities.shouts.Shout">
-		<property name="moment" value="2021/07/30 10:00"/>
+		<property name="moment" value="2021/08/10 10:00"/>
 		<property name="author" value="John Doe"/>		
 		<property name="text" value="I'm happy!"/>
 		<property name="info"><null/></property>
@@ -43,7 +43,7 @@
 		<property name="important" value="true"/>
 	</bean>
 	<bean id="shout02" class="acme.entities.shouts.Shout">
-		<property name="moment" value="2021/07/10 12:00"/>
+		<property name="moment" value="2021/08/10 12:00"/>
 		<property name="author" value="Jane Doe"/>		
 		<property name="text" value="I'm the master of my room!"/>
 		<property name="info" value="http://www.example.org"/>
@@ -57,7 +57,7 @@
 		<property name="important" value="false"/>
 	</bean>
 	<bean id="shout03" class="acme.entities.shouts.Shout">
-		<property name="moment" value="2021/07/10 16:00"/>
+		<property name="moment" value="2021/08/10 16:00"/>
 		<property name="author" value="Foo Bar"/>		
 		<property name="text" value="Just turning 50!"/>
 		<property name="info" value="http://www.example1.org"/>
@@ -72,7 +72,7 @@
 		<property name="important" value="true"/>
 	</bean>
 	<bean id="shout04" class="acme.entities.shouts.Shout">
-		<property name="moment" value="2021/07/10 02:00"/>
+		<property name="moment" value="2021/08/10 02:00"/>
 		<property name="author" value="Francisco Borrego"/>		
 		<property name="text" value="Este es un texto muy guay."/>
 		<property name="info"><null/></property>	
@@ -87,7 +87,7 @@
 		<property name="important" value="false"/>
 	</bean>
 	<bean id="shout05" class="acme.entities.shouts.Shout">
-		<property name="moment" value="2021/07/10 01:00"/>
+		<property name="moment" value="2021/08/10 01:00"/>
 		<property name="author" value="Sergio Arias Ruda"/>		
 		<property name="text" value="Este es un grito antiguo así que no debería verlo un usuario anónimo"/>
 		<property name="info"><null/></property>	
@@ -102,7 +102,7 @@
 		<property name="important" value="true"/>
 	</bean>
 	<bean id="shout06" class="acme.entities.shouts.Shout">
-		<property name="moment" value="2021/07/10 13:00"/>
+		<property name="moment" value="2021/08/10 13:00"/>
 		<property name="author" value="Jesus Vargas"/>		
 		<property name="text" value="Hola miren mi proyecto."/>
 		<property name="info" value="https://github.com/Francisco-Borrego/Acme-Planner/" />
@@ -116,7 +116,7 @@
 		<property name="important" value="false"/>
 	</bean>
 	<bean id="shout07" class="acme.entities.shouts.Shout">
-		<property name="moment" value="2021/07/10 22:00"/>
+		<property name="moment" value="2021/08/10 22:00"/>
 		<property name="author" value="Antonio Funes"/>		
 		<property name="text" value="Me gusta mucho esta página."/>
 		<property name="info" value="https://www.us.es/" />
@@ -130,7 +130,7 @@
 		<property name="important" value="true"/>
 	</bean>
 	<bean id="shout08" class="acme.entities.shouts.Shout">
-		<property name="moment" value="2021/07/10 21:00"/>
+		<property name="moment" value="2021/08/10 21:00"/>
 		<property name="author" value="Usuario de incógnito"/>		
 		<property name="text" value="Esta página está chula"/>
 		<property name="info" value="https://www.google.es/" />

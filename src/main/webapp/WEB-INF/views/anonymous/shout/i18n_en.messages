@@ -22,3 +22,4 @@ anonymous.shout.error.sheet.pattern.day = Wrong date
 anonymous.shout.error.sheet.pattern.duplicated = Duplicated pattern
 anonymous.shout.error.sheet.moment = Moment must be at least one week after the creation of the shout
 anonymous.shout.error.sheet.money = Money must be USD, EUR or GBP
+anonymous.shout.error.sheet.money.amount = Money must be equal or greater than zero

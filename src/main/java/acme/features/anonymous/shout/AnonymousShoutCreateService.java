@@ -122,6 +122,11 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 			//#########################################################################################################################		
             errors.state(request, currency.equals("EUR") || currency.equals("USD") || currency.equals("GBP"), moneyName, anonymousError + moneyName);
 		}
+		try {
+			errors.state(request, entity.getSheet().getMoney().getAmount()>=0, moneyName, anonymousError + moneyName + ".amount");
+		}catch (final Exception e) {
+			// TODO: handle exception
+		}
 	}
 	
 	@Override
