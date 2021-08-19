@@ -27,3 +27,16 @@ administrator.dashboard.form.label.task-privates = Private
 administrator.dashboard.form.label.task-finished =  Finished 
 administrator.dashboard.form.label.task-unfinished = Unfinished 
 administrator.dashboard.form.result.hours = {Hours,Minutes}
+
+administrator.dashboard.form.title.sheet = Sheet information
+administrator.dashboard.form.label.sheet.importantRatio = Sheet flagged as important ratio
+administrator.dashboard.form.label.sheet.zeroBudgetRatio = Sheet with 0 budget ratio
+administrator.dashboard.form.label.avarage.eur = Avarage EUR
+administrator.dashboard.form.label.deviation.eur = Deviation EUR
+administrator.dashboard.form.result.eur = EUR
+administrator.dashboard.form.label.avarage.usd = Avarage USD
+administrator.dashboard.form.label.deviation.usd = Deviation USD
+administrator.dashboard.form.result.usd = USD
+administrator.dashboard.form.label.avarage.gbp = Avarage GBP
+administrator.dashboard.form.label.deviation.gbp = Deviation GBP
+administrator.dashboard.form.result.gbp = GBP
