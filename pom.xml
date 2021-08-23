@@ -18,10 +18,10 @@
 
 	<modelVersion>4.0.0</modelVersion>
 	
-	<name>Acme Planner</name>
-	<description>This is the project Acme Planner for the deliverable D02.</description>
+	<name>Acme Work Plan</name>
+	<description>This is the project Acme Work Plan.</description>
 
-	<artifactId>Acme-Planner</artifactId>
+	<artifactId>Acme-Work-Plan</artifactId>
 	<version>21.2</version>
 	<packaging>war</packaging>
 
