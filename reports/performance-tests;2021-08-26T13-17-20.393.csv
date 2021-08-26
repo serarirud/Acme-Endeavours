@@ -1,0 +1,13 @@
+timestamp,test-class,test-method,time,description,result
+2021-08-26 13:17:42.846,acme.testing.SignUpTest,positiveSignUp,6919,"[1] username=johnny, password=johnny, name=Johnny, surname=López, email=john@mail.com",OK
+2021-08-26 13:17:50.673,acme.testing.SignUpTest,positiveSignUp,7357,"[2] username=lorraine, password=lorraine, name=Lorraine, surname=Williams, email=lorraine@yellow-house.com",OK
+2021-08-26 13:17:59.411,acme.testing.SignUpTest,positiveSignUp,8254,"[3] username=leslie, password=leslie, name=Leslie Marti, surname=Ramport, email=leslie@us.es",OK
+2021-08-26 13:18:06.96,acme.testing.SignUpTest,positiveSignUp,7075,"[4] username=robert, password=robert, name=Robert, surname=Johnson, email=robert@mail.server.com",OK
+2021-08-26 13:18:14.148,acme.testing.SignUpTest,positiveSignUp,6710,"[5] username=pepeluis, password=pepeluis, name=José Luis, surname=Sørensen, email=ppepe.sorensen@sweden.sw",OK
+2021-08-26 13:18:21.377,acme.testing.SignUpTest,positiveSignUp,6776,"[6] username=luisa, password=luisa, name=Luisa, surname=Martínez López, email=luisa@luisa.name",OK
+2021-08-26 13:18:29.241,acme.testing.SignUpTest,positiveSignUp,7355,"[7] username=lukas, password=lukas, name=Lukas, surname=Smith, email=lukas@mail.com",OK
+2021-08-26 13:18:36.458,acme.testing.SignUpTest,positiveSignUp,6741,"[8] username=mary-dt, password=mary-dt, name=Mary, surname=Design-Testing, email=mary@email.com",OK
+2021-08-26 13:18:43.74,acme.testing.SignUpTest,positiveSignUp,6793,"[9] username=jorge, password=jorge, name=Jorge, surname=Libertad, email=jorge@yahoo.com",OK
+2021-08-26 13:18:53.884,acme.testing.SignUpTest,positiveSignUp,9390,"[10] username=sonia, password=sonia, name=Snojia Guðrún, surname=Þor-Anaïs, email=sonja@liberty.de",OK
+2021-08-26 13:18:58.352,acme.testing.SignUpTest,positiveSignUp,3879,"[11] username=parker, password=parker, name=Parker Sigurður, surname=Mañón-Perigüeñez, email=parker@outlook.com",The system doesn't navigate from '/anonymous/user-account/create' to '/master/welcome'
+2021-08-26 13:19:10.301,acme.testing.SignUpTest,positiveSignUp,10978,"[12] username=manolo, password=manolo, name=Manuel Raúl, surname=Benítez López, email=manolo@engineer.com",OK
