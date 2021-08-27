@@ -143,8 +143,8 @@
 	
 	<bean id="task01" class="acme.entities.tasks.Task">
 		<property name="title" value="Tarea 001" />
-		<property name="startExecutionPeriod" value="2021/07/01 12:00"/>
-		<property name="endExecutionPeriod" value="2021/07/01 13:00"/>
+		<property name="startExecutionPeriod" value="2021/10/01 12:00"/>
+		<property name="endExecutionPeriod" value="2021/10/01 13:00"/>
 		<property name="workload" value="1"/>
 		<property name="description" value="Descripción de prueba"/>
 		<property name="link" value="https://github.com/Francisco-Borrego/Acme-Planner"/>
@@ -154,8 +154,8 @@
 	
 	<bean id="task02" class="acme.entities.tasks.Task">
 		<property name="title" value="Tarea 002" />
-		<property name="startExecutionPeriod" value="2021/08/01 10:00"/>
-		<property name="endExecutionPeriod" value="2021/08/04 13:00"/>
+		<property name="startExecutionPeriod" value="2021/10/01 10:00"/>
+		<property name="endExecutionPeriod" value="2021/10/04 13:00"/>
 		<property name="workload" value="1.20"/>
 		<property name="description" value="Descripción de prueba"/>
 		<property name="link"><null/></property>
@@ -165,8 +165,8 @@
 	
 	<bean id="task03" class="acme.entities.tasks.Task">
 		<property name="title" value="Tarea 003" />
-		<property name="startExecutionPeriod" value="2021/08/01 10:00"/>
-		<property name="endExecutionPeriod" value="2021/09/01 13:00"/>
+		<property name="startExecutionPeriod" value="2021/10/01 10:00"/>
+		<property name="endExecutionPeriod" value="2021/11/01 13:00"/>
 		<property name="workload" value="1.20"/>
 		<property name="description" value="Descripción de prueba"/>
 		<property name="link"><null/></property>
@@ -246,8 +246,8 @@
 	
 	<bean id="task10" class="acme.entities.tasks.Task">
 		<property name="title" value="Tarea 10" />
-		<property name="startExecutionPeriod" value="2021/04/22 09:00"/>
-		<property name="endExecutionPeriod" value="2021/08/01 22:00"/>
+		<property name="startExecutionPeriod" value="2021/08/22 09:00"/>
+		<property name="endExecutionPeriod" value="2021/12/01 22:00"/>
 		<property name="workload" value="1.30"/>
 		<property name="description" value="Esta tarea aún no ha acabado. "/>
 		<property name="link" value="https://github.com/"/>
@@ -259,8 +259,8 @@
 	
 	<bean id="task11" class="acme.entities.tasks.Task">
 		<property name="title" value="Tarea 11" />
-		<property name="startExecutionPeriod" value="2021/04/13 11:00"/>
-		<property name="endExecutionPeriod" value="2022/10/01 23:00"/>
+		<property name="startExecutionPeriod" value="2021/08/13 11:00"/>
+		<property name="endExecutionPeriod" value="2022/12/01 23:00"/>
 		<property name="workload" value="50.10"/>
 		<property name="description" value="A esta tarea le queda mucho. "/>
 		<property name="link" value="https://twitter.com/?lang=es"/>
@@ -270,8 +270,8 @@
 	
 	<bean id="task12" class="acme.entities.tasks.Task">
 		<property name="title" value="Tarea muy rara" />
-		<property name="startExecutionPeriod" value="2021/04/10 12:00"/>
-		<property name="endExecutionPeriod" value="2023/10/01 12:00"/>
+		<property name="startExecutionPeriod" value="2021/08/10 12:00"/>
+		<property name="endExecutionPeriod" value="2023/12/01 12:00"/>
 		<property name="workload" value="80.15"/>
 		<property name="description" value="Esta tarea es muy peculiar "/>
 		<property name="link"><null/></property>
@@ -293,8 +293,8 @@
 	
 	<bean id="task14" class="acme.entities.tasks.Task">
 		<property name="title" value="Tarea 14" />
-		<property name="startExecutionPeriod" value="2021/04/22 09:00"/>
-		<property name="endExecutionPeriod" value="2021/08/01 22:00"/>
+		<property name="startExecutionPeriod" value="2021/08/22 09:00"/>
+		<property name="endExecutionPeriod" value="2021/12/01 22:00"/>
 		<property name="workload" value="1.30"/>
 		<property name="description" value="Esta tarea aún no ha acabado. "/>
 		<property name="link" value="https://twitter.com/?lang=es"/>

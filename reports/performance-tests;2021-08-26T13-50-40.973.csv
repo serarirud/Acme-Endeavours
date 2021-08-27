@@ -1,2 +1,0 @@
-timestamp,test-class,test-method,time,description,result
-2021-08-26 13:51:03.625,acme.testing.manager.tasks.ManagerTaskCreateTest,createPositive,4647,"[8] recordIndex=17, title=T, startExecutionPeriod=2025/08/01 16:00, endExecutionPeriod=2025/08/01 16:01, workload=99.59, description=Es una tarea larga, hay que empezar cuanto antes posible, link=null, isPublic=false",The system doesn't navigate from '/manager/task/create' to '/master/welcome'

@@ -1,2 +1,0 @@
-timestamp,test-class,test-method,time,description,result
-2021-08-26 13:55:57.059,acme.testing.manager.tasks.ManagerTaskCreateTest,createNegative,6011,"[2] recordIndex=1, title=Tarea de prueba test, startExecutionPeriod=2021/03/01 10:00, endExecutionPeriod=2021/08/04 13:00, workload=3.29, description=Descripción de prueba test, link=https://google.es, isPublic=true",OK
