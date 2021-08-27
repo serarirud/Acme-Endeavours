@@ -1,7 +1,0 @@
-timestamp,test-class,test-method,time,description,result
-2021-06-05 17:24:16.673,acme.testing.anonymous.shouts.AnonymousShoutsListTest,list,972,"[1] recordIndex=0, moment=2021/06/02 10:00, author=John Doe, text=I'm happy!, info=null",OK
-2021-06-05 17:24:17.914,acme.testing.anonymous.shouts.AnonymousShoutsListTest,list,930,"[2] recordIndex=1, moment=2021/06/02 16:00, author=Foo Bar, text=Just turning 50!, info=http://www.example1.org",OK
-2021-06-05 17:24:19.159,acme.testing.anonymous.shouts.AnonymousShoutsListTest,list,968,"[3] recordIndex=2, moment=2021/06/02 01:00, author=Francisco Borrego, text=Este es un texto muy guay., info=null",OK
-2021-06-05 17:24:20.416,acme.testing.anonymous.shouts.AnonymousShoutsListTest,list,930,"[4] recordIndex=3, moment=2021/06/02 13:00, author=Jesus Vargas, text=Hola miren mi proyecto., info=https://github.com/Francisco-Borrego/Acme-Planner/",OK
-2021-06-05 17:24:21.6,acme.testing.anonymous.shouts.AnonymousShoutsListTest,list,910,"[5] recordIndex=4, moment=2021/06/02 21:00, author=Antonio Funes, text=Me gusta mucho esta página., info=https://www.us.es/",OK
-2021-06-05 17:24:22.806,acme.testing.anonymous.shouts.AnonymousShoutsListTest,list,949,"[6] recordIndex=5, moment=2021/06/02 21:00, author=Usuario de incógnito, text=Esta página está chula, info=https://www.google.es/",OK
