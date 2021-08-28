@@ -1,2 +1,2 @@
-nPrivateTask,nPublicTask,nFinishedTask,nNotFinishedTask,averageTaskExecutionPeriods,deviationTaskExecutionPeriods,minimumTaskExecutionPeriods,maximumTaskExecutionPeriods,averageTaskWorkloads,deviationTaskWorkloads,minimumTaskWorkloads,maximumTaskWorkloads
-3,15,8,10,518.44,926.39,0,4029,25.05,32.08,0.10,90.45
+ratio1,ratio2,avgSheetsUSD,avgSheetsEUR,avgSheetsGBP,devSheetsUSD,devSheetsEUR,devSheetsGBP,nPrivateTask,nPublicTask,nFinishedTask,nNotFinishedTask,averageTaskExecutionPeriods,deviationTaskExecutionPeriods,minimumTaskExecutionPeriods,maximumTaskExecutionPeriods,averageTaskWorkloads,deviationTaskWorkloads,minimumTaskWorkloads,maximumTaskWorkloads
+0.62,0.12,35.00,31.15,55.00,35.00,40.13,25.00,3,15,12,6,525.22,927.62,0,4029,25.05,32.08,0.10,90.45

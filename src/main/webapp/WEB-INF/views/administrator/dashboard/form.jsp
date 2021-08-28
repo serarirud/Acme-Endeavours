@@ -22,6 +22,80 @@
 
 <table class="table table-sm">	
 	<caption><acme:message code="administrator.dashboard.form.title.general-indicators"/></caption>
+	
+	<!-- CC -->
+	<tr>
+		<th scope="row">
+			<acme:message code="administrator.dashboard.form.label.ratio1"/>
+		</th>
+		<td>
+			<acme:print value="${ratio1}"/>
+		</td>
+	</tr>
+	
+	<tr>
+		<th scope="row">
+			<acme:message code="administrator.dashboard.form.label.ratio2"/>
+		</th>
+		<td>
+			<acme:print value="${ratio2}"/>
+		</td>
+	</tr>
+	
+	<tr>
+		<th scope="row">
+			<acme:message code="administrator.dashboard.form.label.avgSheetsUSD"/>
+		</th>
+		<td>
+			<acme:print value="${avgSheetsUSD}"/>
+		</td>
+	</tr>
+	
+	<tr>
+		<th scope="row">
+			<acme:message code="administrator.dashboard.form.label.avgSheetsEUR"/>
+		</th>
+		<td>
+			<acme:print value="${avgSheetsEUR}"/>
+		</td>
+	</tr>
+	
+	<tr>
+		<th scope="row">
+			<acme:message code="administrator.dashboard.form.label.avgSheetsGBP"/>
+		</th>
+		<td>
+			<acme:print value="${avgSheetsGBP}"/>
+		</td>
+	</tr>
+	
+	<tr>
+		<th scope="row">
+			<acme:message code="administrator.dashboard.form.label.devSheetsUSD"/>
+		</th>
+		<td>
+			<acme:print value="${devSheetsUSD}"/>
+		</td>
+	</tr>
+	
+	<tr>
+		<th scope="row">
+			<acme:message code="administrator.dashboard.form.label.devSheetsEUR"/>
+		</th>
+		<td>
+			<acme:print value="${devSheetsEUR}"/>
+		</td>
+	</tr>
+	
+	<tr>
+		<th scope="row">
+			<acme:message code="administrator.dashboard.form.label.devSheetsGBP"/>
+		</th>
+		<td>
+			<acme:print value="${devSheetsGBP}"/>
+		</td>
+	</tr>
+	
 	<tr>
 		<th scope="row">
 			<acme:message code="administrator.dashboard.form.label.number-task-private"/>
@@ -207,4 +281,6 @@
 	</tr>
 	
 </table>
+
+
 

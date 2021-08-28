@@ -27,3 +27,12 @@ administrator.dashboard.form.label.task-privates = Privadas
 administrator.dashboard.form.label.task-finished =  Terminadas
 administrator.dashboard.form.label.task-unfinished = No terminadas
 administrator.dashboard.form.result.hours = {Horas,Minutos}
+
+administrator.dashboard.form.label.ratio1= Ratio de Shouts cuyas Sheets están marcadas como importantes
+administrator.dashboard.form.label.ratio2= Ratio de Shouts cuyas Sheets sin dinero
+administrator.dashboard.form.label.avgSheetsUSD = Media de Sheets con USD
+administrator.dashboard.form.label.avgSheetsEUR = Media de Sheets con EUR
+administrator.dashboard.form.label.avgSheetsGBP = Media de Sheets con GBP
+administrator.dashboard.form.label.devSheetsUSD = Desviación estándar de Sheets con USD
+administrator.dashboard.form.label.devSheetsEUR = Desviación estándar de Sheets con EUR
+administrator.dashboard.form.label.devSheetsGBP = Desviación estándar de Sheets con GBP
