@@ -1,8 +1,8 @@
-recordIndex,moment,author,text,info
-0,2021/08/25 10:00,John Doe,I'm happy!,
-1,2021/08/25 12:00,Jane Doe,I'm the master of my room!,http://www.example.org
-2,2021/08/25 16:00,Foo Bar,Just turning 50!,http://www.example1.org
-3,2021/08/25 01:00,Francisco Borrego,Este es un texto muy guay.,
-4,2021/08/25 13:00,Jesus Vargas,Hola miren mi proyecto.,https://github.com/Francisco-Borrego/Acme-Planner/
-5,2021/08/25 21:00,Antonio Funes,Me gusta mucho esta página.,https://www.us.es/
-6,2021/08/25 21:00,Usuario de incógnito,Esta página está chula,https://www.google.es/
+recordIndex,moment,author,text,info,atributo1,atributo2,atributo3,atributo4
+0,2021/08/29 10:00,John Doe,I'm happy!,,12-gd23-0312,2022/07/01 10:00,GBP 80.00,false
+1,2021/08/28 12:00,Jane Doe,I'm the master of my room!,http://www.example.org,12-gs23-0312,2021/12/30 10:00,USD 70.00,false
+2,2021/08/27 16:00,Foo Bar,Just turning 50!,http://www.example1.org,12-ad23-0312,2024/06/21 10:00,GBP 30.00,false
+3,2021/08/20 01:00,Francisco Borrego,Este es un texto muy guay.,,12-gw23-0312,2027/07/07 10:00,EUR 15.50,true
+4,2021/08/24 13:00,Jesus Vargas,Hola miren mi proyecto.,https://github.com/Francisco-Borrego/Acme-Planner/,12-gr23-0312,2023/03/03 10:00,EUR 0.01,true
+5,2021/08/25 21:00,Antonio Funes,Me gusta mucho esta página.,https://www.us.es/,12-gd33-0312,2025/05/05 10:00,EUR 100.00,true
+6,2021/08/29 21:00,Usuario de incógnito,Esta página está chula,https://www.google.es/,12-gd63-0312,2026/06/06 10:00,USD 0.00,true
