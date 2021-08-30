@@ -1,6 +1,30 @@
-author,text,info
-"",,n
-12345678901234567890123456,John Doe hard          core,http
-1234,,google.es
-"",12345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901 -- + de 100 caracteres,alum.us.es
-"",sex dd     hard             core,https//g
+author,text,info,atributo1,atributo2,atributo3,atributo4
+hola,Autor demasiado corto,http://hola.com,10-hy72-0921,2022/01/01 10:00,EUR 10.00,true,
+holaaaaaaaaaaaaaaaaaaaaaaa,Autor con 26 letras,http://hola.com,10-hy72-0921,2022/01/01 10:00,EUR 10.00,true,
+"",Autor vacío,http://hola.com,10-hy72-0921,2022/01/01 10:00,EUR 10.00,false,
+Texto 101 letras,01234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567891,http://hola.com,10-hy72-0921,2022/01/01 10:00,EUR 10.00,true,
+Texto vacío,,http://hola.com,10-hy72-0921,2022/01/01 10:00,EUR 10.00,true,
+"",,http://hola.com,10-hy72-0921,2022/01/01 10:00,EUR 10.00,true,
+Texto prueba,Texto prueba,malaurl.com,10-hy72-0921,2022/01/01 10:00,EUR 10.00,true,
+Texto prueba,Texto prueba,,15-hy72-0921,2022/01/01 10:00,EUR 10.00,true,
+Texto prueba,Texto prueba,http://hola.com,10-hy72-0621,2022/01/01 10:00,EUR 10.00,true,
+Texto prueba,Texto prueba,http://hola.com,10-hy72-0922,2022/01/01 10:00,EUR 10.00,true,
+Texto prueba,Texto prueba,http://hola.com,10-hyr2-0921,2022/01/01 10:00,EUR 10.00,false,
+Texto prueba,Texto prueba,http://hola.com,,2022/01/01 10:00,EUR 10.00,false,
+"",,,,2022/01/01 10:00,EUR 10.00,true,
+Texto prueba,Texto prueba,http://hola.com,10-hy72-0921,2021/08/15 23:59,EUR 10.00,true,
+Texto prueba,Texto prueba,http://hola.com,10-hy72-0921,2020/08/12 12:45,EUR 10.00,true,
+Texto prueba,Texto prueba,http://hola.com,10-hy72-0921,2022/01t/012 10:00,EUR 10.00,true,
+Texto prueba,Texto prueba,http://hola.com,10-hy72-0921,2022/01/01 12:63,EUR 10.00,true,
+Texto prueba,Texto prueba,http://hola.com,10-hy72-0921,2022/01/01 25:03,EUR 10.00,true,
+Texto prueba,Texto prueba,http://hola.com,10-hy72-0921,2022/01/01 10:00,YEN 10.00,false,
+Texto prueba,Texto prueba,http://hola.com,10-hy72-0921,2022/01/01 10:00,USD .03,false,
+Texto prueba,Texto prueba,http://hola.com,10-hy72-0921,2022/01/01 10:00,"USD 130,34",false,
+Texto prueba,Texto prueba,http://hola.com,10-hy72-0921,,EUR 10.00,false,
+Texto prueba,Texto prueba,http://hola.com,10-hy72-0921,2022/01/01 10:00,GBP,false,
+Texto prueba,Texto prueba,http://hola.com,10-hy72-0921,2022/01/01 10:00,GBP 12.013,true,
+Texto prueba,Texto prueba,http://hola.com,10-hy72-0921,2022/01/01 10:00,"GBP 10,000,000,000.00",true,
+Texto prueba,Texto prueba,http://hola.com,10-hy72-0921,2022/01/01 10:00,,true,
+"",,,,,EUR 10.00,true,
+Texto prueba,Texto prueba,http://hola.com,10-hy72-0921,2022/01/01 10:00,EUR 1e.00,true,
+"",,,,,,true,

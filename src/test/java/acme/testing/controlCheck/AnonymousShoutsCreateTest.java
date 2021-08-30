@@ -1,9 +1,9 @@
 package acme.testing.controlCheck;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
@@ -20,9 +20,9 @@ public class AnonymousShoutsCreateTest extends AcmePlannerTest {
 	
 	@ParameterizedTest
 	@CsvFileSource(resources = "/anonymous/shout/createPositive.csv", encoding = "utf-8", numLinesToSkip = 1)
-	@Order(10)	
+	@Order(10)
 	public void create(final int recordIndex, final String author, final String text, final String info,
-		final String atributo1, String atributo2, final String atributo3, final String atributo4) {
+		 String atributo1, String atributo2, final String atributo3, final String atributo4) {
 		
 		assert !StringHelper.isBlank(author);
 		assert !StringHelper.isBlank(text);
@@ -31,6 +31,19 @@ public class AnonymousShoutsCreateTest extends AcmePlannerTest {
 		//Generamos deadline automáticamente. Por defecto es una semana y un minuto exacto, en el límite.
 		final LocalDateTime now = LocalDateTime.now();
 		atributo2 = now.plusDays(7L).plusMinutes(1L).format(DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm"));
+		
+		//Generamos el patrón automáticamente
+		final LocalDate today = LocalDate.now();
+		final String day = String.valueOf(today.getDayOfMonth());
+		final String month = String.valueOf(today.getMonthValue());
+		final String year = String.valueOf(today.getYear()).substring(2);
+		
+		if(month.length()==1) {
+			atributo1 = day+atributo1+"0"+month+year;
+		}else {
+			atributo1 = day+atributo1+month+year;
+
+		}
 		
 		super.navigateHome();
 		super.clickOnMenu("Anonymous", "Create a shout");
@@ -62,7 +75,6 @@ public class AnonymousShoutsCreateTest extends AcmePlannerTest {
 	 * 		Primer caso: Autor demasiado corto
 	 * 		Segundo cas: Autor demasiado largo (26 letras)
 	 * 		Tercer caso: Autor vacío
-	 * 		Cuarto caso: Texto muy corto (4 caracteres)
 	 * 		Quinto caso: Texto muy largo (101 caracteres)
 	 * 		Sexto caso: Texto vacío
 	 * 		Séptimo caso: Autor y texto vacío
@@ -94,7 +106,6 @@ public class AnonymousShoutsCreateTest extends AcmePlannerTest {
 	@ParameterizedTest
 	@CsvFileSource(resources = "/anonymous/shout/createNegative.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(20)	
-	@Disabled
 	public void createNegative(final String author, final String text, final String info,
 		final String atributo1, final String atributo2, final String atributo3, final String atributo4) {
 		
