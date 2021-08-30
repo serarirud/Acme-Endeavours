@@ -2,6 +2,7 @@ author,text,info,atributo1,atributo2,atributo3,atributo4
 hola,Autor demasiado corto,http://hola.com,10-hy72-0921,2022/01/01 10:00,EUR 10.00,true,
 holaaaaaaaaaaaaaaaaaaaaaaa,Autor con 26 letras,http://hola.com,10-hy72-0921,2022/01/01 10:00,EUR 10.00,true,
 "",Autor vacío,http://hola.com,10-hy72-0921,2022/01/01 10:00,EUR 10.00,false,
+Texto prueba,Texto prueba,http://hola.com,10-hy72-0921,2022/01/01 10:00,USD -12.33,false,
 Texto 101 letras,01234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567891,http://hola.com,10-hy72-0921,2022/01/01 10:00,EUR 10.00,true,
 Texto vacío,,http://hola.com,10-hy72-0921,2022/01/01 10:00,EUR 10.00,true,
 "",,http://hola.com,10-hy72-0921,2022/01/01 10:00,EUR 10.00,true,

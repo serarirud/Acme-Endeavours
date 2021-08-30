@@ -75,6 +75,7 @@ public class AnonymousShoutsCreateTest extends AcmePlannerTest {
 	 * 		Primer caso: Autor demasiado corto
 	 * 		Segundo cas: Autor demasiado largo (26 letras)
 	 * 		Tercer caso: Autor vacío
+	 * 		Cuarto caso: Cantidad monetaria negativa
 	 * 		Quinto caso: Texto muy largo (101 caracteres)
 	 * 		Sexto caso: Texto vacío
 	 * 		Séptimo caso: Autor y texto vacío
