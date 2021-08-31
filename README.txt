@@ -9,7 +9,7 @@
 # they accept any liabilities with respect to them.
 
 
-Esto es Acme-Planner, un proyecto cuya finalidad es poner en práctica los conocimientos 
+Esto es Acme-Work-Plan, un proyecto cuya finalidad es poner en práctica los conocimientos 
 adquiridos durante las clases de la asignatura Diseño y Pruebas 2, constituyendo parte
 fundamental del segundo entregable.  
 

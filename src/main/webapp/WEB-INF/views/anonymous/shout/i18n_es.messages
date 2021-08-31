@@ -1,12 +1,27 @@
 anonymous.shout.form.label.author = Autor:
 anonymous.shout.form.label.text = Texto:
 anonymous.shout.form.label.info = Información:
+anonymous.shout.form.label.moment = Momento:
+anonymous.shout.form.label.keylem = KeyLem:
+anonymous.shout.form.label.deadline = Momento:
+anonymous.shout.form.label.budget = Monedero:
+anonymous.shout.form.label.important = Importante:
 anonymous.shout.form.button.create = ¡Gritar!
 anonymous.shout.form.button.return = Volver
 
 anonymous.shout.list.label.moment = Momento
 anonymous.shout.list.label.author = Autor
 anonymous.shout.list.label.text = Texto
+anonymous.shout.list.label.keylem = KeyLem:
+anonymous.shout.list.label.deadline = Momento:
+anonymous.shout.list.label.budget = Monedero:
+anonymous.shout.list.label.important = Importante:
 anonymous.shout.list.label.info = Información 
+anonymous.shout.list.label.amount = Valor
 
+anonymous.shout.error.keylem = Keylem con fecha no actual
+anonymous.shout.error.keylemFind = Se ha encontrado un keylem con esta id para la fecha de hoy
+anonymous.shout.error.deadline = La fecha debe ser una semana posterior a la de hoy
 anonymous.shout.error.umbral-superado = Umbral de palabras consideradas spam superado
+anonymous.shout.error.money= Moneda no soportada
+anonymous.shout.error.date = Ya hay un grito con la fecha de hoy 

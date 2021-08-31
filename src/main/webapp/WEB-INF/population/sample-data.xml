@@ -21,11 +21,63 @@
 	
 	<!--  Shouts -->
 	
+	<bean name="dolemite1" class="acme.entities.dolemite.Dolemite">
+		<property name="keylem" value="154626:0121:11" />
+		<property name="deadline" value="2021/12/02 21:00" />
+		<property name="budget" value="USD 700.00" />
+		<property name="important" value="TRUE" />
+	</bean>
+	
+	<bean name="dolemite2" class="acme.entities.dolemite.Dolemite">
+		<property name="keylem" value="164259:0421:11" />
+		<property name="deadline" value="2021/12/02 21:00" />
+		<property name="budget" value="USD 300.00" />
+		<property name="important" value="TRUE" />
+	</bean>
+	
+	<bean name="dolemite3" class="acme.entities.dolemite.Dolemite">
+		<property name="keylem" value="514358:0121:11" />
+		<property name="deadline" value="2021/12/02 21:00" />
+		<property name="budget" value="USD 700.00" />
+		<property name="important" value="TRUE" />
+	</bean>
+	<bean name="dolemite4" class="acme.entities.dolemite.Dolemite">
+		<property name="keylem" value="512358:0121:11" />
+		<property name="deadline" value="2021/12/02 21:00" />
+		<property name="budget" value="GBP 900.00" />
+		<property name="important" value="TRUE" />
+	</bean>
+	<bean name="dolemite5" class="acme.entities.dolemite.Dolemite">
+		<property name="keylem" value="623521:0121:11" />
+		<property name="deadline" value="2021/12/02 21:00" />
+		<property name="budget" value="GBP 800.00" />
+		<property name="important" value="TRUE" />
+	</bean>
+	<bean name="dolemite6" class="acme.entities.dolemite.Dolemite">
+		<property name="keylem" value="462515:0121:11" />
+		<property name="deadline" value="2021/12/02 21:00" />
+		<property name="budget" value="EUR 700.00" />
+		<property name="important" value="TRUE" />
+	</bean>
+	<bean name="dolemite7" class="acme.entities.dolemite.Dolemite">
+		<property name="keylem" value="762046:0121:11" />
+		<property name="deadline" value="2021/12/02 21:00" />
+		<property name="budget" value="USD 900.00" />
+		<property name="important" value="TRUE" />
+	</bean>
+	<bean name="dolemite8" class="acme.entities.dolemite.Dolemite">
+		<property name="keylem" value="652462:0121:11" />
+		<property name="deadline" value="2021/12/02 21:00" />
+		<property name="budget" value="EUR 400.00" />
+		<property name="important" value="TRUE" />
+	</bean>
+	
 	<bean id="shout01" class="acme.entities.shouts.Shout">
 		<property name="moment" value="2021/08/25 10:00"/>
 		<property name="author" value="John Doe"/>		
 		<property name="text" value="I'm happy!"/>
 		<property name="info"><null/></property>
+		<property name="dolemite" ref="dolemite1"/>
 	</bean>
 	
 	<bean id="shout02" class="acme.entities.shouts.Shout">
@@ -33,13 +85,15 @@
 		<property name="author" value="Jane Doe"/>		
 		<property name="text" value="I'm the master of my room!"/>
 		<property name="info" value="http://www.example.org"/>
+		<property name="dolemite" ref="dolemite2"/>
 	</bean>
 	
 	<bean id="shout03" class="acme.entities.shouts.Shout">
 		<property name="moment" value="2021/08/25 16:00"/>
 		<property name="author" value="Foo Bar"/>		
 		<property name="text" value="Just turning 50!"/>
-		<property name="info" value="http://www.example1.org"/>	
+		<property name="info" value="http://www.example1.org"/>
+		<property name="dolemite" ref="dolemite3"/>	
 	</bean>
 	
 	
@@ -47,15 +101,17 @@
 		<property name="moment" value="2021/08/25 01:00"/>
 		<property name="author" value="Francisco Borrego"/>		
 		<property name="text" value="Este es un texto muy guay."/>
-		<property name="info"><null/></property>	
+		<property name="info"><null/></property>
+		<property name="dolemite" ref="dolemite4"/>	
 	</bean>
 	
 	
 	<bean id="shout05" class="acme.entities.shouts.Shout">
-		<property name="moment" value="2020/06/12 01:00"/>
+		<property name="moment" value="2020/07/12 01:00"/>
 		<property name="author" value="Sergio Arias Ruda"/>		
 		<property name="text" value="Este es un grito antiguo así que no debería verlo un usuario anónimo"/>
-		<property name="info"><null/></property>	
+		<property name="info"><null/></property>
+		<property name="dolemite" ref="dolemite5"/>	
 	</bean>
 	
 	
@@ -64,6 +120,7 @@
 		<property name="author" value="Jesus Vargas"/>		
 		<property name="text" value="Hola miren mi proyecto."/>
 		<property name="info" value="https://github.com/Francisco-Borrego/Acme-Planner/" />
+		<property name="dolemite" ref="dolemite6"/>
 	</bean>
 	
 	<bean id="shout07" class="acme.entities.shouts.Shout">
@@ -71,6 +128,7 @@
 		<property name="author" value="Antonio Funes"/>		
 		<property name="text" value="Me gusta mucho esta página."/>
 		<property name="info" value="https://www.us.es/" />
+		<property name="dolemite" ref="dolemite7"/>
 	</bean>
 	
 	<bean id="shout08" class="acme.entities.shouts.Shout">
@@ -78,6 +136,7 @@
 		<property name="author" value="Usuario de incógnito"/>		
 		<property name="text" value="Esta página está chula"/>
 		<property name="info" value="https://www.google.es/" />
+		<property name="dolemite" ref="dolemite8"/>
 	</bean>
 	
 	

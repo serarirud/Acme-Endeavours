@@ -1,0 +1,20 @@
+author,text,info,dolemite.keylem,dolemite.deadline,dolemite.budget,dolemite.important
+"",,,,,,false
+12345678901234567890123456,John Doe hard core,,123440:0721:28,2021/09/24 11:11,EUR 100.00,true
+1234,12345,,123440:0721:28,2021/09/24 11:11,EUR 100.00,true
+12345,1234,,123440:0721:28,2021/09/24 11:11,EUR 100.00,true
+John Doe,12345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901 -- + de 100 caracteres,,123440:0721:28,2021/09/24 11:11,EUR 100.00,true
+John Doe,sex dd hard core,,123440:0721:28,2021/09/24 11:11,EUR 100.00,true
+John Doe,Texto de prueba,patron incorrecto,123440:0721:28,2021/09/24 11:11,EUR 100.00,true
+John Doe,Texto de prueba,,patron incorrecto,2021/09/24 11:11,EUR 100.00,true
+John Doe,Texto de prueba,,123440:0721:27,2021/09/24 11:11,EUR 100.00,true
+John Doe,Texto de prueba,,123440:0722:28,2021/09/24 11:11,EUR 100.00,true
+John Doe,Texto de prueba,,123440:0621:28,2021/09/24 11:11,EUR 100.00,true
+John Doe,Texto de prueba,,123440:0621:28,04/09/2021 11:11,EUR 100.00,true,,,
+John Doe,Texto de prueba,,123440:0721:28,2021/07/28 11:11,EUR 100.00,true
+John Doe,Texto de prueba,,123440:0721:28,2021/08/04 11:11,EUR 100.00,true
+John Doe,Texto de prueba,,123440:0721:28,patron incorrecto,EUR 100.00,true
+John Doe,Texto de prueba,,123440:0721:28,2021/09/24 11:11,patron incorrecto,true
+John Doe,Texto de prueba,,123440:0721:28,2021/09/24 11:11,EUR -100.00,true
+John Doe,Texto de prueba,,123440:0721:28,2021/09/24 11:11,CNP 90.00,true
+John Doe,Texto de prueba,,123440:0721:28,2021/09/24 11:11,"EUR 12,345,678,901.01345",true,678,901.01345,true

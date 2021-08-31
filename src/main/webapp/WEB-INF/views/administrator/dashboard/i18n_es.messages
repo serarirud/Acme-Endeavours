@@ -27,3 +27,12 @@ administrator.dashboard.form.label.task-privates = Privadas
 administrator.dashboard.form.label.task-finished =  Terminadas
 administrator.dashboard.form.label.task-unfinished = No terminadas
 administrator.dashboard.form.result.hours = {Horas,Minutos}
+
+administrator.dashboard.form.label.ratio1=Ratio de gritos marcadas cuyo Dolemite esta marcado como importante
+administrator.dashboard.form.label.ratio2=Ratio de gritos cuyo Dolemite tiene un presupuesto de cero
+administrator.dashboard.form.label.averageSheetsEUR=Media de los gritos cuyo presupuesto del dolemite tiene como moneda EUR
+administrator.dashboard.form.label.averageSheetsUSD=Media de los gritos cuyo presupuesto del dolemite tiene como moneda USD
+administrator.dashboard.form.label.averageSheetsGBP=Media de los gritos cuyo presupuesto del dolemite tiene como moneda GBP
+administrator.dashboard.form.label.deviationSheetsEUR=Desviación estándar de los gritos cuyo presupuesto del dolemite tiene como moneda EUR
+administrator.dashboard.form.label.deviationSheetsUSD=Desviación estándar de los gritos cuyo presupuesto del dolemite tiene como moneda USD
+administrator.dashboard.form.label.deviationSheetsGBP=Desviación estándar de los gritos cuyo presupuesto del dolemite tiene como moneda GBP

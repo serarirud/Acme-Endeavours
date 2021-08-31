@@ -58,5 +58,19 @@ public interface AdministratorDashboardRepository extends AbstractRepository {
 	@Query("select max(t.workload)  from Task t")
 	Double maximumTaskWorkloads();
 
+	@Query("SELECT count(s) FROM Shout s")
+	Integer nShouts();
+		
+	@Query("SELECT count(s) FROM Shout s WHERE (s.dolemite.important = true)") 
+	Integer nShoutsFlag();
+	
+	@Query("SELECT count(s) FROM Shout s WHERE (s.dolemite.budget.amount = 0.0)") 
+	Integer nShoutsBudgetZero();
+		
+	@Query("SELECT avg(sh.budget.amount) FROM Dolemite sh WHERE (sh.budget.currency = ?1)")
+	Double averageSheetsByCurrency(String currency);
+		
+	@Query("SELECT stddev(sh.budget.amount) FROM Dolemite sh WHERE (sh.budget.currency = ?1)")
+	Double deviationSheetsByCurrency(String currency);
 	
 }

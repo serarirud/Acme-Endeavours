@@ -18,42 +18,42 @@ public class AnonymousShoutListService implements AbstractListService<Anonymous,
 	
 	// Internal state -------------------------------------------------------------------
 	
-	@Autowired
-	AnonymousShoutRepository repository;
-	
-	// AbstractListService<Administrator, Shout> interface ------------------------------
-	
-	@Override
-	public boolean authorise(final Request<Shout> request) {
-		assert request != null;
+		@Autowired
+		AnonymousShoutRepository repository;
 		
-		return true;
-	}
-	
-	@Override
-	public void unbind(final Request<Shout> request, final Shout entity, final Model model) {
-		assert request != null;
-		assert entity != null;
-		assert model != null;
+		// AbstractListService<Administrator, Shout> interface ------------------------------
 		
-		request.unbind(entity, model, "author", "text", "moment", "info");
-	}
-	
-	@Override
-	public Collection<Shout> findMany(final Request<Shout> request) {
-		assert request != null;
+		@Override
+		public boolean authorise(final Request<Shout> request) {
+			assert request != null;
+			
+			return true;
+		}
 		
-		Collection<Shout> result;
-		Calendar calendar;
-		Date deadline;
+		@Override
+		public void unbind(final Request<Shout> request, final Shout entity, final Model model) {
+			assert request != null;
+			assert entity != null;
+			assert model != null;
+			
+			request.unbind(entity, model, "author", "text", "moment", "info", 
+				"dolemite.keylem", "dolemite.deadline","dolemite.budget","dolemite.important");
+		}
 		
-		calendar = Calendar.getInstance();
-		calendar.add(Calendar.MONTH, -1);
-		deadline = calendar.getTime();
-		
-		result = this.repository.findMany(deadline);
-		
-		return result;
-	}
-
+		@Override
+		public Collection<Shout> findMany(final Request<Shout> request) {
+			assert request != null;
+			
+			Collection<Shout> result;
+			Calendar calendar;
+			Date deadline;
+			
+			calendar = Calendar.getInstance();
+			calendar.add(Calendar.MONTH, -1);
+			deadline = calendar.getTime();
+			
+			result = this.repository.findMany(deadline);
+			
+			return result;
+		}
 }

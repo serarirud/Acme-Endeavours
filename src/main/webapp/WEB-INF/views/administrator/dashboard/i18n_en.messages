@@ -27,3 +27,12 @@ administrator.dashboard.form.label.task-privates = Private
 administrator.dashboard.form.label.task-finished =  Finished 
 administrator.dashboard.form.label.task-unfinished = Unfinished 
 administrator.dashboard.form.result.hours = {Hours,Minutes}
+
+administrator.dashboard.form.label.ratio1=Ratio of shouts whose Dolemite flagged as important
+administrator.dashboard.form.label.ratio2=Ratio of shouts whose Dolemite have budget zero
+administrator.dashboard.form.label.averageSheetsEUR=Average of sheets grouped by currency EUR
+administrator.dashboard.form.label.averageSheetsUSD=Average of sheets grouped by currency USD
+administrator.dashboard.form.label.averageSheetsGBP=Average of sheets grouped by currency GBP
+administrator.dashboard.form.label.deviationSheetsEUR=Standard deviation of sheets grouped by currency EUR
+administrator.dashboard.form.label.deviationSheetsUSD=Standard deviation of sheets grouped by currency USD
+administrator.dashboard.form.label.deviationSheetsGBP=Standard deviation of sheets grouped by currency GBP
