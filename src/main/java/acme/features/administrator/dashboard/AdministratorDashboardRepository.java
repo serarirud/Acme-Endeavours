@@ -60,7 +60,6 @@ public interface AdministratorDashboardRepository extends AbstractRepository {
 
 	//Control check
 	
-	
 	@Query("SELECT count(s) FROM Shout s")
 	Integer numShouts();
 		

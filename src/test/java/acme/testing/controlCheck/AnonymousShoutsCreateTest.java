@@ -20,7 +20,7 @@ public class AnonymousShoutsCreateTest extends AcmePlannerTest {
 	
 	@ParameterizedTest
 	@CsvFileSource(resources = "/anonymous/shout/createPositive.csv", encoding = "utf-8", numLinesToSkip = 1)
-	@Order(10)
+	@Order(30)
 	public void create(final int recordIndex, final String author, final String text, final String info,
 		 String atributo1, String atributo2, final String atributo3, final String atributo4) {
 		
@@ -34,16 +34,19 @@ public class AnonymousShoutsCreateTest extends AcmePlannerTest {
 		
 		//Generamos el patrón automáticamente
 		final LocalDate today = LocalDate.now();
-		final String day = String.valueOf(today.getDayOfMonth());
-		final String month = String.valueOf(today.getMonthValue());
+		String day = String.valueOf(today.getDayOfMonth());
+		String month = String.valueOf(today.getMonthValue());
 		final String year = String.valueOf(today.getYear()).substring(2);
+
+		if(day.length()==1) {
+			day="0"+day;
+		}
 		
 		if(month.length()==1) {
-			atributo1 = day+atributo1+"0"+month+year;
-		}else {
-			atributo1 = day+atributo1+month+year;
-
+			month="0"+month;
 		}
+		
+		atributo1=day+atributo1+month+year;
 		
 		super.navigateHome();
 		super.clickOnMenu("Anonymous", "Create a shout");
@@ -106,7 +109,7 @@ public class AnonymousShoutsCreateTest extends AcmePlannerTest {
 	
 	@ParameterizedTest
 	@CsvFileSource(resources = "/anonymous/shout/createNegative.csv", encoding = "utf-8", numLinesToSkip = 1)
-	@Order(20)	
+	@Order(40)	
 	public void createNegative(final String author, final String text, final String info,
 		final String atributo1, final String atributo2, final String atributo3, final String atributo4) {
 		
