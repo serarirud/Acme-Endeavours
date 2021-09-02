@@ -17,6 +17,85 @@
 <%@ taglib uri = "http://java.sun.com/jsp/jstl/fmt" prefix = "fmt" %>
 
 <h2>
+	<acme:message code="administrator.dashboard.form.title.xxx"/>
+</h2>
+
+<table class="table table-sm">	
+	<caption><acme:message code="administrator.dashboard.form.title.xxx"/></caption>
+	<tr>
+		<th scope="row">
+			<acme:message code="administrator.dashboard.form.label.xxx.ratioShoutsImportant"/>
+		</th>
+		<td>
+			<acme:print value="${ratioShoutsFlaggedAsImportant}"/>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">
+			<acme:message code="administrator.dashboard.form.label.xxx.ratioShoutsBudgetZero"/>
+		</th>
+		<td>
+			<acme:print value="${ratioShoutsWithBudgetZero}"/> 
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">
+			<acme:message code="administrator.dashboard.form.label.xxx.average.eur"/>
+		</th>
+		<td>
+			<acme:print value="${averageShoutsGroupedByEUR}"/> 
+			<acme:message code="administrator.dashboard.form.xxx.result.eur"/>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">
+			<acme:message code="administrator.dashboard.form.label.xxx.deviation.eur"/>
+		</th>
+		<td>
+			<acme:print value="${deviationShoutsGroupedByEUR}"/> 
+			<acme:message code="administrator.dashboard.form.xxx.result.eur"/>			
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">
+			<acme:message code="administrator.dashboard.form.label.xxx.average.usd"/>
+		</th>
+		<td>
+			<acme:print value="${averageShoutsGroupedByUSD}"/> 
+			<acme:message code="administrator.dashboard.form.xxx.result.usd"/>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">
+			<acme:message code="administrator.dashboard.form.label.xxx.deviation.usd"/>
+		</th>
+		<td>
+			<acme:print value="${deviationShoutsGroupedByUSD}"/> 
+			<acme:message code="administrator.dashboard.form.xxx.result.usd"/>			
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">
+			<acme:message code="administrator.dashboard.form.label.xxx.average.gbp"/>
+		</th>
+		<td>
+			<acme:print value="${averageShoutsGroupedByGBP}"/> 
+			<acme:message code="administrator.dashboard.form.xxx.result.gbp"/>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">
+			<acme:message code="administrator.dashboard.form.label.xxx.deviation.gbp"/>
+		</th>
+		<td>
+			<acme:print value="${deviationShoutsGroupedByGBP}"/> 
+			<acme:message code="administrator.dashboard.form.xxx.result.gbp"/>			
+		</td>
+	</tr>
+	
+</table>
+
+<h2>
 	<acme:message code="administrator.dashboard.form.title.general-indicators"/>
 </h2>
 

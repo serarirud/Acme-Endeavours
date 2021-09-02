@@ -1,12 +1,24 @@
 anonymous.shout.form.label.author = Autor:
 anonymous.shout.form.label.text = Texto:
 anonymous.shout.form.label.info = Información:
+anonymous.shout.form.label.xxx.xxx1 = Xxx1: 
+anonymous.shout.form.label.xxx.xxx2 = Xxx2: 
+anonymous.shout.form.label.xxx.xxx3 = Xxx3: 
+anonymous.shout.form.label.xxx.xxx4 = Xxx4:
 anonymous.shout.form.button.create = ¡Gritar!
 anonymous.shout.form.button.return = Volver
 
 anonymous.shout.list.label.moment = Momento
 anonymous.shout.list.label.author = Autor
 anonymous.shout.list.label.text = Texto
-anonymous.shout.list.label.info = Información 
+anonymous.shout.list.label.info = Información
+anonymous.shout.list.label.xxx.xxx1 = Xxx1 
+anonymous.shout.list.label.xxx.xxx2 = Xxx2 
+anonymous.shout.list.label.xxx.xxx3 = Xxx3 
+anonymous.shout.list.label.xxx.xxx4 = Xxx4 
 
 anonymous.shout.error.umbral-superado = Umbral de palabras consideradas spam superado
+anonymous.shout.error.incorrect-xxx1 = Xxx1 incorrecto
+anonymous.shout.error.repeated-xxx1 = Xxx1 repetido
+anonymous.shout.error.xxx2 = Xxx2 incorrecto
+anonymous.shout.error.xxx3 = Xxx3 incorrecto, debe ser EUR, USD o GBP

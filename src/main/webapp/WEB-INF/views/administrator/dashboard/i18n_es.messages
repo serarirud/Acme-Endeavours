@@ -27,3 +27,16 @@ administrator.dashboard.form.label.task-privates = Privadas
 administrator.dashboard.form.label.task-finished =  Terminadas
 administrator.dashboard.form.label.task-unfinished = No terminadas
 administrator.dashboard.form.result.hours = {Horas,Minutos}
+
+administrator.dashboard.form.title.xxx = Información de XXX
+administrator.dashboard.form.label.xxx.ratioShoutsImportant = Ratio de xxx marcadas como importantes
+administrator.dashboard.form.label.xxx.ratioShoutsBudgetZero = Ratio de xxx con presupuesto 0
+administrator.dashboard.form.label.xxx.average.eur = Media de xxx con moneda EUR
+administrator.dashboard.form.label.xxx.deviation.eur = Desviación de xxx con moneda EUR
+administrator.dashboard.form.xxx.result.eur = EUR
+administrator.dashboard.form.label.xxx.average.usd = Media de xxx con moneda USD
+dministrator.dashboard.form.label.xxx.deviation.gbp = Desviación de xxx con moneda USD
+administrator.dashboard.form.xxx.result.usd = USD
+administrator.dashboard.form.label.xxx.average.gbp = Media de xxx con moneda GBP
+dministrator.dashboard.form.label.xxx.deviation.gbp = Desviación de xxx con moneda GBP
+administrator.dashboard.form.xxx.result.gbp = GBP

@@ -51,7 +51,10 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		request.unbind(entity, model,
 			"nPrivateTask", "nPublicTask", "nNotFinishedTask", "nFinishedTask", "averageTaskExecutionPeriods",
 			"deviationTaskExecutionPeriods", "minimumTaskExecutionPeriods", "maximumTaskExecutionPeriods",
-			"averageTaskWorkloads", "deviationTaskWorkloads", "minimumTaskWorkloads", "maximumTaskWorkloads");
+			"averageTaskWorkloads", "deviationTaskWorkloads", "minimumTaskWorkloads", "maximumTaskWorkloads",
+			"ratioShoutsFlaggedAsImportant", "ratioShoutsWithBudgetZero", "averageShoutsGroupedByEUR", "deviationShoutsGroupedByEUR",
+			"averageShoutsGroupedByUSD", "deviationShoutsGroupedByUSD",
+			"averageShoutsGroupedByGBP","deviationShoutsGroupedByGBP");
 	}
 
 	@Override
@@ -74,6 +77,16 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		Double deviationTaskWorkloads;
 		Double	minimumTaskWorkloads;
 		Double	maximumTaskWorkloads;
+		
+		Integer shouts;
+		final Double ratioShoutsFlaggedAsImportant;
+		final Double ratioShoutsWithBudgetZero;
+		final Double averageShoutsGroupedByEUR;
+		final Double deviationShoutsGroupedByEUR;
+		final Double averageShoutsGroupedByUSD;
+		final Double deviationShoutsGroupedByUSD;
+		final Double averageShoutsGroupedByGBP;
+		final Double deviationShoutsGroupedByGBP;
 
 		nPrivateTask = this.repository.nPrivateTask();
 		nPublicTask = this.repository.nPublicTask();
@@ -83,6 +96,15 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		deviationTaskExecutionPeriods = this.repository.deviationTaskExecutionPeriods();
 		minimumTaskExecutionPeriods = this.repository.minimumTaskExecutionPeriods();
 		maximumTaskExecutionPeriods = this.repository.maximumTaskExecutionPeriods();
+		shouts = this.repository.shouts();
+		ratioShoutsFlaggedAsImportant = this.repository.shoutsFlaggedAsImportant()*1./shouts;
+		ratioShoutsWithBudgetZero = this.repository.shoutsWithBudgetZero()*1./shouts;
+		averageShoutsGroupedByEUR = this.repository.averageShoutsGroupedByCurrency("EUR");
+		deviationShoutsGroupedByEUR = this.repository.deviationShoutsGroupedByCurrency("EUR");
+		averageShoutsGroupedByUSD = this.repository.averageShoutsGroupedByCurrency("USD");
+		deviationShoutsGroupedByUSD = this.repository.deviationShoutsGroupedByCurrency("USD");
+		averageShoutsGroupedByGBP = this.repository.averageShoutsGroupedByCurrency("GBP");
+		deviationShoutsGroupedByGBP = this.repository.deviationShoutsGroupedByCurrency("GBP");
 		
 		final List<Task> tasks = this.repository.findAllTask().stream().collect(Collectors.toList());
 		Double sum = 0.;
@@ -120,6 +142,15 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		result.setDeviationTaskWorkloads(deviationTaskWorkloads);
 		result.setMinimumTaskWorkloads(minimumTaskWorkloads);
 		result.setMaximumTaskWorkloads(maximumTaskWorkloads);
+		
+		result.setRatioShoutsFlaggedAsImportant(ratioShoutsFlaggedAsImportant);
+		result.setRatioShoutsWithBudgetZero(ratioShoutsWithBudgetZero);
+		result.setAverageShoutsGroupedByEUR(averageShoutsGroupedByEUR);
+		result.setDeviationShoutsGroupedByEUR(deviationShoutsGroupedByEUR);
+		result.setAverageShoutsGroupedByUSD(averageShoutsGroupedByUSD);
+		result.setDeviationShoutsGroupedByUSD(deviationShoutsGroupedByUSD);
+		result.setAverageShoutsGroupedByGBP(averageShoutsGroupedByGBP);
+		result.setDeviationShoutsGroupedByGBP(deviationShoutsGroupedByGBP);
 		
 		return result;
 	}

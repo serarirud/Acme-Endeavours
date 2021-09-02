@@ -24,5 +24,14 @@ public class Dashboard implements Serializable {
 	Double 						deviationTaskWorkloads;
 	Double						minimumTaskWorkloads;
 	Double						maximumTaskWorkloads;
+	
+	Double						ratioShoutsFlaggedAsImportant;
+	Double						ratioShoutsWithBudgetZero;
+	Double 						averageShoutsGroupedByEUR;
+	Double						deviationShoutsGroupedByEUR;
+	Double 						averageShoutsGroupedByUSD;
+	Double						deviationShoutsGroupedByUSD;
+	Double 						averageShoutsGroupedByGBP;
+	Double						deviationShoutsGroupedByGBP;
 
 }

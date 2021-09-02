@@ -1,6 +1,10 @@
 anonymous.shout.form.label.author = Author:
 anonymous.shout.form.label.text = Text:
-anonymous.shout.form.label.info = Info: 
+anonymous.shout.form.label.info = Info:
+anonymous.shout.form.label.xxx.xxx1 = Xxx1: 
+anonymous.shout.form.label.xxx.xxx2 = Xxx2: 
+anonymous.shout.form.label.xxx.xxx3 = Xxx3: 
+anonymous.shout.form.label.xxx.xxx4 = Xxx4: 
 anonymous.shout.form.button.create = Shout!
 anonymous.shout.form.button.return = Return
 
@@ -8,5 +12,13 @@ anonymous.shout.list.label.moment = Moment
 anonymous.shout.list.label.author = Author
 anonymous.shout.list.label.text = Text
 anonymous.shout.list.label.info = Info 
+anonymous.shout.list.label.xxx.xxx1 = Xxx1 
+anonymous.shout.list.label.xxx.xxx2 = Xxx2 
+anonymous.shout.list.label.xxx.xxx3 = Xxx3 
+anonymous.shout.list.label.xxx.xxx4 = Xxx4 
 
-anonymous.shout.error.umbral-superado = Threshold of spam word reachead
+anonymous.shout.error.umbral-superado = Threshold of spam word reached
+anonymous.shout.error.incorrect-xxx1 = Xxx1 incorrect
+anonymous.shout.error.repeated-xxx1 = Xxx1 repeated
+anonymous.shout.error.xxx2 = Xxx2 incorrect
+anonymous.shout.error.xxx3 = Xxx3 incorrect, must be EUR, USD or GBP
