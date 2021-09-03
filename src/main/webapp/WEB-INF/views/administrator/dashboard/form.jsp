@@ -27,7 +27,7 @@
 			<acme:message code="administrator.dashboard.form.label.xxx.ratioShoutsImportant"/>
 		</th>
 		<td>
-			<acme:print value="${ratioShoutsFlaggedAsImportant}"/>
+			<acme:print value="${ratioShoutsFlaggedAsImportant} %"/>
 		</td>
 	</tr>
 	<tr>
@@ -35,7 +35,7 @@
 			<acme:message code="administrator.dashboard.form.label.xxx.ratioShoutsBudgetZero"/>
 		</th>
 		<td>
-			<acme:print value="${ratioShoutsWithBudgetZero}"/> 
+			<acme:print value="${ratioShoutsWithBudgetZero} %"/> 
 		</td>
 	</tr>
 	<tr>
@@ -43,8 +43,7 @@
 			<acme:message code="administrator.dashboard.form.label.xxx.average.eur"/>
 		</th>
 		<td>
-			<acme:print value="${averageShoutsGroupedByEUR}"/> 
-			<acme:message code="administrator.dashboard.form.xxx.result.eur"/>
+			<acme:print value="${averageShoutsGroupedByEUR} EUR"/> 
 		</td>
 	</tr>
 	<tr>
@@ -52,8 +51,7 @@
 			<acme:message code="administrator.dashboard.form.label.xxx.deviation.eur"/>
 		</th>
 		<td>
-			<acme:print value="${deviationShoutsGroupedByEUR}"/> 
-			<acme:message code="administrator.dashboard.form.xxx.result.eur"/>			
+			<acme:print value="${deviationShoutsGroupedByEUR} EUR"/> 
 		</td>
 	</tr>
 	<tr>
@@ -61,8 +59,7 @@
 			<acme:message code="administrator.dashboard.form.label.xxx.average.usd"/>
 		</th>
 		<td>
-			<acme:print value="${averageShoutsGroupedByUSD}"/> 
-			<acme:message code="administrator.dashboard.form.xxx.result.usd"/>
+			<acme:print value="${averageShoutsGroupedByUSD} USD"/> 
 		</td>
 	</tr>
 	<tr>
@@ -70,8 +67,7 @@
 			<acme:message code="administrator.dashboard.form.label.xxx.deviation.usd"/>
 		</th>
 		<td>
-			<acme:print value="${deviationShoutsGroupedByUSD}"/> 
-			<acme:message code="administrator.dashboard.form.xxx.result.usd"/>			
+			<acme:print value="${deviationShoutsGroupedByUSD} USD"/> 
 		</td>
 	</tr>
 	<tr>
@@ -79,8 +75,7 @@
 			<acme:message code="administrator.dashboard.form.label.xxx.average.gbp"/>
 		</th>
 		<td>
-			<acme:print value="${averageShoutsGroupedByGBP}"/> 
-			<acme:message code="administrator.dashboard.form.xxx.result.gbp"/>
+			<acme:print value="${averageShoutsGroupedByGBP} GBP"/> 
 		</td>
 	</tr>
 	<tr>
@@ -88,8 +83,7 @@
 			<acme:message code="administrator.dashboard.form.label.xxx.deviation.gbp"/>
 		</th>
 		<td>
-			<acme:print value="${deviationShoutsGroupedByGBP}"/> 
-			<acme:message code="administrator.dashboard.form.xxx.result.gbp"/>			
+			<acme:print value="${deviationShoutsGroupedByGBP} GBP"/> 
 		</td>
 	</tr>
 	

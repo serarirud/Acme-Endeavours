@@ -48,13 +48,14 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model,
+		request.unbind(entity, model, 
+			"ratioShoutsFlaggedAsImportant", "ratioShoutsWithBudgetZero", 
+			"averageShoutsGroupedByEUR", "deviationShoutsGroupedByEUR",
+			"averageShoutsGroupedByUSD", "deviationShoutsGroupedByUSD",
+			"averageShoutsGroupedByGBP","deviationShoutsGroupedByGBP",
 			"nPrivateTask", "nPublicTask", "nNotFinishedTask", "nFinishedTask", "averageTaskExecutionPeriods",
 			"deviationTaskExecutionPeriods", "minimumTaskExecutionPeriods", "maximumTaskExecutionPeriods",
-			"averageTaskWorkloads", "deviationTaskWorkloads", "minimumTaskWorkloads", "maximumTaskWorkloads",
-			"ratioShoutsFlaggedAsImportant", "ratioShoutsWithBudgetZero", "averageShoutsGroupedByEUR", "deviationShoutsGroupedByEUR",
-			"averageShoutsGroupedByUSD", "deviationShoutsGroupedByUSD",
-			"averageShoutsGroupedByGBP","deviationShoutsGroupedByGBP");
+			"averageTaskWorkloads", "deviationTaskWorkloads", "minimumTaskWorkloads", "maximumTaskWorkloads");
 	}
 
 	@Override
@@ -79,14 +80,14 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		Double	maximumTaskWorkloads;
 		
 		Integer shouts;
-		final Double ratioShoutsFlaggedAsImportant;
-		final Double ratioShoutsWithBudgetZero;
-		final Double averageShoutsGroupedByEUR;
-		final Double deviationShoutsGroupedByEUR;
-		final Double averageShoutsGroupedByUSD;
-		final Double deviationShoutsGroupedByUSD;
-		final Double averageShoutsGroupedByGBP;
-		final Double deviationShoutsGroupedByGBP;
+		Double ratioShoutsFlaggedAsImportant;
+		Double ratioShoutsWithBudgetZero;
+		Double averageShoutsGroupedByEUR;
+		Double deviationShoutsGroupedByEUR;
+		Double averageShoutsGroupedByUSD;
+		Double deviationShoutsGroupedByUSD;
+		Double averageShoutsGroupedByGBP;
+		Double deviationShoutsGroupedByGBP;
 
 		nPrivateTask = this.repository.nPrivateTask();
 		nPublicTask = this.repository.nPublicTask();
@@ -97,14 +98,23 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		minimumTaskExecutionPeriods = this.repository.minimumTaskExecutionPeriods();
 		maximumTaskExecutionPeriods = this.repository.maximumTaskExecutionPeriods();
 		shouts = this.repository.shouts();
-		ratioShoutsFlaggedAsImportant = this.repository.shoutsFlaggedAsImportant()*1./shouts;
-		ratioShoutsWithBudgetZero = this.repository.shoutsWithBudgetZero()*1./shouts;
+		ratioShoutsFlaggedAsImportant = this.repository.shoutsFlaggedAsImportant()*100./shouts;
+		ratioShoutsWithBudgetZero = this.repository.shoutsWithBudgetZero()*100./shouts;
 		averageShoutsGroupedByEUR = this.repository.averageShoutsGroupedByCurrency("EUR");
 		deviationShoutsGroupedByEUR = this.repository.deviationShoutsGroupedByCurrency("EUR");
 		averageShoutsGroupedByUSD = this.repository.averageShoutsGroupedByCurrency("USD");
 		deviationShoutsGroupedByUSD = this.repository.deviationShoutsGroupedByCurrency("USD");
 		averageShoutsGroupedByGBP = this.repository.averageShoutsGroupedByCurrency("GBP");
 		deviationShoutsGroupedByGBP = this.repository.deviationShoutsGroupedByCurrency("GBP");
+		
+		ratioShoutsFlaggedAsImportant = this.roundToTwoDecimals(ratioShoutsFlaggedAsImportant);
+		ratioShoutsWithBudgetZero = this.roundToTwoDecimals(ratioShoutsWithBudgetZero);
+		averageShoutsGroupedByEUR = this.roundToTwoDecimals(averageShoutsGroupedByEUR);
+		deviationShoutsGroupedByEUR = this.roundToTwoDecimals(deviationShoutsGroupedByEUR);
+		averageShoutsGroupedByUSD = this.roundToTwoDecimals(averageShoutsGroupedByUSD);
+		deviationShoutsGroupedByUSD = this.roundToTwoDecimals(deviationShoutsGroupedByUSD);
+		averageShoutsGroupedByGBP = this.roundToTwoDecimals(averageShoutsGroupedByGBP);
+		deviationShoutsGroupedByGBP = this.roundToTwoDecimals(deviationShoutsGroupedByGBP);
 		
 		final List<Task> tasks = this.repository.findAllTask().stream().collect(Collectors.toList());
 		Double sum = 0.;
@@ -155,6 +165,9 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		return result;
 	}
 	
+	public Double roundToTwoDecimals(final Double n) {
+		return (double) Math.round(n*100) / 100;
+	}
 
 
 }

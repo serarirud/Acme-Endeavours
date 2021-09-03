@@ -27,3 +27,13 @@ administrator.dashboard.form.label.task-privates = Private
 administrator.dashboard.form.label.task-finished =  Finished 
 administrator.dashboard.form.label.task-unfinished = Unfinished 
 administrator.dashboard.form.result.hours = {Hours,Minutes}
+
+administrator.dashboard.form.title.xxx = Shouts information
+administrator.dashboard.form.label.xxx.ratioShoutsImportant = Ratio of shouts whose xxx are flagged as important
+administrator.dashboard.form.label.xxx.ratioShoutsBudgetZero = Ratio of shouts whose xxx has budget zero
+administrator.dashboard.form.label.xxx.average.eur = Average of xxx with EUR
+administrator.dashboard.form.label.xxx.deviation.eur = Deviation of xxx with EUR
+administrator.dashboard.form.label.xxx.average.usd = Average of xxx with USD
+administrator.dashboard.form.label.xxx.deviation.usd = Deviation of xxx with USD
+administrator.dashboard.form.label.xxx.average.gbp = Average of xxx with GBP
+administrator.dashboard.form.label.xxx.deviation.gbp = Deviation of xxx with GBP

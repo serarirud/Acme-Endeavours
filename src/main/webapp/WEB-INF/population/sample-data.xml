@@ -31,7 +31,7 @@
 	<bean id="xxx2" class="acme.entities.xxx.Xxx">
 		<property name="xxx1" value="AAB/25/08/21"/>
 		<property name="xxx2" value="2021/09/04 12:00"/>		
-		<property name="xxx3" value="50 USD"/>
+		<property name="xxx3" value="0 USD"/>
 		<property name="xxx4" value="true"></property>
 	</bean>
 	
@@ -59,7 +59,7 @@
 	<bean id="xxx6" class="acme.entities.xxx.Xxx">
 		<property name="xxx1" value="BBA/25/08/21"/>
 		<property name="xxx2" value="2021/09/07 13:00"/>		
-		<property name="xxx3" value="80 GBP"/>
+		<property name="xxx3" value="0 GBP"/>
 		<property name="xxx4" value="true"></property>
 	</bean>
 	
