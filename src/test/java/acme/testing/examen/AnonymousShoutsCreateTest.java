@@ -1,4 +1,8 @@
-package acme.testing.anonymous.shouts;
+package acme.testing.examen;
+
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -15,18 +19,29 @@ public class AnonymousShoutsCreateTest extends AcmePlannerTest {
 	
 	
 	@ParameterizedTest
-	@CsvFileSource(resources = "/anonymous/shout/createPositive.csv", encoding = "utf-8", numLinesToSkip = 1)
+	@CsvFileSource(resources = "/examen/shout/createPositive.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(20)	
-	public void create(final int recordIndex, final String author, final String text, final String info) {		
+	public void create(final int recordIndex, final String author, final String text, final String info, 
+						String xxx1, String xxx2, final String xxx3, final String xxx4) {		
 		
 		assert !StringHelper.isBlank(author);
 		assert !StringHelper.isBlank(text);
+//		assert !StringHelper.isBlank(xxx1);
+//		assert !StringHelper.isBlank(xxx2);
+//		assert !StringHelper.isBlank(xxx3);
 
+		xxx1 = xxx1 + LocalDate.now().format(DateTimeFormatter.ofPattern("dd/MM/yy"));
+		xxx2 = LocalDateTime.now().plusDays(8).format(DateTimeFormatter.ofPattern("yyyy/MM/dd hh:mm"));
+				
 		super.navigateHome();
 		super.clickOnMenu("Anonymous", "Create a shout");
 		super.fillInputBoxIn("author", author);
 		super.fillInputBoxIn("text", text);
 		super.fillInputBoxIn("info", info);
+		super.fillInputBoxIn("xxx.xxx1", xxx1);
+		super.fillInputBoxIn("xxx.xxx2", xxx2);
+		super.fillInputBoxIn("xxx.xxx3", xxx3);
+		super.fillInputBoxIn("xxx.xxx4", xxx4);
 
 		super.clickOnSubmitButton("Shout!");
 		 
@@ -37,7 +52,12 @@ public class AnonymousShoutsCreateTest extends AcmePlannerTest {
 		super.checkColumnHasValue(recordIndex, 1, author);
 		super.checkColumnHasValue(recordIndex, 2, text);
 		super.checkColumnHasValue(recordIndex, 3, info);
+		super.checkColumnHasValue(recordIndex, 4, xxx1);
+		super.checkColumnHasValue(recordIndex, 5, xxx2);
+		super.checkColumnHasValue(recordIndex, 6, xxx3);
+		super.checkColumnHasValue(recordIndex, 7, xxx4);
 
+		
 	}
 	
 	/*	Feature: un usuario anónimo puede crear gritos
@@ -50,7 +70,7 @@ public class AnonymousShoutsCreateTest extends AcmePlannerTest {
 	*/
 	
 	@ParameterizedTest
-	@CsvFileSource(resources = "/anonymous/shout/createNegative.csv", encoding = "utf-8", numLinesToSkip = 1)
+	@CsvFileSource(resources = "/examen/shout/createNegative.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(20)	
 	public void createNegative(final String author, final String text, final String info, 
 							final String xxx1, final String xxx2, final String xxx3, final String xxx4) {

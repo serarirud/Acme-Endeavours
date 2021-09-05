@@ -1,0 +1,8 @@
+recordIndex,moment,author,text,info,xxx1,xxx2,xxx3,xxx4
+0,2021/08/25 10:00,John Doe,I'm happy!,,AAA/25/08/21,2021/09/03 10:00,EUR 100.00,true
+1,2021/08/25 12:00,Jane Doe,I'm the master of my room!,http://www.example.org,AAB/25/08/21,2021/09/04 12:00,USD 0.00,true
+2,2021/08/25 16:00,Foo Bar,Just turning 50!,http://www.example1.org,ABA/25/08/21,2021/09/05 16:00,GBP 10.00,false
+3,2021/08/25 01:00,Francisco Borrego,Este es un texto muy guay.,,BAA/25/08/21,2021/09/06 01:00,EUR 10.00,false
+4,2021/08/25 13:00,Jesus Vargas,Hola miren mi proyecto.,https://github.com/Francisco-Borrego/Acme-Planner/,BBA/25/08/21,2021/09/07 13:00,GBP 0.00,true
+5,2021/08/25 21:00,Antonio Funes,Me gusta mucho esta página.,https://www.us.es/,BAB/25/08/21,2021/09/08 21:00,USD 40.00,true
+6,2021/08/25 21:00,Usuario de incógnito,Esta página está chula,https://www.google.es/,BBB/25/08/21,2021/09/09 21:00,EUR 25.00,true

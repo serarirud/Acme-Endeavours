@@ -1,4 +1,4 @@
-package acme.testing.anonymous.shouts;
+package acme.testing.examen;
 
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -13,9 +13,10 @@ public class AnonymousShoutsListTest extends AcmePlannerTest {
 	*/
 	
 	@ParameterizedTest
-	@CsvFileSource(resources = "/anonymous/shout/list.csv", encoding = "utf-8", numLinesToSkip = 1)
+	@CsvFileSource(resources = "/examen/shout/list.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(20)	
-	public void list(final int recordIndex, final String moment, final String author, final String text, final String info) {		
+	public void list(final int recordIndex, final String moment, final String author, final String text, final String info,
+					final String xxx1, final String xxx2, final String xxx3, final String xxx4) {		
 		
 		super.clickOnMenu("Anonymous", "Shout list");
 		
@@ -23,7 +24,12 @@ public class AnonymousShoutsListTest extends AcmePlannerTest {
 		super.checkColumnHasValue(recordIndex, 1, author);
 		super.checkColumnHasValue(recordIndex, 2, text);
 		super.checkColumnHasValue(recordIndex, 3, info);
+		super.checkColumnHasValue(recordIndex, 4, xxx1);
+		super.checkColumnHasValue(recordIndex, 5, xxx2);
+		super.checkColumnHasValue(recordIndex, 6, xxx3);
+		super.checkColumnHasValue(recordIndex, 7, xxx4);
 
+		
 	}
 	
 	
