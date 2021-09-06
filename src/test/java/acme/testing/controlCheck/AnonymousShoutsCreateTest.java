@@ -21,7 +21,7 @@ public class AnonymousShoutsCreateTest extends AcmePlannerTest {
 	@ParameterizedTest
 	@CsvFileSource(resources = "/anonymous/shout/createPositive.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(30)
-	public void create(final int recordIndex, final String author, final String text, final String info,
+	public void createPositive(final int recordIndex, final String author, final String text, final String info,
 		 String atributo1, String atributo2, final String atributo3, final String atributo4) {
 		
 		assert !StringHelper.isBlank(author);

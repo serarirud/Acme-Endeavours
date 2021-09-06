@@ -28,6 +28,8 @@ public class Sheet extends DomainEntity{
 	// Attributes --------------------------------------
 	
 	@Pattern(regexp="([012]\\d|3[01])-\\w{2}\\d{2}-(0[1-9]|1[12])\\d{2}") //Hay que cambiar el patrón
+//	@Pattern(regexp="\\d{2}([012]\\d|3[01])-\\w{3}\\d{2}-(0[1-9]|1[12])")
+//	@Pattern(regexp="(0[1-9]|1[12])-\\d{3}-([012]\\d|3[01])\\d{2}-\\w{2}")
 	@Column(unique=true)
 	@NotNull
 	protected String name;

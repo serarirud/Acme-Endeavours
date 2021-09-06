@@ -15,7 +15,7 @@ public class AdministratorDashboardShowTest extends AcmePlannerTest {
 	@ParameterizedTest
 	@CsvFileSource(resources = "/administrator/dashboard/show.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)	
-	public void showPositive(final String ratio1,
+	public void show(final String ratio1,
 		final String ratio2, final String avgSheetsUSD, final String avgSheetsEUR, final String avgSheetsGBP,final String devSheetsUSD, final String devSheetsEUR, final String devSheetsGBP,final String nPrivateTask, final String nPublicTask, final String nFinishedTask, final String nNotFinishedTask, 
 		final String averageTaskExecutionPeriods, final String deviationTaskExecutionPeriods, 
 		final String minimumTaskExecutionPeriods, final String maximumTaskExecutionPeriods, 
