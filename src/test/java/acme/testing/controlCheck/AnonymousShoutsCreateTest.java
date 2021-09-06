@@ -29,8 +29,9 @@ public class AnonymousShoutsCreateTest extends AcmePlannerTest {
 		assert !StringHelper.isBlank(atributo3);
 		
 		//Generamos deadline automáticamente. Por defecto es una semana y un minuto exacto, en el límite.
+		//Añado unos segundos de más, por si el minutero avanza justo tras obtener el minuto anterior y no de error
 		final LocalDateTime now = LocalDateTime.now();
-		atributo2 = now.plusDays(7L).plusMinutes(1L).format(DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm"));
+		atributo2 = now.plusDays(7L).plusMinutes(1L).plusSeconds(6L).format(DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm"));
 		
 		//Generamos el patrón automáticamente
 		final LocalDate today = LocalDate.now();
