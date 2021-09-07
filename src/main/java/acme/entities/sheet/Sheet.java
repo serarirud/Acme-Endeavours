@@ -1,20 +1,17 @@
-package acme.entities.shouts;
+package acme.entities.sheet;
 
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.OneToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.Valid;
-import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Past;
+import javax.validation.constraints.Pattern;
 
-import org.hibernate.validator.constraints.Length;
-import org.hibernate.validator.constraints.URL;
-
-import acme.entities.sheet.Sheet;
+import acme.framework.datatypes.Money;
 import acme.framework.entities.DomainEntity;
 import lombok.Getter;
 import lombok.Setter;
@@ -22,7 +19,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class Shout extends DomainEntity {
+public class Sheet extends DomainEntity {
 	
 	// Serialisation identifier ------------------------
 	
@@ -30,29 +27,24 @@ public class Shout extends DomainEntity {
 	
 	// Attributes --------------------------------------
 	
-	@Temporal(TemporalType.TIMESTAMP)
-	@Past
 	@NotNull
-	protected Date moment;
+	@NotEmpty
+	@Column(unique = true)
+	@Pattern(regexp = "^\\w{2,4}/([012]\\d|3[01])/(0[1-9]|1[012])/\\d{2}$") // ^\\w{2,4}/dd/mm/yy$
+	private String pattern;
 	
-	@NotBlank
-	@Length(min=5, max=25)
-	protected String author;
+	@Temporal(TemporalType.TIMESTAMP)
+	@NotNull
+	private Date moment;
 	
-	@NotBlank
-	@Length(min=1, max=100)
-	protected String text;
+	@NotNull
+	@Valid
+	private Money money;
 	
-	@URL
-	protected String info;
+	@NotNull
+	private Boolean important;
 	
 	// Derived attributes ------------------------------
 	
 	// Relationships -----------------------------------
-	
-	@NotNull
-	@Valid
-	@OneToOne(optional = false)
-	private Sheet sheet;
-
 }
