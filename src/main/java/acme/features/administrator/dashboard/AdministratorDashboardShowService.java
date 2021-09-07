@@ -139,6 +139,16 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		maximumTaskWorkloads = this.repository.maximumTaskWorkloads();
 		
 		result = new Dashboard();
+		
+		result.setRatioShoutsFlaggedAsImportant(ratioShoutsFlaggedAsImportant);
+		result.setRatioShoutsWithBudgetZero(ratioShoutsWithBudgetZero);
+		result.setAverageShoutsGroupedByEUR(averageShoutsGroupedByEUR);
+		result.setDeviationShoutsGroupedByEUR(deviationShoutsGroupedByEUR);
+		result.setAverageShoutsGroupedByUSD(averageShoutsGroupedByUSD);
+		result.setDeviationShoutsGroupedByUSD(deviationShoutsGroupedByUSD);
+		result.setAverageShoutsGroupedByGBP(averageShoutsGroupedByGBP);
+		result.setDeviationShoutsGroupedByGBP(deviationShoutsGroupedByGBP);
+		
 		result.setNPrivateTask(nPrivateTask);
 		result.setNPublicTask(nPublicTask);
 		result.setNFinishedTask(nFinishedTask);
@@ -152,15 +162,6 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		result.setDeviationTaskWorkloads(deviationTaskWorkloads);
 		result.setMinimumTaskWorkloads(minimumTaskWorkloads);
 		result.setMaximumTaskWorkloads(maximumTaskWorkloads);
-		
-		result.setRatioShoutsFlaggedAsImportant(ratioShoutsFlaggedAsImportant);
-		result.setRatioShoutsWithBudgetZero(ratioShoutsWithBudgetZero);
-		result.setAverageShoutsGroupedByEUR(averageShoutsGroupedByEUR);
-		result.setDeviationShoutsGroupedByEUR(deviationShoutsGroupedByEUR);
-		result.setAverageShoutsGroupedByUSD(averageShoutsGroupedByUSD);
-		result.setDeviationShoutsGroupedByUSD(deviationShoutsGroupedByUSD);
-		result.setAverageShoutsGroupedByGBP(averageShoutsGroupedByGBP);
-		result.setDeviationShoutsGroupedByGBP(deviationShoutsGroupedByGBP);
 		
 		return result;
 	}

@@ -26,9 +26,9 @@ public class AnonymousShoutsCreateTest extends AcmePlannerTest {
 		
 		assert !StringHelper.isBlank(author);
 		assert !StringHelper.isBlank(text);
-//		assert !StringHelper.isBlank(xxx1);
-//		assert !StringHelper.isBlank(xxx2);
-//		assert !StringHelper.isBlank(xxx3);
+		assert !StringHelper.isBlank(xxx1);
+		assert StringHelper.isBlank(xxx2);
+		assert !StringHelper.isBlank(xxx3);
 
 		xxx1 = xxx1 + LocalDate.now().format(DateTimeFormatter.ofPattern("dd/MM/yy"));
 		xxx2 = LocalDateTime.now().plusDays(8).format(DateTimeFormatter.ofPattern("yyyy/MM/dd hh:mm"));
@@ -62,11 +62,13 @@ public class AnonymousShoutsCreateTest extends AcmePlannerTest {
 	
 	/*	Feature: un usuario anónimo puede crear gritos
 	 * 	Caso negativo.
-	 * 		Primer update: autor y texto vacío. Información mala URL.
-	 * 		Segundo update: autor superando el máximo de caracteres, texto con umbral de spam superado y mala URL.
-	 * 		Tercer update: autor y texto menor del mínimo de caracteres, y mala URL.
-	 * 		Cuarto update: autor vacío, texto superando el máximo de caracteres y mala URL.
-	 * 		Quinto update: autor vacío, texto con umbral de spam superado y mala URL.
+	 * 		Primer update: autor y texto vacío. Información mala URL. xxx1, xxx2 y xxx3 vacíos.
+	 * 		Segundo update: autor superando el máximo de caracteres, texto con umbral de spam superado y mala URL. xxx1 incorrecto, 
+	 * 		xxx2 vacío y xxx3 con cantidad negativa.
+	 * 		Tercer update: autor y texto menor del mínimo de caracteres, y mala URL. xxx1 vacío, xxx2 en el pasado y xxx3 con moneda incorrecta.
+	 * 		Cuarto update: autor vacío, texto superando el máximo de caracteres y mala URL. xxx1 con patrón correcto pero fecha en pasado, xxx2 inválido y
+	 * 		xxx3 vacío. 
+	 * 		Quinto update: autor vacío, texto con umbral de spam superado y mala URL. xxx1, xxx2 y xxx3 vacíos.
 	*/
 	
 	@ParameterizedTest
