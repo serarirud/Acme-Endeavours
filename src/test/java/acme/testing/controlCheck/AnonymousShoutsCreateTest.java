@@ -16,7 +16,7 @@ public class AnonymousShoutsCreateTest extends AcmePlannerTest {
 	/*	Feature: un usuario anónimo puede crear gritos
 	 * 	Caso positivo.
 	*/
-	
+	Integer i = 1;
 	
 	@ParameterizedTest
 	@CsvFileSource(resources = "/anonymous/shout/createPositive.csv", encoding = "utf-8", numLinesToSkip = 1)
@@ -112,8 +112,45 @@ public class AnonymousShoutsCreateTest extends AcmePlannerTest {
 	@CsvFileSource(resources = "/anonymous/shout/createNegative.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(40)	
 	public void createNegative(final String author, final String text, final String info,
-		final String atributo1, final String atributo2, final String atributo3, final String atributo4) {
+		String atributo1,  String atributo2, final String atributo3, final String atributo4) {
+			
+		final LocalDate today = LocalDate.now();
+		String day = String.valueOf(today.getDayOfMonth());
+		String month = String.valueOf(today.getMonthValue());
+		String year = String.valueOf(today.getYear()).substring(2);
 		
+
+		if(this.i==9) {
+			day=String.valueOf(today.getDayOfMonth()-1);
+		}
+		else if(this.i==10){
+			month=String.valueOf(today.getMonthValue()-1);
+		}
+		else if(this.i==11) {
+			year=String.valueOf(today.getYear()-1).substring(2);
+		}
+		
+
+		if(day.length()==1) {
+			day="0"+day;
+		}
+		
+		if(month.length()==1) {
+			month="0"+month;
+		}
+		
+		if(this.i!=13 && this.i!=14 && this.i!=28 && this.i!=30) {
+			atributo1=day+atributo1+month+year;
+
+		}
+		
+		
+		if(this.i==15) {
+			final LocalDateTime now = LocalDateTime.now();
+			atributo2 = now.plusDays(7L).minusMinutes(1L).format(DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm"));
+		}
+		
+
 		super.navigateHome();
 		super.clickOnMenu("Anonymous", "Create a shout");
 		super.fillInputBoxIn("author", author);
@@ -128,6 +165,8 @@ public class AnonymousShoutsCreateTest extends AcmePlannerTest {
 		super.checkErrorsExist();
 		
 		super.checkSimplePath("/anonymous/shout/create");
+		
+		this.i++;
 		
 	}
 	

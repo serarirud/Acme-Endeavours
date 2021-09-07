@@ -2974,3 +2974,7 @@ INFO [acme.framework.utilities.DatabasePopulator] > Persisting task16 = acme.ent
 INFO [acme.framework.utilities.DatabasePopulator] > Persisting task17 = acme.entities.tasks.Task{id=45, version=0}
 INFO [acme.framework.utilities.DatabasePopulator] > Persisting task18 = acme.entities.tasks.Task{id=46, version=0}
 INFO [acme.framework.configuration.ShutdownConfiguration] The system is shutting down...
+WARN [com.zaxxer.hikari.pool.PoolBase] {} - Failed to validate connection {} ({}). Possibly consider using a shorter maxLifetime value.
+WARN [com.zaxxer.hikari.pool.PoolBase] {} - Failed to validate connection {} ({}). Possibly consider using a shorter maxLifetime value.
+WARN [com.zaxxer.hikari.pool.PoolBase] {} - Failed to validate connection {} ({}). Possibly consider using a shorter maxLifetime value.
+WARN [com.zaxxer.hikari.pool.PoolBase] {} - Failed to validate connection {} ({}). Possibly consider using a shorter maxLifetime value.
