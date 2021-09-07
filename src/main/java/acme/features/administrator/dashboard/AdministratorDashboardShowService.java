@@ -98,8 +98,8 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		minimumTaskExecutionPeriods = this.repository.minimumTaskExecutionPeriods();
 		maximumTaskExecutionPeriods = this.repository.maximumTaskExecutionPeriods();
 		shouts = this.repository.shouts();
-		ratioShoutsFlaggedAsImportant = this.repository.shoutsFlaggedAsImportant()*100./shouts;
-		ratioShoutsWithBudgetZero = this.repository.shoutsWithBudgetZero()*100./shouts;
+		ratioShoutsFlaggedAsImportant = this.repository.shoutsFlaggedAsImportant()*1./shouts;
+		ratioShoutsWithBudgetZero = this.repository.shoutsWithBudgetZero()*1./shouts;
 		averageShoutsGroupedByEUR = this.repository.averageShoutsGroupedByCurrency("EUR");
 		deviationShoutsGroupedByEUR = this.repository.deviationShoutsGroupedByCurrency("EUR");
 		averageShoutsGroupedByUSD = this.repository.averageShoutsGroupedByCurrency("USD");
@@ -167,8 +167,7 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 	}
 	
 	public Double roundToTwoDecimals(final Double n) {
-		return (double) Math.round(n*100) / 100;
-	}
+		return Math.round(n * 100.0) / 100.0;	}
 
 
 }

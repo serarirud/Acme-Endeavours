@@ -27,7 +27,7 @@
 			<acme:message code="administrator.dashboard.form.label.xxx.ratioShoutsImportant"/>
 		</th>
 		<td>
-			<acme:print value="${ratioShoutsFlaggedAsImportant} %"/>
+			<acme:print value="${ratioShoutsFlaggedAsImportant}"/>
 		</td>
 	</tr>
 	<tr>
@@ -35,7 +35,7 @@
 			<acme:message code="administrator.dashboard.form.label.xxx.ratioShoutsBudgetZero"/>
 		</th>
 		<td>
-			<acme:print value="${ratioShoutsWithBudgetZero} %"/> 
+			<acme:print value="${ratioShoutsWithBudgetZero}"/> 
 		</td>
 	</tr>
 	<tr>

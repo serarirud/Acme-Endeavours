@@ -1,3 +1,0 @@
-timestamp,test-class,test-method,time,description,result
-2021-09-04 10:15:25.546,acme.testing.anonymous.shouts.AnonymousShoutsCreateTest,create,31334,"[1] recordIndex=7, author=12345, text=1, info=null, xxx1=AWA/, xxx2=null, xxx3=EUR 0.00, xxx4=true",Cannot find 'By.name: xxx1'
-2021-09-04 10:15:57.107,acme.testing.anonymous.shouts.AnonymousShoutsCreateTest,create,31331,"[2] recordIndex=8, author=123456, text=12, info=http://www.example1.org, xxx1=EWE/, xxx2=null, xxx3=USD 15.00, xxx4=false",Cannot find 'By.name: xxx1'

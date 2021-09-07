@@ -1,6 +1,0 @@
-timestamp,test-class,test-method,time,description,result
-2021-09-04 11:00:25.661,acme.testing.anonymous.shouts.AnonymousShoutsCreateTest,createNegative,3129,"[1] author=, text=null, info=n, xxx1=null, xxx2=null, xxx3=null, xxx4=false",OK
-2021-09-04 11:00:28.774,acme.testing.anonymous.shouts.AnonymousShoutsCreateTest,createNegative,2873,"[2] author=12345678901234567890123456, text=John Doe hard          core, info=http, xxx1=qwerty/, xxx2=null, xxx3=EUR -100.00, xxx4=true",OK
-2021-09-04 11:00:31.756,acme.testing.anonymous.shouts.AnonymousShoutsCreateTest,createNegative,2779,"[3] author=1234, text=null, info=google.es, xxx1=null, xxx2=2020/12/12 12:00, xxx3=CHEN 50.00, xxx4=true",OK
-2021-09-04 11:00:34.574,acme.testing.anonymous.shouts.AnonymousShoutsCreateTest,createNegative,2615,"[4] author=, text=12345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901 -- + de 100 caracteres, info=alum.us.es, xxx1=qwe/04/04/2020, xxx2=aaaa, xxx3=null, xxx4=false",OK
-2021-09-04 11:00:37.318,acme.testing.anonymous.shouts.AnonymousShoutsCreateTest,createNegative,2538,"[5] author=, text=sex dd     hard             core, info=https//g, xxx1=null, xxx2=null, xxx3=null, xxx4=false",OK

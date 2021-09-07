@@ -30,8 +30,8 @@ public class AdministratorDashboardShowTest extends AcmePlannerTest {
 		super.clickOnMenu("Administrator", "Dashboard");
 		
 		
-		super.checkErrorsAcmeMessageExist(2,1,1,ratioShoutsFlaggedAsImportant.toString() + " %");
-		super.checkErrorsAcmeMessageExist(2,1,2,ratioShoutsWithBudgetZero.toString() + " %");
+		super.checkErrorsAcmeMessageExist(2,1,1,ratioShoutsFlaggedAsImportant.toString());
+		super.checkErrorsAcmeMessageExist(2,1,2,ratioShoutsWithBudgetZero.toString());
 		super.checkErrorsAcmeMessageExist(2,1,3,averageShoutsGroupedByEUR.toString() + " EUR");
 		super.checkErrorsAcmeMessageExist(2,1,4,deviationShoutsGroupedByEUR.toString() + " EUR");
 		super.checkErrorsAcmeMessageExist(2,1,5,averageShoutsGroupedByUSD.toString() + " USD");
