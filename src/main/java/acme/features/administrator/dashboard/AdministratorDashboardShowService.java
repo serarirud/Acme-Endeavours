@@ -51,7 +51,9 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		request.unbind(entity, model,
 			"nPrivateTask", "nPublicTask", "nNotFinishedTask", "nFinishedTask", "averageTaskExecutionPeriods",
 			"deviationTaskExecutionPeriods", "minimumTaskExecutionPeriods", "maximumTaskExecutionPeriods",
-			"averageTaskWorkloads", "deviationTaskWorkloads", "minimumTaskWorkloads", "maximumTaskWorkloads");
+			"averageTaskWorkloads", "deviationTaskWorkloads", "minimumTaskWorkloads", "maximumTaskWorkloads",
+			"ratioImportantSheet", "ratioZeroBudgetSheet", "avarageEUR", "deviationEUR",
+			"avarageUSD", "deviationUSD", "avarageGBP", "deviationGBP");
 	}
 
 	@Override
@@ -121,6 +123,41 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		result.setMinimumTaskWorkloads(minimumTaskWorkloads);
 		result.setMaximumTaskWorkloads(maximumTaskWorkloads);
 		
+		//################################################ CAMBIAR ################################################################
+		
+		Double ratioImportantSheet;
+		Double ratioZeroBudgetSheet;
+		Double avarageEUR;
+		Double deviationEUR;
+		Double avarageUSD;
+		Double deviationUSD;
+		Double avarageGBP;
+		Double deviationGBP;
+		
+		Integer totalSheets;
+		
+		totalSheets = this.repository.shoutAmount();
+		
+		ratioImportantSheet = this.repository.shoutsFlaggedAsImportant()*1./totalSheets;
+		ratioZeroBudgetSheet = this.repository.shoutsWhereBudgetIsZero()*1./totalSheets;
+
+		avarageEUR = this.repository.averageMoney("EUR");
+		deviationEUR = this.repository.deviationMoney("EUR");
+		avarageUSD = this.repository.averageMoney("USD");
+		deviationUSD = this.repository.deviationMoney("USD");
+		avarageGBP = this.repository.averageMoney("GBP");
+		deviationGBP = this.repository.deviationMoney("GBP");
+		
+		result.setRatioImportantSheet(ratioImportantSheet);
+		result.setRatioZeroBudgetSheet(ratioZeroBudgetSheet);
+		result.setAvarageEUR(avarageEUR);
+		result.setDeviationEUR(deviationEUR);
+		result.setAvarageUSD(avarageUSD);
+		result.setDeviationUSD(deviationUSD);
+		result.setAvarageGBP(avarageGBP);
+		result.setDeviationGBP(deviationGBP);
+
+		//#########################################################################################################################
 		return result;
 	}
 	
