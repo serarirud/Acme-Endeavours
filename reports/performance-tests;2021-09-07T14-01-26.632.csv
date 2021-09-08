@@ -1,5 +1,0 @@
-timestamp,test-class,test-method,time,description,result
-2021-09-07 14:01:49.724,acme.testing.examen.shouts.AnonymousShoutsCreateTest,create,5544,"[1] recordIndex=8, author=12345, text=12345, info=null, pattern=AA, moment=null, money=USD 0.00, important=true",OK
-2021-09-07 14:01:55.956,acme.testing.examen.shouts.AnonymousShoutsCreateTest,create,5772,"[2] recordIndex=9, author=123456, text=123456, info=http://www.example1.org, pattern=AAAA, moment=null, money=EUR 0.00, important=false",OK
-2021-09-07 14:02:02.329,acme.testing.examen.shouts.AnonymousShoutsCreateTest,create,5922,"[3] recordIndex=10, author=1234567890123456789012345, text=1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890, info=https://www.google.es, pattern=B2er, moment=null, money=GBP 0.99, important=true",OK
-2021-09-07 14:02:10.556,acme.testing.examen.shouts.AnonymousShoutsCreateTest,create,7776,"[4] recordIndex=11, author=123456789012345678901234, text=123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789, info=null, pattern=oG, moment=null, money=USD 999.99, important=false",OK

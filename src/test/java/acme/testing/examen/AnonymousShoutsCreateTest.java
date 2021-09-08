@@ -1,4 +1,4 @@
-package acme.testing.examen.shouts;
+package acme.testing.examen;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -71,18 +71,25 @@ public class AnonymousShoutsCreateTest extends AcmePlannerTest {
 	@ParameterizedTest
 	@CsvFileSource(resources = "/examen/shout/createNegative.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(20)	
-	public void createNegative(final String author, final String text, final String info) {
+	public void createNegative(final String author, final String text, final String info
+		, final String pattern, final String moment, final String money) {
 		
 		super.navigateHome();
 		super.clickOnMenu("Anonymous", "Create a shout");
 		super.fillInputBoxIn("author", author);
 		super.fillInputBoxIn("text", text);
 		super.fillInputBoxIn("info", info);
+		super.fillInputBoxIn("sheet.pattern", pattern);
+		super.fillInputBoxIn("sheet.moment", moment);
+		super.fillInputBoxIn("sheet.money", money);
 		super.clickOnSubmitButton("Shout!");
 		
 		super.checkErrorsExist("author");
 		super.checkErrorsTextAreaExist("text");
 		super.checkErrorsExist("info");
+		super.checkErrorsExist("sheet.pattern");
+		super.checkErrorsExist("sheet.moment");
+		super.checkErrorsExist("sheet.money");
 		
 		super.checkSimplePath("/anonymous/shout/create");
 		

@@ -1,0 +1,2 @@
+nPrivateTask,nPublicTask,nFinishedTask,nNotFinishedTask,averageTaskExecutionPeriods,deviationTaskExecutionPeriods,minimumTaskExecutionPeriods,maximumTaskExecutionPeriods,averageTaskWorkloads,deviationTaskWorkloads,minimumTaskWorkloads,maximumTaskWorkloads,ratioImportantSheet,ratioZeroBudgetSheet,avarageEUR,deviationEUR,avarageUSD,deviationUSD,avarageGBP,deviationGBP
+3,15,13,5,525.22,927.62,0,4029,25.05,32.08,0.10,90.45,0.50,0.50,6.25,6.50,7.50,7.50,5.00,5.00
