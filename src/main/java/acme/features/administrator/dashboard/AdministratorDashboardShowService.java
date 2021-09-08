@@ -118,7 +118,6 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		maximumTaskWorkloads = this.repository.maximumTaskWorkloads();
 		
 		//CC
-
 		
 		final Integer numShoutsImportant = this.repository.numShoutsImportant();
 		final Integer numShouts = this.repository.numShouts();
