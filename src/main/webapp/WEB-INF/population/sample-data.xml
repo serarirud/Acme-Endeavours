@@ -22,29 +22,29 @@
 	<!--  Shouts -->
 	
 	<bean id="xxx1" class="acme.entities.xxx.Xxx">
-		<property name="xxx1" value="AAA/25/08/21"/>
-		<property name="xxx2" value="2021/09/03 10:00"/>		
+		<property name="xxx1" value="AAA/09/09/21"/>
+		<property name="xxx2" value="2021/11/03 10:00"/>		
 		<property name="xxx3" value="111 EUR"/>
 		<property name="xxx4" value="true"></property>
 	</bean>
 	
 	<bean id="xxx2" class="acme.entities.xxx.Xxx">
-		<property name="xxx1" value="AAB/25/08/21"/>
-		<property name="xxx2" value="2021/09/04 12:00"/>		
+		<property name="xxx1" value="AAB/09/09/21"/>
+		<property name="xxx2" value="2021/11/04 12:00"/>		
 		<property name="xxx3" value="0 USD"/>
 		<property name="xxx4" value="true"></property>
 	</bean>
 	
 	<bean id="xxx3" class="acme.entities.xxx.Xxx">
-		<property name="xxx1" value="ABA/25/08/21"/>
-		<property name="xxx2" value="2021/09/05 16:00"/>		
+		<property name="xxx1" value="ABA/09/09/21"/>
+		<property name="xxx2" value="2021/11/05 16:00"/>		
 		<property name="xxx3" value="12 GBP"/>
 		<property name="xxx4" value="false"></property>
 	</bean>
 	
 	<bean id="xxx4" class="acme.entities.xxx.Xxx">
-		<property name="xxx1" value="BAA/25/08/21"/>
-		<property name="xxx2" value="2021/09/06 01:00"/>		
+		<property name="xxx1" value="BAA/09/09/21"/>
+		<property name="xxx2" value="2021/11/06 01:00"/>		
 		<property name="xxx3" value="10 EUR"/>
 		<property name="xxx4" value="false"></property>
 	</bean>
@@ -57,28 +57,28 @@
 	</bean>
 	
 	<bean id="xxx6" class="acme.entities.xxx.Xxx">
-		<property name="xxx1" value="BBA/25/08/21"/>
-		<property name="xxx2" value="2021/09/07 13:00"/>		
+		<property name="xxx1" value="BBA/09/09/21"/>
+		<property name="xxx2" value="2021/11/07 13:00"/>		
 		<property name="xxx3" value="0 GBP"/>
 		<property name="xxx4" value="true"></property>
 	</bean>
 	
 	<bean id="xxx7" class="acme.entities.xxx.Xxx">
-		<property name="xxx1" value="BAB/25/08/21"/>
-		<property name="xxx2" value="2021/09/08 21:00"/>		
+		<property name="xxx1" value="BAB/09/09/21"/>
+		<property name="xxx2" value="2021/11/08 21:00"/>		
 		<property name="xxx3" value="40 USD"/>
 		<property name="xxx4" value="true"></property>
 	</bean>
 	
 	<bean id="xxx8" class="acme.entities.xxx.Xxx">
-		<property name="xxx1" value="BBB/25/08/21"/>
-		<property name="xxx2" value="2021/09/09 21:00"/>		
+		<property name="xxx1" value="BBB/09/09/21"/>
+		<property name="xxx2" value="2021/11/09 21:00"/>		
 		<property name="xxx3" value="25 EUR"/>
 		<property name="xxx4" value="true"></property>
 	</bean>
 	
 	<bean id="shout01" class="acme.entities.shouts.Shout">
-		<property name="moment" value="2021/08/25 10:00"/>
+		<property name="moment" value="2021/09/09 10:00"/>
 		<property name="author" value="John Doe"/>		
 		<property name="text" value="I'm happy!"/>
 		<property name="info"><null/></property>
@@ -86,7 +86,7 @@
 	</bean>
 	
 	<bean id="shout02" class="acme.entities.shouts.Shout">
-		<property name="moment" value="2021/08/25 12:00"/>
+		<property name="moment" value="2021/09/09 12:00"/>
 		<property name="author" value="Jane Doe"/>		
 		<property name="text" value="I'm the master of my room!"/>
 		<property name="info" value="http://www.example.org"/>
@@ -95,7 +95,7 @@
 	</bean>
 	
 	<bean id="shout03" class="acme.entities.shouts.Shout">
-		<property name="moment" value="2021/08/25 16:00"/>
+		<property name="moment" value="2021/09/09 16:00"/>
 		<property name="author" value="Foo Bar"/>		
 		<property name="text" value="Just turning 50!"/>
 		<property name="info" value="http://www.example1.org"/>	
@@ -104,7 +104,7 @@
 	
 	
 	<bean id="shout04" class="acme.entities.shouts.Shout">
-		<property name="moment" value="2021/08/25 01:00"/>
+		<property name="moment" value="2021/09/09 01:00"/>
 		<property name="author" value="Francisco Borrego"/>		
 		<property name="text" value="Este es un texto muy guay."/>
 		<property name="info"><null/></property>
@@ -122,7 +122,7 @@
 	
 	
 	<bean id="shout06" class="acme.entities.shouts.Shout">
-		<property name="moment" value="2021/08/25 13:00"/>
+		<property name="moment" value="2021/09/09 13:00"/>
 		<property name="author" value="Jesus Vargas"/>		
 		<property name="text" value="Hola miren mi proyecto."/>
 		<property name="info" value="https://github.com/Francisco-Borrego/Acme-Planner/" />
@@ -130,7 +130,7 @@
 	</bean>
 	
 	<bean id="shout07" class="acme.entities.shouts.Shout">
-		<property name="moment" value="2021/08/25 21:00"/>
+		<property name="moment" value="2021/09/09 21:00"/>
 		<property name="author" value="Antonio Funes"/>		
 		<property name="text" value="Me gusta mucho esta página."/>
 		<property name="info" value="https://www.us.es/" />
@@ -138,7 +138,7 @@
 	</bean>
 	
 	<bean id="shout08" class="acme.entities.shouts.Shout">
-		<property name="moment" value="2021/08/25 21:00"/>
+		<property name="moment" value="2021/09/09 21:00"/>
 		<property name="author" value="Usuario de incógnito"/>		
 		<property name="text" value="Esta página está chula"/>
 		<property name="info" value="https://www.google.es/" />
