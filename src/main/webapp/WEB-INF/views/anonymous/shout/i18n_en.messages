@@ -18,7 +18,7 @@ anonymous.shout.list.label.xxx.xxx3 = Xxx3
 anonymous.shout.list.label.xxx.xxx4 = Xxx4 
 
 anonymous.shout.error.umbral-superado = Threshold of spam word reached
-anonymous.shout.error.incorrect-xxx1 = Xxx1 incorrect
-anonymous.shout.error.repeated-xxx1 = Xxx1 repeated
-anonymous.shout.error.xxx2 = Xxx2 incorrect
+anonymous.shout.error.incorrect-xxx1 = Xxx1 incorrect, must be match the pattern xxxx/dd/mm/yyyy
+anonymous.shout.error.repeated-xxx1 = Xxx1 repeated, it must be unique
+anonymous.shout.error.xxx2 = Xxx2 incorrect, must be at least one week after today's date
 anonymous.shout.error.xxx3 = Xxx3 incorrect, must be EUR, USD or GBP

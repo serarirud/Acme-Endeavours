@@ -24,7 +24,7 @@
 	<bean id="xxx1" class="acme.entities.xxx.Xxx">
 		<property name="xxx1" value="AAA/25/08/21"/>
 		<property name="xxx2" value="2021/09/03 10:00"/>		
-		<property name="xxx3" value="100 EUR"/>
+		<property name="xxx3" value="111 EUR"/>
 		<property name="xxx4" value="true"></property>
 	</bean>
 	
@@ -38,7 +38,7 @@
 	<bean id="xxx3" class="acme.entities.xxx.Xxx">
 		<property name="xxx1" value="ABA/25/08/21"/>
 		<property name="xxx2" value="2021/09/05 16:00"/>		
-		<property name="xxx3" value="10 GBP"/>
+		<property name="xxx3" value="12 GBP"/>
 		<property name="xxx4" value="false"></property>
 	</bean>
 	
@@ -52,7 +52,7 @@
 	<bean id="xxx5" class="acme.entities.xxx.Xxx">
 		<property name="xxx1" value="ABB/12/06/20"/>
 		<property name="xxx2" value="2020/06/20 01:00"/>		
-		<property name="xxx3" value="5 USD"/>
+		<property name="xxx3" value="17 USD"/>
 		<property name="xxx4" value="false"></property>
 	</bean>
 	

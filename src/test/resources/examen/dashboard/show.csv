@@ -1,2 +1,2 @@
 ratioShoutsFlaggedAsImportant,ratioShoutsWithBudgetZero,averageShoutsGroupedByEUR,deviationShoutsGroupedByEUR,averageShoutsGroupedByUSD,deviationShoutsGroupedByUSD,averageShoutsGroupedByGBP,deviationShoutsGroupedByGBP,nPrivateTask,nPublicTask,nFinishedTask,nNotFinishedTask,averageTaskExecutionPeriods,deviationTaskExecutionPeriods,minimumTaskExecutionPeriods,maximumTaskExecutionPeriods,averageTaskWorkloads,deviationTaskWorkloads,minimumTaskWorkloads,maximumTaskWorkloads
-0.63,0.25,45.0,39.37,15.0,17.8,5.0,5.0,3,15,8,10,518.44,926.39,0,4029,25.05,32.08,0.10,90.45
+0.63,0.25,48.67,44.5,19.0,16.39,6.0,6.0,3,15,8,10,518.44,926.39,0,4029,25.05,32.08,0.10,90.45
