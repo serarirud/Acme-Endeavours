@@ -167,7 +167,10 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 	}
 	
 	public Double roundToTwoDecimals(final Double n) {
-		return Math.round(n * 100.0) / 100.0;	}
+		
+		return Math.round(n * 100.0) / 100.0;	
+	
+	}
 
 
 }
