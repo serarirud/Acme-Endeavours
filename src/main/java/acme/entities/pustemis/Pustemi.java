@@ -31,7 +31,6 @@ public class Pustemi extends DomainEntity {
 	@NotEmpty
 	@Column(unique = true)
 	@Pattern(regexp = "^\\d{2}-(0[1-9]|1[012])\\w{2,4}-\\d{2,4}$") // ^yy-mmdd-\d{2,4}$
-	//@Pattern(regexp = "^\\w{2,4}/([012]\\d|3[01])/(0[1-9]|1[012])/\\d{2}$") // ^\\w{2,4}/dd/mm/yy$
 	private String label;
 		
 	@Temporal(TemporalType.TIMESTAMP)
