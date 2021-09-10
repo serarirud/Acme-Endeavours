@@ -14,7 +14,7 @@ import javax.validation.constraints.Past;
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
-import acme.entities.dolemite.Dolemite;
+import acme.entities.pomel.Pomel;
 import acme.framework.entities.DomainEntity;
 import lombok.Getter;
 import lombok.Setter;
@@ -53,5 +53,5 @@ public class Shout extends DomainEntity {
 	@NotNull
 	@OneToOne(optional=false)
 	@Valid
-	protected Dolemite dolemite;
+	protected Pomel pomel;
 }

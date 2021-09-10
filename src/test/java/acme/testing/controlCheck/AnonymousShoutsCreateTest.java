@@ -18,7 +18,7 @@ public class AnonymousShoutsCreateTest extends AcmePlannerTest {
 	@CsvFileSource(resources = "/anonymous/shout/createPos.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(20)	
 	public void create(final int recordIndex, final String author, final String text, final String info,
-		final String keylem, final String deadline, final String budget, final String important) {	
+		final String tracker, final String deadline, final String budget, final String important) {	
 		assert !StringHelper.isBlank(author);
 		assert !StringHelper.isBlank(text);
 		
@@ -27,10 +27,10 @@ public class AnonymousShoutsCreateTest extends AcmePlannerTest {
 		super.fillInputBoxIn("author", author);
 		super.fillInputBoxIn("text", text);
 		super.fillInputBoxIn("info", info);
-		super.fillInputBoxIn("dolemite.keylem", keylem);
-		super.fillInputBoxIn("dolemite.deadline", deadline);
-		super.fillInputBoxIn("dolemite.budget", budget);
-		super.fillInputBoxIn("dolemite.important", important);
+		super.fillInputBoxIn("pomel.tracker", tracker);
+		super.fillInputBoxIn("pomel.deadline", deadline);
+		super.fillInputBoxIn("pomel.budget", budget);
+		super.fillInputBoxIn("pomel.important", important);
 		super.clickOnSubmitButton("Shout!");
 		 
 		super.checkSimplePath("/master/welcome");
@@ -40,7 +40,7 @@ public class AnonymousShoutsCreateTest extends AcmePlannerTest {
 		super.checkColumnHasValue(recordIndex, 1, author);
 		super.checkColumnHasValue(recordIndex, 2, text);
 		super.checkColumnHasValue(recordIndex, 3, info);
-		super.checkColumnHasValue(recordIndex, 4, keylem);
+		super.checkColumnHasValue(recordIndex, 4, tracker);
 		super.checkColumnHasValue(recordIndex, 5, deadline);
 		super.checkColumnHasValue(recordIndex, 6, budget);
 		super.checkColumnHasValue(recordIndex, 7, important);
@@ -60,17 +60,17 @@ public class AnonymousShoutsCreateTest extends AcmePlannerTest {
 	@CsvFileSource(resources = "/anonymous/shout/createNeg.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(20)	
 	public void createNegative(final String author, final String text, final String info,
-		final String keylem, final String deadline, final String budget, final String important) {
+		final String tracker, final String deadline, final String budget, final String important) {
 		
 		super.navigateHome();
 		super.clickOnMenu("Anonymous", "Create a shout");
 		super.fillInputBoxIn("author", author);
 		super.fillInputBoxIn("text", text);
 		super.fillInputBoxIn("info", info);
-		super.fillInputBoxIn("dolemite.keylem", keylem);
-		super.fillInputBoxIn("dolemite.deadline", deadline);
-		super.fillInputBoxIn("dolemite.budget", budget);
-		super.fillInputBoxIn("dolemite.important", important);
+		super.fillInputBoxIn("pomel.tracker", tracker);
+		super.fillInputBoxIn("pomel.deadline", deadline);
+		super.fillInputBoxIn("pomel.budget", budget);
+		super.fillInputBoxIn("pomel.important", important);
 		super.clickOnSubmitButton("Shout!");
 		
 		super.checkErrorsExist();

@@ -61,16 +61,16 @@ public interface AdministratorDashboardRepository extends AbstractRepository {
 	@Query("SELECT count(s) FROM Shout s")
 	Integer nShouts();
 		
-	@Query("SELECT count(s) FROM Shout s WHERE (s.dolemite.important = true)") 
+	@Query("SELECT count(s) FROM Shout s WHERE (s.pomel.important = true)") 
 	Integer nShoutsFlag();
 	
-	@Query("SELECT count(s) FROM Shout s WHERE (s.dolemite.budget.amount = 0.0)") 
+	@Query("SELECT count(s) FROM Shout s WHERE (s.pomel.budget.amount = 0.0)") 
 	Integer nShoutsBudgetZero();
 		
-	@Query("SELECT avg(sh.budget.amount) FROM Dolemite sh WHERE (sh.budget.currency = ?1)")
+	@Query("SELECT avg(sh.budget.amount) FROM Pomel sh WHERE (sh.budget.currency = ?1)")
 	Double averageSheetsByCurrency(String currency);
 		
-	@Query("SELECT stddev(sh.budget.amount) FROM Dolemite sh WHERE (sh.budget.currency = ?1)")
+	@Query("SELECT stddev(sh.budget.amount) FROM Pomel sh WHERE (sh.budget.currency = ?1)")
 	Double deviationSheetsByCurrency(String currency);
 	
 }

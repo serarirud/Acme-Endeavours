@@ -1,20 +1,38 @@
-author,text,info,dolemite.keylem,dolemite.deadline,dolemite.budget,dolemite.important
+author,text,info,pomel.tracker,pomel.deadline,pomel.budget,pomel.important
 "",,,,,,false
-12345678901234567890123456,John Doe hard core,,123440:0721:28,2021/09/24 11:11,EUR 100.00,true
-1234,12345,,123440:0721:28,2021/09/24 11:11,EUR 100.00,true
-12345,1234,,123440:0721:28,2021/09/24 11:11,EUR 100.00,true
-John Doe,12345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901 -- + de 100 caracteres,,123440:0721:28,2021/09/24 11:11,EUR 100.00,true
-John Doe,sex dd hard core,,123440:0721:28,2021/09/24 11:11,EUR 100.00,true
-John Doe,Texto de prueba,patron incorrecto,123440:0721:28,2021/09/24 11:11,EUR 100.00,true
+12345678901234567890123456,John Doe hard core,,21-6161-0910,2021/09/24 11:11,EUR 100.00,true
+1234,12345,,21-6161-0910,2021/09/24 11:11,EUR 100.00,true
+12345,,,21-6161-0910,2021/09/24 11:11,EUR 100.00,true
+John Doe,12345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901 -- + de 100 caracteres,,21-6161-0910,2021/09/24 11:11,EUR 100.00,true
+John Doe,sex dd hard core,,21-6161-0910,2021/09/24 11:11,EUR 100.00,true
+John Doe,Texto de prueba,patron incorrecto,21-6161-0910,2021/09/24 11:11,EUR 100.00,true
 John Doe,Texto de prueba,,patron incorrecto,2021/09/24 11:11,EUR 100.00,true
-John Doe,Texto de prueba,,123440:0721:27,2021/09/24 11:11,EUR 100.00,true
-John Doe,Texto de prueba,,123440:0722:28,2021/09/24 11:11,EUR 100.00,true
-John Doe,Texto de prueba,,123440:0621:28,2021/09/24 11:11,EUR 100.00,true
-John Doe,Texto de prueba,,123440:0621:28,04/09/2021 11:11,EUR 100.00,true,,,
-John Doe,Texto de prueba,,123440:0721:28,2021/07/28 11:11,EUR 100.00,true
-John Doe,Texto de prueba,,123440:0721:28,2021/08/04 11:11,EUR 100.00,true
-John Doe,Texto de prueba,,123440:0721:28,patron incorrecto,EUR 100.00,true
-John Doe,Texto de prueba,,123440:0721:28,2021/09/24 11:11,patron incorrecto,true
-John Doe,Texto de prueba,,123440:0721:28,2021/09/24 11:11,EUR -100.00,true
-John Doe,Texto de prueba,,123440:0721:28,2021/09/24 11:11,CNP 90.00,true
-John Doe,Texto de prueba,,123440:0721:28,2021/09/24 11:11,"EUR 12,345,678,901.01345",true,678,901.01345,true
+John Doe,Texto de prueba,,21-6161-0909,2021/09/24 11:11,EUR 100.00,true
+John Doe,Texto de prueba,,21-6161-0710,2021/09/24 11:11,EUR 100.00,true
+John Doe,Texto de prueba,,22-6161-0728,2021/09/24 11:11,EUR 100.00,true
+John Doe,Texto de prueba,,21-6161-0628,04/09/2021 11:11,EUR 100.00,true,,,
+John Doe,Texto de prueba,,21-6161-0910,2021/07/28 11:11,EUR 100.00,true
+John Doe,Texto de prueba,,21-6161-0910,2021/09/10 06:00,EUR 100.00,true
+John Doe,Texto de prueba,,21-6161-0910,patron incorrecto,EUR 100.00,true
+John Doe,Texto de prueba,,21-6161-0910,2021/09/24 11:11,patron incorrecto,true
+John Doe,Texto de prueba,,21-6161-0910,2021/09/24 11:11,EUR -100.00,true
+John Doe,Texto de prueba,,21-6161-0910,2021/09/24 11:11,CNP 90.00,true
+John Doe,Texto de prueba,,21-6161-0910,2021/09/24 11:11,"EUR 12,345,678,901.01345",true,678,901.01345,true
+"",Texto de prueba,,21-6161-0910,2021/09/24 11:11,EUR 100.00,true,,,
+John Doe,,https://www.google.es,21-6161-0910,2021/09/24 11:11,EUR 100.00,true,,,
+John Doe,Texto de prueba,google.es,21-6161-0910,2021/09/24 11:11,EUR 100.00,true,,,
+John Doe,Texto de prueba,,,2021/09/24 11:11,EUR 100.00,true,,,
+John Doe,Texto de prueba,,21-6161-0910,,EUR 100.00,true,,,
+John Doe,Texto de prueba,,21-6161-0910,2021/09/24 11:11,,true,,,
+John Doe,Texto de prueba,,21-6161-0910,1999/09/24 11:11,EUR 100.00,false,,,
+John Doe,Texto de prueba,,,,,false,,,
+pepe,Texto de prueba,https://www.google.es,21-6161-0910,2021/09/24 11:11,EUR 100.00,false,,,
+pepejuan,,https://www.google.es,21-6161-0910,2021/09/10 14:00,EUR 100.00,true,,,
+pepejuan,Texto de prueba,www.google.es,21-6161-0910,2021/09/10 11:00,EUR 100.00,false,,,
+John Doe,Texto de prueba,https://www.google.es,21-6161-0910,2021/09/10 11:00,EUR 100.00,false,,,
+John Doe,Texto de prueba,https://www.google.es,21-6161-0910,2021/09/24 11:11,EUR -0.00,false,,,
+John Doe,Texto de prueba,https://www.google.es,21-6161-0910,2021/09/24 11:11,CNP -0.00,true,,,
+John Doe,Texto de prueba,https://www.google.es,21-6161-0910,2021/09/24 11:11,GBP -0.00,false,,,
+John Doe,Texto de prueba,https://www.google.es,21-6161-0910,2021/09/24 11:11,akds 0.21,true,,,
+John Doe,Texto de prueba,https://www.google.es,21-6161-0910,,,false,,,
+John Doe,Texto de prueba,,21-6161-0911,2021/09/24 11:11,EUR 100.00,false,,,

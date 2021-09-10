@@ -1,4 +1,4 @@
-package acme.entities.dolemite;
+package acme.entities.pomel;
 
 import java.util.Calendar;
 import java.util.Date;
@@ -20,14 +20,15 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class Dolemite extends DomainEntity{
+public class Pomel extends DomainEntity{
 
 	protected static final long serialVersionUID = 1L;
 	
 	@NotBlank
 	@Column(unique=true)
-	@Pattern(regexp = "^\\w{6}:(0[1-9]|1[012])\\d{2}:([012]\\d|3[01])$", message = "Error con el patrón, debe ser: w{6}:mmyy:dd") //w{6}:mmyy:dd
-	protected String keylem;
+//	@Pattern(regexp = "^\\w{6}:(0[1-9]|1[012])\\d{2}:([012]\\d|3[01])$", message = "Error con el patrón, debe ser: w{6}:mmyy:dd") //w{6}:mmyy:dd
+	@Pattern(regexp = "^\\d{2}-\\w{2}\\w{2}-(0[1-9]|1[012])([012]\\d|3[01])", message = "Error con el patrón, debe ser: yy-w{2}w{2}-mmdd")
+	protected String tracker;
 	
 	@Temporal(TemporalType.TIMESTAMP)
 	@NotNull
@@ -54,6 +55,6 @@ public class Dolemite extends DomainEntity{
 			month = "0" + month;
 		year = year.substring(2);
 
-		return "^\\w{6}:" + month + year + ":" + day + "$";
+		return year + "-w{2}w{2}-" + month + day + "$";
 	}
 }

@@ -7,7 +7,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.entities.dolemite.Dolemite;
+import acme.entities.pomel.Pomel;
 import acme.entities.shouts.Shout;
 import acme.features.configuration.ConfigurationService;
 import acme.framework.components.Errors;
@@ -51,7 +51,7 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 		assert entity != null;
 		assert model != null;
 		
-		model.setAttribute("codePlaceholder", Dolemite.getCodeRegExp(entity.getMoment()));
+		model.setAttribute("codePlaceholder", Pomel.getCodeRegExp(entity.getMoment()));
 			
 		request.unbind(entity, model, "author", "text", "info");
 	}
@@ -78,7 +78,7 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 		assert errors != null;
 		
 		Calendar cal = Calendar.getInstance();			
-		Dolemite dolemite = entity.getDolemite();
+		Pomel pomel = entity.getPomel();
 		Integer day = cal.get(Calendar.DAY_OF_MONTH);
 		Integer month = cal.get(Calendar.MONTH) + 1;
 		Integer year = cal.get(Calendar.YEAR);
@@ -88,13 +88,13 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 			errors.state(request, !umbralSuperado,"text", "manager.task.error.umbral-superado");
 		}
 		
-		if(!errors.hasErrors("dolemite.budget")) {
-			final String currency = entity.getDolemite().getBudget().getCurrency();
-			errors.state(request, currency.equals("EUR") || currency.equals("USD") || currency.equals("GBP"), "dolemite.budget", "anonymous.shout.error.money");
+		if(!errors.hasErrors("pomel.budget")) {
+			final String currency = entity.getPomel().getBudget().getCurrency();
+			errors.state(request, currency.equals("EUR") || currency.equals("USD") || currency.equals("GBP"), "pomel.budget", "anonymous.shout.error.money");
 		}
-		if(!errors.hasErrors("dolemite.keylem")) {
-			final Optional<Dolemite> opt = this.shoutRepository.findDolemiteByDate(entity.getDolemite().getKeylem());
-			errors.state(request, !opt.isPresent(), "dolemite.keylem", "anonymous.shout.error.keylemFind");
+		if(!errors.hasErrors("pomel.tracker")) {
+			final Optional<Pomel> opt = this.shoutRepository.findPomelByDate(entity.getPomel().getTracker());
+			errors.state(request, !opt.isPresent(), "pomel.tracker", "anonymous.shout.error.trackerFind");
 			
 			
 			String dayS = "";
@@ -110,16 +110,18 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 				monthS = month.toString();
 			}
 			
-			String op = monthS + year.toString().substring(year.toString().length()-2) + ":" + dayS;
+			String yearTracker = pomel.getTracker().substring(0,2);
 			
-			String keylem = dolemite.getKeylem().substring(7, 14);
+			String mmddTracker = pomel.getTracker().substring(8,12);
 			
-			errors.state(request, keylem.equals(op) , "dolemite.keylem", "anonymous.shout.error.keylem");
+			String op = monthS + dayS;
+			
+			errors.state(request, year.toString().substring(2,4).equals(yearTracker) && mmddTracker.equals(op) , "pomel.tracker", "anonymous.shout.error.tracker");
 		}
-		if(!errors.hasErrors("dolemite.deadline")) {
-			final Date deadline = dolemite.getDeadline();
+		if(!errors.hasErrors("pomel.deadline")) {
+			final Date deadline = pomel.getDeadline();
 			cal.add(Calendar.DAY_OF_MONTH, 7);
-			errors.state(request, deadline.after(cal.getTime()), "dolemite.deadline", "anonymous.shout.error.deadline");
+			errors.state(request, deadline.after(cal.getTime()), "pomel.deadline", "anonymous.shout.error.deadline");
 		}
 		
 		
@@ -134,9 +136,9 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 		Date moment;
 		moment = new Date(System.currentTimeMillis() - 1);
 		entity.setMoment(moment);
-		final Dolemite dolemite = entity.getDolemite();
+		final Pomel pomel = entity.getPomel();
 		
-		this.shoutRepository.save(dolemite);
+		this.shoutRepository.save(pomel);
 		this.shoutRepository.save(entity);
 	}
 

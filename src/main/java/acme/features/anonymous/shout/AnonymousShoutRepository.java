@@ -7,7 +7,7 @@ import java.util.Optional;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
-import acme.entities.dolemite.Dolemite;
+import acme.entities.pomel.Pomel;
 import acme.entities.shouts.Shout;
 import acme.framework.repositories.AbstractRepository;
 
@@ -17,8 +17,8 @@ public interface AnonymousShoutRepository extends AbstractRepository {
 	@Query("select s from Shout s where s.moment >= ?1")
 	Collection<Shout> findMany(Date deadline);
 	
-	@Query("select sh from Dolemite sh where sh.keylem=?1")
-	Optional<Dolemite> findDolemiteByDate(String atr1);
+	@Query("select sh from Pomel sh where sh.tracker=?1")
+	Optional<Pomel> findPomelByDate(String atr1);
 
 
 }
