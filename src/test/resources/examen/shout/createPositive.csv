@@ -27,4 +27,3 @@ recordIndex,author,text,info,pustemi.label,pustemi.deadline,pustemi.budget,puste
 32,nombre test9,Este es otro shout de prueba,http://www.example1.org,-247,,EUR 10.00,true
 33,nombre test10,Este es otro shout de prueba,http://www.example1.org,-248,,USD 10.00,false
 34,nombre test11,Este es otro shout de prueba,http://www.example1.org,-249,,EUR 10.00,true
-35,nombre test12,Este es otro shout de prueba,http://www.example1.org,-250,,EUR 10.00,false
