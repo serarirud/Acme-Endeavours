@@ -52,7 +52,7 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 		assert entity != null;
 		assert model != null;
 			
-		request.unbind(entity, model, "author", "text", "info", "xxx.xxx1", "xxx.xxx2", "xxx.xxx3", "xxx.xxx4");
+		request.unbind(entity, model, "author", "text", "info", "pustemi.label", "pustemi.deadline", "pustemi.budget", "pustemi.important");
 	}
 		
 	@Override
@@ -81,41 +81,41 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 			errors.state(request, !umbralSuperado, "text", "anonymous.shout.error.umbral-superado");
 		}
 		
-		if(!errors.hasErrors("xxx.xxx1")) {
+		if(!errors.hasErrors("pustemi.label")) {
 			
-			final String xxx1 = entity.getXxx().getXxx1();
+			final String label = entity.getPustemi().getLabel();
 			
-			final String[] split = xxx1.split("/");
+			final String[] split = label.split("-");
 			
-			final Integer day = Integer.valueOf(split[1]);
-			final Integer month = Integer.valueOf(split[2]);
-			final Integer year = Integer.valueOf("20" + split[3]);
+			final Integer year = Integer.valueOf("20" + split[0]);
+			final Integer month = Integer.valueOf(split[1].substring(0,2));
+			final Integer day = Integer.valueOf(split[1].substring(2));
 	
 			final Boolean correctPattern = LocalDate.now().getYear() == year && LocalDate.now().getMonthValue() == month && LocalDate.now().getDayOfMonth() == day;
-			final Optional<Shout> opt = this.shoutRepository.findShoutByXXX1(xxx1);
+			final Optional<Shout> opt = this.shoutRepository.findShoutByLabel(label);
 
-			errors.state(request, correctPattern, "xxx.xxx1", "anonymous.shout.error.incorrect-xxx1");
-			errors.state(request, !opt.isPresent(), "xxx.xxx1", "anonymous.shout.error.repeated-xxx1");
+			errors.state(request, correctPattern, "pustemi.label", "anonymous.shout.error.incorrect-label");
+			errors.state(request, !opt.isPresent(), "pustemi.label", "anonymous.shout.error.repeated-label");
 
 		}
 		
-		if(!errors.hasErrors("xxx.xxx2")) {
+		if(!errors.hasErrors("pustemi.deadline")) {
 			
-			final Date xxx2 = entity.getXxx().getXxx2();
+			final Date deadline = entity.getPustemi().getDeadline();
 			
 			final Calendar condition = Calendar.getInstance();
 			condition.add(Calendar.WEEK_OF_MONTH, +1);
 			
-			errors.state(request, xxx2.after(condition.getTime()) , "xxx.xxx2", "anonymous.shout.error.xxx2");
+			errors.state(request, deadline.after(condition.getTime()) , "pustemi.deadline", "anonymous.shout.error.deadline");
 		}
 		
-		if(!errors.hasErrors("xxx.xxx3")) {
+		if(!errors.hasErrors("pustemi.budget")) {
 			
-			final Money xxx3 = entity.getXxx().getXxx3();
+			final Money budget = entity.getPustemi().getBudget();
 			
-			final Boolean condition = xxx3.getCurrency().equals("EUR") || xxx3.getCurrency().equals("USD") || xxx3.getCurrency().equals("GBP");
+			final Boolean condition = budget.getCurrency().equals("EUR") || budget.getCurrency().equals("USD") || budget.getCurrency().equals("GBP");
 			
-			errors.state(request, condition, "xxx.xxx3", "anonymous.shout.error.xxx3");
+			errors.state(request, condition, "pustemi.budget", "anonymous.shout.error.budget");
 		}
 	}
 	
@@ -128,7 +128,7 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 		
 		moment = new Date(System.currentTimeMillis() - 1);
 		entity.setMoment(moment);
-		this.shoutRepository.save(entity.getXxx());
+		this.shoutRepository.save(entity.getPustemi());
 		this.shoutRepository.save(entity);
 	}
 

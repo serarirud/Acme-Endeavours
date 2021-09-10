@@ -1,4 +1,4 @@
-package acme.entities.xxx;
+package acme.entities.pustemis;
 
 import java.util.Date;
 
@@ -19,7 +19,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class Xxx extends DomainEntity {
+public class Pustemi extends DomainEntity {
 	
 	// Serialisation identifier ------------------------
 	
@@ -30,19 +30,20 @@ public class Xxx extends DomainEntity {
 	@NotNull
 	@NotEmpty
 	@Column(unique = true)
-	@Pattern(regexp = "^\\w{2,4}/([012]\\d|3[01])/(0[1-9]|1[012])/\\d{2}$") // ^\\w{2,4}/dd/mm/yy$
-	private String xxx1;
+	@Pattern(regexp = "^\\d{2}-(0[1-9]|1[012])\\w{2,4}-\\d{2,4}$") // ^yy-mmdd-\d{2,4}$
+	//@Pattern(regexp = "^\\w{2,4}/([012]\\d|3[01])/(0[1-9]|1[012])/\\d{2}$") // ^\\w{2,4}/dd/mm/yy$
+	private String label;
 		
 	@Temporal(TemporalType.TIMESTAMP)
 	@NotNull
-	private Date xxx2;
+	private Date deadline;
 		
 	@NotNull
 	@Valid
-	private Money xxx3;
+	private Money budget;
 		
 	@NotNull
-	private Boolean xxx4;
+	private Boolean important;
 		
 	// Derived attributes ------------------------------
 		

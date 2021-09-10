@@ -17,14 +17,14 @@
 <%@ taglib uri = "http://java.sun.com/jsp/jstl/fmt" prefix = "fmt" %>
 
 <h2>
-	<acme:message code="administrator.dashboard.form.title.xxx"/>
+	<acme:message code="administrator.dashboard.form.title.pustemi"/>
 </h2>
 
 <table class="table table-sm">	
-	<caption><acme:message code="administrator.dashboard.form.title.xxx"/></caption>
+	<caption><acme:message code="administrator.dashboard.form.title.pustemi"/></caption>
 	<tr>
 		<th scope="row">
-			<acme:message code="administrator.dashboard.form.label.xxx.ratioShoutsImportant"/>
+			<acme:message code="administrator.dashboard.form.label.pustemi.ratioShoutsImportant"/>
 		</th>
 		<td>
 			<acme:print value="${ratioShoutsFlaggedAsImportant}"/>
@@ -32,7 +32,7 @@
 	</tr>
 	<tr>
 		<th scope="row">
-			<acme:message code="administrator.dashboard.form.label.xxx.ratioShoutsBudgetZero"/>
+			<acme:message code="administrator.dashboard.form.label.pustemi.ratioShoutsBudgetZero"/>
 		</th>
 		<td>
 			<acme:print value="${ratioShoutsWithBudgetZero}"/> 
@@ -40,7 +40,7 @@
 	</tr>
 	<tr>
 		<th scope="row">
-			<acme:message code="administrator.dashboard.form.label.xxx.average.eur"/>
+			<acme:message code="administrator.dashboard.form.label.pustemi.average.eur"/>
 		</th>
 		<td>
 			<acme:print value="${averageShoutsGroupedByEUR} EUR"/> 
@@ -48,7 +48,7 @@
 	</tr>
 	<tr>
 		<th scope="row">
-			<acme:message code="administrator.dashboard.form.label.xxx.deviation.eur"/>
+			<acme:message code="administrator.dashboard.form.label.pustemi.deviation.eur"/>
 		</th>
 		<td>
 			<acme:print value="${deviationShoutsGroupedByEUR} EUR"/> 
@@ -56,7 +56,7 @@
 	</tr>
 	<tr>
 		<th scope="row">
-			<acme:message code="administrator.dashboard.form.label.xxx.average.usd"/>
+			<acme:message code="administrator.dashboard.form.label.pustemi.average.usd"/>
 		</th>
 		<td>
 			<acme:print value="${averageShoutsGroupedByUSD} USD"/> 
@@ -64,7 +64,7 @@
 	</tr>
 	<tr>
 		<th scope="row">
-			<acme:message code="administrator.dashboard.form.label.xxx.deviation.usd"/>
+			<acme:message code="administrator.dashboard.form.label.pustemi.deviation.usd"/>
 		</th>
 		<td>
 			<acme:print value="${deviationShoutsGroupedByUSD} USD"/> 
@@ -72,7 +72,7 @@
 	</tr>
 	<tr>
 		<th scope="row">
-			<acme:message code="administrator.dashboard.form.label.xxx.average.gbp"/>
+			<acme:message code="administrator.dashboard.form.label.pustemi.average.gbp"/>
 		</th>
 		<td>
 			<acme:print value="${averageShoutsGroupedByGBP} GBP"/> 
@@ -80,7 +80,7 @@
 	</tr>
 	<tr>
 		<th scope="row">
-			<acme:message code="administrator.dashboard.form.label.xxx.deviation.gbp"/>
+			<acme:message code="administrator.dashboard.form.label.pustemi.deviation.gbp"/>
 		</th>
 		<td>
 			<acme:print value="${deviationShoutsGroupedByGBP} GBP"/> 

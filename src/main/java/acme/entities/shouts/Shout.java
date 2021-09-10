@@ -14,7 +14,7 @@ import javax.validation.constraints.Past;
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
-import acme.entities.xxx.Xxx;
+import acme.entities.pustemis.Pustemi;
 import acme.framework.entities.DomainEntity;
 import lombok.Getter;
 import lombok.Setter;
@@ -52,6 +52,6 @@ public class Shout extends DomainEntity {
 	
 	@Valid
 	@OneToOne(optional = false)
-	private Xxx xxx;
+	private Pustemi pustemi;
 
 }

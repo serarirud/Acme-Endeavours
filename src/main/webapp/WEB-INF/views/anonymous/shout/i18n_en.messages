@@ -1,10 +1,10 @@
 anonymous.shout.form.label.author = Author:
 anonymous.shout.form.label.text = Text:
 anonymous.shout.form.label.info = Info:
-anonymous.shout.form.label.xxx.xxx1 = Xxx1: 
-anonymous.shout.form.label.xxx.xxx2 = Xxx2: 
-anonymous.shout.form.label.xxx.xxx3 = Xxx3: 
-anonymous.shout.form.label.xxx.xxx4 = Xxx4: 
+anonymous.shout.form.label.pustemi.label = Label: 
+anonymous.shout.form.label.pustemi.deadline = Deadline: 
+anonymous.shout.form.label.pustemi.budget = Budget: 
+anonymous.shout.form.label.pustemi.important = Important: 
 anonymous.shout.form.button.create = Shout!
 anonymous.shout.form.button.return = Return
 
@@ -12,13 +12,13 @@ anonymous.shout.list.label.moment = Moment
 anonymous.shout.list.label.author = Author
 anonymous.shout.list.label.text = Text
 anonymous.shout.list.label.info = Info 
-anonymous.shout.list.label.xxx.xxx1 = Xxx1 
-anonymous.shout.list.label.xxx.xxx2 = Xxx2 
-anonymous.shout.list.label.xxx.xxx3 = Xxx3 
-anonymous.shout.list.label.xxx.xxx4 = Xxx4 
+anonymous.shout.list.label.pustemi.label = Label
+anonymous.shout.list.label.pustemi.deadline = Deadline 
+anonymous.shout.list.label.pustemi.budget = Budget 
+anonymous.shout.list.label.pustemi.important = Important 
 
 anonymous.shout.error.umbral-superado = Threshold of spam word reached
-anonymous.shout.error.incorrect-xxx1 = Xxx1 incorrect, must be match the pattern xxxx/dd/mm/yyyy
-anonymous.shout.error.repeated-xxx1 = Xxx1 repeated, it must be unique
-anonymous.shout.error.xxx2 = Xxx2 incorrect, must be at least one week after today's date
-anonymous.shout.error.xxx3 = Xxx3 incorrect, must be EUR, USD or GBP
+anonymous.shout.error.incorrect-label = Label incorrect, must match the pattern yy-mmdd-xxxx
+anonymous.shout.error.repeated-label = Label repeated, it must be unique
+anonymous.shout.error.deadline = Deadline incorrect, must be at least one week after today's date
+anonymous.shout.error.budget = Budget incorrect, must be EUR, USD or GBP

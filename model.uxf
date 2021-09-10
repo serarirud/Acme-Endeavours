@@ -487,12 +487,12 @@ bg=blue</panel_attributes>
       <h>84</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
-XXX
+Pustemi
 --
-+ xxx1: String {NotNull, NotEmpty, Unique}
-+ xxx2: Date {Temporal(TIMESTAMP}, NotNull}
-+ xxx3: Money {NotNull, Valid}
-+ xxx4: Boolean {NotNull}</panel_attributes>
++ label: String {NotNull, NotEmpty, Unique}
++ deadline: Date {Temporal(TIMESTAMP}, NotNull}
++ budget: Money {NotNull, Valid}
++ important: Boolean {NotNull}</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -503,7 +503,7 @@ XXX
       <w>168</w>
       <h>42</h>
     </coordinates>
-    <panel_attributes>The xxx2 must be at least 
+    <panel_attributes>The deadline must be at least 
 one week after the creation
 of the shout
 bg=blue</panel_attributes>
@@ -531,8 +531,8 @@ hasA ^</panel_attributes>
       <w>168</w>
       <h>42</h>
     </coordinates>
-    <panel_attributes>The xxx1 must match the pattern
-"xxxxxxxxxxxxxxxx"
+    <panel_attributes>The label must match the pattern
+"^yy-mmdd-\d{2,4}$"
 bg=blue</panel_attributes>
     <additional_attributes/>
   </element>
@@ -568,7 +568,7 @@ bg=blue</panel_attributes>
       <w>168</w>
       <h>42</h>
     </coordinates>
-    <panel_attributes>The xxx3 currency must be 
+    <panel_attributes>The budget currency must be 
 EUR, USD or GBP
 bg=blue</panel_attributes>
     <additional_attributes/>

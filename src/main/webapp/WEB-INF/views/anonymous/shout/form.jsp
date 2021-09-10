@@ -7,10 +7,10 @@
 	<acme:form-textbox code="anonymous.shout.form.label.author" path="author"/>
 	<acme:form-textarea code="anonymous.shout.form.label.text" path="text"/>
 	<acme:form-textbox code="anonymous.shout.form.label.info" path="info"/>
-	<acme:form-textbox code="anonymous.shout.form.label.xxx.xxx1" path="xxx.xxx1" placeholder="xxxx/dd/mm/yy, donde xxxx son cualquier letra de 2 a 4, dd es el día actual, mm es el mes actual y yy es el año actual."/>
-	<acme:form-moment code="anonymous.shout.form.label.xxx.xxx2" path="xxx.xxx2"/>
-	<acme:form-money code="anonymous.shout.form.label.xxx.xxx3" path="xxx.xxx3"/>
-	<acme:form-checkbox code="anonymous.shout.form.label.xxx.xxx4" path="xxx.xxx4" />
+	<acme:form-textbox code="anonymous.shout.form.label.pustemi.label" path="pustemi.label" placeholder="yy-mmdd-xxxx, donde dd es el día actual, mm es el mes actual, yy es el año actual y xxxx son cualquier número de 2 a 4 dígitos."/>
+	<acme:form-moment code="anonymous.shout.form.label.pustemi.deadline" path="pustemi.deadline"/>
+	<acme:form-money code="anonymous.shout.form.label.pustemi.budget" path="pustemi.budget"/>
+	<acme:form-checkbox code="anonymous.shout.form.label.pustemi.important" path="pustemi.important" />
 	
 	
 	<acme:form-submit code="anonymous.shout.form.button.create" action="/anonymous/shout/create"/>

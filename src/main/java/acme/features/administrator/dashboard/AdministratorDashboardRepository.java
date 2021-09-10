@@ -61,16 +61,16 @@ public interface AdministratorDashboardRepository extends AbstractRepository {
 	@Query("select count(s) from Shout s")
 	Integer shouts();
 	
-	@Query("select count(s) from Shout s where s.xxx.xxx4 = true")
+	@Query("select count(s) from Shout s where s.pustemi.important = true")
 	Integer shoutsFlaggedAsImportant();
 	
-	@Query("select count(s) from Shout s where s.xxx.xxx3.amount = 0")
+	@Query("select count(s) from Shout s where s.pustemi.budget.amount = 0")
 	Integer shoutsWithBudgetZero();
 	
-	@Query("select avg(s.xxx.xxx3.amount)  from Shout s where s.xxx.xxx3.currency = :currency")
+	@Query("select avg(s.pustemi.budget.amount)  from Shout s where s.pustemi.budget.currency = :currency")
 	Double averageShoutsGroupedByCurrency(String currency);
 
-	@Query("select stddev(s.xxx.xxx3.amount)  from Shout s where s.xxx.xxx3.currency = :currency")
+	@Query("select stddev(s.pustemi.budget.amount)  from Shout s where s.pustemi.budget.currency = :currency")
 	Double deviationShoutsGroupedByCurrency(String currency);
 
 	

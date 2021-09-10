@@ -1,8 +1,30 @@
-recordIndex,author,text,info,xxx.xxx1,xxx.xxx2,xxx.xxx3,xxx.xxx4
-7,12345,1,,AWA/,,EUR 0.00,true
-8,123456,12,http://www.example1.org,EWE/,,USD 15.00,false
-9,1234567890123456789012345,1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890,https://www.google.es,OWO/,,USD 0.50,false
-10,123456789012345678901234,123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789,,UWU/,,"GBP 9,999,999,999.99",true
-11,leo messi,viva el psg,,nWn/,,EUR 123.00,true
-12,joaquin,sex este es un texto con palabra spam pero sin superar el filtro,,zWz/,,USD 10.00,false
-13,JVargas,Este es otro shout de prueba,http://www.google.es,fcb/,,EUR 375.00,true
+recordIndex,author,text,info,pustemi.label,pustemi.deadline,pustemi.budget,pustemi.important
+7,12345,1,,-222,,EUR 0.00,true
+8,123456,12,http://www.example1.org,-223,,USD 15.00,false
+9,1234567890123456789012345,1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890,https://www.google.es,-224,,USD 0.50,false
+10,123456789012345678901234,123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789,,-225,,"GBP 9,999,999,999.99",true
+11,leo messi,viva el psg,,-226,,EUR 123.00,true
+12,joaquin,sex este es un texto con palabra spam pero sin superar el filtro,,-227,,USD 10.00,false
+13,JVargas,Este es otro shout de prueba,http://www.google.es,-228,,EUR 375.00,true
+14,JVarguitas,Este es otro shout de prueba,,-229,,EUR 375.00,true
+15,Jajajaja,Este es otro shout de prueba,,-230,,EUR 375.00,true
+16,si yo soy yo,Este es otro shout de prueba,http://www.youtube.com,-231,,EUR 375.00,true
+17,nombre prueba,Este es otro shout de prueba,,-232,,USD 0.00,false
+18,sergio ari,Este es otro shout de prueba,,-233,,GBP 1.00,true
+19,auronplay dale al play,Este es otro shout de prueba,,-234,,EUR 375.00,false
+20,hola que tal,Este es otro shout de prueba,,-235,,EUR 375.00,true
+21,ronaldo cristiano,Este es otro shout de prueba,,-236,,USD 25.00,true
+22,pepe el pepe,Este es otro shout de prueba,http://www.example1.org,-237,,EUR 10.00,false
+23,nombre test,Este es otro shout de prueba,http://www.example1.org,-238,,EUR 10.00,false
+24,nombre test1,Este es otro shout de prueba,,-239,,EUR 10.00,false
+25,nombre test2,Este es otro shout de prueba,http://www.example1.org,-240,,EUR 10.00,true
+26,nombre test3,Este es otro shout de prueba,,-241,,EUR 10.00,false
+27,nombre test4,Este es otro shout de prueba,http://www.example1.org,-242,,EUR 10.00,false
+28,nombre test5,Este es otro shout de prueba,http://www.example1.org,-243,,GBP 10.00,false
+29,nombre test6,Este es otro shout de prueba,http://www.example1.org,-244,,GBP 10.00,false
+30,nombre test7,Este es otro shout de prueba,,-245,,EUR 10.00,false
+31,nombre test8,Este es otro shout de prueba,http://www.example1.org,-246,,USD 10.00,false
+32,nombre test9,Este es otro shout de prueba,http://www.example1.org,-247,,EUR 10.00,true
+33,nombre test10,Este es otro shout de prueba,http://www.example1.org,-248,,USD 10.00,false
+34,nombre test11,Este es otro shout de prueba,http://www.example1.org,-249,,EUR 10.00,true
+35,nombre test12,Este es otro shout de prueba,http://www.example1.org,-250,,EUR 10.00,false
