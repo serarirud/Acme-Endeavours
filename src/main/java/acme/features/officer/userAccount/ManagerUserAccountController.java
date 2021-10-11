@@ -10,7 +10,7 @@
  * they accept any liabilities with respect to them.
  */
 
-package acme.features.manager.userAccount;
+package acme.features.officer.userAccount;
 
 import javax.annotation.PostConstruct;
 
@@ -20,12 +20,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import acme.framework.components.BasicCommand;
 import acme.framework.controllers.AbstractController;
-import acme.framework.entities.Manager;
+import acme.framework.entities.Officer;
 import acme.framework.entities.UserAccount;
 
 @Controller
-@RequestMapping("/manager/user-account/")
-public class ManagerUserAccountController extends AbstractController<Manager, UserAccount> {
+@RequestMapping("/officer/user-account/")
+public class ManagerUserAccountController extends AbstractController<Officer, UserAccount> {
 
 	// Internal state ---------------------------------------------------------
 

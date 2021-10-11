@@ -1,4 +1,4 @@
-package acme.features.manager.task;
+package acme.features.officer.task;
 
 import java.util.Collection;
 
@@ -8,17 +8,17 @@ import org.springframework.stereotype.Service;
 import acme.entities.tasks.Task;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
-import acme.framework.entities.Manager;
+import acme.framework.entities.Officer;
 import acme.framework.entities.Principal;
 import acme.framework.services.AbstractListService;
 
 @Service
-public class ManagerTaskListService implements AbstractListService<Manager, Task> {
+public class OfficerTaskListService implements AbstractListService<Officer, Task> {
 
 	// Internal state
 	
 	@Autowired
-	private ManagerTaskRepository repository;
+	private OfficerTaskRepository repository;
 
 	
 	// AbstractListService<Administrator, Task> interface

@@ -63,7 +63,7 @@ master.menu.user-account.provider = Provider data
 master.menu.user-account.become-provider = Become a provider
 master.menu.user-account.consumer = Consumer data
 master.menu.user-account.become-consumer = Become a consumer
-master.menu.user-account.become-manager = Become a manager
+master.menu.user-account.become-officer = Become a officer
 
 # master.footer ###############################################################
 
@@ -112,7 +112,7 @@ master.panic.label.exceptions = Exceptions:
 master.panic.text.consult-log = Please, consult the log to see them full stack trace.
 
 # master.menu.administrator ###################################################
-master.menu.manager = Manager
-master.menu.manager.task.create = Create a task
-master.menu.manager.task.list = My task list
+master.menu.officer = Officer
+master.menu.officer.task.create = Create a task
+master.menu.officer.task.list = My task list
 

@@ -63,7 +63,7 @@ master.menu.user-account.provider = Datos de proveedor
 master.menu.user-account.become-provider = Hazte proveedor
 master.menu.user-account.consumer = Datos de consumidor
 master.menu.user-account.become-consumer = Hazte consumidor
-master.menu.user-account.become-manager = Hazte mánager
+master.menu.user-account.become-officer = Hazte oficial
 
 ﻿# master.footer ###############################################################
 
@@ -114,7 +114,7 @@ master.panic.label.exceptions = Excepciones:
 master.panic.text.consult-log = Por favor, consulte el log para ver más detalles.
 
 # master.menu.administrator ###################################################
-master.menu.manager = Manager
-master.menu.manager.task.create = Crear una tarea
-master.menu.manager.task.list = Mi lista de tareas
+master.menu.officer = Oficial
+master.menu.officer.task.create = Crear una tarea
+master.menu.officer.task.list = Mi lista de tareas
 

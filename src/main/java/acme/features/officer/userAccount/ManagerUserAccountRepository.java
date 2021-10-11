@@ -10,7 +10,7 @@
  * they accept any liabilities with respect to them.
  */
 
-package acme.features.manager.userAccount;
+package acme.features.officer.userAccount;
 
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;

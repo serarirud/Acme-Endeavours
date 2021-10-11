@@ -10,7 +10,7 @@
  * they accept any liabilities with respect to them.
  */
 
-package acme.features.manager.userAccount;
+package acme.features.officer.userAccount;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -20,7 +20,7 @@ import acme.framework.components.HttpMethod;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
 import acme.framework.components.Response;
-import acme.framework.entities.Manager;
+import acme.framework.entities.Officer;
 import acme.framework.entities.Principal;
 import acme.framework.entities.UserAccount;
 import acme.framework.entities.UserRole;
@@ -28,7 +28,7 @@ import acme.framework.helpers.PrincipalHelper;
 import acme.framework.services.AbstractUpdateService;
 
 @Service
-public class ManagerUserAccountUpdateService implements AbstractUpdateService<Manager, UserAccount> {
+public class ManagerUserAccountUpdateService implements AbstractUpdateService<Officer, UserAccount> {
 
 	// Internal state ---------------------------------------------------------
 

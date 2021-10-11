@@ -1,4 +1,4 @@
-package acme.features.manager.task;
+package acme.features.officer.task;
 
 import java.util.Date;
 
@@ -10,16 +10,16 @@ import acme.features.configuration.ConfigurationService;
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
-import acme.framework.entities.Manager;
+import acme.framework.entities.Officer;
 import acme.framework.entities.Principal;
 import acme.framework.services.AbstractUpdateService;
 
 @Service
-public class ManagerTaskUpdateService implements AbstractUpdateService<Manager, Task>{
+public class OfficerTaskUpdateService implements AbstractUpdateService<Officer, Task>{
 
 	
 	@Autowired
-	protected ManagerTaskRepository repository;
+	protected OfficerTaskRepository repository;
 
 	@Autowired
 	protected ConfigurationService confService;
@@ -30,12 +30,12 @@ public class ManagerTaskUpdateService implements AbstractUpdateService<Manager, 
 		
 		int taskId;
 		Task task;
-		Manager manager;
+		Officer manager;
 		Principal principal;
 		
 		taskId = request.getModel().getInteger("id");
 		task = this.repository.findOneById(taskId);
-		manager = task.getManager();
+		manager = task.getOfficer();
 		principal = request.getPrincipal();
 		
 		return manager.getUserAccount().getId() == principal.getAccountId();

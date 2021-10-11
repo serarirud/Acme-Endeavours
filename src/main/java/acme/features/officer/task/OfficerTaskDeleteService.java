@@ -1,4 +1,4 @@
-package acme.features.manager.task;
+package acme.features.officer.task;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -7,15 +7,15 @@ import acme.entities.tasks.Task;
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
-import acme.framework.entities.Manager;
+import acme.framework.entities.Officer;
 import acme.framework.entities.Principal;
 import acme.framework.services.AbstractDeleteService;
 
 @Service
-public class ManagerTaskDeleteService implements AbstractDeleteService<Manager, Task>{
+public class OfficerTaskDeleteService implements AbstractDeleteService<Officer, Task>{
 	
 	@Autowired
-	protected ManagerTaskRepository repository;
+	protected OfficerTaskRepository repository;
 
 	@Override
 	public boolean authorise(final Request<Task> request) {
@@ -23,12 +23,12 @@ public class ManagerTaskDeleteService implements AbstractDeleteService<Manager, 
 		
 		int taskId;
 		Task task;
-		Manager manager;
+		Officer manager;
 		Principal principal;
 		
 		taskId = request.getModel().getInteger("id");
 		task = this.repository.findOneById(taskId);
-		manager = task.getManager();
+		manager = task.getOfficer();
 		principal = request.getPrincipal();
 		
 		return manager.getUserAccount().getId() == principal.getAccountId();

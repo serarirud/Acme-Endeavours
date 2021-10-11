@@ -1,4 +1,4 @@
-package acme.features.manager.task;
+package acme.features.officer.task;
 
 import java.util.Calendar;
 import java.util.Date;
@@ -11,15 +11,15 @@ import acme.features.configuration.ConfigurationService;
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
-import acme.framework.entities.Manager;
+import acme.framework.entities.Officer;
 import acme.framework.services.AbstractCreateService;
 
 @Service
-public class ManagerTaskCreateService implements AbstractCreateService<Manager, Task>{
+public class OfficerTaskCreateService implements AbstractCreateService<Officer, Task>{
 
 	
 	@Autowired
-	protected ManagerTaskRepository repository;
+	protected OfficerTaskRepository repository;
 	
 	@Autowired
 	protected ConfigurationService confService;
@@ -56,11 +56,11 @@ public class ManagerTaskCreateService implements AbstractCreateService<Manager, 
 		assert request != null;
 		
 		Task result;
-		Manager manager;
+		Officer manager;
 		
 		manager= this.repository.findOneManagerById(request.getPrincipal().getActiveRoleId());
 		result= new Task();
-		result.setManager(manager);
+		result.setOfficer(manager);
 		
 		return result;
 	}

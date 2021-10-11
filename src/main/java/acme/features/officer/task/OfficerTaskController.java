@@ -1,4 +1,4 @@
-package acme.features.manager.task;
+package acme.features.officer.task;
 
 import javax.annotation.PostConstruct;
 
@@ -9,28 +9,28 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import acme.entities.tasks.Task;
 import acme.framework.components.BasicCommand;
 import acme.framework.controllers.AbstractController;
-import acme.framework.entities.Manager;
+import acme.framework.entities.Officer;
 
 @Controller
-@RequestMapping("/manager/task/")
-public class ManagerTaskController extends AbstractController<Manager, Task>{
+@RequestMapping("/officer/task/")
+public class OfficerTaskController extends AbstractController<Officer, Task>{
 
 	// Internal state
 	
 	@Autowired
-	private ManagerTaskListService listService;
+	private OfficerTaskListService listService;
 	
 	@Autowired
-	private ManagerTaskShowService showService;
+	private OfficerTaskShowService showService;
 	
 	@Autowired
-	private ManagerTaskCreateService createService;
+	private OfficerTaskCreateService createService;
 	
 	@Autowired
-	private ManagerTaskUpdateService updateService;
+	private OfficerTaskUpdateService updateService;
 	
 	@Autowired
-	private ManagerTaskDeleteService deleteService;
+	private OfficerTaskDeleteService deleteService;
 	
 	// Constructors
 	

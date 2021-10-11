@@ -1,0 +1,26 @@
+officer.task.list.label.title = Título
+officer.task.list.label.start-execution-period = Inicio del periodo de ejecución
+officer.task.list.label.end-execution-period = Fin del periodo de ejecución
+officer.task.list.label.workload = Carga de trabajo
+
+
+officer.task.form.label.title = Título
+officer.task.form.label.start-execution-period = Inicio del periodo de ejecución
+officer.task.form.label.end-execution-period = Fin del periodo de ejecución
+officer.task.form.label.workload = Carga de trabajo
+officer.task.form.label.description = Descripción
+officer.task.form.label.link = Enlace
+officer.task.form.label.is-public = Pública
+officer.task.form.button.return = Volver
+
+officer.task.form.error.end= Error de fechas, la fecha de fin del periodo de ejecución debe ser posterior a la de inicio del periodo de ejecución
+officer.task.form.error.start = Error de fechas, la fecha de inicio del periodo de ejecución debe ser posterior a la de hoy
+officer.task.form.error.title = Error de titulo, el titulo debe tener tamaño menor a 80 caracteres
+officer.task.form.error.description = Error de descripcion, la descripcion debe tener tamaño menor a 500 caracteres
+officer.task.form.error.workload = Error de carga de trabajo, la parte decimal de la carga de trabajo debe ser menor a 60 ya que representa minutos {Horas,Minutos}
+officer.task.form.error.workload2 = Error de carga de trabajo, es demasiado grande para el periodo de ejecución dado
+officer.task.form.button.create = Crear
+officer.task.form.button.update = Actualizar
+officer.task.form.button.delete = Borrar
+
+officer.task.error.umbral-superado = Umbral de palabras spam superado

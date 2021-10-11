@@ -81,61 +81,61 @@
 	</bean>
 	
 	
-	<!-- Manager -->
+	<!-- Officer -->
 	
-	<bean name="managerUserAccount" class="acme.framework.entities.UserAccount">
-		<property name="username" value="manager" />
-		<property name="password" value="manager" />
+	<bean name="officerUserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="officer" />
+		<property name="password" value="officer" />
 		<property name="enabled" value="true" />
 		<property name="identity">
 			<bean class="acme.datatypes.UserIdentity">
-				<property name="name" value="Manager" />
+				<property name="name" value="officer" />
 				<property name="surname" value="Acme.com" />
-				<property name="email" value="manager@acme.com" />
+				<property name="email" value="officer@acme.com" />
 			</bean>
 		</property>
 		<property name="roles">
 			<list>
-				<ref bean="managerManager" />
-				<ref bean="managerAuthenticated" />
+				<ref bean="officerOfficer" />
+				<ref bean="officerAuthenticated" />
 			</list>
 		</property>
 	</bean>
 	
-	<bean name="managerManager" class="acme.framework.entities.Manager">
-		<property name="userAccount" ref="managerUserAccount" />
+	<bean name="officerOfficer" class="acme.framework.entities.Officer">
+		<property name="userAccount" ref="officerUserAccount" />
 	</bean>
 	
-	<bean name="managerAuthenticated" class="acme.framework.entities.Authenticated">
-		<property name="userAccount" ref="managerUserAccount" />
+	<bean name="officerAuthenticated" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="officerUserAccount" />
 	</bean>
 
 	
-	<bean name="managerUserAccount1" class="acme.framework.entities.UserAccount">
-		<property name="username" value="manager1" />
-		<property name="password" value="manager1" />
+	<bean name="officerUserAccount1" class="acme.framework.entities.UserAccount">
+		<property name="username" value="officer1" />
+		<property name="password" value="officer1" />
 		<property name="enabled" value="true" />
 		<property name="identity">
 			<bean class="acme.datatypes.UserIdentity">
-				<property name="name" value="Manager1" />
+				<property name="name" value="officer1" />
 				<property name="surname" value="Acme.com" />
-				<property name="email" value="manager1@acme.com" />
+				<property name="email" value="officer1@acme.com" />
 			</bean>
 		</property>
 		<property name="roles">
 			<list>
-				<ref bean="manager1Manager" />
-				<ref bean="manager1Authenticated" />
+				<ref bean="officer1Officer" />
+				<ref bean="officer1Authenticated" />
 			</list>
 		</property>
 	</bean>
 	
-	<bean name="manager1Manager" class="acme.framework.entities.Manager">
-		<property name="userAccount" ref="managerUserAccount1" />
+	<bean name="officer1Officer" class="acme.framework.entities.Officer">
+		<property name="userAccount" ref="officerUserAccount1" />
 	</bean>
 	
-	<bean name="manager1Authenticated" class="acme.framework.entities.Authenticated">
-		<property name="userAccount" ref="managerUserAccount1" />
+	<bean name="officer1Authenticated" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="officerUserAccount1" />
 	</bean>
 	
 	
@@ -149,7 +149,7 @@
 		<property name="description" value="Descripción de prueba"/>
 		<property name="link" value="https://github.com/Francisco-Borrego/Acme-Planner"/>
 		<property name="isPublic" value="true"/>
-		<property name="manager" ref="managerManager"/>
+		<property name="officer" ref="officerOfficer"/>
 	</bean>
 	
 	<bean id="task02" class="acme.entities.tasks.Task">
@@ -160,7 +160,7 @@
 		<property name="description" value="Descripción de prueba"/>
 		<property name="link"><null/></property>
 		<property name="isPublic" value="true"/>
-		<property name="manager" ref="managerManager"/>
+		<property name="officer" ref="officerOfficer"/>
 	</bean>
 	
 	<bean id="task03" class="acme.entities.tasks.Task">
@@ -171,7 +171,7 @@
 		<property name="description" value="Descripción de prueba"/>
 		<property name="link"><null/></property>
 		<property name="isPublic" value="false"/>
-		<property name="manager" ref="managerManager"/>
+		<property name="officer" ref="officerOfficer"/>
 	</bean>
 	
 	
@@ -183,7 +183,7 @@
 		<property name="description" value="Descripción de prueba"/>
 		<property name="link"><null/></property>
 		<property name="isPublic" value="true"/>
-		<property name="manager" ref="manager1Manager"/>
+		<property name="officer" ref="officer1Officer"/>
 	</bean>
 	
 	<bean id="task05" class="acme.entities.tasks.Task">
@@ -194,7 +194,7 @@
 		<property name="description" value="Descripción de prueba"/>
 		<property name="link"><null/></property>
 		<property name="isPublic" value="true"/>
-		<property name="manager" ref="manager1Manager"/>
+		<property name="officer" ref="officer1Officer"/>
 	</bean>
 	
 	
@@ -206,7 +206,7 @@
 		<property name="description" value="Es una tarea complicada, tened cuidado. "/>
 		<property name="link" value="https://www.google.es/"/>
 		<property name="isPublic" value="true"/>
-		<property name="manager" ref="manager1Manager"/>
+		<property name="officer" ref="officer1Officer"/>
 	</bean>
 	
 	<bean id="task07" class="acme.entities.tasks.Task">
@@ -217,7 +217,7 @@
 		<property name="description" value="Es una tarea muy fácil y corta, hacedlo lo antes posible. "/>
 		<property name="link" value="https://www.youtube.com/"/>
 		<property name="isPublic" value="true"/>
-		<property name="manager" ref="manager1Manager"/>
+		<property name="officer" ref="officer1Officer"/>
 	</bean>
 	
 	
@@ -229,7 +229,7 @@
 		<property name="description" value="Es una tarea larga, hay que empezar cuanto antes posible  "/>
 		<property name="link"><null/></property>
 		<property name="isPublic" value="false"/>
-		<property name="manager" ref="managerManager"/>
+		<property name="officer" ref="officerOfficer"/>
 	</bean>
 	
 	<bean id="task09" class="acme.entities.tasks.Task">
@@ -241,7 +241,7 @@
 		todo lo posible y no se me ocurre nada más que poner, espero que sea suficiente. "/>
 		<property name="link" value="https://www.us.es/"/>
 		<property name="isPublic" value="true"/>
-		<property name="manager" ref="manager1Manager"/>
+		<property name="officer" ref="officer1Officer"/>
 	</bean>
 	
 	<bean id="task10" class="acme.entities.tasks.Task">
@@ -252,7 +252,7 @@
 		<property name="description" value="Esta tarea aún no ha acabado. "/>
 		<property name="link" value="https://github.com/"/>
 		<property name="isPublic" value="true"/>
-		<property name="manager" ref="manager1Manager"/>
+		<property name="officer" ref="officer1Officer"/>
 	</bean>
 	
 	
@@ -265,7 +265,7 @@
 		<property name="description" value="A esta tarea le queda mucho. "/>
 		<property name="link" value="https://twitter.com/?lang=es"/>
 		<property name="isPublic" value="true"/>
-		<property name="manager" ref="managerManager"/>
+		<property name="officer" ref="officerOfficer"/>
 	</bean>
 	
 	<bean id="task12" class="acme.entities.tasks.Task">
@@ -276,7 +276,7 @@
 		<property name="description" value="Esta tarea es muy peculiar "/>
 		<property name="link"><null/></property>
 		<property name="isPublic" value="true"/>
-		<property name="manager" ref="managerManager"/>
+		<property name="officer" ref="officerOfficer"/>
 	</bean>
 	
 	
@@ -288,7 +288,7 @@
 		<property name="description" value="Esta tarea es para dentro de unos años "/>
 		<property name="link"><null/></property>
 		<property name="isPublic" value="true"/>
-		<property name="manager" ref="managerManager"/>
+		<property name="officer" ref="officerOfficer"/>
 	</bean>
 	
 	<bean id="task14" class="acme.entities.tasks.Task">
@@ -299,7 +299,7 @@
 		<property name="description" value="Esta tarea aún no ha acabado. "/>
 		<property name="link" value="https://twitter.com/?lang=es"/>
 		<property name="isPublic" value="true"/>
-		<property name="manager" ref="manager1Manager"/>
+		<property name="officer" ref="officer1Officer"/>
 	</bean>
 	
 	<bean id="task15" class="acme.entities.tasks.Task">
@@ -310,7 +310,7 @@
 		<property name="description" value="Esta tarea es la última. "/>
 		<property name="link" value="https://www.amazon.es/"/>
 		<property name="isPublic" value="true"/>
-		<property name="manager" ref="manager1Manager"/>
+		<property name="officer" ref="officer1Officer"/>
 	</bean>
 	
 	<bean id="task16" class="acme.entities.tasks.Task">
@@ -321,7 +321,7 @@
 		<property name="description" value="Esta tarea es para dentro de muchos años"/>
 		<property name="link"><null/></property>
 		<property name="isPublic" value="true"/>
-		<property name="manager" ref="managerManager"/>
+		<property name="officer" ref="officerOfficer"/>
 	</bean>
 	
 	<bean id="task17" class="acme.entities.tasks.Task">
@@ -332,7 +332,7 @@
 		<property name="description" value="Esta tarea también es de prueba"/>
 		<property name="link" value="https://www.amazon.es/"/>
 		<property name="isPublic" value="false"/>
-		<property name="manager" ref="managerManager"/>
+		<property name="officer" ref="officerOfficer"/>
 	</bean>
 	
 	<bean id="task18" class="acme.entities.tasks.Task">
@@ -343,7 +343,7 @@
 		<property name="description" value="Mas tareas de prueba"/>
 		<property name="link" value="https://www.google.es/"/>
 		<property name="isPublic" value="true"/>
-		<property name="manager" ref="managerManager"/>
+		<property name="officer" ref="officerOfficer"/>
 	</bean>
 
 </beans>

@@ -1,4 +1,4 @@
-package acme.features.authenticated.manager;
+package acme.features.authenticated.officer;
 
 import javax.annotation.PostConstruct;
 
@@ -9,16 +9,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import acme.framework.components.BasicCommand;
 import acme.framework.controllers.AbstractController;
 import acme.framework.entities.Authenticated;
-import acme.framework.entities.Manager;
+import acme.framework.entities.Officer;
 
 @Controller
-@RequestMapping("/authenticated/manager/")
-public class AuthenticatedManagerController extends AbstractController<Authenticated, Manager> {
+@RequestMapping("/authenticated/officer/")
+public class AuthenticatedOfficerController extends AbstractController<Authenticated, Officer> {
 	
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	protected AuthenticatedManagerCreateService	createService;
+	protected AuthenticatedOfficerCreateService	createService;
 
 
 	// Constructors -----------------------------------------------------------
