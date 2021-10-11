@@ -1,30 +1,30 @@
-package acme.features.authenticated.task;
+package acme.features.authenticated.duties;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.entities.tasks.Task;
+import acme.entities.duties.Duties;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
 import acme.framework.entities.Authenticated;
 import acme.framework.services.AbstractShowService;
 
 @Service
-public class AuthenticatedTaskShowService implements AbstractShowService<Authenticated, Task> {
+public class AuthenticatedDutiesShowService implements AbstractShowService<Authenticated, Duties> {
 	
 	
 	@Autowired
-	private AuthenticatedTaskRepository authenticatedTaskRepository;
+	private AuthenticatedDutiesRepository authenticatedTaskRepository;
 
 	@Override
-	public boolean authorise(final Request<Task> request) {
+	public boolean authorise(final Request<Duties> request) {
 		assert request != null;
 		
 		return true;
 	}
 
 	@Override
-	public void unbind(final Request<Task> request, final Task entity, final Model model) {
+	public void unbind(final Request<Duties> request, final Duties entity, final Model model) {
 		assert request != null;
 		assert entity != null;
 		assert model != null;
@@ -35,11 +35,11 @@ public class AuthenticatedTaskShowService implements AbstractShowService<Authent
 	}
 
 	@Override
-	public Task findOne(final Request<Task> request) {
+	public Duties findOne(final Request<Duties> request) {
 		assert request != null;
 
 		int id;
-		Task t;
+		Duties t;
 		id = request.getModel().getInteger("id");
 		t = this.authenticatedTaskRepository.findOneById(id);
 		

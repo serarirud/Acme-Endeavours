@@ -1,4 +1,4 @@
-package acme.features.anonymous.task;
+package acme.features.authenticated.duties;
 
 import javax.annotation.PostConstruct;
 
@@ -6,22 +6,22 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import acme.entities.tasks.Task;
+import acme.entities.duties.Duties;
 import acme.framework.components.BasicCommand;
 import acme.framework.controllers.AbstractController;
-import acme.framework.entities.Anonymous;
+import acme.framework.entities.Authenticated;
 
 @Controller
-@RequestMapping("/anonymous/task/")
-public class AnonymousTaskController extends AbstractController<Anonymous, Task>{
+@RequestMapping("/authenticated/task/")
+public class AuthenticatedDutiesController extends AbstractController<Authenticated, Duties>{
 
 	// Internal state
 	
 	@Autowired
-	private AnonymousTaskListService listService;
+	private AuthenticatedDutiesListService listService;
 	
 	@Autowired
-	private AnonymousTaskShowService showService;
+	private AuthenticatedDutiesShowService showService;
 	
 	// Constructors
 	

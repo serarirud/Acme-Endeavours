@@ -1,9 +1,9 @@
-package acme.features.officer.task;
+package acme.features.officer.duties;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.entities.tasks.Task;
+import acme.entities.duties.Duties;
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
@@ -12,17 +12,17 @@ import acme.framework.entities.Principal;
 import acme.framework.services.AbstractDeleteService;
 
 @Service
-public class OfficerTaskDeleteService implements AbstractDeleteService<Officer, Task>{
+public class OfficerDutiesDeleteService implements AbstractDeleteService<Officer, Duties>{
 	
 	@Autowired
-	protected OfficerTaskRepository repository;
+	protected OfficerDutiesRepository repository;
 
 	@Override
-	public boolean authorise(final Request<Task> request) {
+	public boolean authorise(final Request<Duties> request) {
 		assert request != null;
 		
 		int taskId;
-		Task task;
+		Duties task;
 		Officer manager;
 		Principal principal;
 		
@@ -35,7 +35,7 @@ public class OfficerTaskDeleteService implements AbstractDeleteService<Officer, 
 	}
 
 	@Override
-	public void bind(final Request<Task> request, final Task entity, final Errors errors) {
+	public void bind(final Request<Duties> request, final Duties entity, final Errors errors) {
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
@@ -44,7 +44,7 @@ public class OfficerTaskDeleteService implements AbstractDeleteService<Officer, 
 	}
 
 	@Override
-	public void unbind(final Request<Task> request, final Task entity, final Model model) {
+	public void unbind(final Request<Duties> request, final Duties entity, final Model model) {
 		assert request != null;
 		assert entity != null;
 		assert model != null;
@@ -54,7 +54,7 @@ public class OfficerTaskDeleteService implements AbstractDeleteService<Officer, 
 	}
 
 	@Override
-	public Task findOne(final Request<Task> request) {
+	public Duties findOne(final Request<Duties> request) {
 		assert request != null;
 		
 		final int id = request.getModel().getInteger("id");
@@ -62,14 +62,14 @@ public class OfficerTaskDeleteService implements AbstractDeleteService<Officer, 
 	}
 
 	@Override
-	public void validate(final Request<Task> request, final Task entity, final Errors errors) {
+	public void validate(final Request<Duties> request, final Duties entity, final Errors errors) {
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
 	}
 
 	@Override
-	public void delete(final Request<Task> request, final Task entity) {
+	public void delete(final Request<Duties> request, final Duties entity) {
 		assert request != null;
 		assert entity !=null;
 		

@@ -11,18 +11,18 @@ public class Dashboard implements Serializable {
 
 	protected static final long	serialVersionUID	= 1L;
 	
-	Integer 					nPublicTask;
-	Integer 					nPrivateTask;
-	Integer 					nFinishedTask;
-	Integer 					nNotFinishedTask;
-	Double						averageTaskExecutionPeriods;
-	Double						deviationTaskExecutionPeriods;
-	Integer						minimumTaskExecutionPeriods;
-	Integer						maximumTaskExecutionPeriods;
+	Integer 					nPublicDuties;
+	Integer 					nPrivateDuties;
+	Integer 					nFinishedDuties;
+	Integer 					nNotFinishedDuties;
+	Double						averageDutiesExecutionPeriods;
+	Double						deviationDutiesExecutionPeriods;
+	Integer						minimumDutiesExecutionPeriods;
+	Integer						maximumDutiesExecutionPeriods;
 	
-	Double 						averageTaskWorkloads;
-	Double 						deviationTaskWorkloads;
-	Double						minimumTaskWorkloads;
-	Double						maximumTaskWorkloads;
+	Double 						averageDutiesWorkloads;
+	Double 						deviationDutiesWorkloads;
+	Double						minimumDutiesWorkloads;
+	Double						maximumDutiesWorkloads;
 
 }

@@ -504,3 +504,172 @@ ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] HTTP GET /Acme-Ende
 ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Status: 404
 ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] HTTP GET /Acme-Endeavours/WEB-INF/views/framework/page.jsp HTTP/1.1
 ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Status: 404
+INFO [acme.Launcher] Starting Launcher using Java 1.8.0_281 on DESKTOP-87FOBAA with PID 2712 (D:\AAUniversidad_II-IS\Tercero\Segundo cuatrimestre\DP2\Workspace-21.1\Projects\Acme-Endeavours\target\classes started by sergi in D:\AAUniversidad_II-IS\Tercero\Segundo cuatrimestre\DP2\Workspace-21.1\Projects\Acme-Endeavours)
+INFO [acme.Launcher] The following profiles are active: development,populator
+INFO [acme.Launcher] Started Launcher in 7.604 seconds (JVM running for 8.24)
+INFO [acme.framework.utilities.DatabasePopulator] Populating sample data
+INFO [acme.framework.utilities.DatabasePopulator] Recreating schema
+INFO [acme.framework.utilities.DatabasePopulator] Populating entities from classpath:/WEB-INF/population/initial-data.xml
+INFO [acme.framework.utilities.DatabasePopulator] Validating your entities.
+INFO [acme.framework.utilities.DatabasePopulator] Validating anonymousUserAccount ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating anonymousAnonymous ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating administratorUserAccount ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating administratorAdministrator ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating administratorAuthenticated ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating configuration ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Sorting your entities topologically.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 0 for anonymousUserAccount.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 1 for anonymousAnonymous.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 2 for administratorUserAccount.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 3 for administratorAdministrator.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 4 for administratorAuthenticated.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 5 for configuration.
+INFO [acme.framework.utilities.DatabasePopulator] Persiting your entities.
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting anonymousUserAccount = acme.framework.entities.UserAccount{id=1, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting anonymousAnonymous = acme.framework.entities.Anonymous{id=2, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting administratorUserAccount = acme.framework.entities.UserAccount{id=3, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting administratorAdministrator = acme.framework.entities.Administrator{id=4, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting administratorAuthenticated = acme.framework.entities.Authenticated{id=5, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting configuration = acme.entities.configuration.Configuration{id=6, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] Populating entities from classpath:/WEB-INF/population/sample-data.xml
+INFO [acme.framework.configuration.ShutdownConfiguration] The system is shutting down...
+INFO [acme.Launcher] Starting Launcher using Java 1.8.0_281 on DESKTOP-87FOBAA with PID 11620 (D:\AAUniversidad_II-IS\Tercero\Segundo cuatrimestre\DP2\Workspace-21.1\Projects\Acme-Endeavours\target\classes started by sergi in D:\AAUniversidad_II-IS\Tercero\Segundo cuatrimestre\DP2\Workspace-21.1\Projects\Acme-Endeavours)
+INFO [acme.Launcher] The following profiles are active: development,populator
+INFO [acme.Launcher] Starting Launcher using Java 1.8.0_281 on DESKTOP-87FOBAA with PID 7364 (D:\AAUniversidad_II-IS\Tercero\Segundo cuatrimestre\DP2\Workspace-21.1\Projects\Acme-Endeavours\target\classes started by sergi in D:\AAUniversidad_II-IS\Tercero\Segundo cuatrimestre\DP2\Workspace-21.1\Projects\Acme-Endeavours)
+INFO [acme.Launcher] The following profiles are active: development,populator
+INFO [acme.Launcher] Starting Launcher using Java 1.8.0_281 on DESKTOP-87FOBAA with PID 1304 (D:\AAUniversidad_II-IS\Tercero\Segundo cuatrimestre\DP2\Workspace-21.1\Projects\Acme-Endeavours\target\classes started by sergi in D:\AAUniversidad_II-IS\Tercero\Segundo cuatrimestre\DP2\Workspace-21.1\Projects\Acme-Endeavours)
+INFO [acme.Launcher] The following profiles are active: development,populator
+INFO [acme.Launcher] Starting Launcher using Java 1.8.0_281 on DESKTOP-87FOBAA with PID 9104 (D:\AAUniversidad_II-IS\Tercero\Segundo cuatrimestre\DP2\Workspace-21.1\Projects\Acme-Endeavours\target\classes started by sergi in D:\AAUniversidad_II-IS\Tercero\Segundo cuatrimestre\DP2\Workspace-21.1\Projects\Acme-Endeavours)
+INFO [acme.Launcher] The following profiles are active: development,populator
+INFO [acme.Launcher] Starting Launcher using Java 1.8.0_281 on DESKTOP-87FOBAA with PID 12748 (D:\AAUniversidad_II-IS\Tercero\Segundo cuatrimestre\DP2\Workspace-21.1\Projects\Acme-Endeavours\target\classes started by sergi in D:\AAUniversidad_II-IS\Tercero\Segundo cuatrimestre\DP2\Workspace-21.1\Projects\Acme-Endeavours)
+INFO [acme.Launcher] The following profiles are active: development,populator
+INFO [acme.Launcher] Starting Launcher using Java 1.8.0_281 on DESKTOP-87FOBAA with PID 9188 (D:\AAUniversidad_II-IS\Tercero\Segundo cuatrimestre\DP2\Workspace-21.1\Projects\Acme-Endeavours\target\classes started by sergi in D:\AAUniversidad_II-IS\Tercero\Segundo cuatrimestre\DP2\Workspace-21.1\Projects\Acme-Endeavours)
+INFO [acme.Launcher] The following profiles are active: development,populator
+INFO [acme.Launcher] Starting Launcher using Java 1.8.0_281 on DESKTOP-87FOBAA with PID 11956 (D:\AAUniversidad_II-IS\Tercero\Segundo cuatrimestre\DP2\Workspace-21.1\Projects\Acme-Endeavours\target\classes started by sergi in D:\AAUniversidad_II-IS\Tercero\Segundo cuatrimestre\DP2\Workspace-21.1\Projects\Acme-Endeavours)
+INFO [acme.Launcher] The following profiles are active: development,populator
+INFO [acme.Launcher] Started Launcher in 7.561 seconds (JVM running for 8.216)
+INFO [acme.framework.utilities.DatabasePopulator] Populating sample data
+INFO [acme.framework.utilities.DatabasePopulator] Recreating schema
+INFO [acme.framework.utilities.DatabasePopulator] Populating entities from classpath:/WEB-INF/population/initial-data.xml
+INFO [acme.framework.utilities.DatabasePopulator] Validating your entities.
+INFO [acme.framework.utilities.DatabasePopulator] Validating anonymousUserAccount ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating anonymousAnonymous ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating administratorUserAccount ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating administratorAdministrator ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating administratorAuthenticated ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating configuration ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Sorting your entities topologically.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 0 for anonymousUserAccount.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 1 for anonymousAnonymous.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 2 for administratorUserAccount.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 3 for administratorAdministrator.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 4 for administratorAuthenticated.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 5 for configuration.
+INFO [acme.framework.utilities.DatabasePopulator] Persiting your entities.
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting anonymousUserAccount = acme.framework.entities.UserAccount{id=1, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting anonymousAnonymous = acme.framework.entities.Anonymous{id=2, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting administratorUserAccount = acme.framework.entities.UserAccount{id=3, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting administratorAdministrator = acme.framework.entities.Administrator{id=4, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting administratorAuthenticated = acme.framework.entities.Authenticated{id=5, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting configuration = acme.entities.configuration.Configuration{id=6, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] Populating entities from classpath:/WEB-INF/population/sample-data.xml
+INFO [acme.framework.utilities.DatabasePopulator] Validating your entities.
+INFO [acme.framework.utilities.DatabasePopulator] Validating shout01 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating shout02 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating shout03 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating shout04 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating shout05 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating shout06 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating shout07 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating shout08 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating officerUserAccount ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating officerOfficer ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating officerAuthenticated ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating officerUserAccount1 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating officer1Officer ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating officer1Authenticated ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating duties01 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating duties02 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating duties03 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating duties04 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating duties05 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating duties06 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating duties07 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating duties08 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating duties09 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating duties10 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating duties11 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating duties12 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating duties13 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating duties14 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating duties15 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating duties16 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating duties17 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating duties18 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Sorting your entities topologically.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 0 for shout01.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 1 for shout02.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 2 for shout03.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 3 for shout04.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 4 for shout05.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 5 for shout06.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 6 for shout07.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 7 for shout08.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 8 for officerUserAccount.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 9 for officerOfficer.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 10 for officerAuthenticated.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 11 for officerUserAccount1.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 12 for officer1Officer.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 13 for officer1Authenticated.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 14 for duties01.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 15 for duties02.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 16 for duties03.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 17 for duties04.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 18 for duties05.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 19 for duties06.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 20 for duties07.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 21 for duties08.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 22 for duties09.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 23 for duties10.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 24 for duties11.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 25 for duties12.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 26 for duties13.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 27 for duties14.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 28 for duties15.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 29 for duties16.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 30 for duties17.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 31 for duties18.
+INFO [acme.framework.utilities.DatabasePopulator] Persiting your entities.
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting shout01 = acme.entities.shouts.Shout{id=7, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting shout02 = acme.entities.shouts.Shout{id=8, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting shout03 = acme.entities.shouts.Shout{id=9, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting shout04 = acme.entities.shouts.Shout{id=10, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting shout05 = acme.entities.shouts.Shout{id=11, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting shout06 = acme.entities.shouts.Shout{id=12, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting shout07 = acme.entities.shouts.Shout{id=13, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting shout08 = acme.entities.shouts.Shout{id=14, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting officerUserAccount = acme.framework.entities.UserAccount{id=15, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting officerOfficer = acme.framework.entities.Officer{id=16, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting officerAuthenticated = acme.framework.entities.Authenticated{id=17, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting officerUserAccount1 = acme.framework.entities.UserAccount{id=18, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting officer1Officer = acme.framework.entities.Officer{id=19, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting officer1Authenticated = acme.framework.entities.Authenticated{id=20, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting duties01 = acme.entities.duties.Duties{id=21, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting duties02 = acme.entities.duties.Duties{id=22, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting duties03 = acme.entities.duties.Duties{id=23, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting duties04 = acme.entities.duties.Duties{id=24, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting duties05 = acme.entities.duties.Duties{id=25, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting duties06 = acme.entities.duties.Duties{id=26, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting duties07 = acme.entities.duties.Duties{id=27, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting duties08 = acme.entities.duties.Duties{id=28, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting duties09 = acme.entities.duties.Duties{id=29, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting duties10 = acme.entities.duties.Duties{id=30, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting duties11 = acme.entities.duties.Duties{id=31, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting duties12 = acme.entities.duties.Duties{id=32, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting duties13 = acme.entities.duties.Duties{id=33, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting duties14 = acme.entities.duties.Duties{id=34, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting duties15 = acme.entities.duties.Duties{id=35, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting duties16 = acme.entities.duties.Duties{id=36, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting duties17 = acme.entities.duties.Duties{id=37, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting duties18 = acme.entities.duties.Duties{id=38, version=0}
+INFO [acme.framework.configuration.ShutdownConfiguration] The system is shutting down...

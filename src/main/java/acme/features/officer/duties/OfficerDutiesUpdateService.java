@@ -1,11 +1,11 @@
-package acme.features.officer.task;
+package acme.features.officer.duties;
 
 import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.entities.tasks.Task;
+import acme.entities.duties.Duties;
 import acme.features.configuration.ConfigurationService;
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
@@ -15,21 +15,21 @@ import acme.framework.entities.Principal;
 import acme.framework.services.AbstractUpdateService;
 
 @Service
-public class OfficerTaskUpdateService implements AbstractUpdateService<Officer, Task>{
+public class OfficerDutiesUpdateService implements AbstractUpdateService<Officer, Duties>{
 
 	
 	@Autowired
-	protected OfficerTaskRepository repository;
+	protected OfficerDutiesRepository repository;
 
 	@Autowired
 	protected ConfigurationService confService;
 	
 	@Override
-	public boolean authorise(final Request<Task> request) {
+	public boolean authorise(final Request<Duties> request) {
 		assert request != null;
 		
 		int taskId;
-		Task task;
+		Duties task;
 		Officer manager;
 		Principal principal;
 		
@@ -42,7 +42,7 @@ public class OfficerTaskUpdateService implements AbstractUpdateService<Officer, 
 	}
 
 	@Override
-	public void bind(final Request<Task> request, final Task entity, final Errors errors) {
+	public void bind(final Request<Duties> request, final Duties entity, final Errors errors) {
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
@@ -51,7 +51,7 @@ public class OfficerTaskUpdateService implements AbstractUpdateService<Officer, 
 	}
 
 	@Override
-	public void unbind(final Request<Task> request, final Task entity, final Model model) {
+	public void unbind(final Request<Duties> request, final Duties entity, final Model model) {
 		assert request != null;
 		assert entity != null;
 		assert model != null;
@@ -61,7 +61,7 @@ public class OfficerTaskUpdateService implements AbstractUpdateService<Officer, 
 	}
 
 	@Override
-	public Task findOne(final Request<Task> request) {
+	public Duties findOne(final Request<Duties> request) {
 		assert request != null;
 		
 		final int id = request.getModel().getInteger("id");
@@ -69,7 +69,7 @@ public class OfficerTaskUpdateService implements AbstractUpdateService<Officer, 
 	}
 
 	@Override
-	public void validate(final Request<Task> request, final Task entity, final Errors errors) {
+	public void validate(final Request<Duties> request, final Duties entity, final Errors errors) {
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
@@ -103,7 +103,7 @@ public class OfficerTaskUpdateService implements AbstractUpdateService<Officer, 
 	}
 
 	@Override
-	public void update(final Request<Task> request, final Task entity) {
+	public void update(final Request<Duties> request, final Duties entity) {
 		assert request != null;
 		assert entity != null;
 		

@@ -1,4 +1,4 @@
-package acme.features.officer.task;
+package acme.features.officer.duties;
 
 import java.util.Calendar;
 import java.util.Date;
@@ -6,7 +6,7 @@ import java.util.Date;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.entities.tasks.Task;
+import acme.entities.duties.Duties;
 import acme.features.configuration.ConfigurationService;
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
@@ -15,24 +15,24 @@ import acme.framework.entities.Officer;
 import acme.framework.services.AbstractCreateService;
 
 @Service
-public class OfficerTaskCreateService implements AbstractCreateService<Officer, Task>{
+public class OfficerDutiesCreateService implements AbstractCreateService<Officer, Duties>{
 
 	
 	@Autowired
-	protected OfficerTaskRepository repository;
+	protected OfficerDutiesRepository repository;
 	
 	@Autowired
 	protected ConfigurationService confService;
 	
 	@Override
-	public boolean authorise(final Request<Task> request) {
+	public boolean authorise(final Request<Duties> request) {
 		assert request != null;
 		
 		return true;
 	}
 
 	@Override
-	public void bind(final Request<Task> request, final Task entity, final Errors errors) {
+	public void bind(final Request<Duties> request, final Duties entity, final Errors errors) {
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
@@ -41,7 +41,7 @@ public class OfficerTaskCreateService implements AbstractCreateService<Officer, 
 	}
 
 	@Override
-	public void unbind(final Request<Task> request, final Task entity, final Model model) {
+	public void unbind(final Request<Duties> request, final Duties entity, final Model model) {
 		assert request != null;
 		assert entity != null;
 		assert model != null;
@@ -52,21 +52,21 @@ public class OfficerTaskCreateService implements AbstractCreateService<Officer, 
 	}
 
 	@Override
-	public Task instantiate(final Request<Task> request) {
+	public Duties instantiate(final Request<Duties> request) {
 		assert request != null;
 		
-		Task result;
+		Duties result;
 		Officer manager;
 		
 		manager= this.repository.findOneManagerById(request.getPrincipal().getActiveRoleId());
-		result= new Task();
+		result= new Duties();
 		result.setOfficer(manager);
 		
 		return result;
 	}
 
 	@Override
-	public void validate(final Request<Task> request, final Task entity, final Errors errors) {
+	public void validate(final Request<Duties> request, final Duties entity, final Errors errors) {
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
@@ -105,7 +105,7 @@ public class OfficerTaskCreateService implements AbstractCreateService<Officer, 
 	}
 
 	@Override
-	public void create(final Request<Task> request, final Task entity) {
+	public void create(final Request<Duties> request, final Duties entity) {
 		assert request != null;
 		assert entity != null;
 		

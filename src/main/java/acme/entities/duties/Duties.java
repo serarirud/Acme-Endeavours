@@ -1,4 +1,4 @@
-package acme.entities.tasks;
+package acme.entities.duties;
 
 import java.util.Date;
 
@@ -23,7 +23,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class Task extends DomainEntity {
+public class Duties extends DomainEntity {
 	
 	//Serialisation identifier
 	

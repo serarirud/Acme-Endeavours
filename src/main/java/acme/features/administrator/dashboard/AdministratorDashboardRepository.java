@@ -18,45 +18,45 @@ import java.util.Date;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
-import acme.entities.tasks.Task;
+import acme.entities.duties.Duties;
 import acme.framework.repositories.AbstractRepository;
 
 @Repository
 public interface AdministratorDashboardRepository extends AbstractRepository {
 
-	@Query("SELECT count(t) FROM Task t WHERE (t.isPublic = true)")
-	Integer nPublicTask();
+	@Query("SELECT count(d) FROM Duties d WHERE (d.isPublic = true)")
+	Integer nPublicDuties();
 	
-	@Query("SELECT count(t) FROM Task t WHERE (t.isPublic = false)")
-	Integer nPrivateTask();
+	@Query("SELECT count(d) FROM Duties d WHERE (d.isPublic = false)")
+	Integer nPrivateDuties();
 	
-	@Query("SELECT count(t) FROM Task t WHERE (t.endExecutionPeriod > :today)")
-	Integer nNotFinishedTask(Date today);
+	@Query("SELECT count(d) FROM Duties d WHERE (d.endExecutionPeriod > :today)")
+	Integer nNotFinishedDuties(Date today);
 
-	@Query("SELECT count(t) FROM Task t WHERE (t.endExecutionPeriod < :today)")
-	Integer nFinishedTask(Date today);
+	@Query("SELECT count(d) FROM Duties d WHERE (d.endExecutionPeriod < :today)")
+	Integer nFinishedDuties(Date today);
 
 	//DATEDIFF calcula la diferencia en días entre 2 fechas
-	@Query("select avg(DATEDIFF(t.endExecutionPeriod, t.startExecutionPeriod))  from Task t")
-	Double averageTaskExecutionPeriods();
+	@Query("select avg(DATEDIFF(d.endExecutionPeriod, d.startExecutionPeriod))  from Duties d")
+	Double averageDutiesExecutionPeriods();
 
-	@Query("select stddev(DATEDIFF(t.endExecutionPeriod, t.startExecutionPeriod))  from Task t")
-	Double deviationTaskExecutionPeriods();
+	@Query("select stddev(DATEDIFF(d.endExecutionPeriod, d.startExecutionPeriod))  from Duties d")
+	Double deviationDutiesExecutionPeriods();
 
-	@Query("select min(DATEDIFF(t.endExecutionPeriod, t.startExecutionPeriod))  from Task t")
-	Integer minimumTaskExecutionPeriods();
+	@Query("select min(DATEDIFF(d.endExecutionPeriod, d.startExecutionPeriod))  from Duties d")
+	Integer minimumDutiesExecutionPeriods();
 
-	@Query("select max(DATEDIFF(t.endExecutionPeriod, t.startExecutionPeriod))  from Task t")
-	Integer maximumTaskExecutionPeriods();
+	@Query("select max(DATEDIFF(d.endExecutionPeriod, d.startExecutionPeriod))  from Duties d")
+	Integer maximumDutiesExecutionPeriods();
 
-	@Query("select t from Task t")
-	Collection<Task> findAllTask();
+	@Query("select d from Duties d")
+	Collection<Duties> findAllDuties();
 	
-	@Query("select min(t.workload)  from Task t")
-	Double minimumTaskWorkloads();
+	@Query("select min(d.workload)  from Duties d")
+	Double minimumDutiesWorkloads();
 
-	@Query("select max(t.workload)  from Task t")
-	Double maximumTaskWorkloads();
+	@Query("select max(d.workload)  from Duties d")
+	Double maximumDutiesWorkloads();
 
 	
 }
