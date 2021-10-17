@@ -12,7 +12,7 @@ import acme.framework.controllers.AbstractController;
 import acme.framework.entities.Officer;
 
 @Controller
-@RequestMapping("/officer/task/")
+@RequestMapping("/officer/duties/")
 public class OfficerDutiesController extends AbstractController<Officer, Duties>{
 
 	// Internal state

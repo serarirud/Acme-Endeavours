@@ -28,14 +28,14 @@ master.menu.sign-out = Salir
 # master.menu.anonymous #######################################################
 
 master.menu.anonymous = Anónimo
-master.menu.anonymous.task.list = Lista de tareas públicas no finalizadas
+master.menu.anonymous.duties.list = Lista de deberes públicas no finalizadas
 master.menu.anonymous.shout.list = Lista de gritos
 master.menu.anonymous.shout.form = Crear un grito
 
 # master.menu.authenticated #######################################################
 
 master.menu.authenticated = Autenticado
-master.menu.authenticated.task.list = Lista de tareas públicas finalizadas
+master.menu.authenticated.duties.list = Lista de deberes públicas finalizadas
 
 # master.menu.administrator ###################################################
 
@@ -82,7 +82,7 @@ master.footer.label.spanish = Español
 master.company.title = La compañía
 master.company.text = \
 	Acme Endeavours, Inc. es una compañía fictícia que desarrolla un proyecto \
-	para organizar tareas y más.
+	para organizar deberes y más.
 master.company.name = Acme Endeavours, Inc.
 master.company.address = Calle ejemplo, número 1, Sevilla, Andalucía, España
 master.company.phone = +000 123 456
@@ -115,6 +115,6 @@ master.panic.text.consult-log = Por favor, consulte el log para ver más detalle
 
 # master.menu.administrator ###################################################
 master.menu.officer = Oficial
-master.menu.officer.task.create = Crear una tarea
-master.menu.officer.task.list = Mi lista de tareas
+master.menu.officer.duties.create = Crear un deber
+master.menu.officer.duties.list = Mi lista de deberes
 
