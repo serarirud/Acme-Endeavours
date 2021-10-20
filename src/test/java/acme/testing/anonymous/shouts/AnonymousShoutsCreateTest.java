@@ -5,9 +5,9 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 
 import acme.framework.helpers.StringHelper;
-import acme.testing.AcmePlannerTest;
+import acme.testing.AcmeEndeavoursTest;
 
-public class AnonymousShoutsCreateTest extends AcmePlannerTest {
+public class AnonymousShoutsCreateTest extends AcmeEndeavoursTest {
 	
 	/*	Feature: un usuario anónimo puede crear gritos
 	 * 	Caso positivo.

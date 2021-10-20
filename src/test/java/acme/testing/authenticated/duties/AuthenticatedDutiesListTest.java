@@ -4,9 +4,9 @@ import org.junit.jupiter.api.Order;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 
-import acme.testing.AcmePlannerTest;
+import acme.testing.AcmeEndeavoursTest;
 
-public class AuthenticatedDutiesListTest extends AcmePlannerTest {
+public class AuthenticatedDutiesListTest extends AcmeEndeavoursTest {
 	
 	
 	/*	Feature: un usuario autenticado puede listar las tareas públicas finalizadas y ver detalles de estas

@@ -14,7 +14,7 @@ public class AuthenticatedDutiesShowService implements AbstractShowService<Authe
 	
 	
 	@Autowired
-	private AuthenticatedDutiesRepository authenticatedTaskRepository;
+	private AuthenticatedDutiesRepository authenticatedDutiesRepository;
 
 	@Override
 	public boolean authorise(final Request<Duties> request) {
@@ -41,7 +41,7 @@ public class AuthenticatedDutiesShowService implements AbstractShowService<Authe
 		int id;
 		Duties t;
 		id = request.getModel().getInteger("id");
-		t = this.authenticatedTaskRepository.findOneById(id);
+		t = this.authenticatedDutiesRepository.findOneById(id);
 		
 		return t;
 	}

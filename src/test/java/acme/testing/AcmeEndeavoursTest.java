@@ -5,7 +5,7 @@ import org.junit.jupiter.api.BeforeAll;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-public abstract class AcmePlannerTest extends AcmeTest {
+public abstract class AcmeEndeavoursTest extends AcmeTest {
 
 	// Internal state ---------------------------------------------------------
 

@@ -4,9 +4,9 @@ import org.junit.jupiter.api.Order;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 
-import acme.testing.AcmePlannerTest;
+import acme.testing.AcmeEndeavoursTest;
 
-public class AnonymousTasksListTest extends AcmePlannerTest{
+public class AnonymousTasksListTest extends AcmeEndeavoursTest{
 	
 	/*	Feature: un usuario anonimo puede ver las tareas de públicas no finalizadas
 	 * 	Caso positivo.

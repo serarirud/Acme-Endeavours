@@ -5,9 +5,9 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 
 import acme.framework.helpers.StringHelper;
-import acme.testing.AcmePlannerTest;
+import acme.testing.AcmeEndeavoursTest;
 
-public class OfficerDutiesUpdateTest extends AcmePlannerTest{
+public class OfficerDutiesUpdateTest extends AcmeEndeavoursTest{
 
 	/*	Feature: un usuario manager puede editar sus propias tareas
 	*	Caso positivo

@@ -4,9 +4,9 @@ import org.junit.jupiter.api.Order;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 
-import acme.testing.AcmePlannerTest;
+import acme.testing.AcmeEndeavoursTest;
 
-public class OfficerDutiesDeleteTest extends AcmePlannerTest{
+public class OfficerDutiesDeleteTest extends AcmeEndeavoursTest{
 
 	/*
 	 * Feature: un usuario manager puede borrar sus tareas

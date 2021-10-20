@@ -12,7 +12,7 @@ import acme.framework.repositories.AbstractRepository;
 @Repository
 public interface AuthenticatedDutiesRepository extends AbstractRepository {
 
-	//tareas públicas y que no estén finalizadas
+	//deberes públicos y que no estén finalizados
 	@Query("SELECT d FROM Duties d WHERE (d.isPublic = true AND d.endExecutionPeriod < :today) ")
 	Collection<Duties> findMany(Date today);
 	

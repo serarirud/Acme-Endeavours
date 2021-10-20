@@ -5,9 +5,9 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 
-import acme.testing.AcmePlannerTest;
+import acme.testing.AcmeEndeavoursTest;
 
-public class OfficerDutiesListShowTest extends AcmePlannerTest{
+public class OfficerDutiesListShowTest extends AcmeEndeavoursTest{
 
 	/*	Feature: un usuario manager puede listar sus propias tareas y ver detalles de estas
 	*	Caso positivo

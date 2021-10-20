@@ -16,7 +16,7 @@ import org.junit.jupiter.api.Order;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 
-public class SignUpTest extends AcmePlannerTest {
+public class SignUpTest extends AcmeEndeavoursTest {
 
 	// This is a placeholder where you can introduce your own sign-up test
   	// Note that it depends on your project-specific test class.

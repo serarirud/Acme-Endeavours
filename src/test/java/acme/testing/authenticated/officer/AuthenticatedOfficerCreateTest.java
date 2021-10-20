@@ -3,9 +3,9 @@ package acme.testing.authenticated.officer;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 
-import acme.testing.AcmePlannerTest;
+import acme.testing.AcmeEndeavoursTest;
 
-public class AuthenticatedOfficerCreateTest extends AcmePlannerTest {
+public class AuthenticatedOfficerCreateTest extends AcmeEndeavoursTest {
 	
 	
 	/*	Feature: un usuario autenticado puede convertirse en mánager si no lo es

@@ -21,8 +21,6 @@ public class AuthenticatedDutiesListService implements AbstractListService<Authe
 	private AuthenticatedDutiesRepository repository;
 
 	
-	// AbstractListService<Administrator, Task> interface
-	
 	@Override
 	public boolean authorise(final Request<Duties> request) {
 		assert request != null;
