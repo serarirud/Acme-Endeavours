@@ -1,4 +1,4 @@
-package acme.testing.manager.tasks;
+package acme.testing.officer.duties;
 
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
@@ -7,20 +7,20 @@ import org.junit.jupiter.params.provider.CsvFileSource;
 
 import acme.testing.AcmePlannerTest;
 
-public class ManagerTaskListShowTest extends AcmePlannerTest{
+public class OfficerDutiesListShowTest extends AcmePlannerTest{
 
 	/*	Feature: un usuario manager puede listar sus propias tareas y ver detalles de estas
 	*	Caso positivo
 	*/
 	
 	@ParameterizedTest
-	@CsvFileSource(resources = "/manager/task/list.csv", encoding = "utf-8", numLinesToSkip = 1)
+	@CsvFileSource(resources = "/officer/duties/list.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)	
 	public void listAndShowPositive(final int recordIndex, final String title, final String startExecutionPeriod, final String endExecutionPeriod, final String workload, final String description, final String link, final String isPublic) {
 		
-		super.signIn("manager", "manager");
+		super.signIn("officer", "officer");
 		
-		super.clickOnMenu("Manager", "My task list");
+		super.clickOnMenu("Officer", "My duties list");
 		
 		super.checkColumnHasValue(recordIndex, 0, title);
 		super.checkColumnHasValue(recordIndex, 1, startExecutionPeriod);
@@ -51,7 +51,7 @@ public class ManagerTaskListShowTest extends AcmePlannerTest{
 	@Order(20)	
 	public void listNegative() {
 				
-		super.navigate("/manager/task/list", "");
+		super.navigate("/officer/duties/list", "");
 		super.checkErrorsExist();
 	}
 }

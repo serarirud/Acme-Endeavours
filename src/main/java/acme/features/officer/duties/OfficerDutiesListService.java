@@ -24,7 +24,7 @@ public class OfficerDutiesListService implements AbstractListService<Officer, Du
 	// AbstractListService<Administrator, Task> interface
 	
 	
-	//No hay que comprobar el manager pues la url no usa parámetros, solo puede obtener sus tareas
+	//No hay que comprobar el officer pues la url no usa parámetros, solo puede obtener sus tareas
 	@Override
 	public boolean authorise(final Request<Duties> request) {
 		assert request != null;

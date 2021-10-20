@@ -1,4 +1,4 @@
-package acme.testing.manager.tasks;
+package acme.testing.officer.duties;
 
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -6,7 +6,7 @@ import org.junit.jupiter.params.provider.CsvFileSource;
 
 import acme.testing.AcmePlannerTest;
 
-public class ManagerTaskDeleteTest extends AcmePlannerTest{
+public class OfficerDutiesDeleteTest extends AcmePlannerTest{
 
 	/*
 	 * Feature: un usuario manager puede borrar sus tareas
@@ -14,20 +14,20 @@ public class ManagerTaskDeleteTest extends AcmePlannerTest{
 	 */
 	
 	@ParameterizedTest
-	@CsvFileSource(resources = "/manager/task/list.csv", encoding = "utf-8", numLinesToSkip = 1)
+	@CsvFileSource(resources = "/officer/duties/list.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)
 	public void delete(final int recordIndex, final String title, final String startExecutionPeriod, final String endExecutionPeriod, final String workload, final String description, final String link, final String isPublic) {
 		
-		super.signIn("manager", "manager");
+		super.signIn("officer", "officer");
 		
-		super.clickOnMenu("Manager", "My task list");
+		super.clickOnMenu("Officer", "My duties list");
 		
 		super.clickOnListingRecord(0); //Para evitar conflictos de rango, siempre va a borrar la tarea 
 									   //que tenga el recordIndex=0 pues cuando se borra una, las tareas
 									   //se quedan con recordIndex-1
 		
 		super.clickOnSubmitButton("Delete");
-		super.isSimplePath("/manager/task/list");
+		super.isSimplePath("/officer/duties/list");
 
 		super.signOut();
 		

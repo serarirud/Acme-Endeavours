@@ -23,15 +23,15 @@ public class OfficerDutiesDeleteService implements AbstractDeleteService<Officer
 		
 		int taskId;
 		Duties task;
-		Officer manager;
+		Officer officer;
 		Principal principal;
 		
 		taskId = request.getModel().getInteger("id");
 		task = this.repository.findOneById(taskId);
-		manager = task.getOfficer();
+		officer = task.getOfficer();
 		principal = request.getPrincipal();
 		
-		return manager.getUserAccount().getId() == principal.getAccountId();
+		return officer.getUserAccount().getId() == principal.getAccountId();
 	}
 
 	@Override

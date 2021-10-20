@@ -1,12 +1,12 @@
-authenticated.task.list.label.title = Title
-authenticated.task.list.label.start-execution-period = Start of the execution period
-authenticated.task.list.label.end-execution-period = End of the execution period
-authenticated.task.list.label.workload = Workload
+authenticated.duties.list.label.title = Title
+authenticated.duties.list.label.start-execution-period = Start of the execution period
+authenticated.duties.list.label.end-execution-period = End of the execution period
+authenticated.duties.list.label.workload = Workload
 
-authenticated.task.form.label.title = Title
-authenticated.task.form.label.start-execution-period = Start of the execution period
-authenticated.task.form.label.end-execution-period = End of the execution period
-authenticated.task.form.label.workload = Workload
-authenticated.task.form.label.description = Description
-authenticated.task.form.label.link = Link
-authenticated.task.form.label.is-public = Public
+authenticated.duties.form.label.title = Title
+authenticated.duties.form.label.start-execution-period = Start of the execution period
+authenticated.duties.form.label.end-execution-period = End of the execution period
+authenticated.duties.form.label.workload = Workload
+authenticated.duties.form.label.description = Description
+authenticated.duties.form.label.link = Link
+authenticated.duties.form.label.is-public = Public

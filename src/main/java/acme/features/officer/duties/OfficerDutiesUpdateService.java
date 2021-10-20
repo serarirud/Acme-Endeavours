@@ -28,17 +28,17 @@ public class OfficerDutiesUpdateService implements AbstractUpdateService<Officer
 	public boolean authorise(final Request<Duties> request) {
 		assert request != null;
 		
-		int taskId;
-		Duties task;
-		Officer manager;
+		int dutiesId;
+		Duties duties;
+		Officer officer;
 		Principal principal;
 		
-		taskId = request.getModel().getInteger("id");
-		task = this.repository.findOneById(taskId);
-		manager = task.getOfficer();
+		dutiesId = request.getModel().getInteger("id");
+		duties = this.repository.findOneById(dutiesId);
+		officer = duties.getOfficer();
 		principal = request.getPrincipal();
 		
-		return manager.getUserAccount().getId() == principal.getAccountId();
+		return officer.getUserAccount().getId() == principal.getAccountId();
 	}
 
 	@Override
@@ -75,14 +75,14 @@ public class OfficerDutiesUpdateService implements AbstractUpdateService<Officer
 		assert errors != null;
 		
 		if(!errors.hasErrors("startExecutionPeriod") && !errors.hasErrors("endExecutionPeriod")) {
-			errors.state(request, entity.getEndExecutionPeriod().after(entity.getStartExecutionPeriod()), "endExecutionPeriod", "manager.task.form.error.end");
+			errors.state(request, entity.getEndExecutionPeriod().after(entity.getStartExecutionPeriod()), "endExecutionPeriod", "officer.duties.form.error.end");
 		}
 		
 		if(!errors.hasErrors("workload")) {
 			final Double workload = entity.getWorkload();
 			final Integer parteEntera = workload.intValue();
 			final Double parteDecimal = workload - parteEntera;
-			errors.state(request, parteDecimal<0.6, "workload", "manager.task.form.error.workload");
+			errors.state(request, parteDecimal<0.6, "workload", "officer.duties.form.error.workload");
 			
 			if (!errors.hasErrors("startExecutionPeriod") && !errors.hasErrors("endExecutionPeriod")) {
 				final Date startExecutionPeriod = entity.getStartExecutionPeriod();
@@ -90,15 +90,15 @@ public class OfficerDutiesUpdateService implements AbstractUpdateService<Officer
 				final long diferencia = endExecutionPeriod.getTime() - startExecutionPeriod.getTime();
 				final Integer minutosDiferencia = (int) (diferencia/(1000*60));
 				final Integer minutosWorkload = (int) (parteEntera*60 + parteDecimal*100);
-				errors.state(request, minutosDiferencia>=minutosWorkload, "workload", "manager.task.form.error.workload2");
+				errors.state(request, minutosDiferencia>=minutosWorkload, "workload", "officer.duties.form.error.workload2");
 			}
 
 		}
 		
 		if(!errors.hasErrors("description") && !errors.hasErrors("title")) {
 			final boolean umbralSuperado = this.confService.spamFilter(entity.getTitle()+" "+entity.getDescription());
-			errors.state(request, !umbralSuperado,"description", "manager.task.error.umbral-superado");
-			errors.state(request, !umbralSuperado,"title", "manager.task.error.umbral-superado");
+			errors.state(request, !umbralSuperado,"description", "officer.duties.error.umbral-superado");
+			errors.state(request, !umbralSuperado,"title", "officer.duties.error.umbral-superado");
 		}
 	}
 

@@ -15,7 +15,7 @@ public class OfficerDutiesShowService implements AbstractShowService<Officer, Du
 	
 	
 	@Autowired
-	private OfficerDutiesRepository managerTaskRepository;
+	private OfficerDutiesRepository officerTaskRepository;
 
 	@Override
 	public boolean authorise(final Request<Duties> request) {
@@ -23,15 +23,15 @@ public class OfficerDutiesShowService implements AbstractShowService<Officer, Du
 		
 		int taskId;
 		Duties task;
-		Officer manager;
+		Officer officer;
 		Principal principal;
 		
 		taskId = request.getModel().getInteger("id");
-		task = this.managerTaskRepository.findOneById(taskId);
-		manager = task.getOfficer();
+		task = this.officerTaskRepository.findOneById(taskId);
+		officer = task.getOfficer();
 		principal = request.getPrincipal();
 		
-		return manager.getUserAccount().getId() == principal.getAccountId();
+		return officer.getUserAccount().getId() == principal.getAccountId();
 		
 	}
 
@@ -53,7 +53,7 @@ public class OfficerDutiesShowService implements AbstractShowService<Officer, Du
 		int id;
 		Duties t;
 		id = request.getModel().getInteger("id");
-		t = this.managerTaskRepository.findOneById(id);
+		t = this.officerTaskRepository.findOneById(id);
 		
 		return t;
 	}

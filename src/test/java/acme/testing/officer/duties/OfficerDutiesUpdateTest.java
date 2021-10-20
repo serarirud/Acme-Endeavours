@@ -1,4 +1,4 @@
-package acme.testing.manager.tasks;
+package acme.testing.officer.duties;
 
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -7,7 +7,7 @@ import org.junit.jupiter.params.provider.CsvFileSource;
 import acme.framework.helpers.StringHelper;
 import acme.testing.AcmePlannerTest;
 
-public class ManagerTaskUpdateTest extends AcmePlannerTest{
+public class OfficerDutiesUpdateTest extends AcmePlannerTest{
 
 	/*	Feature: un usuario manager puede editar sus propias tareas
 	*	Caso positivo
@@ -16,7 +16,7 @@ public class ManagerTaskUpdateTest extends AcmePlannerTest{
 	*/
 	
 	@ParameterizedTest
-	@CsvFileSource(resources = "/manager/task/updatePositive.csv", encoding = "utf-8", numLinesToSkip = 1)
+	@CsvFileSource(resources = "/officer/duties/updatePositive.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)
 	public void updatePositive(final int recordIndex, final String title, final String startExecutionPeriod, final String endExecutionPeriod, final String workload, final String description, final String link, final String isPublic) {
 		
@@ -27,9 +27,9 @@ public class ManagerTaskUpdateTest extends AcmePlannerTest{
 		assert !StringHelper.isBlank(description);
 		assert !StringHelper.isBlank(isPublic);
 		
-		super.signIn("manager", "manager");
+		super.signIn("officer", "officer");
 		
-		super.clickOnMenu("Manager", "My task list");
+		super.clickOnMenu("Officer", "My duties list");
 		
 		super.clickOnListingRecord(recordIndex);
 		
@@ -72,13 +72,13 @@ public class ManagerTaskUpdateTest extends AcmePlannerTest{
 	*/
 	
 	@ParameterizedTest
-	@CsvFileSource(resources = "/manager/task/updateNegative.csv", encoding = "utf-8", numLinesToSkip = 1)
+	@CsvFileSource(resources = "/officer/duties/updateNegative.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(20)	
 	public void updateNegative(final int recordIndex, final String title, final String startExecutionPeriod, final String endExecutionPeriod, final String workload, final String description, final String link, final String isPublic) {
 		
-		super.signIn("manager", "manager");
+		super.signIn("officer", "officer");
 		
-		super.clickOnMenu("Manager", "My task list");
+		super.clickOnMenu("Officer", "My duties list");
 		
 		super.clickOnListingRecord(recordIndex);
 		
@@ -92,7 +92,7 @@ public class ManagerTaskUpdateTest extends AcmePlannerTest{
 		
 		super.clickOnSubmitButton("Update");
 		
-		super.checkSimplePath("/manager/task/update");
+		super.checkSimplePath("/officer/duties/update");
 		super.checkErrorsExist();
 		
 		super.signOut();

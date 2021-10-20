@@ -1,11 +1,11 @@
-package acme.testing.authenticated.manager;
+package acme.testing.authenticated.officer;
 
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 
 import acme.testing.AcmePlannerTest;
 
-public class AuthenticatedManagerCreateTest extends AcmePlannerTest {
+public class AuthenticatedOfficerCreateTest extends AcmePlannerTest {
 	
 	
 	/*	Feature: un usuario autenticado puede convertirse en mánager si no lo es
@@ -18,12 +18,12 @@ public class AuthenticatedManagerCreateTest extends AcmePlannerTest {
 	public void create() {		
 		super.navigateHome();
 		super.signIn("administrator", "administrator");
-		super.clickOnMenu("Account", "Become a manager");
-		super.clickOnSubmitButton("Become a manager");
+		super.clickOnMenu("Account", "Become an officer");
+		super.clickOnSubmitButton("Become an officer");
 		 
 		super.checkSimplePath("/master/welcome");
-		super.clickOnMenu("Manager", "My task list");
-		super.checkSimplePath("/manager/task/list");
+		super.clickOnMenu("Officer", "My duties list");
+		super.checkSimplePath("/officer/duties/list");
 		
 	}
 	
@@ -35,7 +35,7 @@ public class AuthenticatedManagerCreateTest extends AcmePlannerTest {
 	@Test
 	@Order(20)	
 	public void createNegative() {	
-		super.navigate("/authenticated/manager/create", "");
+		super.navigate("/authenticated/officer/create", "");
 		super.checkErrorsExist();
 		
 	}

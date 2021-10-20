@@ -1,4 +1,4 @@
-package acme.testing.manager.tasks;
+package acme.testing.officer.duties;
 
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -7,14 +7,14 @@ import org.junit.jupiter.params.provider.CsvFileSource;
 import acme.framework.helpers.StringHelper;
 import acme.testing.AcmePlannerTest;
 
-public class ManagerTaskCreateTest extends AcmePlannerTest{
+public class OfficerDutiesCreateTest extends AcmePlannerTest{
 
 	/*	Feature: un usuario manager puede crear una nueva tarea
 	*	Caso positivo
 	*/
 	
 	@ParameterizedTest
-	@CsvFileSource(resources = "/manager/task/createPositive.csv", encoding = "utf-8", numLinesToSkip = 1)
+	@CsvFileSource(resources = "/officer/duties/createPositive.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)	
 	public void createPositive(final int recordIndex, final String title, final String startExecutionPeriod, final String endExecutionPeriod, final String workload, final String description, final String link, final String isPublic) {
 	
@@ -26,9 +26,9 @@ public class ManagerTaskCreateTest extends AcmePlannerTest{
 		assert !StringHelper.isBlank(isPublic);
 
 		
-		super.signIn("manager", "manager");
+		super.signIn("officer", "officer");
 		
-		super.clickOnMenu("Manager", "Create a task");
+		super.clickOnMenu("Officer", "Create duties");
 		super.fillInputBoxIn("title", title);
 		super.fillInputBoxIn("startExecutionPeriod", startExecutionPeriod);
 		super.fillInputBoxIn("endExecutionPeriod", endExecutionPeriod);
@@ -40,7 +40,7 @@ public class ManagerTaskCreateTest extends AcmePlannerTest{
 		super.clickOnSubmitButton("Create");
 		
 		super.checkSimplePath("/master/welcome");
-		super.clickOnMenu("Manager", "My task list");
+		super.clickOnMenu("Officer", "My duties list");
 		
 		super.clickOnListingRecord(recordIndex);
 		
@@ -74,13 +74,13 @@ public class ManagerTaskCreateTest extends AcmePlannerTest{
 	*/
 	
 	@ParameterizedTest
-	@CsvFileSource(resources = "/manager/task/createNegative.csv", encoding = "utf-8", numLinesToSkip = 1)
+	@CsvFileSource(resources = "/officer/duties/createNegative.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(20)	
 	public void createNegative(final int recordIndex, final String title, final String startExecutionPeriod, final String endExecutionPeriod, final String workload, final String description, final String link, final String isPublic) {
 	
-		super.signIn("manager", "manager");
+		super.signIn("officer", "officer");
 		
-		super.clickOnMenu("Manager", "Create a task");
+		super.clickOnMenu("Officer", "Create duties");
 		super.fillInputBoxIn("title", title);
 		super.fillInputBoxIn("startExecutionPeriod", startExecutionPeriod);
 		super.fillInputBoxIn("endExecutionPeriod", endExecutionPeriod);
@@ -91,7 +91,7 @@ public class ManagerTaskCreateTest extends AcmePlannerTest{
 
 		super.clickOnSubmitButton("Create");
 		
-		super.checkSimplePath("/manager/task/create");
+		super.checkSimplePath("/officer/duties/create");
 		super.checkErrorsExist();
 		
 		super.signOut();

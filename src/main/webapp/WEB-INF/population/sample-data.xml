@@ -203,7 +203,7 @@
 		<property name="startExecutionPeriod" value="2008/04/10 07:00"/>
 		<property name="endExecutionPeriod" value="2008/04/11 17:00"/>
 		<property name="workload" value="9.10"/>
-		<property name="description" value="Es una Deber complicada, tened cuidado. "/>
+		<property name="description" value="Es un deber complicada, tened cuidado. "/>
 		<property name="link" value="https://www.google.es/"/>
 		<property name="isPublic" value="true"/>
 		<property name="officer" ref="officer1Officer"/>
@@ -214,7 +214,7 @@
 		<property name="startExecutionPeriod" value="2016/03/02 16:00"/>
 		<property name="endExecutionPeriod" value="2016/03/02 16:15"/>
 		<property name="workload" value="0.10"/>
-		<property name="description" value="Es una Deber muy fácil y corta, hacedlo lo antes posible. "/>
+		<property name="description" value="Es un deber muy fácil y corta, hacedlo lo antes posible. "/>
 		<property name="link" value="https://www.youtube.com/"/>
 		<property name="isPublic" value="true"/>
 		<property name="officer" ref="officer1Officer"/>
@@ -226,7 +226,7 @@
 		<property name="startExecutionPeriod" value="2005/08/01 16:00"/>
 		<property name="endExecutionPeriod" value="2016/08/12 18:45"/>
 		<property name="workload" value="6.15"/>
-		<property name="description" value="Es una Deber larga, hay que empezar cuanto antes posible  "/>
+		<property name="description" value="Es un deber largo, hay que empezar cuanto antes posible  "/>
 		<property name="link"><null/></property>
 		<property name="isPublic" value="false"/>
 		<property name="officer" ref="officerOfficer"/>
@@ -237,7 +237,7 @@
 		<property name="startExecutionPeriod" value="2015/07/01 08:00"/>
 		<property name="endExecutionPeriod" value="2016/08/01 19:00"/>
 		<property name="workload" value="10.25"/>
-		<property name="description" value="Esta es una descripción muy larga así que esto se usa para rellenar
+		<property name="description" value="Esta es una descripción muy largo así que esto se usa para rellenar
 		todo lo posible y no se me ocurre nada más que poner, espero que sea suficiente. "/>
 		<property name="link" value="https://www.us.es/"/>
 		<property name="isPublic" value="true"/>
@@ -249,7 +249,7 @@
 		<property name="startExecutionPeriod" value="2021/08/22 09:00"/>
 		<property name="endExecutionPeriod" value="2021/12/01 22:00"/>
 		<property name="workload" value="1.30"/>
-		<property name="description" value="Esta Deber aún no ha acabado. "/>
+		<property name="description" value="Este deber aún no ha acabado. "/>
 		<property name="link" value="https://github.com/"/>
 		<property name="isPublic" value="true"/>
 		<property name="officer" ref="officer1Officer"/>
@@ -262,14 +262,14 @@
 		<property name="startExecutionPeriod" value="2021/08/13 11:00"/>
 		<property name="endExecutionPeriod" value="2022/12/01 23:00"/>
 		<property name="workload" value="50.10"/>
-		<property name="description" value="A esta Deber le queda mucho. "/>
+		<property name="description" value="A este deber le queda mucho. "/>
 		<property name="link" value="https://twitter.com/?lang=es"/>
 		<property name="isPublic" value="true"/>
 		<property name="officer" ref="officerOfficer"/>
 	</bean>
 	
 	<bean id="duties12" class="acme.entities.duties.Duties">
-		<property name="title" value="Deber muy rara" />
+		<property name="title" value="Deber muy raro" />
 		<property name="startExecutionPeriod" value="2021/08/10 12:00"/>
 		<property name="endExecutionPeriod" value="2023/12/01 12:00"/>
 		<property name="workload" value="80.15"/>
@@ -281,7 +281,7 @@
 	
 	
 	<bean id="duties13" class="acme.entities.duties.Duties">
-		<property name="title" value="Deber futura" />
+		<property name="title" value="Deber futuro" />
 		<property name="startExecutionPeriod" value="2025/04/10 12:00"/>
 		<property name="endExecutionPeriod" value="2027/10/01 12:00"/>
 		<property name="workload" value="90.45"/>
@@ -314,7 +314,7 @@
 	</bean>
 	
 	<bean id="duties16" class="acme.entities.duties.Duties">
-		<property name="title" value="Deber también futura" />
+		<property name="title" value="Deber también futuro" />
 		<property name="startExecutionPeriod" value="2026/04/10 12:00"/>
 		<property name="endExecutionPeriod" value="2027/10/01 12:00"/>
 		<property name="workload" value="70.45"/>
@@ -325,7 +325,7 @@
 	</bean>
 	
 	<bean id="duties17" class="acme.entities.duties.Duties">
-		<property name="title" value="Deber de prueba futura" />
+		<property name="title" value="Deber de prueba futuro" />
 		<property name="startExecutionPeriod" value="2024/04/10 12:00"/>
 		<property name="endExecutionPeriod" value="2027/10/01 12:00"/>
 		<property name="workload" value="45.45"/>
@@ -336,11 +336,11 @@
 	</bean>
 	
 	<bean id="duties18" class="acme.entities.duties.Duties">
-		<property name="title" value="Deber 18 antigua" />
+		<property name="title" value="Deber 18 antiguo" />
 		<property name="startExecutionPeriod" value="2007/04/10 12:00"/>
 		<property name="endExecutionPeriod" value="2007/10/01 12:00"/>
 		<property name="workload" value="4.45"/>
-		<property name="description" value="Mas Deber de prueba"/>
+		<property name="description" value="Mas deberes de prueba"/>
 		<property name="link" value="https://www.google.es/"/>
 		<property name="isPublic" value="true"/>
 		<property name="officer" ref="officerOfficer"/>

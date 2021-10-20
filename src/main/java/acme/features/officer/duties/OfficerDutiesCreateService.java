@@ -56,11 +56,11 @@ public class OfficerDutiesCreateService implements AbstractCreateService<Officer
 		assert request != null;
 		
 		Duties result;
-		Officer manager;
+		Officer officer;
 		
-		manager= this.repository.findOneManagerById(request.getPrincipal().getActiveRoleId());
+		officer= this.repository.findOneOfficerById(request.getPrincipal().getActiveRoleId());
 		result= new Duties();
-		result.setOfficer(manager);
+		result.setOfficer(officer);
 		
 		return result;
 	}
@@ -73,18 +73,18 @@ public class OfficerDutiesCreateService implements AbstractCreateService<Officer
 		
 		if(!errors.hasErrors("startExecutionPeriod") && !errors.hasErrors("endExecutionPeriod")) {
 			final Date today = Calendar.getInstance().getTime();
-			errors.state(request, entity.getStartExecutionPeriod().after(today), "startExecutionPeriod", "manager.task.form.error.start");
+			errors.state(request, entity.getStartExecutionPeriod().after(today), "startExecutionPeriod", "officer.duties.form.error.start");
 		}
 		
 		if(!errors.hasErrors("startExecutionPeriod") && !errors.hasErrors("endExecutionPeriod")) {
-			errors.state(request, entity.getEndExecutionPeriod().after(entity.getStartExecutionPeriod()), "endExecutionPeriod", "manager.task.form.error.end");
+			errors.state(request, entity.getEndExecutionPeriod().after(entity.getStartExecutionPeriod()), "endExecutionPeriod", "officer.duties.form.error.end");
 		}
 
 		if(!errors.hasErrors("workload")) {
 			final Double workload = entity.getWorkload();			
 			final Integer parteEntera = workload.intValue();
 			final Double parteDecimal = workload - parteEntera;
-			errors.state(request, parteDecimal<0.6, "workload", "manager.task.form.error.workload");
+			errors.state(request, parteDecimal<0.6, "workload", "officer.duties.form.error.workload");
 			
 			if (!errors.hasErrors("startExecutionPeriod") && !errors.hasErrors("endExecutionPeriod")) {
 				final Date startExecutionPeriod = entity.getStartExecutionPeriod();
@@ -92,14 +92,14 @@ public class OfficerDutiesCreateService implements AbstractCreateService<Officer
 				final long diferencia = endExecutionPeriod.getTime() - startExecutionPeriod.getTime();
 				final Integer minutosDiferencia = (int) (diferencia/(1000*60));
 				final Integer minutosWorkload = (int) (parteEntera*60 + parteDecimal*100);
-				errors.state(request, minutosDiferencia>=minutosWorkload, "workload", "manager.task.form.error.workload2");
+				errors.state(request, minutosDiferencia>=minutosWorkload, "workload", "officer.duties.form.error.workload2");
 			}
 		}
 		
 		if(!errors.hasErrors("description") && !errors.hasErrors("title")) {
 			final boolean umbralSuperado = this.confService.spamFilter(entity.getTitle()+" "+entity.getDescription());
-			errors.state(request, !umbralSuperado,"description", "manager.task.error.umbral-superado");
-			errors.state(request, !umbralSuperado,"title", "manager.task.error.umbral-superado");
+			errors.state(request, !umbralSuperado,"description", "officer.duties.error.umbral-superado");
+			errors.state(request, !umbralSuperado,"title", "officer.duties.error.umbral-superado");
 		}
 		
 	}

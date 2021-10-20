@@ -19,6 +19,6 @@ public interface OfficerDutiesRepository extends AbstractRepository {
 	Collection<Duties> findMany(int idManager);
 	
 	@Query("select o from Officer o where o.id = ?1")
-	Officer findOneManagerById(int id);
+	Officer findOneOfficerById(int id);
 	
 }
