@@ -144,7 +144,7 @@
 	<bean id="duties01" class="acme.entities.duties.Duties">
 		<property name="title" value="Deber 001" />
 		<property name="startExecutionPeriod" value="2021/10/01 12:00"/>
-		<property name="endExecutionPeriod" value="2021/10/01 13:00"/>
+		<property name="endExecutionPeriod" value="2022/10/01 13:00"/>
 		<property name="workload" value="1"/>
 		<property name="description" value="Descripción de prueba"/>
 		<property name="link" value="https://github.com/Francisco-Borrego/Acme-Planner"/>
@@ -155,7 +155,7 @@
 	<bean id="duties02" class="acme.entities.duties.Duties">
 		<property name="title" value="Deber 002" />
 		<property name="startExecutionPeriod" value="2021/10/01 10:00"/>
-		<property name="endExecutionPeriod" value="2021/10/04 13:00"/>
+		<property name="endExecutionPeriod" value="2022/10/04 13:00"/>
 		<property name="workload" value="1.20"/>
 		<property name="description" value="Descripción de prueba"/>
 		<property name="link"><null/></property>
@@ -247,7 +247,7 @@
 	<bean id="duties10" class="acme.entities.duties.Duties">
 		<property name="title" value="Deber 10" />
 		<property name="startExecutionPeriod" value="2021/08/22 09:00"/>
-		<property name="endExecutionPeriod" value="2021/12/01 22:00"/>
+		<property name="endExecutionPeriod" value="2022/12/01 22:00"/>
 		<property name="workload" value="1.30"/>
 		<property name="description" value="Este deber aún no ha acabado. "/>
 		<property name="link" value="https://github.com/"/>
@@ -294,7 +294,7 @@
 	<bean id="duties14" class="acme.entities.duties.Duties">
 		<property name="title" value="Deber 14" />
 		<property name="startExecutionPeriod" value="2021/08/22 09:00"/>
-		<property name="endExecutionPeriod" value="2021/12/01 22:00"/>
+		<property name="endExecutionPeriod" value="2022/12/01 22:00"/>
 		<property name="workload" value="1.30"/>
 		<property name="description" value="Este deber aún no ha acabado. "/>
 		<property name="link" value="https://twitter.com/?lang=es"/>

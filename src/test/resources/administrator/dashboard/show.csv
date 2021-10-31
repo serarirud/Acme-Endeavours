@@ -1,2 +1,2 @@
 nPrivateTask,nPublicTask,nFinishedTask,nNotFinishedTask,averageTaskExecutionPeriods,deviationTaskExecutionPeriods,minimumTaskExecutionPeriods,maximumTaskExecutionPeriods,averageTaskWorkloads,deviationTaskWorkloads,minimumTaskWorkloads,maximumTaskWorkloads
-3,15,8,10,518.44,926.39,0,4029,25.05,32.08,0.10,90.45
+3,15,8,10,599.56,897.46,0,4029,25.05,32.08,0.10,90.45

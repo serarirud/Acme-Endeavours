@@ -1,4 +1,4 @@
-package acme.testing.anonymous.task;
+package acme.testing.anonymous.duties;
 
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -6,18 +6,18 @@ import org.junit.jupiter.params.provider.CsvFileSource;
 
 import acme.testing.AcmeEndeavoursTest;
 
-public class AnonymousTasksListTest extends AcmeEndeavoursTest{
+public class AnonymousDutiesListTest extends AcmeEndeavoursTest{
 	
 	/*	Feature: un usuario anonimo puede ver las tareas de públicas no finalizadas
 	 * 	Caso positivo.
 	*/
 	
 	@ParameterizedTest
-	@CsvFileSource(resources = "/anonymous/task/list.csv", encoding = "utf-8", numLinesToSkip = 1)
+	@CsvFileSource(resources = "/anonymous/duties/list.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(20)	
 	public void list(final int recordIndex, final String title, final String startExecutionPeriod, final String endExecutionPeriod, final String workload, final String description, final String link, final String isPublic) {		
 				
-		super.clickOnMenu("Anonymous", "Public non-finished task list");		
+		super.clickOnMenu("Anonymous", "Public non-finished duties list");		
 		
 		super.checkColumnHasValue(recordIndex, 0, title);
 		super.checkColumnHasValue(recordIndex, 1, startExecutionPeriod);
