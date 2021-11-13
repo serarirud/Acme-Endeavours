@@ -9,6 +9,3 @@
 # they accept any liabilities with respect to them.
 
 - Sergio Arias Ruda (serarirud@alum.us.es)
-- Jesús Vargas Zambrana (jesvarzam@alum.us.es)
-- Antonio Funes Mejías (antfunmej@alum.us.es)
-- Alejandro Morales García (alemorgar@alum.us.es)
