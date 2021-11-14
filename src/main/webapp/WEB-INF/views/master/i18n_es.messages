@@ -16,7 +16,7 @@ master.banner.background = #FFE97F
 
 master.welcome.title = ¡Bienvenidos!
 master.welcome.text = \
-	¡Bienvenidos a Acme Work Plan! 
+	¡Bienvenidos a Acme Endeavours! 
 
 # master.menu #################################################################
 
@@ -28,14 +28,14 @@ master.menu.sign-out = Salir
 # master.menu.anonymous #######################################################
 
 master.menu.anonymous = Anónimo
-master.menu.anonymous.task.list = Lista de tareas públicas no finalizadas
+master.menu.anonymous.duties.list = Lista de deberes públicas no finalizadas
 master.menu.anonymous.shout.list = Lista de gritos
 master.menu.anonymous.shout.form = Crear un grito
 
 # master.menu.authenticated #######################################################
 
 master.menu.authenticated = Autenticado
-master.menu.authenticated.task.list = Lista de tareas públicas finalizadas
+master.menu.authenticated.duties.list = Lista de deberes públicas finalizadas
 
 # master.menu.administrator ###################################################
 
@@ -63,7 +63,7 @@ master.menu.user-account.provider = Datos de proveedor
 master.menu.user-account.become-provider = Hazte proveedor
 master.menu.user-account.consumer = Datos de consumidor
 master.menu.user-account.become-consumer = Hazte consumidor
-master.menu.user-account.become-manager = Hazte mánager
+master.menu.user-account.become-officer = Hazte oficial
 
 ﻿# master.footer ###############################################################
 
@@ -81,9 +81,9 @@ master.footer.label.spanish = Español
 
 master.company.title = La compañía
 master.company.text = \
-	Acme Work Plan, Inc. es una compañía fictícia que desarrolla un proyecto \
-	para organizar tareas y más.
-master.company.name = Acme Work Plan, Inc.
+	Acme Endeavours, Inc. es una compañía fictícia que desarrolla un proyecto \
+	para organizar deberes y más.
+master.company.name = Acme Endeavours, Inc.
 master.company.address = Calle ejemplo, número 1, Sevilla, Andalucía, España
 master.company.phone = +000 123 456
 master.company.email = contact@acme.com
@@ -114,7 +114,7 @@ master.panic.label.exceptions = Excepciones:
 master.panic.text.consult-log = Por favor, consulte el log para ver más detalles.
 
 # master.menu.administrator ###################################################
-master.menu.manager = Manager
-master.menu.manager.task.create = Crear una tarea
-master.menu.manager.task.list = Mi lista de tareas
+master.menu.officer = Oficial
+master.menu.officer.duties.create = Crear un deber
+master.menu.officer.duties.list = Mi lista de deberes
 

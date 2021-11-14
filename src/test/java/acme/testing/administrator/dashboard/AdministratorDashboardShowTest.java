@@ -4,9 +4,9 @@ import org.junit.jupiter.api.Order;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 
-import acme.testing.AcmePlannerTest;
+import acme.testing.AcmeEndeavoursTest;
 
-public class AdministratorDashboardShowTest extends AcmePlannerTest {
+public class AdministratorDashboardShowTest extends AcmeEndeavoursTest {
 	
 	/*	Feature: un usuario administrador puede ver los datos de tasks y shouts
 	 * 	Caso positivo.

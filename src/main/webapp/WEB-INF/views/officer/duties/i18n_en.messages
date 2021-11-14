@@ -1,0 +1,26 @@
+officer.duties.list.label.title = Title
+officer.duties.list.label.start-execution-period = Start of the execution period
+officer.duties.list.label.end-execution-period = End of the execution period
+officer.duties.list.label.workload = Workload
+
+
+officer.duties.form.label.title = Title
+officer.duties.form.label.start-execution-period = Start of the execution period
+officer.duties.form.label.end-execution-period = End of the execution period
+officer.duties.form.label.workload = Workload
+officer.duties.form.label.description = Description
+officer.duties.form.label.link = Link
+officer.duties.form.label.is-public = Public
+officer.duties.form.button.return = Return
+
+officer.duties.form.error.end= Date error, end of the execution period must be after at start of the execution period 
+officer.duties.form.error.start = Date error, start of the execution period must be after at today
+officer.duties.form.error.title = Title error, the title must be shorter that 80 characters
+officer.duties.form.error.description = Description error, the description must be shorter that 500 characters
+officer.duties.form.error.workload = Workload error, the decimal part of workload must be shooter that 60 because represent minutes {Hours,Minutes}
+officer.duties.form.error.workload2 = Workload error, it is too big for the execution period
+officer.duties.form.button.create = Create
+officer.duties.form.button.update = Update
+officer.duties.form.button.delete = Delete
+
+officer.duties.error.umbral-superado = Threshold of spam words reached 

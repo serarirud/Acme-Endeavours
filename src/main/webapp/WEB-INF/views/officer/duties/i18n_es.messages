@@ -1,0 +1,26 @@
+officer.duties.list.label.title = Título
+officer.duties.list.label.start-execution-period = Inicio del periodo de ejecución
+officer.duties.list.label.end-execution-period = Fin del periodo de ejecución
+officer.duties.list.label.workload = Carga de trabajo
+
+
+officer.duties.form.label.title = Título
+officer.duties.form.label.start-execution-period = Inicio del periodo de ejecución
+officer.duties.form.label.end-execution-period = Fin del periodo de ejecución
+officer.duties.form.label.workload = Carga de trabajo
+officer.duties.form.label.description = Descripción
+officer.duties.form.label.link = Enlace
+officer.duties.form.label.is-public = Pública
+officer.duties.form.button.return = Volver
+
+officer.duties.form.error.end= Error de fechas, la fecha de fin del periodo de ejecución debe ser posterior a la de inicio del periodo de ejecución
+officer.duties.form.error.start = Error de fechas, la fecha de inicio del periodo de ejecución debe ser posterior a la de hoy
+officer.duties.form.error.title = Error de titulo, el titulo debe tener tamaño menor a 80 caracteres
+officer.duties.form.error.description = Error de descripcion, la descripcion debe tener tamaño menor a 500 caracteres
+officer.duties.form.error.workload = Error de carga de trabajo, la parte decimal de la carga de trabajo debe ser menor a 60 ya que representa minutos {Horas,Minutos}
+officer.duties.form.error.workload2 = Error de carga de trabajo, es demasiado grande para el periodo de ejecución dado
+officer.duties.form.button.create = Crear
+officer.duties.form.button.update = Actualizar
+officer.duties.form.button.delete = Borrar
+
+officer.duties.error.umbral-superado = Umbral de palabras spam superado

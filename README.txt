@@ -13,6 +13,6 @@ Esto es Acme-Planner, un proyecto cuya finalidad es poner en práctica los conoc
 adquiridos durante las clases de la asignatura Diseño y Pruebas 2, constituyendo parte
 fundamental del segundo entregable.  
 
-Enlace al repositorio en Github: https://github.com/serarirud/Acme-Work-Plan
+Enlace al repositorio en Github: https://github.com/serarirud/Acme-Endeavours
 
-Enlace de la release: https://github.com/serarirud/Acme-Work-Plan/releases/tag/4.0
+Enlace de la release: https://github.com/serarirud/Acme-Work-Plan/releases/tag/5.0

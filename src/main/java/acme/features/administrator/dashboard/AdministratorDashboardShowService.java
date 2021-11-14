@@ -19,7 +19,7 @@ import java.util.stream.Collectors;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.entities.tasks.Task;
+import acme.entities.duties.Duties;
 import acme.forms.Dashboard;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
@@ -49,9 +49,9 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		assert model != null;
 
 		request.unbind(entity, model,
-			"nPrivateTask", "nPublicTask", "nNotFinishedTask", "nFinishedTask", "averageTaskExecutionPeriods",
-			"deviationTaskExecutionPeriods", "minimumTaskExecutionPeriods", "maximumTaskExecutionPeriods",
-			"averageTaskWorkloads", "deviationTaskWorkloads", "minimumTaskWorkloads", "maximumTaskWorkloads");
+			"nPrivateDuties", "nPublicDuties", "nNotFinishedDuties", "nFinishedDuties", "averageDutiesExecutionPeriods",
+			"deviationDutiesExecutionPeriods", "minimumDutiesExecutionPeriods", "maximumDutiesExecutionPeriods",
+			"averageDutiesWorkloads", "deviationDutiesWorkloads", "minimumDutiesWorkloads", "maximumDutiesWorkloads");
 	}
 
 	@Override
@@ -61,65 +61,65 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		final Date today = new Date(System.currentTimeMillis());
 
 		Dashboard result;
-		Integer nPrivateTask;
-		Integer nPublicTask;
-		Integer nNotFinishedTask;
-		Integer nFinishedTask;
-		Double averageTaskExecutionPeriods;
-		Double deviationTaskExecutionPeriods;
-		Integer minimumTaskExecutionPeriods;
-		Integer	maximumTaskExecutionPeriods;
+		Integer nPrivateDuties;
+		Integer nPublicDuties;
+		Integer nNotFinishedDuties;
+		Integer nFinishedDuties;
+		Double averageDutiesExecutionPeriods;
+		Double deviationDutiesExecutionPeriods;
+		Integer minimumDutiesExecutionPeriods;
+		Integer	maximumDutiesExecutionPeriods;
 		
-		Double averageTaskWorkloads;
-		Double deviationTaskWorkloads;
-		Double	minimumTaskWorkloads;
-		Double	maximumTaskWorkloads;
+		Double averageDutiesWorkloads;
+		final Double deviationDutiesWorkloads;
+		final Double	minimumDutiesWorkloads;
+		final Double	maximumDutiesWorkloads;
 
-		nPrivateTask = this.repository.nPrivateTask();
-		nPublicTask = this.repository.nPublicTask();
-		nNotFinishedTask = this.repository.nNotFinishedTask(today);
-		nFinishedTask = this.repository.nFinishedTask(today);
-		averageTaskExecutionPeriods = this.repository.averageTaskExecutionPeriods();
-		deviationTaskExecutionPeriods = this.repository.deviationTaskExecutionPeriods();
-		minimumTaskExecutionPeriods = this.repository.minimumTaskExecutionPeriods();
-		maximumTaskExecutionPeriods = this.repository.maximumTaskExecutionPeriods();
+		nPrivateDuties = this.repository.nPrivateDuties();
+		nPublicDuties = this.repository.nPublicDuties();
+		nNotFinishedDuties = this.repository.nNotFinishedDuties(today);
+		nFinishedDuties = this.repository.nFinishedDuties(today);
+		averageDutiesExecutionPeriods = this.repository.averageDutiesExecutionPeriods();
+		deviationDutiesExecutionPeriods = this.repository.deviationDutiesExecutionPeriods();
+		minimumDutiesExecutionPeriods = this.repository.minimumDutiesExecutionPeriods();
+		maximumDutiesExecutionPeriods = this.repository.maximumDutiesExecutionPeriods();
 		
-		final List<Task> tasks = this.repository.findAllTask().stream().collect(Collectors.toList());
+		final List<Duties> duties = this.repository.findAllDuties().stream().collect(Collectors.toList());
 		Double sum = 0.;
-		for(final Task a:tasks) {
+		for(final Duties a:duties) {
 			sum += a.getMinutes();
 		}
-		final Double averageHoursWorkloads = sum/tasks.size()/60; 
+		final Double averageHoursWorkloads = sum/duties.size()/60; 
 		final Integer parteEntera = averageHoursWorkloads.intValue(); 
 		final Double parteFracional = (averageHoursWorkloads - parteEntera)*0.6;
 
-		averageTaskWorkloads = parteEntera + parteFracional;
+		averageDutiesWorkloads = parteEntera + parteFracional;
 		
 		Double sum1=0.;
-		for(final Task a:tasks) {
+		for(final Duties a:duties) {
 			sum1 += Math.pow(a.getMinutes() - averageHoursWorkloads*60, 2); 
 		}
-		final Double desviation = Math.sqrt(sum1 / tasks.size())/60;
+		final Double desviation = Math.sqrt(sum1 / duties.size())/60;
 		final Integer parteEntera1 = desviation.intValue();
 		final Double parteFracional1 = (desviation - parteEntera1)*0.6;
-		deviationTaskWorkloads = parteEntera1 + parteFracional1;
-		minimumTaskWorkloads = this.repository.minimumTaskWorkloads();
-		maximumTaskWorkloads = this.repository.maximumTaskWorkloads();
+		deviationDutiesWorkloads = parteEntera1 + parteFracional1;
+		minimumDutiesWorkloads = this.repository.minimumDutiesWorkloads();
+		maximumDutiesWorkloads = this.repository.maximumDutiesWorkloads();
 		
 		result = new Dashboard();
-		result.setNPrivateTask(nPrivateTask);
-		result.setNPublicTask(nPublicTask);
-		result.setNFinishedTask(nFinishedTask);
-		result.setNNotFinishedTask(nNotFinishedTask);
-		result.setAverageTaskExecutionPeriods(averageTaskExecutionPeriods);
-		result.setDeviationTaskExecutionPeriods(deviationTaskExecutionPeriods);
-		result.setMinimumTaskExecutionPeriods(minimumTaskExecutionPeriods);
-		result.setMaximumTaskExecutionPeriods(maximumTaskExecutionPeriods);
+		result.setNPrivateDuties(nPrivateDuties);
+		result.setNPublicDuties(nPublicDuties);
+		result.setNFinishedDuties(nFinishedDuties);
+		result.setNNotFinishedDuties(nNotFinishedDuties);
+		result.setAverageDutiesExecutionPeriods(averageDutiesExecutionPeriods);
+		result.setDeviationDutiesExecutionPeriods(deviationDutiesExecutionPeriods);
+		result.setMinimumDutiesExecutionPeriods(minimumDutiesExecutionPeriods);
+		result.setMaximumDutiesExecutionPeriods(maximumDutiesExecutionPeriods);
 		
-		result.setAverageTaskWorkloads(averageTaskWorkloads);
-		result.setDeviationTaskWorkloads(deviationTaskWorkloads);
-		result.setMinimumTaskWorkloads(minimumTaskWorkloads);
-		result.setMaximumTaskWorkloads(maximumTaskWorkloads);
+		result.setAverageDutiesWorkloads(averageDutiesWorkloads);
+		result.setDeviationDutiesWorkloads(deviationDutiesWorkloads);
+		result.setMinimumDutiesWorkloads(minimumDutiesWorkloads);
+		result.setMaximumDutiesWorkloads(maximumDutiesWorkloads);
 		
 		return result;
 	}

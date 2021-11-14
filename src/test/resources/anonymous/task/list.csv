@@ -1,8 +1,0 @@
-recordIndex,title,startExecutionPeriod,endExecutionPeriod,workload,description,link,isPublic
-0,Tarea 001,2021/10/01 12:00,2021/10/01 13:00,1.00,Descripción de prueba,https://github.com/Francisco-Borrego/Acme-Planner,true
-1,Tarea 002,2021/10/01 10:00,2021/10/04 13:00,1.20,Descripción de prueba,,true
-2,Tarea 10,2021/08/22 09:00,2021/12/01 22:00,1.30,Esta tarea aún no ha acabado.,https://github.com/,true
-3,Tarea 11,2021/08/13 11:00,2022/12/01 23:00,50.10,A esta tarea le queda mucho.,https://twitter.com/?lang=es,true
-4,Tarea muy rara,2021/08/10 12:00,2023/12/01 12:00,80.15,Esta tarea es muy peculiar,,true
-5,Tarea futura,2025/04/10 12:00,2027/10/01 12:00,90.45,Esta tarea es para dentro de unos años,,true
-6,Tarea 14,2021/08/22 09:00,2021/12/01 22:00,1.30,Esta tarea aún no ha acabado.,https://twitter.com/?lang=es,true

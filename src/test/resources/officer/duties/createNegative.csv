@@ -1,0 +1,16 @@
+recordIndex,title,startExecutionPeriod,endExecutionPeriod,workload,description,link,isPublic
+0,Deber nueva test,2022/09/01 12:00,2022/08/01 14:00,1.34,Descripción de prueba test,https://google.es,true
+1,Deber de prueba test,2021/03/01 10:00,2021/08/04 13:00,3.29,Descripción de prueba test,https://google.es,true
+2,Deber test prueba,2022/08/01 10:00,2022/09/01 13:00,1.78,Descripción de prueba,https://google.es,true
+3,Deber de test,2025/08/01 16:00,2025/08/01 17:00,6.15,"Es un deber largo, hay que empezar cuanto antes posible",https://google.es,false
+4,Deber erroneo prueba,2025/08/01 16:00,2026/10/01 17:00,6.15,nigeria sex viagra nigeria,https://google.es,false
+5,,2025/08/01 16:00,2025/10/01 17:00,1.00,Descripción de prueba,,false
+6,Deber erroneo prueba,,2025/10/01 17:00,1.00,Descripción de prueba,https://google.es,false
+7,Deber fallo,2025/08/01 16:00,2025/10/01 17:00,,Descripción de prueba,https://google.es,false
+8,Deber con fallos,2025/08/01 16:00,,2.00,Descripción de prueba,,false
+9,Deber con mas fallos,2025/08/01 16:00,2025/10/01 17:00,2.00,,,true
+10,Deber con mas fallos,2025/08/01 16:00,2025/10/01 17:00,-2.00,e,,true
+11,,,,,,,false
+12,Deber con mas fallos,2025/08/01 16:00,2025/10/01 17:00,2.00,e,n,true
+13,Deber con mas fallos,2025/08/01 16:00,2025/08/01 17:00,1.01,e,n,true
+14,Deber con mas fallos,2025/08/01 16:00,2025/08/01 17:00,-0.01,e,n,true

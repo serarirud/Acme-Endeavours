@@ -19,14 +19,14 @@
 <acme:menu-bar code="master.menu.home">
 	<acme:menu-left>
 		<acme:menu-option code="master.menu.anonymous" access="isAnonymous()">
-			<acme:menu-suboption code="master.menu.anonymous.task.list" action="/anonymous/task/list"/>
+			<acme:menu-suboption code="master.menu.anonymous.duties.list" action="/anonymous/duties/list"/>
 			<acme:menu-suboption code="master.menu.anonymous.shout.list" action="/anonymous/shout/list"/>
 			<acme:menu-suboption code="master.menu.anonymous.shout.form" action="/anonymous/shout/create"/>
 			
 		</acme:menu-option>
 		
 		<acme:menu-option code="master.menu.authenticated" access="isAuthenticated()">
-			<acme:menu-suboption code="master.menu.authenticated.task.list" action="/authenticated/task/list"/>
+			<acme:menu-suboption code="master.menu.authenticated.duties.list" action="/authenticated/duties/list"/>
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.administrator" access="hasRole('Administrator')">
@@ -41,9 +41,9 @@
 			<acme:menu-suboption code="master.menu.administrator.show.configuration" action="/administrator/configuration/show"/>
 		</acme:menu-option>
 		
-		<acme:menu-option code="master.menu.manager" access="hasRole('Manager')">
-			<acme:menu-suboption code="master.menu.manager.task.create" action="/manager/task/create"/>
-			<acme:menu-suboption code="master.menu.manager.task.list" action="/manager/task/list"/>
+		<acme:menu-option code="master.menu.officer" access="hasRole('Officer')">
+			<acme:menu-suboption code="master.menu.officer.duties.create" action="/officer/duties/create"/>
+			<acme:menu-suboption code="master.menu.officer.duties.list" action="/officer/duties/list"/>
 		</acme:menu-option>
 	</acme:menu-left>
 
@@ -53,7 +53,7 @@
 
 		<acme:menu-option code="master.menu.user-account" access="isAuthenticated()">
 			<acme:menu-suboption code="master.menu.user-account.general-data" action="/authenticated/user-account/update"/>
-			<acme:menu-suboption code="master.menu.user-account.become-manager" action="/authenticated/manager/create" access="!hasRole('Manager')"/>
+			<acme:menu-suboption code="master.menu.user-account.become-officer" action="/authenticated/officer/create" access="!hasRole('Manager')"/>
 			
 		</acme:menu-option>
 

@@ -18,10 +18,10 @@
 
 	<modelVersion>4.0.0</modelVersion>
 	
-	<name>Acme Work Plan</name>
-	<description>This is the project Acme Work Plan.</description>
+	<name>Acme Endeavours</name>
+	<description>This is the project Acme Endeavours.</description>
 
-	<artifactId>Acme-Work-Plan</artifactId>
+	<artifactId>Acme-Endeavours</artifactId>
 	<version>21.2</version>
 	<packaging>war</packaging>
 

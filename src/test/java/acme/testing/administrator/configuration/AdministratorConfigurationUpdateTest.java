@@ -4,9 +4,9 @@ import org.junit.jupiter.api.Order;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 
-import acme.testing.AcmePlannerTest;
+import acme.testing.AcmeEndeavoursTest;
 
-public class AdministratorConfigurationUpdateTest extends AcmePlannerTest {
+public class AdministratorConfigurationUpdateTest extends AcmeEndeavoursTest {
 	
 	/*	Feature: un usuario administrador puede modificar los parámetros de configuración de la
 	 * 	aplicación (palabras spam, umbral de spam).

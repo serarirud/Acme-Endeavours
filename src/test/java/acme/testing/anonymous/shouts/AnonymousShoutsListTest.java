@@ -4,9 +4,9 @@ import org.junit.jupiter.api.Order;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 
-import acme.testing.AcmePlannerTest;
+import acme.testing.AcmeEndeavoursTest;
 
-public class AnonymousShoutsListTest extends AcmePlannerTest {
+public class AnonymousShoutsListTest extends AcmeEndeavoursTest {
 	
 	/*	Feature: un usuario anonimo puede ver los gritos de otros usuarios anonimos
 	 * 	Caso positivo.
