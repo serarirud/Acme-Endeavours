@@ -1,4 +1,4 @@
-package acme.features.anonymous.shout;
+package acme.features.anonymous.info;
 
 import java.util.Calendar;
 import java.util.Collection;

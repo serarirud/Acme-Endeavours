@@ -1,4 +1,4 @@
-package acme.features.anonymous.shout;
+package acme.features.anonymous.info;
 
 import javax.annotation.PostConstruct;
 
@@ -12,7 +12,7 @@ import acme.framework.controllers.AbstractController;
 import acme.framework.entities.Anonymous;
 
 @Controller
-@RequestMapping("/anonymous/shout/")
+@RequestMapping("/anonymous/info/")
 public class AnonymousShoutController extends AbstractController<Anonymous, Info> {
 	
 	// Internal state --------------------------------------------------------------

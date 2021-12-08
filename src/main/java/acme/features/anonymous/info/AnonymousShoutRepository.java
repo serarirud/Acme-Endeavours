@@ -1,4 +1,4 @@
-package acme.features.anonymous.shout;
+package acme.features.anonymous.info;
 
 import java.util.Collection;
 import java.util.Date;
