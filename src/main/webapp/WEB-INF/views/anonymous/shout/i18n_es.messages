@@ -7,6 +7,17 @@ anonymous.shout.form.button.return = Volver
 anonymous.shout.list.label.moment = Momento
 anonymous.shout.list.label.author = Autor
 anonymous.shout.list.label.text = Texto
-anonymous.shout.list.label.info = Información 
+anonymous.shout.list.label.info = Información
+
+anonymous.shout.list.label.sheet.pattern = Patrón
+anonymous.shout.list.label.sheet.moment = Momento
+anonymous.shout.list.label.sheet.money = Dinero
+anonymous.shout.list.label.sheet.important = Importante
 
 anonymous.shout.error.umbral-superado = Umbral de palabras consideradas spam superado
+
+anonymous.shout.error.sheet.pattern.day = Fecha incorrecta
+anonymous.shout.error.sheet.pattern.duplicated = Patrón duplicado
+anonymous.shout.error.sheet.moment = El momento tiene que ser al menos una semana posterior a la creación del Shout
+anonymous.shout.error.sheet.money = El dinero tiene que ser USD, EUR or GBP
+anonymous.shout.error.sheet.money.amount = El dinero tiene que ser mayor o igual a cero

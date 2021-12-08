@@ -7,14 +7,14 @@ import java.util.Date;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.entities.shouts.Shout;
+import acme.entities.info.Info;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
 import acme.framework.entities.Anonymous;
 import acme.framework.services.AbstractListService;
 
 @Service
-public class AnonymousShoutListService implements AbstractListService<Anonymous, Shout> {
+public class AnonymousShoutListService implements AbstractListService<Anonymous, Info> {
 	
 	// Internal state -------------------------------------------------------------------
 	
@@ -24,26 +24,28 @@ public class AnonymousShoutListService implements AbstractListService<Anonymous,
 	// AbstractListService<Administrator, Shout> interface ------------------------------
 	
 	@Override
-	public boolean authorise(final Request<Shout> request) {
+	public boolean authorise(final Request<Info> request) {
 		assert request != null;
 		
 		return true;
 	}
 	
 	@Override
-	public void unbind(final Request<Shout> request, final Shout entity, final Model model) {
+	public void unbind(final Request<Info> request, final Info entity, final Model model) {
 		assert request != null;
 		assert entity != null;
 		assert model != null;
 		
-		request.unbind(entity, model, "author", "text", "moment", "info");
+		//################################################ CAMBIAR ################################################################	
+		request.unbind(entity, model, "shout.author", "shout.text", "shout.moment", "shout.info", "pattern", "moment", "money", "important");
+		//#########################################################################################################################	
 	}
 	
 	@Override
-	public Collection<Shout> findMany(final Request<Shout> request) {
+	public Collection<Info> findMany(final Request<Info> request) {
 		assert request != null;
 		
-		Collection<Shout> result;
+		Collection<Info> result;
 		Calendar calendar;
 		Date deadline;
 		
