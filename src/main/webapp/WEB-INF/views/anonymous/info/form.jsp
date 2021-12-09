@@ -7,11 +7,11 @@
 	<acme:form-textbox code="anonymous.shout.form.label.author" path="shout.author"/>
 	<acme:form-textarea code="anonymous.shout.form.label.text" path="shout.text"/>
 	<acme:form-textbox code="anonymous.shout.form.label.info" path="shout.info"/>
-	<acme:form-textbox code="anonymous.shout.form.label.sheet.pattern" path="pattern" placeholder="De 2 a 4 letras o números seguido de /dd/mm/yy. Ej: ab/10/09/2021 o ab2d/10/09/2021"/>
-	<acme:form-textbox code="anonymous.shout.form.label.sheet.moment" path="moment" placeholder="YYYY/MM/DD hh:mm"/>
-	<acme:form-textbox code="anonymous.shout.form.label.sheet.money" path="money" placeholder="100 EUR o 100 USD o 100 GBP"/>
-	<acme:form-checkbox code="anonymous.shout.form.label.sheet.important" path="important"/>
+	<acme:form-textbox code="anonymous.shout.form.label.pattern" path="pattern" placeholder="De 2 a 4 letras o números seguido de /dd/mm/yy. Ej: ab/10/09/2021 o ab2d/10/09/2021"/>
+	<acme:form-textbox code="anonymous.shout.form.label.moment" path="moment" placeholder="YYYY/MM/DD hh:mm"/>
+	<acme:form-textbox code="anonymous.shout.form.label.money" path="money" placeholder="100 EUR o 100 USD o 100 GBP"/>
+	<acme:form-checkbox code="anonymous.shout.form.label.important" path="important"/>
 	
-	<acme:form-submit code="anonymous.shout.form.button.create" action="/anonymous/shout/create"/>
+	<acme:form-submit code="anonymous.shout.form.button.create" action="/anonymous/info/create"/>
 	<acme:form-return code="anonymous.shout.form.button.return"/>
 </acme:form>

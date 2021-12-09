@@ -22,7 +22,7 @@
 	<!-- Info pills -->
 	
 	<bean name="info1" class="acme.entities.info.Info">
-		<property name="pattern" value="AAA/10/09/21"/>
+		<property name="pattern" value="211214#zzz"/>
 		<property name="moment" value="2022/10/18 10:00"/>		
 		<property name="money" value="0 EUR"/>
 		<property name="important" value="false"/>
@@ -30,7 +30,7 @@
 	</bean>
 	
 	<bean name="info2" class="acme.entities.info.Info">
-		<property name="pattern" value="AAB/10/09/21"/>
+		<property name="pattern" value="211214#zzg"/>
 		<property name="moment" value="2022/10/18 10:00"/>		
 		<property name="money" value="0 USD"/>
 		<property name="important" value="true"/>
@@ -38,7 +38,7 @@
 	</bean>
 	
 	<bean name="info3" class="acme.entities.info.Info">	
-		<property name="pattern" value="ABA/10/09/21"/>
+		<property name="pattern" value="211214#zzf"/>
 		<property name="moment" value="2022/10/18 10:00"/>		
 		<property name="money" value="0 GBP"/>
 		<property name="important" value="false"/>
@@ -46,7 +46,7 @@
 	</bean>
 	
 	<bean name="info4" class="acme.entities.info.Info">	
-		<property name="pattern" value="ABB/10/09/21"/>
+		<property name="pattern" value="211214#zze"/>
 		<property name="moment" value="2022/10/18 10:00"/>		
 		<property name="money" value="0 EUR"/>
 		<property name="important" value="true"/>
@@ -54,7 +54,7 @@
 	</bean>
 	
 	<bean name="info5" class="acme.entities.info.Info">	
-		<property name="pattern" value="BAA/10/09/21"/>
+		<property name="pattern" value="211214#zzd"/>
 		<property name="moment" value="2022/10/18 10:00"/>		
 		<property name="money" value="15 USD"/>
 		<property name="important" value="false"/>
@@ -62,7 +62,7 @@
 	</bean>
 	
 	<bean name="info6" class="acme.entities.info.Info">	
-		<property name="pattern" value="BAB/10/09/21"/>
+		<property name="pattern" value="211214#zzc"/>
 		<property name="moment" value="2022/10/18 10:00"/>		
 		<property name="money" value="10 GBP"/>
 		<property name="important" value="true"/>
@@ -70,7 +70,7 @@
 	</bean>
 	
 	<bean name="info7" class="acme.entities.info.Info">	
-		<property name="pattern" value="BBA/10/09/21"/>
+		<property name="pattern" value="211214#zzb"/>
 		<property name="moment" value="2022/10/18 10:00"/>		
 		<property name="money" value="10 EUR"/>
 		<property name="important" value="false"/>
@@ -78,7 +78,7 @@
 	</bean>
 	
 	<bean name="info8" class="acme.entities.info.Info">	
-		<property name="pattern" value="BBB/10/09/21"/>
+		<property name="pattern" value="211214#zza"/>
 		<property name="moment" value="2022/10/18 10:00"/>		
 		<property name="money" value="15 EUR"/>
 		<property name="important" value="true"/>

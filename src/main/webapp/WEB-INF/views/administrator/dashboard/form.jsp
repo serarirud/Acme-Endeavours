@@ -17,6 +17,85 @@
 <%@ taglib uri = "http://java.sun.com/jsp/jstl/fmt" prefix = "fmt" %>
 
 <h2>
+	<acme:message code="administrator.dashboard.form.title.info"/>
+</h2>
+
+<table class="table table-sm">	
+	<caption><acme:message code="administrator.dashboard.form.title.info"/></caption>
+	<tr>
+		<th scope="row">
+			<acme:message code="administrator.dashboard.form.label.info.importantRatio"/>
+		</th>
+		<td>
+			<acme:print value="${ratioImportantInfo}"/>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">
+			<acme:message code="administrator.dashboard.form.label.info.zeroBudgetRatio"/>
+		</th>
+		<td>
+			<acme:print value="${ratioZeroBudgetInfo}"/> 
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">
+			<acme:message code="administrator.dashboard.form.label.avarage.eur"/>
+		</th>
+		<td>
+			<acme:print value="${avarageEUR}"/> 
+			<acme:message code="administrator.dashboard.form.result.eur"/>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">
+			<acme:message code="administrator.dashboard.form.label.deviation.eur"/>
+		</th>
+		<td>
+			<acme:print value="${deviationEUR}"/> 
+			<acme:message code="administrator.dashboard.form.result.eur"/>			
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">
+			<acme:message code="administrator.dashboard.form.label.avarage.usd"/>
+		</th>
+		<td>
+			<acme:print value="${avarageUSD}"/> 
+			<acme:message code="administrator.dashboard.form.result.usd"/>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">
+			<acme:message code="administrator.dashboard.form.label.deviation.usd"/>
+		</th>
+		<td>
+			<acme:print value="${deviationUSD}"/> 
+			<acme:message code="administrator.dashboard.form.result.usd"/>			
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">
+			<acme:message code="administrator.dashboard.form.label.avarage.gbp"/>
+		</th>
+		<td>
+			<acme:print value="${avarageGBP}"/> 
+			<acme:message code="administrator.dashboard.form.result.gbp"/>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">
+			<acme:message code="administrator.dashboard.form.label.deviation.gbp"/>
+		</th>
+		<td>
+			<acme:print value="${deviationGBP}"/> 
+			<acme:message code="administrator.dashboard.form.result.gbp"/>			
+		</td>
+	</tr>
+	
+</table>
+
+<h2>
 	<acme:message code="administrator.dashboard.form.title.general-indicators"/>
 </h2>
 

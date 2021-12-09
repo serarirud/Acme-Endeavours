@@ -32,7 +32,7 @@ public class Info extends DomainEntity {
 	@NotNull
 	@NotEmpty
 	@Column(unique = true)
-	@Pattern(regexp = "^\\w{2,4}/([012]\\d|3[01])/(0[1-9]|1[012])/\\d{2}$") // ^\\w{2,4}/dd/mm/yy$
+	@Pattern(regexp = "^\\d{2}(0[1-9]|1[012])([012]\\d|3[01])#\\w{3}$") // “^yymmdd#\w{3}$” 
 	private String pattern;
 	
 	@Temporal(TemporalType.TIMESTAMP)

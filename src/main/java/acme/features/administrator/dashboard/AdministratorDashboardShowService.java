@@ -51,7 +51,11 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		request.unbind(entity, model,
 			"nPrivateDuties", "nPublicDuties", "nNotFinishedDuties", "nFinishedDuties", "averageDutiesExecutionPeriods",
 			"deviationDutiesExecutionPeriods", "minimumDutiesExecutionPeriods", "maximumDutiesExecutionPeriods",
-			"averageDutiesWorkloads", "deviationDutiesWorkloads", "minimumDutiesWorkloads", "maximumDutiesWorkloads");
+			"averageDutiesWorkloads", "deviationDutiesWorkloads", "minimumDutiesWorkloads", "maximumDutiesWorkloads",
+			//########################################### CAMBIAR ###########################################
+			"ratioImportantInfo", "ratioZeroBudgetInfo", "avarageEUR", "deviationEUR",
+			"avarageUSD", "deviationUSD", "avarageGBP", "deviationGBP");
+			//###############################################################################################
 	}
 
 	@Override
@@ -120,6 +124,42 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		result.setDeviationDutiesWorkloads(deviationDutiesWorkloads);
 		result.setMinimumDutiesWorkloads(minimumDutiesWorkloads);
 		result.setMaximumDutiesWorkloads(maximumDutiesWorkloads);
+		
+		//################################################ CAMBIAR ################################################################
+		
+		Double ratioImportantInfo;
+		Double ratioZeroBudgetInfo;
+		Double avarageEUR;
+		Double deviationEUR;
+		Double avarageUSD;
+		Double deviationUSD;
+		Double avarageGBP;
+		Double deviationGBP;
+		
+		Integer totalSheets;
+		
+		totalSheets = this.repository.shoutAmount();
+		
+		ratioImportantInfo = this.repository.shoutsFlaggedAsImportant()*1./totalSheets;
+		ratioZeroBudgetInfo = this.repository.shoutsWhereBudgetIsZero()*1./totalSheets;
+
+		avarageEUR = this.repository.averageMoney("EUR");
+		deviationEUR = this.repository.deviationMoney("EUR");
+		avarageUSD = this.repository.averageMoney("USD");
+		deviationUSD = this.repository.deviationMoney("USD");
+		avarageGBP = this.repository.averageMoney("GBP");
+		deviationGBP = this.repository.deviationMoney("GBP");
+		
+		result.setRatioImportantInfo(ratioImportantInfo);
+		result.setRatioZeroBudgetInfo(ratioZeroBudgetInfo);
+		result.setAvarageEUR(avarageEUR);
+		result.setDeviationEUR(deviationEUR);
+		result.setAvarageUSD(avarageUSD);
+		result.setDeviationUSD(deviationUSD);
+		result.setAvarageGBP(avarageGBP);
+		result.setDeviationGBP(deviationGBP);
+
+		//#########################################################################################################################
 		
 		return result;
 	}

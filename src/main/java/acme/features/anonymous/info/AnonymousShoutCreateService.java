@@ -77,12 +77,10 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
-		//################################################ CAMBIAR ################################################################
-		final String infoPillName = "info.";
-		//#########################################################################################################################	
-		if(!errors.hasErrors(infoPillName + "text")) {
+
+		if(!errors.hasErrors("shout.text")) {
 			final boolean umbralSuperado = this.confService.spamFilter(entity.getShout().getText());
-			errors.state(request, !umbralSuperado,"text", "manager.task.error.umbral-superado");
+			errors.state(request, !umbralSuperado, "shout.text", "anonymous.shout.error.umbral-superado");
 		}
 		final String anonymousError = "anonymous.shout.error.";
 		//################################################ CAMBIAR ################################################################
@@ -93,10 +91,10 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 			//################################################ CAMBIAR ################################################################	
 			final String pattern = entity.getPattern();
 
-			final String[] split = pattern.split("/");
-			final String day = split[1];
-			final String month = split[2];
-			final String year = "20" + split[3];
+			final String date = pattern.split("#")[0];
+			final String day = date.substring(4, 6);
+			final String month = date.substring(2, 4);
+			final String year = "20" + date.substring(0, 2);	
 			//#########################################################################################################################			
 			final LocalDate today = LocalDate.now();
 			final Boolean condicion = today.getYear() == Integer.valueOf(year) && today.getMonthValue() == Integer.valueOf(month) && today.getDayOfMonth() == Integer.valueOf(day);
@@ -107,7 +105,7 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 			//#########################################################################################################################		
 		}
 		//################################################ CAMBIAR ################################################################	
-		final String momentName = "sheet.moment"; // REFACTORIZAR EL NOMBRE DE LA VARIABLE
+		final String momentName = "moment"; // REFACTORIZAR EL NOMBRE DE LA VARIABLE
 		//#########################################################################################################################	
 		if(!errors.hasErrors(momentName)) {
 			//################################################ CAMBIAR ################################################################	
@@ -119,7 +117,7 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 			errors.state(request, moment.after(calendar.getTime()), momentName, anonymousError + momentName);
 		}
 		//################################################ CAMBIAR ################################################################	
-		final String moneyName = "sheet.money"; // REFACTORIZAR EL NOMBRE DE LA VARIABLE
+		final String moneyName = "money"; // REFACTORIZAR EL NOMBRE DE LA VARIABLE
 		//#########################################################################################################################	
 		if(!errors.hasErrors(moneyName)) {
 			//################################################ CAMBIAR ################################################################	
@@ -142,10 +140,10 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 		
 		moment = new Date(System.currentTimeMillis() - 1);
 		entity.getShout().setMoment(moment);
+		this.shoutRepository.save(entity);
 		//################################################ CAMBIAR ################################################################	
 		this.shoutRepository.save(entity.getShout());
 		//#########################################################################################################################	
-		this.shoutRepository.save(entity);
 	}
 
 

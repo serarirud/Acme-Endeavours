@@ -27,3 +27,16 @@ administrator.dashboard.form.label.duties-privates = Privadas
 administrator.dashboard.form.label.duties-finished =  Terminadas
 administrator.dashboard.form.label.duties-unfinished = No terminadas
 administrator.dashboard.form.result.hours = {Horas,Minutos}
+
+administrator.dashboard.form.title.info = info information
+administrator.dashboard.form.label.info.importantRatio = info flagged as important ratio
+administrator.dashboard.form.label.info.zeroBudgetRatio = info with 0 budget ratio
+administrator.dashboard.form.label.avarage.eur = Avarage EUR
+administrator.dashboard.form.label.deviation.eur = Deviation EUR
+administrator.dashboard.form.result.eur = EUR
+administrator.dashboard.form.label.avarage.usd = Avarage USD
+administrator.dashboard.form.label.deviation.usd = Deviation USD
+administrator.dashboard.form.result.usd = USD
+administrator.dashboard.form.label.avarage.gbp = Avarage GBP
+administrator.dashboard.form.label.deviation.gbp = Deviation GBP
+administrator.dashboard.form.result.gbp = GBP
