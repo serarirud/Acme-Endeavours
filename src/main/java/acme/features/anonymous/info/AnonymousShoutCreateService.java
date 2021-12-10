@@ -140,10 +140,10 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 		
 		moment = new Date(System.currentTimeMillis() - 1);
 		entity.getShout().setMoment(moment);
-		this.shoutRepository.save(entity);
 		//################################################ CAMBIAR ################################################################	
 		this.shoutRepository.save(entity.getShout());
 		//#########################################################################################################################	
+		this.shoutRepository.save(entity);
 	}
 
 
